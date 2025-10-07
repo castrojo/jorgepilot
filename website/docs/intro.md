@@ -3,18 +3,8 @@ sidebar_position: 1
 slug: /
 ---
 
-# Copilot Scratchpad
+# Jorgepilot
 
-Welcome to the Copilot Scratchpad documentation! This is a collection of things I make GitHub Copilot do for me.
+This is an experiment to see how useful Copilot can be to a Community Engineer. 
 
-## What's Inside
-
-This documentation site contains:
-
-- **GitHub Copilot Onboarding** - Get started with GitHub Copilot
-- **Tutorials and Examples** - Various projects and experiments
-- **Best Practices** - Tips and tricks for using GitHub Copilot effectively
-
-## Getting Started
-
-Navigate through the documentation using the sidebar on the left.
+This will likely be more verbose than the [actual Jorge](https://ypsidanger.com). This may be a mistake.
