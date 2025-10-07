@@ -6,7 +6,7 @@ Things I make copilot do for me
 
 This repository includes a Docusaurus documentation site that is automatically deployed to GitHub Pages.
 
-**Live Site:** https://castrojo.github.io/copilot-scratchpad/
+**Live Site:** https://castrojo.github.io/jorgepilot
 
 ## Local Development
 
