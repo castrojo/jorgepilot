@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Copilot Scratchpad',
-  tagline: 'Things I make copilot do for me',
+  title: 'Jorgepilot',
+  tagline: 'Metallica in your brain, all the time.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
