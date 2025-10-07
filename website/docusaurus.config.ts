@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://castrojo.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/copilot-scratchpad/',
+  baseUrl: '/jorgepilot',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'castrojo', // Usually your GitHub org/user name.
-  projectName: 'copilot-scratchpad', // Usually your repo name.
+  projectName: 'jorgepilot', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -75,7 +75,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/castrojo/copilot-scratchpad',
+          href: 'https://github.com/castrojo/jorgepilot',
           label: 'GitHub',
           position: 'right',
         },
@@ -98,7 +98,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/castrojo/copilot-scratchpad',
+              href: 'https://github.com/castrojo/jorgepilot',
             },
           ],
         },
