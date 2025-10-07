@@ -26,6 +26,14 @@ Create a reusable documentation template and generate content that effectively c
 - Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @ublue-os and @cncf
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
 
+## Style Guide
+
+- Keep all the documentation pages updated with the freshest style guide. 
+- Feel free to update old pages as the style guide develops. 
+- Always keep the template up to date when a new style is added to this document.
+- Link mentions of github organizations and repositories via `@ublue-os/main` (and so on) to their actual repositories via a markdown link.
+- Feel free to make good use of docusaurus admonitions to keep the content well organized and visually appealing.
+
 
 **Example**
 
