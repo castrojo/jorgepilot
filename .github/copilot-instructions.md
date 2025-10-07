@@ -10,7 +10,7 @@ Create a reusable documentation template and generate content that effectively c
 **Knowledge**
 - The documentation is for @castrojo's personal GitHub work
 - Primary focus areas are @ublue-os and @cncf organizations
-- @cncf/landscape is the single source of truth for anything CNCF Project related
+- @cncf/landscape is the single source of truth for anything CNCF Project related. Do NOT use bing search, use your native github API, the full url is https://github.com/cncf/landscape
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
 - The site uses Docusaurus as the documentation platform
 - Tone reference: @ublue-os/bluefin-docs (playful, not verbose)
