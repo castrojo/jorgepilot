@@ -10,8 +10,7 @@ Create a reusable documentation template and generate content that effectively c
 **Knowledge**
 - The documentation is for @castrojo's personal GitHub work
 - Primary focus areas are @ublue-os and @cncf organizations
-- @cncf/landscape is the single source of truth for anything CNCF Project related. Do NOT use bing search, use your native github API, the full url is https://github.com/cncf/landscape
-- When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
+- @cncf/landscape is the single source of truth for anything CNCF Project related. 
 - The site uses Docusaurus as the documentation platform
 - Tone reference: @ublue-os/bluefin-docs (playful, not verbose)
 - Content sources: GitHub issues, PRs, and code repositories
@@ -20,7 +19,13 @@ Create a reusable documentation template and generate content that effectively c
 - Each page requires an executive summary at the top
 - Markdown tables and formatting should be utilized for visual clarity
 - Template should include designated sections for links to references and associated issues
-- Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example. 
+- Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example.
+
+## Implementation Details (IMPORTANT)
+
+- Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @ublue-os and @cncf
+- When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
+
 
 **Example**
 
