@@ -20,6 +20,7 @@ Create a reusable documentation template and generate content that effectively c
 - Each page requires an executive summary at the top
 - Markdown tables and formatting should be utilized for visual clarity
 - Template should include designated sections for links to references and associated issues
+- Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example. 
 
 **Example**
 
