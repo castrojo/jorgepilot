@@ -311,6 +311,18 @@ Cloud Custodian exhibits **strong project health** across all evaluated dimensio
 - [Release Notes](https://github.com/cloud-custodian/cloud-custodian/releases)
 - [Community Discussions](https://github.com/cloud-custodian/cloud-custodian/discussions)
 
+## CNCF Blog Posts
+
+Recent CNCF blog posts related to Cloud Custodian (last year):
+
+- [Cloud Custodian completes audit to strengthen security posture and enable continuous assessment](https://www.cncf.io/blog/2024/04/19/cloud-custodian-completes-audit-to-strengthen-security-posture-and-enable-continuous-assessment/) - April 19, 2024
+- [PaC in the Cloud Native Landscape](https://www.cncf.io/blog/2025/08/01/pac-in-the-cloud-native-landscape/) - August 1, 2025
+
+Additional relevant CNCF blog posts:
+
+- [2024 year in review of CNCF and top 30 open source project velocity](https://www.cncf.io/blog/2025/01/29/2024-year-in-review-of-cncf-and-top-30-open-source-project-velocity/) - January 29, 2025
+- [Top 6 cloud computing trends for 2025](https://www.cncf.io/blog/2024/12/03/top-6-cloud-computing-trends-for-2025/) - December 3, 2024
+
 ## Associated Issues
 
 | Issue | Status | Priority | Link |
