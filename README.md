@@ -8,7 +8,7 @@ Want to create your own branded version? (e.g., "Jeefypilot", "MrBobbypilot")
 
 See the **[Customization Guide](CUSTOMIZATION.md)** for instructions on personalizing the site with your name and GitHub avatar.
 
-**TL;DR**: Edit 3 lines at the top of `website/docusaurus.config.ts` to set your GitHub username, display name, and tagline. Your GitHub avatar will automatically become the favicon and logo!
+**TL;DR**: Edit 4 lines at the top of `website/docusaurus.config.ts` to set your GitHub username, repository name, display name, and tagline. Your GitHub avatar will automatically become the favicon and logo!
 
 ## Documentation
 

@@ -8,6 +8,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // CUSTOMIZATION: Change these values to personalize your pilot
 // ============================================================================
 const GITHUB_USERNAME = 'castrojo'; // Your GitHub username
+const REPO_NAME = 'jorgepilot'; // Your repository name
 const DISPLAY_NAME = 'Jorge'; // Your name (e.g., 'Jorge', 'Jeefy', 'MrBobby')
 const TAGLINE = 'Metallica in your brain, all the time.'; // Your custom tagline
 
@@ -30,12 +31,12 @@ const config: Config = {
   url: `https://${GITHUB_USERNAME}.github.io`,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/jorgepilot',
+  baseUrl: `/${REPO_NAME}`,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: GITHUB_USERNAME, // Usually your GitHub org/user name.
-  projectName: 'jorgepilot', // Usually your repo name.
+  projectName: REPO_NAME, // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -57,7 +58,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            `https://github.com/${GITHUB_USERNAME}/jorgepilot/tree/main/website/`,
+            `https://github.com/${GITHUB_USERNAME}/${REPO_NAME}/tree/main/website/`,
         },
         blog: false, // Disable the blog plugin
         theme: {
@@ -87,7 +88,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: `https://github.com/${GITHUB_USERNAME}/jorgepilot`,
+          href: `https://github.com/${GITHUB_USERNAME}/${REPO_NAME}`,
           label: 'GitHub',
           position: 'right',
         },
@@ -110,7 +111,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: `https://github.com/${GITHUB_USERNAME}/jorgepilot`,
+              href: `https://github.com/${GITHUB_USERNAME}/${REPO_NAME}`,
             },
           ],
         },

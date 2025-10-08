@@ -6,6 +6,7 @@ Here are some real-world examples of how to customize your pilot site.
 
 ```typescript
 const GITHUB_USERNAME = 'jeefy';
+const REPO_NAME = 'jorgepilot';
 const DISPLAY_NAME = 'Jeefy';
 const TAGLINE = 'Building the future, one commit at a time.';
 ```
@@ -21,6 +22,7 @@ const TAGLINE = 'Building the future, one commit at a time.';
 
 ```typescript
 const GITHUB_USERNAME = 'mrbobby';
+const REPO_NAME = 'jorgepilot';
 const DISPLAY_NAME = 'MrBobby';
 const TAGLINE = 'Automating all the things!';
 ```
@@ -36,6 +38,7 @@ const TAGLINE = 'Automating all the things!';
 
 ```typescript
 const GITHUB_USERNAME = 'sarahdev';
+const REPO_NAME = 'jorgepilot';
 const DISPLAY_NAME = 'Sarah';
 const TAGLINE = 'Code, coffee, and cloud native tech.';
 ```
@@ -51,6 +54,7 @@ const TAGLINE = 'Code, coffee, and cloud native tech.';
 
 ```typescript
 const GITHUB_USERNAME = 'kubernetes';
+const REPO_NAME = 'jorgepilot';
 const DISPLAY_NAME = 'K8s';
 const TAGLINE = 'Kubernetes insights and analysis.';
 ```
