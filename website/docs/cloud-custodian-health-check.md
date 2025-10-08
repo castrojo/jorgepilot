@@ -26,7 +26,7 @@ Cloud Custodian maintains highly responsive maintainer engagement across all con
 
 | Metric | Status | Evidence |
 |--------|--------|----------|
-| **Average Response Time** | <24 hours | Recent PRs show same-day reviews |
+| **Average Response Time** | < 24 hours | Recent PRs show same-day reviews |
 | **Median Time to Merge** | 2-5 days | Active PRs merged within week |
 | **Review Depth** | Thorough | Multiple rounds of review with detailed feedback |
 
@@ -41,7 +41,7 @@ Cloud Custodian maintains highly responsive maintainer engagement across all con
 |--------|-------|------------|
 | **Open Issues (2024+)** | 284 | Healthy backlog management |
 | **Issue Triage** | Active | Issues labeled and categorized promptly |
-| **Bug Response Time** | <48 hours | Critical bugs addressed immediately |
+| **Bug Response Time** | < 48 hours | Critical bugs addressed immediately |
 
 **Note:** The project maintains a realistic issue backlog (284 open from 2024+) without overwhelming accumulation, indicating sustainable triage practices.
 
