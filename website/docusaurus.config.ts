@@ -62,9 +62,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Copilot Scratchpad',
+      title: 'Jorgepilot',
       logo: {
-        alt: 'Copilot Scratchpad Logo',
+        alt: 'Jorgepilot',
         src: 'img/logo.svg',
       },
       items: [
