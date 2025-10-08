@@ -25,7 +25,8 @@ Create a reusable documentation template and generate content that effectively c
 
 - Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @ublue-os and @cncf
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
-- Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work. 
+- Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work.
+- "jorgepilot" is an example and a reference implementation, this repository should always be designed to be usable as a template so that users can run their own "alicepilot" or "bobpilot". 
 
 ## Style Guide
 
