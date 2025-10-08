@@ -26,6 +26,6 @@ body:
     attributes:
       label: Task
       description: Describe what needs to be done
-      placeholder: Provide detailed steps or requirements for completing this task
+      placeholder: Provide detailed steps or requirements for completing this task, remember you can always edit the issue later.
     validations:
       required: true
