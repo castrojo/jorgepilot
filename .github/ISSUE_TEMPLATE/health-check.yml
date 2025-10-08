@@ -1,6 +1,6 @@
 name: Health Check
 description: Request a CNCF-style health check
-title: "Health check for"
+title: "Health check for ..."
 labels: ["project-health"]
 body:
   - type: markdown
@@ -16,6 +16,6 @@ body:
       label: Project
       description: Name of the project to analyze (e.g., "Kubernetes", "Prometheus", "Linkerd")
       value: |
-        Use `website/docs/cncf-project-health-check-criteria.md` to do a health check on @org/project and generate a report here
+        Generate a health check report for @org or @org/project
     validations:
       required: true
