@@ -113,3 +113,35 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 - **Version Support**: v3.x actively maintained, v4.0 in alpha
 - **Binaries**: Multi-platform support (Darwin, Linux, Windows across multiple architectures)
 
+## Security Posture
+
+### Security Practices
+
+| Criterion | Status | Evidence |
+|-----------|--------|------------|
+| **Security Reporting** | ✅ Excellent | Clear vulnerability disclosure process |
+| **Access Controls** | ✅ Excellent | 2FA required, branch protection enabled |
+| **Dependency Scanning** | ✅ Excellent | Automated Dependabot updates |
+| **Code Scanning** | ✅ Excellent | CodeQL and security workflows active |
+| **OSSF Scorecard** | ✅ Good | Regular security posture monitoring |
+
+**Security Features:**
+- **Provenance Signing**: Chart provenance and verification support
+- **SBOM**: Software Bill of Materials generation
+- **Vulnerability Scanning**: Automated dependency vulnerability checks
+- **Security Audits**: Regular third-party security assessments
+- **CVE Response**: Rapid response to security issues (same-day for critical)
+
+**Recent Security Updates:**
+- Oct 7: Dependency updates (Kubernetes libraries, controller-runtime)
+- Oct 1: Security scanning workflow updates (OSSF scorecard)
+- Sept 30: Cryptographic library updates (golang.org/x/crypto)
+- Sept 25: Security-focused dependency bumps
+
+### Supply Chain Security
+
+- **Signed Releases**: All releases cryptographically signed
+- **Reproducible Builds**: Build process documented and reproducible
+- **Dependency Management**: Automated updates via Dependabot
+- **License Compliance**: Apache 2.0 with clear dependency attribution
+
