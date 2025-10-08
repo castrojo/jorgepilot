@@ -29,6 +29,7 @@ Be very strict with the instructions in this section:
 - Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work.
 - "jorgepilot" is an example and a reference implementation, this repository should always be designed to be usable as a template so that users can run their own "alicepilot" or "bobpilot". 
 - Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example.
+- If a common top level theme has over 5 documents, make a new docusaurus tag and update all the affected documents. There should never be more than 10 total tags across the site, don't make too many tags, keep it focused.
 
 ## Style Guide
 
