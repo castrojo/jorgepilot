@@ -4,10 +4,22 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+// ============================================================================
+// CUSTOMIZATION: Change these values to personalize your pilot
+// ============================================================================
+const GITHUB_USERNAME = 'castrojo'; // Your GitHub username
+const DISPLAY_NAME = 'Jorge'; // Your name (e.g., 'Jorge', 'Jeefy', 'MrBobby')
+const TAGLINE = 'Metallica in your brain, all the time.'; // Your custom tagline
+
+// Derived values - no need to edit these
+const SITE_TITLE = `${DISPLAY_NAME}pilot`;
+const GITHUB_AVATAR_URL = `https://avatars.githubusercontent.com/${GITHUB_USERNAME}`;
+// ============================================================================
+
 const config: Config = {
-  title: 'Jorgepilot',
-  tagline: 'Metallica in your brain, all the time.',
-  favicon: 'img/favicon.ico',
+  title: SITE_TITLE,
+  tagline: TAGLINE,
+  favicon: `${GITHUB_AVATAR_URL}?size=64`,
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -15,14 +27,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://castrojo.github.io',
+  url: `https://${GITHUB_USERNAME}.github.io`,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/jorgepilot',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'castrojo', // Usually your GitHub org/user name.
+  organizationName: GITHUB_USERNAME, // Usually your GitHub org/user name.
   projectName: 'jorgepilot', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -45,7 +57,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/castrojo/copilot-scratchpad/tree/main/website/',
+            `https://github.com/${GITHUB_USERNAME}/jorgepilot/tree/main/website/`,
         },
         blog: false, // Disable the blog plugin
         theme: {
@@ -62,10 +74,10 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Jorgepilot',
+      title: SITE_TITLE,
       logo: {
-        alt: 'Jorgepilot',
-        src: 'img/logo.svg',
+        alt: `${SITE_TITLE} Logo`,
+        src: `${GITHUB_AVATAR_URL}?size=40`,
       },
       items: [
         {
@@ -75,7 +87,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/castrojo/jorgepilot',
+          href: `https://github.com/${GITHUB_USERNAME}/jorgepilot`,
           label: 'GitHub',
           position: 'right',
         },
@@ -98,7 +110,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/castrojo/jorgepilot',
+              href: `https://github.com/${GITHUB_USERNAME}/jorgepilot`,
             },
           ],
         },
