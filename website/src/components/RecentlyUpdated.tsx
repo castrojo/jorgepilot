@@ -11,6 +11,12 @@ interface Document {
 
 const recentDocuments: Document[] = [
   {
+    title: 'Helm Project Health Check',
+    path: '/helm-health-check',
+    description: 'CNCF Graduated project health assessment - October 2025',
+    lastUpdated: 'Oct 8, 2025',
+  },
+  {
     title: 'CNCF Health Checks Report',
     path: '/cncf-health-checks-report',
     description: '2024 project health reviews - effort, duration, and trends',
@@ -33,12 +39,6 @@ const recentDocuments: Document[] = [
     path: '/copr-analysis',
     description: 'COPR usage analysis for ublue-os',
     lastUpdated: 'Oct 7, 2025',
-  },
-  {
-    title: 'Introduction',
-    path: '/',
-    description: 'Getting started with Jorgepilot',
-    lastUpdated: 'Oct 8, 2025',
   },
 ];
 
