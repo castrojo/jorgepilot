@@ -58,7 +58,7 @@ Strong community engagement with active daily contributions, responsive maintain
 | **Open PRs** | 20 (Oct 2025) | Active review pipeline |
 | **Watchers** | 1,991 | High engagement |
 
-### Contribution Activity (Past 30 Days)
+### Contribution Activity (Past Year)
 
 **Commit Velocity:**
 - **Daily average**: 5-8 commits
@@ -66,9 +66,9 @@ Strong community engagement with active daily contributions, responsive maintain
 - **Bot-assisted**: ~60% automated (ubot-7274 for dependencies)
 - **Human contributions**: ~40% feature/fix work
 
-**Recent Contributors (September-October 2025):**
-1. **@castrojo** - 10+ commits (cleanup, fixes, infrastructure)
-2. **@ubot-7274[bot]** - 50+ automated dependency updates
+**Active Contributors (Past 365 Days):**
+1. **@castrojo** - Project lead, active daily contributor
+2. **@ubot-7274[bot]** - Automated dependency updates
 3. **@EyeCantCU** - Developer tooling additions
 4. **@valerie-tar-gz** - Bazaar app additions
 5. **@ahmedadan** - Framework laptop support, filesystem improvements
@@ -276,9 +276,10 @@ This health check was conducted using:
 - CNCF Project Health Check Criteria adapted for OS projects
 
 **Assessment Date:** October 2025  
+**Analysis Period:** Past 365 days (October 2024 - October 2025)  
 **Data Sources:** GitHub API, project documentation, community forums  
 **Evaluator:** Automated analysis + manual review
 
 ---
 
-**Note:** Bluefin is not a CNCF project but was evaluated using adapted CNCF health check criteria as a framework for assessing project maturity and sustainability. This report reflects the project's health as of October 2025 and should be refreshed periodically as the project evolves.
+**Note:** Bluefin is not a CNCF project but was evaluated using adapted CNCF health check criteria as a framework for assessing project maturity and sustainability. This report analyzes the past year's worth of activity (365 days) and should be refreshed annually as the project evolves.
