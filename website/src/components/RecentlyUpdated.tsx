@@ -31,11 +31,16 @@ const recentDocuments: Document[] = [
 ];
 
 export default function RecentlyUpdated(): React.JSX.Element {
+  // Always show 9 cards - fill remaining with placeholders
+  const totalCards = 9;
+  const filledCards = [...recentDocuments];
+  const placeholderCount = totalCards - filledCards.length;
+  
   return (
     <section className={styles.recentlyUpdated}>
       <h2>Recently Updated</h2>
       <div className={styles.grid}>
-        {recentDocuments.map((doc) => (
+        {filledCards.map((doc) => (
           <Link key={doc.path} to={doc.path} className={styles.card}>
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{doc.title}</h3>
@@ -45,6 +50,9 @@ export default function RecentlyUpdated(): React.JSX.Element {
               </div>
             </div>
           </Link>
+        ))}
+        {Array.from({ length: placeholderCount }).map((_, index) => (
+          <div key={`placeholder-${index}`} className={styles.placeholderCard} />
         ))}
       </div>
     </section>
