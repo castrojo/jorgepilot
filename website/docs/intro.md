@@ -6,6 +6,7 @@ slug: /
 import RecentlyUpdated from '@site/src/components/RecentlyUpdated';
 
 # Jorgepilot
+*My mental scratchpad*
 
 This is an experiment to see how useful Copilot can be to a Community Engineer. I use it my own personal interface to asking GitHub things, built for my specific needs. It's served by docusaurus to GitHub pages so I can share my ideas with friends. 
 
