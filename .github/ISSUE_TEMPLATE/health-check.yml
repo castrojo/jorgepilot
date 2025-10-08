@@ -1,39 +1,20 @@
 name: Health Check
-description: Request a comprehensive health check for a CNCF project
-title: "[HEALTH CHECK] {CNCF Project}"
-labels: ["cncf", "project-health"]
+description: Request a CNCF-style health check
+title: "Health check for"
+labels: ["project-health"]
 body:
   - type: markdown
     attributes:
       value: |
-        ## CNCF Project Health Check Request
+        ## Project Health Check Request
         
         Request a comprehensive analysis of a CNCF project's health, including contributor activity, responsiveness, velocity, inclusivity indicators, and alignment with TAG Contributor Strategy criteria.
 
   - type: input
     id: cncf_project
     attributes:
-      label: CNCF Project
-      description: Name of the CNCF project to analyze (e.g., "Kubernetes", "Prometheus", "Linkerd")
+      label: Project
+      description: Name of the project to analyze (e.g., "Kubernetes", "Prometheus", "Linkerd")
       placeholder: Cloud Custodian
     validations:
       required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        
-        ### What will be analyzed:
-        
-        - **Responsiveness**: PR and issue response times, maintainer engagement
-        - **Contributor Activity**: Commit velocity, contributor diversity, new contributor onboarding
-        - **Contributor Risk**: Maintainer concentration, organizational diversity, geographic distribution
-        - **Project Velocity**: Commit activity, PR throughput, issue resolution rates
-        - **Release Activity**: Release cadence, dependency management
-        - **Inclusivity Indicators**: Governance documentation, community support, first-time contributor success
-        - **Risks & Recommendations**: Identified risks and actionable recommendations
-        - **CNCF Standards Comparison**: Alignment with TAG Contributor Strategy criteria
-        - **CNCF Blog Posts**: Links to relevant CNCF blog posts from the last year
-        
-        The analysis will use GitHub API data and cross-reference against TAG Contributor Strategy project health criteria.
