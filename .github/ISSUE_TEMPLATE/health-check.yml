@@ -15,6 +15,7 @@ body:
     attributes:
       label: Project
       description: Name of the project to analyze (e.g., "Kubernetes", "Prometheus", "Linkerd")
-      placeholder: Use `website/docs/cncf-project-health-check-criteria.md` to do a health check on @org/project and generate a report here
+      value: |
+        Use `website/docs/cncf-project-health-check-criteria.md` to do a health check on @org/project and generate a report here
     validations:
       required: true
