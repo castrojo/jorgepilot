@@ -183,3 +183,39 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 - **Third-party Tools**: Helmfile, helm-diff, helm-secrets, etc.
 - **Training & Certification**: Multiple training providers and certification paths
 
+## References & Context
+
+### Source Documentation
+
+- [Helm Repository](https://github.com/helm/helm) - Main project repository
+- [Helm Documentation](https://helm.sh/docs/) - Official documentation
+- [Helm Community](https://github.com/helm/community) - Governance and community
+- [CNCF Helm Project Page](https://www.cncf.io/projects/helm/) - CNCF project information
+- [Artifact Hub](https://artifacthub.io/) - Public chart discovery
+
+### Related CNCF Projects
+
+- **Kubernetes** - Core platform Helm manages
+- **Harbor** - Container and Helm chart registry
+- **Flux** - GitOps tool with native Helm support
+- **Argo CD** - GitOps CD tool with Helm integration
+
+### Health Check Methodology
+
+This health check was conducted on **October 8, 2025** using:
+
+- **GitHub API**: Repository statistics, commit history, PR/issue data
+- **Release Data**: v3.19.0 release notes and changelog
+- **Community Observation**: Slack channels, GitHub discussions
+- **CNCF Documentation**: Project status and graduation criteria
+
+**Assessment Framework**: Evaluated against CNCF Graduated project criteria including governance, community health, engineering practices, security posture, and adoption metrics.
+
+**Data Period**: Primary focus on September-October 2025 activity with historical context from the project's ~10-year history.
+
+---
+
+**Report Generated**: October 8, 2025
+
+**Next Review**: Recommended annual review or upon significant project changes
+
