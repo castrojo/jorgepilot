@@ -1,6 +1,6 @@
-# copilot-scratchpad
+# jorgepilot
 
-Things I make copilot do for me
+Things I make copilot do for me.
 
 ## Documentation
 
