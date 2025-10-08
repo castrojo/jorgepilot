@@ -1,0 +1,20 @@
+name: Health Check
+description: Request a CNCF-style health check
+title: "Health check for"
+labels: ["project-health"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Project Health Check Request
+        
+        Request a comprehensive analysis of a CNCF project's health, including contributor activity, responsiveness, velocity, inclusivity indicators, and alignment with TAG Contributor Strategy criteria.
+
+  - type: input
+    id: cncf_project
+    attributes:
+      label: Project
+      description: Name of the project to analyze (e.g., "Kubernetes", "Prometheus", "Linkerd")
+      placeholder: Cloud Custodian
+    validations:
+      required: true
