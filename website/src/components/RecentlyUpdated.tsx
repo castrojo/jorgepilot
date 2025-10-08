@@ -11,6 +11,12 @@ interface Document {
 
 const recentDocuments: Document[] = [
   {
+    title: 'CNCF Project Moving Levels Status',
+    path: '/cncf-project-moving-levels-status',
+    description: 'Status report of projects graduating and moving to incubation',
+    lastUpdated: 'Oct 8, 2025',
+  },
+  {
     title: 'CNCF Rust Analysis',
     path: '/cncf-rust-analysis',
     description: 'Analysis of Rust projects in CNCF',
