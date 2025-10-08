@@ -30,7 +30,7 @@ const recentDocuments: Document[] = [
   },
 ];
 
-export default function RecentlyUpdated(): JSX.Element {
+export default function RecentlyUpdated(): React.JSX.Element {
   return (
     <section className={styles.recentlyUpdated}>
       <h2>Recently Updated</h2>
