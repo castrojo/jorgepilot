@@ -11,6 +11,12 @@ interface Document {
 
 const recentDocuments: Document[] = [
   {
+    title: 'CNCF Health Checks Report',
+    path: '/cncf-health-checks-report',
+    description: '2024 project health reviews - effort, duration, and trends',
+    lastUpdated: 'Jan 9, 2025',
+  },
+  {
     title: 'CNCF Project Moving Levels Status',
     path: '/cncf-project-moving-levels-status',
     description: 'Status report of projects graduating and moving to incubation',
