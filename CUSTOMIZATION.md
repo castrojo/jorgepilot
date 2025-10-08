@@ -51,6 +51,8 @@ Result:
 - Favicon & Logo: Jeefy's GitHub avatar
 - URL: https://jeefy.github.io/jorgepilot
 
+**See [CUSTOMIZATION_EXAMPLES.md](CUSTOMIZATION_EXAMPLES.md) for more examples!**
+
 ## Why GitHub Avatars?
 
 Using GitHub avatars has several advantages:
