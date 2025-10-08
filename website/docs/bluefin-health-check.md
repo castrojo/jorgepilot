@@ -273,7 +273,7 @@ This health check was conducted using:
 - GitHub API data (commits, PRs, issues, contributors)
 - Repository analysis (CODEOWNERS, documentation, CI/CD configs)
 - Community resources review (forum, docs, blog)
-- [CNCF Project Health Check Criteria](/cncf-project-health-check-criteria) adapted for OS projects
+- CNCF Project Health Check Criteria adapted for OS projects
 
 **Assessment Date:** October 2025  
 **Data Sources:** GitHub API, project documentation, community forums  
