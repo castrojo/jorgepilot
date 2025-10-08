@@ -1,6 +1,6 @@
 name: Task Request
 description: Submit a task for Copilot to work on
-title: ""
+title: "Make a report that ..."
 labels: []
 body:
   - type: textarea
