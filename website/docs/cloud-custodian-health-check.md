@@ -300,6 +300,7 @@ Cloud Custodian exhibits **strong project health** across all evaluated dimensio
 
 ## Related Work
 
+- [TAG Contributor Strategy Health Check Guide](/tag-contributor-strategy-guide) - Comprehensive guide to health check criteria
 - [TAG Contributor Strategy - Project Health Criteria](https://github.com/cncf/tag-contributor-strategy/blob/main/website/content/maintainers/community/project-health.md)
 - [CNCF TOC Health Check Process](https://github.com/cncf/toc/blob/main/process/health_checks.md)
 - [Cloud Custodian GitHub](https://github.com/cloud-custodian/cloud-custodian)
