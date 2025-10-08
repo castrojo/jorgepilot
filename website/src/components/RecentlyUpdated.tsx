@@ -11,9 +11,9 @@ interface Document {
 
 const recentDocuments: Document[] = [
   {
-    title: 'TAG Contributor Strategy Guide',
-    path: '/tag-contributor-strategy-guide',
-    description: 'Reference guide for CNCF project health check criteria',
+    title: 'CNCF Project Health Check Criteria',
+    path: '/cncf-project-health-check-criteria',
+    description: 'Comprehensive guide to CNCF health check criteria across all maturity levels',
     lastUpdated: 'Jan 10, 2025',
   },
   {
