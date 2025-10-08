@@ -19,14 +19,16 @@ Create a reusable documentation template and generate content that effectively c
 - Each page requires an executive summary at the top
 - Markdown tables and formatting should be utilized for visual clarity
 - Template should include designated sections for links to references and associated issues
-- Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example.
 
 ## Implementation Details (IMPORTANT)
+
+Be very strict with the instructions in this section: 
 
 - Do NOT use bing search, use the native github API - this repository will only ever ask for things that are hosted on github. Specifically @ublue-os and @cncf
 - When generating answers for CNCF projects, always break up the table by Graduated, Incubating, and Sandbox
 - Always follow docusaurus best practices and always investigate popular community plugins if necessary. Do not overcomplicate it, the website configuration should remain as vanilla as possible, avoid custom work.
 - "jorgepilot" is an example and a reference implementation, this repository should always be designed to be usable as a template so that users can run their own "alicepilot" or "bobpilot". 
+- Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example.
 
 ## Style Guide
 
