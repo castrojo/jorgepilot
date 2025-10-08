@@ -14,7 +14,7 @@ tags:
 
 ## Overview
 
-Cloud Custodian is a rules engine for cloud governance, management, and security. This health check evaluates the project against [TAG Contributor Strategy criteria](https://github.com/cncf/tag-contributor-strategy/blob/main/website/content/maintainers/community/project-health.md) using direct GitHub metrics from October 2025.
+Cloud Custodian is a rules engine for cloud governance, management, and security. This health check evaluates the project against [TAG Contributor Strategy criteria](https://github.com/cncf/tag-contributor-strategy/blob/main/website/content/maintainers/community/project-health.md) using direct GitHub metrics from October 05.
 
 ## Responsiveness
 
@@ -282,7 +282,7 @@ While overall health is strong, a few areas warrant ongoing attention.
 
 | Criterion | Status | Notes |
 |-----------|--------|-------|
-| **Responsiveness** | ✅ Excellent | <24hr PR response, <48hr issue triage |
+| **Responsiveness** | ✅ Excellent | < 24hr PR response, < 48hr issue triage |
 | **Contributor Growth** | ✅ Strong | 50+ unique contributors/quarter |
 | **PR Author Diversity** | ✅ Good | 10+ active contributors/month |
 | **Contributor Risk** | ⚠️ Moderate | Top 3 = 40% (acceptable for mature project) |
