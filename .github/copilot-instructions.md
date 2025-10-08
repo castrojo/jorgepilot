@@ -30,7 +30,8 @@ Be very strict with the instructions in this section:
 - "jorgepilot" is an example and a reference implementation, this repository should always be designed to be usable as a template so that users can run their own "alicepilot" or "bobpilot". 
 - Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example.
 - If a common top level theme has over 5 documents, make a new docusaurus tag and update all the affected documents. There should never be more than 10 total tags across the site, don't make too many tags, keep it focused.
-- Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown. 
+- Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown.
+- Use `website/docs/cncf-project-health-check-criteria.md` as the means for generating Health Checks that are reported via the issue template.
 
 ## Style Guide
 
