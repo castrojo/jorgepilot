@@ -11,12 +11,6 @@ interface Document {
 
 const recentDocuments: Document[] = [
   {
-    title: 'CNCF Project Health Check Criteria',
-    path: '/cncf-project-health-check-criteria',
-    description: 'Comprehensive guide to CNCF health check criteria across all maturity levels',
-    lastUpdated: 'Jan 10, 2025',
-  },
-  {
     title: 'CNCF Health Checks Report',
     path: '/cncf-health-checks-report',
     description: '2024 project health reviews - effort, duration, and trends',
