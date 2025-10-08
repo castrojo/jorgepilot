@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Customization Guide
 
 This guide explains how to customize your jorgepilot site to create your own branded version (e.g., "Jeefypilot", "MrBobbypilot").
@@ -44,17 +48,11 @@ If Jeefy wanted to create "Jeefypilot":
 
 ```typescript
 const GITHUB_USERNAME = 'jeefy';
-const REPO_NAME = 'jorgepilot'; // Or rename to 'jeefypilot' if forking with a new name
+const REPO_NAME = 'jeefypilot'; // Or rename to 'jeefypilot' if forking with a new name
 const DISPLAY_NAME = 'Jeefy';
-const TAGLINE = 'Building the future, one commit at a time.';
+const TAGLINE = 'All the metal, none of the drama.';
 ```
 
-Result:
-- Site title: "Jeefypilot"
-- Favicon & Logo: Jeefy's GitHub avatar
-- URL: https://jeefy.github.io/jorgepilot (or https://jeefy.github.io/jeefypilot if renamed)
-
-**See [CUSTOMIZATION_EXAMPLES.md](CUSTOMIZATION_EXAMPLES.md) for more examples!**
 
 ## Why GitHub Avatars?
 
