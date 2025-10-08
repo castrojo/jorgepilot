@@ -6,11 +6,11 @@ sidebar_position: 3
 
 ## Executive Summary
 
-Analysis of COPR repositories across ublue-os ecosystem reveals 14 total repositories: 4 first-party (ublue-os controlled) and 10 third-party. The project maintains good control over critical packages through first-party COPRs while using third-party repos for specialized tools (fonts, virtualization, container tools).
+Analysis of COPR repositories across the [@ublue-os](https://github.com/ublue-os) ecosystem reveals 14 total repositories: 4 first-party (ublue-os controlled) and 10 third-party. The project maintains good control over critical packages through first-party COPRs while using third-party repos for specialized tools (fonts, virtualization, container tools).
 
 ## Overview
 
-This report examines COPR (Cool Other Package Repositories) usage across @ublue-os/bluefin, @ublue-os/bluefin-lts, @ublue-os/main, @ublue-os/akmods, and @ublue-os/packages. COPRs extend Fedora's package ecosystem, similar to Ubuntu's PPA system.
+This report examines COPR (Cool Other Package Repositories) usage across [@ublue-os/bluefin](https://github.com/ublue-os/bluefin), [@ublue-os/bluefin-lts](https://github.com/ublue-os/bluefin-lts), [@ublue-os/main](https://github.com/ublue-os/main), [@ublue-os/akmods](https://github.com/ublue-os/akmods), and [@ublue-os/packages](https://github.com/ublue-os/packages). COPRs extend Fedora's package ecosystem, similar to Ubuntu's PPA system.
 
 ## Key Findings
 
@@ -84,17 +84,20 @@ Two additional external repos are used:
 
 ## Analysis
 
+:::tip Philosophy
 The ublue-os COPR strategy is pragmatic and measured. First-party repos handle the heavy lifting (staging, packages, akmods), while third-party COPRs fill gaps for niche use cases.
+:::
 
 **Strengths:**
 - Well-organized first-party infrastructure with clear staging/production separation
 - Comprehensive akmod support for diverse hardware
 - Most critical components under ublue-os control
 
-**Concerns:**
+:::warning Concerns
 - Kernel module (looking-glass-kvmfr) from third-party source
 - Boot integration (podman-bootc) not under direct control
 - negativo17 repo overrides core system packages (mesa, graphics stack)
+:::
 
 **Usage Philosophy:**
 1. Provide packages unavailable in Fedora repos

@@ -10,7 +10,7 @@ The CNCF ecosystem has embraced Rust for its performance, memory safety, and rel
 
 ## Overview
 
-This report analyzes Rust adoption within the Cloud Native Computing Foundation (CNCF) landscape. Data is sourced from the official @cncf/landscape repository, which serves as the single source of truth for CNCF projects. The analysis categorizes projects by their CNCF maturity level: Graduated, Incubating, and Sandbox.
+This report analyzes Rust adoption within the Cloud Native Computing Foundation (CNCF) landscape. Data is sourced from the official [@cncf/landscape](https://github.com/cncf/landscape) repository, which serves as the single source of truth for CNCF projects. The analysis categorizes projects by their CNCF maturity level: Graduated, Incubating, and Sandbox.
 
 ## Key Findings
 
@@ -35,12 +35,12 @@ Linkerd is a service mesh that provides security, observability, and reliability
 | Property | Details |
 |----------|---------|
 | **Description** | Ultra light, ultra simple, ultra powerful service mesh |
-| **Repository** | <a href="https://github.com/linkerd/linkerd2">linkerd/linkerd2</a> |
-| **Homepage** | <a href="https://linkerd.io/">linkerd.io</a> |
+| **Repository** | [linkerd/linkerd2](https://github.com/linkerd/linkerd2) |
+| **Homepage** | [linkerd.io](https://linkerd.io/) |
 | **Languages** | Go, Rust |
 | **Key Features** | mTLS, observability, multi-cluster, load balancing, traffic authorization, security, zero trust |
 | **Target Users** | SREs, DevOps Engineers, Architects |
-| **Dev Stats** | <a href="https://linkerd.devstats.cncf.io/">linkerd.devstats.cncf.io</a> |
+| **Dev Stats** | [linkerd.devstats.cncf.io](https://linkerd.devstats.cncf.io/) |
 
 **Security Audits:**
 - **2019-06-01**: Security audit by Cure53
@@ -59,11 +59,11 @@ Enables cloud native confidential computing by leveraging Trusted Execution Envi
 
 | Property | Details |
 |----------|---------|
-| **Repository** | <a href="https://github.com/confidential-containers/confidential-containers">confidential-containers/confidential-containers</a> |
-| **Homepage** | <a href="https://confidentialcontainers.org/">confidentialcontainers.org</a> |
-| **Dev Stats** | <a href="https://confidentialcontainers.devstats.cncf.io/">confidentialcontainers.devstats.cncf.io</a> |
-| **Slack** | <a href="https://cloud-native.slack.com/">#confidential-containers</a> |
-| **Annual Review** | <a href="https://github.com/cncf/toc/pull/1084">2023-06-15</a> |
+| **Repository** | [confidential-containers/confidential-containers](https://github.com/confidential-containers/confidential-containers) |
+| **Homepage** | [confidentialcontainers.org](https://confidentialcontainers.org/) |
+| **Dev Stats** | [confidentialcontainers.devstats.cncf.io](https://confidentialcontainers.devstats.cncf.io/) |
+| **Slack** | [#confidential-containers](https://cloud-native.slack.com/) |
+| **Annual Review** | [2023-06-15](https://github.com/cncf/toc/pull/1084) |
 
 **Rust Components:** Uses Rust for security-critical components interfacing with TEE technologies.
 
@@ -77,12 +77,12 @@ Bootstrap and maintain trust on the Edge, Cloud, and IoT devices using remote at
 
 | Property | Details |
 |----------|---------|
-| **Repository** | <a href="https://github.com/keylime/keylime">keylime/keylime</a> |
-| **Homepage** | <a href="https://keylime.dev/">keylime.dev</a> |
-| **Twitter** | <a href="https://twitter.com/KeylimeProject">@KeylimeProject</a> |
-| **Dev Stats** | <a href="https://keylime.devstats.cncf.io/">keylime.devstats.cncf.io</a> |
-| **Slack** | <a href="https://cloud-native.slack.com/messages/keylime">#Keylime</a> |
-| **Annual Review** | <a href="https://github.com/cncf/toc/pull/959">2022-11-10</a> |
+| **Repository** | [keylime/keylime](https://github.com/keylime/keylime) |
+| **Homepage** | [keylime.dev](https://keylime.dev/) |
+| **Twitter** | [@KeylimeProject](https://twitter.com/KeylimeProject) |
+| **Dev Stats** | [keylime.devstats.cncf.io](https://keylime.devstats.cncf.io/) |
+| **Slack** | [#Keylime](https://cloud-native.slack.com/messages/keylime) |
+| **Annual Review** | [2022-11-10](https://github.com/cncf/toc/pull/959) |
 
 **Rust Components:** Keylime has Rust components for secure, low-level system interactions and cryptographic operations.
 
@@ -96,12 +96,12 @@ WebAssembly-powered Kubernetes policy engine supporting policies written in mult
 
 | Property | Details |
 |----------|---------|
-| **Repository** | <a href="https://github.com/kubewarden/kubewarden-controller">kubewarden/kubewarden-controller</a> |
-| **Homepage** | <a href="https://www.kubewarden.io">kubewarden.io</a> |
-| **Twitter** | <a href="https://twitter.com/kubewarden">@kubewarden</a> |
-| **Dev Stats** | <a href="https://kubewarden.devstats.cncf.io/">kubewarden.devstats.cncf.io</a> |
-| **Slack** | <a href="https://kubernetes.slack.com/">#kubewarden</a> |
-| **Annual Review** | <a href="https://github.com/cncf/toc/pull/1162">2023-10-10</a> |
+| **Repository** | [kubewarden/kubewarden-controller](https://github.com/kubewarden/kubewarden-controller) |
+| **Homepage** | [kubewarden.io](https://www.kubewarden.io) |
+| **Twitter** | [@kubewarden](https://twitter.com/kubewarden) |
+| **Dev Stats** | [kubewarden.devstats.cncf.io](https://kubewarden.devstats.cncf.io/) |
+| **Slack** | [#kubewarden](https://kubernetes.slack.com/) |
+| **Annual Review** | [2023-10-10](https://github.com/cncf/toc/pull/1162) |
 
 **Rust Usage:** Core runtime written in Rust; supports policy development in Rust for maximum performance and safety.
 
@@ -115,10 +115,10 @@ Free, open source tool enabling controlled, audited access to Kubernetes infrast
 
 | Property | Details |
 |----------|---------|
-| **Repository** | <a href="https://github.com/paralus/paralus">paralus/paralus</a> |
-| **Homepage** | <a href="https://www.paralus.io/">paralus.io</a> |
-| **Dev Stats** | <a href="https://paralus.devstats.cncf.io/">paralus.devstats.cncf.io</a> |
-| **Slack** | <a href="https://paralus.io/slack">#paralus</a> |
+| **Repository** | [paralus/paralus](https://github.com/paralus/paralus) |
+| **Homepage** | [paralus.io](https://www.paralus.io/) |
+| **Dev Stats** | [paralus.devstats.cncf.io](https://paralus.devstats.cncf.io/) |
+| **Slack** | [#paralus](https://paralus.io/slack) |
 
 **Rust Components:** Contains Rust components for security-critical path operations.
 
@@ -132,14 +132,18 @@ The core Rust ecosystem for building Kubernetes applications, providing idiomati
 
 | Property | Details |
 |----------|---------|
-| **Repository** | <a href="https://github.com/kube-rs/kube">kube-rs/kube</a> |
-| **Homepage** | <a href="https://kube.rs">kube.rs</a> |
-| **Dev Stats** | <a href="https://kube.devstats.cncf.io/">kube.devstats.cncf.io</a> |
-| **Slack** | <a href="https://kubernetes.slack.com/">#kube-rs</a> |
+| **Repository** | [kube-rs/kube](https://github.com/kube-rs/kube) |
+| **Homepage** | [kube.rs](https://kube.rs) |
+| **Dev Stats** | [kube.devstats.cncf.io](https://kube.devstats.cncf.io/) |
+| **Slack** | [#kube-rs](https://kubernetes.slack.com/) |
 
 **Pure Rust:** Complete Rust client library for Kubernetes, enabling developers to build controllers, operators, and tools entirely in Rust.
 
 ## Analysis
+
+:::info Key Insight
+Rust's adoption in CNCF projects centers on security-critical and performance-sensitive workloads, with Linkerd proving Rust's viability at the graduated level.
+:::
 
 ### Adoption Trends
 
@@ -171,30 +175,30 @@ Beyond CNCF, several prominent Rust projects power cloud native infrastructure:
 
 | Project | Description | Repository |
 |---------|-------------|------------|
-| **Firecracker** | AWS microVM technology powering Lambda and Fargate | <a href="https://github.com/firecracker-microvm/firecracker">firecracker-microvm/firecracker</a> |
-| **Krustlet** | Kubernetes Kubelet implementation for running WebAssembly workloads | <a href="https://github.com/krustlet/krustlet">krustlet/krustlet</a> |
-| **Wasmtime** | Fast, secure WebAssembly runtime from the Bytecode Alliance | <a href="https://github.com/bytecodealliance/wasmtime">bytecodealliance/wasmtime</a> |
-| **Wasmer** | Leading WebAssembly runtime supporting WASI | <a href="https://github.com/wasmerio/wasmer">wasmerio/wasmer</a> |
+| **Firecracker** | AWS microVM technology powering Lambda and Fargate | [firecracker-microvm/firecracker](https://github.com/firecracker-microvm/firecracker) |
+| **Krustlet** | Kubernetes Kubelet implementation for running WebAssembly workloads | [krustlet/krustlet](https://github.com/krustlet/krustlet) |
+| **Wasmtime** | Fast, secure WebAssembly runtime from the Bytecode Alliance | [bytecodealliance/wasmtime](https://github.com/bytecodealliance/wasmtime) |
+| **Wasmer** | Leading WebAssembly runtime supporting WASI | [wasmerio/wasmer](https://github.com/wasmerio/wasmer) |
 
 ### Observability & Data
 
 | Project | Description | Repository |
 |---------|-------------|------------|
-| **Parseable** | Open source log storage and observability platform for Kubernetes | <a href="https://github.com/parseablehq/parseable">parseablehq/parseable</a> |
-| **InfluxDB** | Time series database (v3) rebuilt in Rust using Apache Arrow/Parquet | <a href="https://github.com/influxdata/influxdb">influxdata/influxdb</a> |
-| **Vector** | High-performance observability data pipeline | <a href="https://github.com/vectordotdev/vector">vectordotdev/vector</a> |
+| **Parseable** | Open source log storage and observability platform for Kubernetes | [parseablehq/parseable](https://github.com/parseablehq/parseable) |
+| **InfluxDB** | Time series database (v3) rebuilt in Rust using Apache Arrow/Parquet | [influxdata/influxdb](https://github.com/influxdata/influxdb) |
+| **Vector** | High-performance observability data pipeline | [vectordotdev/vector](https://github.com/vectordotdev/vector) |
 
 ### Networking & Security
 
 | Project | Description | Repository |
 |---------|-------------|------------|
-| **Pomerium** | Identity-aware access proxy for zero-trust security | <a href="https://github.com/pomerium/pomerium">pomerium/pomerium</a> |
+| **Pomerium** | Identity-aware access proxy for zero-trust security | [pomerium/pomerium](https://github.com/pomerium/pomerium) |
 
 ### Stream Processing
 
 | Project | Description | Repository |
 |---------|-------------|------------|
-| **ArkFlow** | High-performance Rust stream processing engine | <a href="https://github.com/arkflow-rs/arkflow">arkflow-rs/arkflow</a> |
+| **ArkFlow** | High-performance Rust stream processing engine | [arkflow-rs/arkflow](https://github.com/arkflow-rs/arkflow) |
 
 ### Notable Mentions
 
@@ -204,17 +208,17 @@ Beyond CNCF, several prominent Rust projects power cloud native infrastructure:
 
 ## Related Work
 
-- <a href="https://github.com/cncf/landscape">CNCF Landscape</a> - Official CNCF projects and landscape data
-- <a href="https://www.cncf.io/projects/">CNCF Projects</a> - Official CNCF project directory
-- <a href="https://linkerd.io/">Linkerd</a> - Graduated service mesh
-- <a href="https://www.rust-lang.org/">Rust Programming Language</a> - Official Rust website
+- [CNCF Landscape](https://github.com/cncf/landscape) - Official CNCF projects and landscape data
+- [CNCF Projects](https://www.cncf.io/projects/) - Official CNCF project directory
+- [Linkerd](https://linkerd.io/) - Graduated service mesh
+- [Rust Programming Language](https://www.rust-lang.org/) - Official Rust website
 
 ## References
 
-- <a href="https://github.com/cncf/landscape/blob/main/landscape.yml">CNCF Landscape Data</a> - Source of truth for CNCF projects
-- <a href="https://www.cncf.io/blog/2019/08/06/toc-votes-to-move-linkerd-to-incubation/">Linkerd Incubation Announcement</a>
-- <a href="https://www.cncf.io/announcements/2021/07/28/cloud-native-computing-foundation-announces-linkerd-graduation/">Linkerd Graduation Announcement</a>
-- <a href="https://github.com/cncf/toc">CNCF Technical Oversight Committee</a>
+- [CNCF Landscape Data](https://github.com/cncf/landscape/blob/main/landscape.yml) - Source of truth for CNCF projects
+- [Linkerd Incubation Announcement](https://www.cncf.io/blog/2019/08/06/toc-votes-to-move-linkerd-to-incubation/)
+- [Linkerd Graduation Announcement](https://www.cncf.io/announcements/2021/07/28/cloud-native-computing-foundation-announces-linkerd-graduation/)
+- [CNCF Technical Oversight Committee](https://github.com/cncf/toc)
 
 ## Associated Issues
 
