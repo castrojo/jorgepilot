@@ -1,5 +1,4 @@
 ---
-sidebar_position: 4
 ---
 
 # CNCF Rust Projects Analysis
