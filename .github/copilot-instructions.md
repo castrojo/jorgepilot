@@ -555,7 +555,7 @@ Example 1 - Documentation Template Structure:
 | [Item] | [Data] | [Context] |
 
 ## Analysis
-[Curt analysis of the work/issues/PRs]
+[Concise analysis of the work/issues/PRs]
 
 ## Related Work
 - [Issue #123](link) - Description
