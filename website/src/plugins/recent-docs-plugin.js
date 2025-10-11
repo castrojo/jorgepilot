@@ -77,7 +77,7 @@ module.exports = function recentDocsPlugin(context, options) {
               // Get the next non-empty line as description
               for (let j = i + 1; j < lines.length; j++) {
                 const descLine = lines[j].trim();
-                if (descLine && !descLine.startsWith('#') && !descLine.startsWith('[') && !descLine.startsWith(':::')) {
+                if (descLine && !descLine.startsWith('#') && !descLine.startsWith(':::')) {
                   return descLine.substring(0, 150); // Limit description length
                 }
               }
