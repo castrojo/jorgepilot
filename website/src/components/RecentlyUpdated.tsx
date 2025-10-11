@@ -28,7 +28,7 @@ function parseMarkdownLinks(text: string): React.ReactNode[] {
       parts.push(text.substring(lastIndex, match.index));
     }
     
-    // Add the link as an anchor element
+    // Add the link as an anchor element with click event prevention from bubbling
     parts.push(
       <a 
         key={key++}
@@ -36,6 +36,7 @@ function parseMarkdownLinks(text: string): React.ReactNode[] {
         className={styles.descriptionLink}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
       >
         {match[1]}
       </a>
@@ -70,9 +71,11 @@ export default function RecentlyUpdated(): React.JSX.Element {
       <h2>Recently Updated</h2>
       <div className={styles.grid}>
         {recentDocs.map((doc) => (
-          <Link key={doc.id} to={doc.path} className={styles.card}>
+          <div key={doc.id} className={styles.card}>
             <div className={styles.cardContent}>
-              <h3 className={styles.cardTitle}>{doc.title}</h3>
+              <Link to={doc.path} className={styles.cardTitleLink}>
+                <h3 className={styles.cardTitle}>{doc.title}</h3>
+              </Link>
               <p className={styles.cardDescription}>
                 {parseMarkdownLinks(doc.description)}
               </p>
@@ -80,7 +83,7 @@ export default function RecentlyUpdated(): React.JSX.Element {
                 <span className={styles.lastUpdated}>{formatDate(doc.lastUpdatedAt)}</span>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </section>
