@@ -837,7 +837,7 @@ tags:
 
 ## Comparison to CNCF Standards
 
-(Include this section for CNCF projects)
+(Include this section for CNCF projects, omit for non-CNCF projects)
 
 ### [Sandbox/Incubating/Graduated] Level Criteria
 
@@ -849,6 +849,28 @@ tags:
 | [Add all relevant criteria] | ✅ / ⚠️ / ❌ | [Brief evidence] |
 
 **Maturity Assessment:** [Overall assessment of alignment with maturity level expectations]
+
+## Day 2 Operations
+
+(Optional: Include for graduated CNCF projects or infrastructure-focused projects)
+
+### Observability
+
+| Capability | Status | Evidence |
+|------------|--------|----------|
+| **Metrics Collection** | ✅ / ⚠️ / ❌ | [Tools/methods] |
+| **Logging** | ✅ / ⚠️ / ❌ | [Implementation] |
+| **Tracing** | ✅ / ⚠️ / ❌ | [Implementation] |
+| **Dashboards** | ✅ / ⚠️ / ❌ | [Available dashboards] |
+
+### Scalability & Reliability
+
+| Aspect | Status | Details |
+|--------|--------|---------|
+| **SLO/SLI Definitions** | ✅ / ⚠️ / ❌ | [Defined service levels] |
+| **Resource Usage Documentation** | ✅ / ⚠️ / ❌ | [CPU/memory/storage guidance] |
+| **Load Testing** | ✅ / ⚠️ / ❌ | [Test results] |
+| **Backup/Recovery** | ✅ / ⚠️ / ❌ | [Procedures] |
 
 ## Risks & Recommendations
 
@@ -919,6 +941,15 @@ tags:
 - [CNCF DevStats](https://devstats.cncf.io/) - Project activity metrics (if CNCF)
 - [CNCF Landscape](https://landscape.cncf.io/) - Project listing (if CNCF)
 - [Additional reference](link)
+
+## CNCF Blog Posts
+
+(Optional: Include for CNCF projects with recent blog coverage)
+
+| Date | Title | Link |
+|------|-------|------|
+| [YYYY-MM-DD] | [Blog post title] | [URL] |
+| [YYYY-MM-DD] | [Blog post title] | [URL] |
 
 ## Associated Issues
 
