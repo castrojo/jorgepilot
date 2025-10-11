@@ -72,17 +72,6 @@
   font-style: italic;
 }
 
-.placeholderCard {
-  display: flex;
-  flex-direction: column;
-  background: var(--ifm-card-background-color);
-  border: 1px dashed var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  padding: 1.5rem;
-  min-height: 150px;
-  opacity: 0.3;
-}
-
 /* Responsive design */
 @media (max-width: 996px) {
   .grid {
