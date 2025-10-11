@@ -34,11 +34,12 @@ This analysis examines GitHub Actions workflows building OCI container images ac
 
 ### Current State
 
-**Existing Optimizations:**
+:::info Existing Optimizations
 - GitHub Actions cache for RPM downloads
 - container-storage-action for disk space management
 - Rechunking to reduce layer sizes
 - Reusable workflows reduce duplication
+:::
 
 **Build Bottlenecks:**
 - COPR repository enablement (serial operations)
@@ -48,37 +49,53 @@ This analysis examines GitHub Actions workflows building OCI container images ac
 
 ### Optimization Opportunities
 
+:::tip Quick Wins
+Six optimization opportunities identified with measurable time savings
+:::
+
 **1. Smarter Matrix Scheduling**
 
-Build only changed variants on PRs instead of full matrix. Use path-based filtering to detect which image flavors require rebuilding. Potential savings: 20-30 minutes on PR builds.
+Build only changed variants on PRs instead of full matrix. Use path-based filtering to detect which image flavors require rebuilding.
+
+**Potential savings:** 20-30 minutes on PR builds
 
 **2. Parallel COPR Repository Enablement**
 
-Current implementation enables COPR repos serially. Consolidate repo files and run single `dnf makecache` operation. Expected savings: 2-4 minutes per build.
+Current implementation enables COPR repos serially. Consolidate repo files and run single `dnf makecache` operation.
+
+**Expected savings:** 2-4 minutes per build
 
 **3. Base Layer Caching**
 
-Create pre-built base layer images with common dependencies. Downstream images pull cached base instead of rebuilding. Savings: 10-15 minutes on incremental builds.
+Create pre-built base layer images with common dependencies. Downstream images pull cached base instead of rebuilding.
+
+**Savings:** 10-15 minutes on incremental builds
 
 **4. Dependency Pre-fetching**
 
-Download common RPM packages to GitHub Actions cache before build. Avoids repeated downloads across matrix jobs. Savings: 3-5 minutes per job.
+Download common RPM packages to GitHub Actions cache before build. Avoids repeated downloads across matrix jobs.
+
+**Savings:** 3-5 minutes per job
 
 **5. Matrix Optimization**
 
-Reduce matrix size by consolidating similar variants. Use build-time arguments instead of separate jobs where possible. Savings: Reduces total CI time but not individual job time.
+Reduce matrix size by consolidating similar variants. Use build-time arguments instead of separate jobs where possible.
+
+**Savings:** Reduces total CI time but not individual job time
 
 **6. Workflow Consolidation**
 
-Single workflow file with matrix for streams instead of multiple files per repo. Reduces maintenance burden and enables centralized optimization. Savings: No direct time savings but easier optimization.
+Single workflow file with matrix for streams instead of multiple files per repo. Reduces maintenance burden and enables centralized optimization.
+
+**Savings:** No direct time savings but easier optimization
 
 ### Not Recommended
 
-**Parallel Job Multiplication:** GitHub Actions has concurrency limits. Excessive parallelization risks job queuing.
-
-**SBOM Re-enabling:** Currently disabled. Would add 5-10 minutes to build time without clear benefit for image-based distribution.
-
-**External Registry Caching:** Complexity and cost outweigh benefits for current scale.
+:::warning Approaches to Avoid
+- Parallel job multiplication (GitHub Actions concurrency limits)
+- SBOM re-enabling (currently disabled, adds 5-10 minutes)
+- External registry caching (complexity outweighs benefits)
+:::
 
 ## Recommendations
 

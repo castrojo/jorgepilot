@@ -35,23 +35,47 @@ Bluefin provides a cloud-native desktop operating system built on Fedora Silverb
 
 ### Governance
 
-The project maintains 4 core maintainers defined in CODEOWNERS (@castrojo, @p5, @m2Giles, @tulilirockz). Decision-making follows GitHub PR workflow with maintainer approval. Apache 2.0 licensing with Universal Blue Community Guidelines provide governance framework.
+:::tip Maintainer Structure
+4 core maintainers defined in CODEOWNERS: @castrojo, @p5, @m2Giles, @tulilirockz
+:::
+
+Decision-making follows GitHub PR workflow with maintainer approval. Apache 2.0 licensing with Universal Blue Community Guidelines provide governance framework.
 
 ### Community Activity
 
-Daily commits include automated dependency updates via Renovate bot and manual contributions for features and fixes. Recent activity shows @castrojo leading cleanup and infrastructure work, with contributions from @EyeCantCU (developer tooling), @valerie-tar-gz (Bazaar additions), and others. Issue count of 84 appears manageable with active triage.
+Daily commits include automated dependency updates via Renovate bot and manual contributions for features and fixes. Recent activity shows @castrojo leading cleanup and infrastructure work, with contributions from @EyeCantCU (developer tooling), @valerie-tar-gz (Bazaar additions), and others.
+
+:::info Issue Management
+84 open issues with active triage and appropriate labeling
+:::
 
 ### Engineering Practices
 
-GitHub Actions provides CI/CD with daily image builds across multiple streams (main, stable, gts). Build times average 30-45 minutes for full matrix. Container-first approach uses OCI images with OSTree-based atomic updates. Codacy integration shows Grade A code quality. Secure Boot support includes custom key with enrollment automation.
+GitHub Actions provides CI/CD with daily image builds across multiple streams (main, stable, gts). Build times average 30-45 minutes for full matrix. Container-first approach uses OCI images with OSTree-based atomic updates.
+
+**Key Technologies:**
+- Codacy integration (Grade A code quality)
+- Secure Boot support with custom key enrollment
+- OSTree atomic updates with automatic rollback
 
 ### Security
 
-2FA requirements and branch protection are enabled. Container scanning and dependency updates address vulnerabilities. Clear vulnerability reporting process documented. Immutable filesystem with SELinux provides runtime hardening.
+:::note Security Features
+- 2FA requirements for maintainers
+- Branch protection enabled
+- Container scanning active
+- Immutable filesystem with SELinux
+:::
+
+Clear vulnerability reporting process documented. Dependency updates address vulnerabilities promptly through automated bot.
 
 ### Operational Maturity
 
-Atomic updates with automatic rollback reduce risk. Multiple release streams support different user preferences. Automated ISO generation for installations. Documentation portal at docs.projectbluefin.io with community forum at community.projectbluefin.io.
+Atomic updates with automatic rollback reduce deployment risk. Multiple release streams (main, stable, gts) support different user preferences. Automated ISO generation for fresh installations.
+
+**Documentation Resources:**
+- Documentation portal: [docs.projectbluefin.io](https://docs.projectbluefin.io/)
+- Community forum: [community.projectbluefin.io](https://community.projectbluefin.io/)
 
 ## Related Work
 
@@ -69,7 +93,7 @@ Atomic updates with automatic rollback reduce risk. Multiple release streams sup
 
 ## Associated Issues
 
-Recent notable issues include GPU compatibility concerns (#3300), Secure Boot challenges (#3354), and enhancement requests for developer tooling (#3353, #3348). Issues show active community engagement with appropriate triage and labeling.
+Recent notable issues include GPU compatibility concerns ([#3300](https://github.com/ublue-os/bluefin/issues/3300)), Secure Boot challenges ([#3354](https://github.com/ublue-os/bluefin/issues/3354)), and enhancement requests for developer tooling ([#3353](https://github.com/ublue-os/bluefin/issues/3353), [#3348](https://github.com/ublue-os/bluefin/issues/3348)). Issues show active community engagement with appropriate triage and labeling.
 
 ---
 

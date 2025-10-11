@@ -27,19 +27,27 @@ This report examines COPR usage across [@ublue-os/bluefin](https://github.com/ub
 
 ### First-Party Repositories
 
-**ublue-os/staging**
+:::tip ublue-os Controlled
+Four COPRs maintained directly by the ublue-os organization
+:::
+
+**ublue-os/staging**  
 Staging ground for packages being tested before promotion to main. Used in bluefin, bluefin-lts, and main images.
 
-**ublue-os/packages**
+**ublue-os/packages**  
 Main package repository with ublue-os-specific utilities. Contains project-specific tools and configurations.
 
-**ublue-os/akmods**
+**ublue-os/akmods**  
 Pre-built kernel modules for various hardware and drivers. Includes Framework laptops, gaming controllers, display drivers, network adapters. Provides VirtualBox, xone, openrazer, v4l2loopback, kvmfr, evdi, and ZFS modules.
 
-**ublue-os/ucore**
+**ublue-os/ucore**  
 Packages specific to the ucore minimal server image variant.
 
 ### Third-Party Repositories
+
+:::info External Dependencies
+10 third-party COPRs provide specialized packages not available in Fedora
+:::
 
 **kylegospo/** repositories provide gaming-related packages and tools. Multiple COPRs from this maintainer suggest close collaboration with ublue-os team.
 
@@ -65,7 +73,11 @@ Packages specific to the ucore minimal server image variant.
 
 ### Risk Assessment
 
-**looking-glass-kvmfr** kernel module from third-party source requires security audit. Kernel modules pose elevated risk due to privileged access. Recommendation: vendor module in ublue-os/akmods for full control and security oversight.
+:::warning Security Consideration
+looking-glass-kvmfr kernel module from third-party source requires security audit
+:::
+
+Kernel modules pose elevated risk due to privileged system access. Recommendation: vendor module in ublue-os/akmods for full control and security oversight.
 
 ## Recommendations
 
@@ -103,4 +115,4 @@ Packages specific to the ucore minimal server image variant.
 ---
 
 **Analysis Date:** October 2025  
-**Methodology:** Analysis of build scripts, Containerfiles, and repository configurations across ublue-os projects. Searched for `dnf copr enable` and COPR URL patterns.
+**Methodology:** Analysis of build scripts, Containerfiles, and repository configurations across ublue-os projects

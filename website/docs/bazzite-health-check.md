@@ -35,27 +35,57 @@ Bazzite provides a Fedora Atomic-based gaming distribution for desktop PCs, Stea
 
 ### Governance
 
-Multi-maintainer structure with @KyleGospo, @EyeCantCU, @antheas, @HikariKnight, and @noelmiller as core contributors. GitHub-based workflow with PR reviews. Apache 2.0 licensing. Universal Blue Community Guidelines provide Code of Conduct framework.
+:::tip Maintainer Team
+Multi-maintainer structure: @KyleGospo, @EyeCantCU, @antheas, @HikariKnight, @noelmiller
+:::
+
+GitHub-based workflow with PR reviews. Apache 2.0 licensing. Universal Blue Community Guidelines provide Code of Conduct framework.
 
 ### Community Activity
 
-Highest activity among Universal Blue projects reflects large gaming community. Daily commits across multiple image variants (Desktop, Deck, GNOME, KDE, NVIDIA). Issue count of 451 reflects active user base reporting bugs and requesting features. Active Discord and Discourse forums provide community support channels.
+Highest activity among Universal Blue projects reflects large gaming community. Daily commits across multiple image variants (Desktop, Deck, GNOME, KDE, NVIDIA).
+
+:::info Community Engagement
+- 451 open issues (active user base)
+- Discord and Discourse forums active
+- Multiple hardware configurations supported
+:::
+
+Issue volume reflects engaged user base reporting bugs and requesting features. Maintainer team responds to critical issues promptly.
 
 ### Engineering Practices
 
-GitHub Actions builds matrix of variants for different hardware configurations and desktop environments. Automated ISO generation for all variants. Cosign image signing with public key verification. Distribution via GHCR.io container registry. Gaming-optimized kernel from kernel-bazzite project provides performance enhancements.
+GitHub Actions builds matrix of variants for different hardware configurations and desktop environments. Automated ISO generation for all variants. Cosign image signing with public key verification. Distribution via GHCR.io container registry.
+
+**Build Infrastructure:**
+- Matrix builds for variant coverage
+- Automated ISO generation
+- Container image signing (Cosign)
+- Gaming-optimized kernel integration
 
 ### Gaming Focus
 
-Custom kernel patches, HDR support, and Steam Deck compatibility distinguish Bazzite from other Universal Blue variants. Handheld Daemon (hhd) integration provides input support for gaming handhelds. Pre-configured gaming tools and optimizations reduce setup complexity for users.
+:::note Gaming Features
+- Custom kernel patches for performance
+- HDR support for compatible displays
+- Steam Deck native compatibility
+- Handheld Daemon (hhd) integration
+:::
+
+Pre-configured gaming tools and optimizations reduce setup complexity. Handheld input support covers various gaming devices beyond Steam Deck.
 
 ### Security
 
-Container signing via Cosign. Branch protection and 2FA requirements for maintainers. Atomic updates with rollback capability reduce risk from problematic updates.
+Container signing via Cosign ensures image authenticity. Branch protection and 2FA requirements for maintainers. Atomic updates with rollback capability reduce risk from problematic updates.
 
 ### Operational Maturity
 
-Multiple image variants support diverse hardware (desktop, HTPC, handheld devices). Automated builds maintain currency with upstream Fedora. Documentation at docs.bazzite.gg with download portal at download.bazzite.gg. Website at bazzite.gg provides project information.
+Multiple image variants support diverse hardware (desktop, HTPC, handheld devices). Automated builds maintain currency with upstream Fedora releases.
+
+**Resources:**
+- Documentation: [docs.bazzite.gg](https://docs.bazzite.gg/)
+- Download portal: [download.bazzite.gg](https://download.bazzite.gg/)
+- Website: [bazzite.gg](https://bazzite.gg/)
 
 ## Related Work
 
