@@ -70,6 +70,10 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    './src/plugins/recent-docs-plugin.js',
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',

@@ -23,8 +23,6 @@
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 8px;
   padding: 1.5rem;
-  text-decoration: none;
-  color: inherit;
   transition: all 0.2s ease-in-out;
   min-height: 150px;
 }
@@ -33,7 +31,6 @@
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-color: var(--ifm-color-primary);
-  text-decoration: none;
 }
 
 .cardContent {
@@ -42,11 +39,25 @@
   height: 100%;
 }
 
+.cardTitleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardTitleLink:hover {
+  text-decoration: none;
+}
+
 .cardTitle {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--ifm-heading-color);
+  transition: color 0.2s ease-in-out;
+}
+
+.cardTitleLink:hover .cardTitle {
+  color: var(--ifm-color-primary);
 }
 
 .cardDescription {
@@ -55,6 +66,18 @@
   color: var(--ifm-color-emphasis-700);
   margin-bottom: 1rem;
   line-height: 1.5;
+}
+
+.descriptionLink {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.descriptionLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
 }
 
 .cardFooter {
