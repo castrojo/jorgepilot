@@ -1,5 +1,4 @@
 ---
-sidebar_position: 100
 tags:
   - project-health
   - python

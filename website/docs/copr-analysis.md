@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 ---
 
 # COPR Usage Analysis for ublue-os

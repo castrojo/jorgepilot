@@ -1,5 +1,4 @@
 ---
-sidebar_position: 10
 tags:
   - ublue
   - project-health
