@@ -57,6 +57,18 @@
   line-height: 1.5;
 }
 
+.descriptionLink {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.descriptionLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
 .cardFooter {
   display: flex;
   justify-content: flex-end;
