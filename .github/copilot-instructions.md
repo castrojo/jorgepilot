@@ -541,32 +541,414 @@ This guide should be updated when:
 
 **Example**
 
-Example 1 - Documentation Template Structure:
+Example 1 - Project Health Check Template Structure:
+
 """
+---
+tags:
+  - cncf  # or ublue, personal-project, etc.
+  - project-health
+  - [project-name]
+---
+
+# [Project Name] Project Health Check
+
 ## Executive Summary
-[2-3 sentence overview of the topic/analysis]
+
+[2-3 sentence overview of project health, maturity level assessment, and key findings. Example: "@org/project demonstrates strong project health with active development and robust community engagement. Analysis of [date range] shows [key metric 1], [key metric 2], and [key metric 3].]
 
 ## Overview
-[Brief context about what this report covers]
 
-## Key Findings
-| Metric | Value | Notes |
+[Brief project context: what it does, maturity level (if CNCF), analysis period, and scope of review.]
+
+**Repository:** [@org/project](https://github.com/org/project)  
+**Created:** [Month Year]  
+**Maturity Level:** [Sandbox/Incubating/Graduated] (if CNCF)  
+**Stars:** [Number] (as of [Date])  
+**Forks:** [Number]  
+**Open Issues:** [Number]  
+**License:** [License Type]
+
+**Analysis Period:** [Start Date] - [End Date] (Past 365 days)
+
+## Responsiveness
+
+:::tip [Excellent/Good/Moderate/Concern] Status
+[Brief statement about overall responsiveness]
+:::
+
+### Pull Request Responsiveness
+
+| Metric | Status | Evidence |
+|--------|--------|----------|
+| **Average Response Time** | [< 24 hours / 3-7 days / > 1 week] | [Evidence from recent PRs] |
+| **Median Time to Merge** | [X days] | [Evidence] |
+| **Review Depth** | [Thorough / Adequate / Minimal] | [Evidence] |
+| **Stale PR Management** | [Active / Moderate / Concern] | [Evidence] |
+
+**Recent PR Examples ([Month Year]):**
+- PR #[number]: [Description] merged [timeframe] ([Date])
+- PR #[number]: [Description] merged [timeframe] ([Date])
+- PR #[number]: [Description] merged [timeframe] ([Date])
+
+### Issue Responsiveness
+
+| Metric | Status | Evidence |
+|--------|--------|----------|
+| **Issue Triage Time** | [< 72 hours / 1-2 weeks / > 2 weeks] | [Evidence] |
+| **Bug Response** | [< 48 hours / 3-7 days / > 1 week] | [Evidence] |
+| **Feature Discussions** | [Active / Moderate / Limited] | [Evidence] |
+| **Issue Resolution Rate** | [Healthy / Adequate / Backlog growing] | [Evidence] |
+
+**Open Issues**: [Number] ([assessment of manageability])
+**Issue Labels**: [Description of triage system]
+
+## Contributor Activity
+
+:::tip [Strong/Moderate/Limited] [Momentum/Growth/Activity]
+[Brief statement about contributor activity patterns]
+:::
+
+### Overall Activity Metrics
+
+| Period | Commits | Pull Requests | Unique Contributors | New Contributors |
+|--------|---------|---------------|---------------------|------------------|
+| **Q4 [Year]** | [Number] | [Number] | [Number] | [Number] |
+| **Q1 [Year]** | [Number] | [Number] | [Number] | [Number] |
+| **Q2 [Year]** | [Number] | [Number] | [Number] | [Number] |
+| **Q3 [Year]** | [Number] | [Number] | [Number] | [Number] |
+
+**Commit Velocity:**
+- **Daily average**: [Number] commits
+- **Peak activity**: [Days/Times]
+- **Contributor mix**: [X%] core maintainers, [Y%] community
+
+### Notable Contributors (Past 12 Months)
+
+**Top 10 Active Contributors:**
+1. **@username1** - [Role/Focus]
+2. **@username2** - [Role/Focus]
+3. **@username3** - [Role/Focus]
+4. **@username4** - [Role/Focus]
+5. **@username5** - [Role/Focus]
+6. **@username6** - [Role/Focus]
+7. **@username7** - [Role/Focus]
+8. **@username8** - [Role/Focus]
+9. **@username9** - [Role/Focus]
+10. **@username10** - [Role/Focus]
+
+### Contributor Growth
+
+**New Contributor Onboarding:**
+- [Number]+ new contributors in [timeframe]
+- [Evidence of onboarding practices]
+- [Evidence of mentorship or guidance]
+- [Labels or mechanisms for newcomers]
+
+## Contributor Risk
+
+:::caution [High/Moderate/Low] Concentration
+[Brief statement about maintainer/contributor concentration]
+:::
+
+### Maintainer Concentration
+
+| Risk Factor | Assessment | Details |
+|-------------|------------|---------|
+| **Individual Concentration** | [High / Moderate / Low] | Top [X] contributors: [Y]% of commits |
+| **Single Point of Failure** | [High / Moderate / Low] | [Assessment of bus factor] |
+| **Organization Diversity** | [Excellent / Good / Limited / Single] | [X] organizations represented |
+| **Geographic Distribution** | [Global / Regional / Concentrated] | [Evidence of timezone/region coverage] |
+
+### Bus Factor Analysis
+
+**Bus Factor: [Number]** ([High/Moderate/Low Risk])
+
+[Analysis of what would happen if top contributors became unavailable]
+
+## Project Velocity
+
+:::tip [Excellent/Good/Moderate/Limited] Momentum
+[Brief statement about development pace and delivery]
+:::
+
+### Commit Activity (Past 12 Months)
+
+| Metric | Value | Trend |
 |--------|-------|-------|
-| [Item] | [Data] | [Context] |
+| **Total Commits** | [Number] | [↑ Increasing / → Stable / ↓ Decreasing] |
+| **Average Commits/Day** | [Number] | [↑ / → / ↓] |
+| **Active Days** | [Number]/365 | [X%] |
+| **Longest Gap** | [Number] days | [Context] |
 
-## Analysis
-[Concise analysis of the work/issues/PRs]
+### Pull Request Throughput
+
+| Metric | Value | Assessment |
+|--------|-------|------------|
+| **PRs Opened** | [Number] | [Context] |
+| **PRs Merged** | [Number] | [Context] |
+| **PRs Closed (unmerged)** | [Number] | [Context] |
+| **Average PR Lifespan** | [Number] days | [Healthy / Adequate / Concern] |
+
+### Issue Resolution
+
+| Metric | Value | Assessment |
+|--------|-------|------------|
+| **Issues Opened** | [Number] | [Context] |
+| **Issues Closed** | [Number] | [Context] |
+| **Net Change** | [+/-Number] | [Backlog growing/stable/shrinking] |
+| **Average Resolution Time** | [Number] days | [Assessment] |
+
+## Release Activity
+
+:::tip [Excellent/Good/Moderate/Concern] [Cadence/Consistency]
+[Brief statement about release patterns and frequency]
+:::
+
+### Recent Releases (Past 12 Months)
+
+| Version | Release Date | Days Since Previous | Type | Highlights |
+|---------|--------------|---------------------|------|-----------|
+| [v1.2.3] | [Date] | [Number] | [Major/Minor/Patch] | [Key changes] |
+| [v1.2.2] | [Date] | [Number] | [Major/Minor/Patch] | [Key changes] |
+| [v1.2.1] | [Date] | [Number] | [Major/Minor/Patch] | [Key changes] |
+
+### Release Metrics
+
+| Metric | Value | Assessment |
+|--------|-------|------------|
+| **Release Cadence** | [Frequency] | [Monthly / Quarterly / Semi-annual / Annual] |
+| **Release Consistency** | [Regular / Variable] | [Context] |
+| **Version Strategy** | [SemVer / CalVer / Other] | [Evidence] |
+| **Pre-release Testing** | [Extensive / Adequate / Limited] | [Evidence] |
+
+## Governance & Maintainership
+
+:::info [Strong/Adequate/Basic] Governance
+[Brief statement about governance maturity]
+:::
+
+### Governance Structure
+
+| Indicator | Status | Evidence |
+|-----------|--------|----------|
+| **Code of Conduct** | ✅ / ⚠️ / ❌ | [CoC type or link] |
+| **Contributing Guide** | ✅ / ⚠️ / ❌ | [Quality assessment] |
+| **Security Policy** | ✅ / ⚠️ / ❌ | [SECURITY.md or disclosure process] |
+| **License** | ✅ / ⚠️ / ❌ | [License type] |
+| **Governance Documentation** | ✅ / ⚠️ / ❌ | [Documentation quality] |
+| **Decision-Making Transparency** | ✅ / ⚠️ / ❌ | [Evidence] |
+
+### Maintainer Structure
+
+**Active Maintainers: [Number]**
+
+| Maintainer | Organization | Focus Area | Activity Level |
+|------------|--------------|------------|----------------|
+| @username1 | [Company/Org] | [Area] | [High/Medium/Low] |
+| @username2 | [Company/Org] | [Area] | [High/Medium/Low] |
+| @username3 | [Company/Org] | [Area] | [High/Medium/Low] |
+
+### Organizational Diversity
+
+**Organizations Represented: [Number]**
+
+[List organizations contributing maintainers or significant code]
+
+## Inclusivity Indicators
+
+:::tip [Excellent/Good/Adequate/Limited] Inclusivity
+[Brief statement about community inclusivity and welcoming practices]
+:::
+
+### Community Support
+
+**Communication Channels:**
+- [Channel 1]: [Activity level and purpose]
+- [Channel 2]: [Activity level and purpose]
+- [Channel 3]: [Activity level and purpose]
+
+**Maintainer Tone:** [Assessment of communication style with examples]
+
+### Documentation & Accessibility
+
+| Indicator | Status | Notes |
+|-----------|--------|-------|
+| **README Quality** | ✅ / ⚠️ / ❌ | [Assessment] |
+| **Getting Started Guide** | ✅ / ⚠️ / ❌ | [Assessment] |
+| **API Documentation** | ✅ / ⚠️ / ❌ | [Assessment] |
+| **Contributor Guide** | ✅ / ⚠️ / ❌ | [Assessment] |
+| **Issue Templates** | ✅ / ⚠️ / ❌ | [Assessment] |
+| **PR Templates** | ✅ / ⚠️ / ❌ | [Assessment] |
+
+## Security Practices
+
+:::info [Strong/Adequate/Basic] Security Posture
+[Brief statement about security practices and maturity]
+:::
+
+### Security Implementation
+
+| Practice | Status | Evidence |
+|----------|--------|----------|
+| **Security Policy (SECURITY.md)** | ✅ / ⚠️ / ❌ | [Link or details] |
+| **Vulnerability Disclosure Process** | ✅ / ⚠️ / ❌ | [Process description] |
+| **Security Response Team** | ✅ / ⚠️ / ❌ | [Team details] |
+| **OpenSSF Best Practices Badge** | ✅ Passing / ✅ Silver / ✅ Gold / ❌ None | [Badge level] |
+| **Security Audit** | ✅ / ⚠️ / ❌ / N/A | [Audit date and findings] |
+| **Dependabot/Renovate** | ✅ / ⚠️ / ❌ | [Automation status] |
+| **SAST/Code Scanning** | ✅ / ⚠️ / ❌ | [Tools in use] |
+| **Branch Protection** | ✅ / ⚠️ / ❌ | [Rules in place] |
+
+### Security Findings (if applicable)
+
+**Critical/High:** [Number] ([Status])
+**Medium:** [Number] ([Status])
+**Low:** [Number] ([Status])
+
+[Details on any unresolved findings or remediation plans]
+
+## Adoption & Ecosystem
+
+:::tip [Strong/Growing/Moderate/Limited] Adoption
+[Brief statement about adoption and ecosystem integration]
+:::
+
+### Known Adopters
+
+**Public Adopters: [Number]**
+
+| Organization | Usage Level | Use Case | Source |
+|--------------|-------------|----------|--------|
+| [Company 1] | Production / Test / Dev | [Description] | [Link] |
+| [Company 2] | Production / Test / Dev | [Description] | [Link] |
+| [Company 3] | Production / Test / Dev | [Description] | [Link] |
+
+### Ecosystem Integration
+
+**Compatible Projects/Platforms:**
+- [Integration 1]: [Description]
+- [Integration 2]: [Description]
+- [Integration 3]: [Description]
+
+**Mentions/Coverage:**
+- [Conference/Blog/Article]: [Brief note]
+- [Conference/Blog/Article]: [Brief note]
+
+## Comparison to CNCF Standards
+
+(Include this section for CNCF projects)
+
+### [Sandbox/Incubating/Graduated] Level Criteria
+
+| Criterion | Status | Evidence |
+|-----------|--------|----------|
+| [Criterion 1] | ✅ / ⚠️ / ❌ | [Brief evidence] |
+| [Criterion 2] | ✅ / ⚠️ / ❌ | [Brief evidence] |
+| [Criterion 3] | ✅ / ⚠️ / ❌ | [Brief evidence] |
+| [Add all relevant criteria] | ✅ / ⚠️ / ❌ | [Brief evidence] |
+
+**Maturity Assessment:** [Overall assessment of alignment with maturity level expectations]
+
+## Risks & Recommendations
+
+:::caution Areas for [Monitoring/Attention/Improvement]
+[Brief statement about key concerns or areas needing attention]
+:::
+
+### Identified Risks
+
+| Risk | Severity | Impact | Likelihood |
+|------|----------|--------|------------|
+| **[Risk 1]** | 🔴 Critical / 🟡 Medium / 🟢 Low | [Impact description] | [High/Medium/Low] |
+| **[Risk 2]** | 🔴 Critical / 🟡 Medium / 🟢 Low | [Impact description] | [High/Medium/Low] |
+| **[Risk 3]** | 🔴 Critical / 🟡 Medium / 🟢 Low | [Impact description] | [High/Medium/Low] |
+
+### Recommendations
+
+| Priority | Recommendation | Rationale | Timeline |
+|----------|----------------|-----------|----------|
+| **High** | [Action 1] | [Why this matters] | [Timeframe] |
+| **Medium** | [Action 2] | [Why this matters] | [Timeframe] |
+| **Low** | [Action 3] | [Why this matters] | [Timeframe] |
+
+## Areas of Excellence
+
+(Optional: Highlight what the project does exceptionally well)
+
+- **[Area 1]**: [Description of exemplary practice]
+- **[Area 2]**: [Description of exemplary practice]
+- **[Area 3]**: [Description of exemplary practice]
+
+## Project Maturity Assessment
+
+**Maturity Level**: [Level] ([Aligned with expectations / Exceeds / Below])
+
+**Characteristics:**
+- ✅ / ⚠️ / ❌ [Characteristic 1]
+- ✅ / ⚠️ / ❌ [Characteristic 2]
+- ✅ / ⚠️ / ❌ [Characteristic 3]
+- ✅ / ⚠️ / ❌ [Characteristic 4]
+
+**Suitable For:**
+- [Use case 1]
+- [Use case 2]
+- [Use case 3]
+
+**Not Suitable For:**
+- [Limitation 1]
+- [Limitation 2]
+- [Limitation 3]
+
+## Conclusion
+
+[2-3 paragraph summary of overall health, key strengths, areas for improvement, and final health grade]
+
+**Health Grade: [A+/A/A-/B+/B/B-/C+/C/C-/D/F] ([Excellent/Good/Fair/Poor])**
 
 ## Related Work
-- [Issue #123](link) - Description
-- [PR #456](link) - Description
+
+- [Related Health Check 1](/path-to-doc) - [Brief description]
+- [Related Health Check 2](/path-to-doc) - [Brief description]
+- [TAG Contributor Strategy Health Check Guide](/tag-contributor-strategy-guide)
+- [Relevant external resource](link)
 
 ## References
-- [Source 1](link)
-- [Source 2](link)
+
+- [@org/project](https://github.com/org/project) - Project repository
+- [CNCF DevStats](https://devstats.cncf.io/) - Project activity metrics (if CNCF)
+- [CNCF Landscape](https://landscape.cncf.io/) - Project listing (if CNCF)
+- [Additional reference](link)
 
 ## Associated Issues
-| Issue | Status | Priority | Link |
-|-------|--------|----------|------|
-| [Title] | [Open/Closed] | [High/Med/Low] | [URL] |
+
+| Issue # | Project | Status | Duration | Link |
+|---------|---------|--------|----------|------|
+| #[number] | [Project] | [Open/Resolved/Archived] | [X] days | [Description](link) |
+| #[number] | [Project] | [Open/Resolved/Archived] | [X] days | [Description](link) |
+
+## Methodology
+
+**Data Sources:**
+- GitHub API (commits, PRs, releases, issues)
+- Repository file analysis (governance docs, security policies)
+- [Additional sources as relevant]
+
+**Analysis Period:** [Start Date] - [End Date] (365 days)
+
+**Scope:** This health check focuses on observable project activity over the past 12 months, including [specific aspects analyzed]. [Note any limitations, such as no adopter interviews conducted.]
+
+**Metrics Collection:**
+- Commit and PR data: GitHub REST API v3
+- Contributor analysis: GitHub GraphQL API v4
+- Release data: GitHub Releases API
+- [Additional methodology notes]
+
+---
+
+**Report Generated**: [Date]  
+**Analyst**: GitHub Copilot  
+**Data Source**: [@org/project](https://github.com/org/project) repository (GitHub API)
+
+**Note on Data:** This analysis focuses on [scope description]. [Any additional caveats or notes about the data.]
 """
