@@ -5,9 +5,9 @@ tags:
   - contributing
 ---
 
-# Bluefin Detailed Contributor's Guide
+# Bluefin Contributor's Guide
 
-This comprehensive guide provides detailed instructions for contributing to [Bluefin](https://projectbluefin.io), the Fedora Atomic-based developer workstation. Whether you're fixing bugs, adding features, or improving documentation, this guide will help you contribute effectively using the workflows established by the Bluefin maintainer team.
+This guide provides detailed instructions for contributing to [Bluefin](https://projectbluefin.io), the Fedora Atomic-based developer workstation. Whether you're fixing bugs, adding features, or improving documentation, this guide will help you contribute effectively using the workflows established by the Bluefin maintainer team.
 
 ## Overview
 
