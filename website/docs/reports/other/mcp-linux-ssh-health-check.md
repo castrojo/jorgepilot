@@ -17,6 +17,7 @@ date: 2025-10-12
 [@subpop/mcp_linux_ssh](https://github.com/subpop/mcp_linux_ssh) is an MCP server that provides AI assistants with secure remote system administration capabilities over SSH. This health check evaluates project activity from **September 25, 2025 to October 8, 2025** (project inception to present) - approximately 2 weeks of development.
 
 **Project Stats (as of October 8, 2025):**
+
 - **Created**: September 25, 2025
 - **Total Commits**: 34 commits
 - **Current Version**: v0.1.1 (October 3, 2025)
@@ -37,11 +38,13 @@ Intensive development burst with 34 commits in first 2 weeks shows focused effor
 ### Commit Activity (First 2 Weeks)
 
 **September 25 - October 7, 2025:**
+
 - **Total Commits**: 34
 - **Daily Average**: 2-3 commits
 - **Peak Activity**: October 1-7 (feature additions and refinements)
 
 **Recent Commit Examples:**
+
 - Oct 7: Documentation improvements for copy_file tool
 - Oct 7: Added rsync-based file copying with backups
 - Oct 7: SSH options support via -o flags
@@ -56,6 +59,7 @@ Intensive development burst with 34 commits in first 2 weeks shows focused effor
 ### Release Cadence
 
 **Release History:**
+
 - **v0.1.1** (October 3, 2025) - 8 days after initial release
 - **v0.1.0** (September 25, 2025) - Initial release
 
@@ -63,12 +67,12 @@ Intensive development burst with 34 commits in first 2 weeks shows focused effor
 
 ### Development Velocity
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **Commits (Week 1)** | 14 | High velocity |
-| **Commits (Week 2)** | 20 | Increasing momentum |
-| **Features Added** | 4 major tools | Rapid feature delivery |
-| **Releases** | 2 in 2 weeks | Active release management |
+| Metric               | Value         | Assessment                |
+| -------------------- | ------------- | ------------------------- |
+| **Commits (Week 1)** | 14            | High velocity             |
+| **Commits (Week 2)** | 20            | Increasing momentum       |
+| **Features Added**   | 4 major tools | Rapid feature delivery    |
+| **Releases**         | 2 in 2 weeks  | Active release management |
 
 ## Responsiveness
 
@@ -79,6 +83,7 @@ As a solo developer project, response patterns reflect personal availability rat
 ### Issue & PR Management
 
 **Current Status:**
+
 - **Open Issues**: 0
 - **Open Pull Requests**: 0
 - **Activity**: All development via direct commits to main
@@ -93,17 +98,18 @@ Professional development practices with automated builds, multi-platform support
 
 ### Development Infrastructure
 
-| Criterion | Status | Evidence |
-|-----------|--------|----------|
-| **CI/CD Automation** | ✅ Excellent | GitHub Actions for automated builds on push/PR |
+| Criterion                 | Status       | Evidence                                            |
+| ------------------------- | ------------ | --------------------------------------------------- |
+| **CI/CD Automation**      | ✅ Excellent | GitHub Actions for automated builds on push/PR      |
 | **Multi-Platform Builds** | ✅ Excellent | 6 platform targets (Linux, macOS, Windows, aarch64) |
-| **Release Automation** | ✅ Excellent | Automated binary builds attached to releases |
-| **Code Quality** | ✅ Good | Rust with clippy linting in CI |
-| **Dependency Management** | ✅ Good | Modern Rust dependencies, edition 2024 |
+| **Release Automation**    | ✅ Excellent | Automated binary builds attached to releases        |
+| **Code Quality**          | ✅ Good      | Rust with clippy linting in CI                      |
+| **Dependency Management** | ✅ Good      | Modern Rust dependencies, edition 2024              |
 
 ### Technical Architecture
 
 **Core Technologies:**
+
 - **Language**: Rust 2024 edition
 - **MCP Framework**: rmcp 0.6.4 with transport-io
 - **Async Runtime**: Tokio 1.47 with multi-threading
@@ -111,6 +117,7 @@ Professional development practices with automated builds, multi-platform support
 - **CLI Execution**: tokio::process for command spawning
 
 **Key Features:**
+
 - **Four Tools**: Local Run, SSH, SSH Sudo, Copy_File (rsync)
 - **Resource Discovery**: Public SSH keys listing
 - **Configurable Timeouts**: Per-command timeout control
@@ -135,6 +142,7 @@ Professional development practices with automated builds, multi-platform support
 ### Build & Release Process
 
 **Automated Workflows:**
+
 - **Build on Push**: Runs `cargo build --release` and `cargo clippy`
 - **Release on Tag**: Creates GitHub release with binaries
 - **Multi-Platform**: x86_64-linux, aarch64-linux, x86_64-macos, aarch64-macos (v0.1.1)
@@ -146,16 +154,17 @@ Professional development practices with automated builds, multi-platform support
 Comprehensive documentation with multiple use cases, detailed examples, and setup instructions for various AI platforms.
 :::
 
-| Aspect | Status | Evidence |
-|--------|--------|----------|
-| **README Completeness** | ✅ Excellent | 16KB comprehensive guide |
-| **Setup Instructions** | ✅ Excellent | Multiple platforms (Claude, Gemini, VSCode, Cursor, Goose) |
-| **Use Case Examples** | ✅ Excellent | Real-world sysadmin scenarios |
-| **API Documentation** | ✅ Excellent | All tools and parameters documented |
-| **Security Guidance** | ✅ Good | SSH best practices and considerations |
-| **Troubleshooting** | ✅ Good | Common issues and solutions |
+| Aspect                  | Status       | Evidence                                                   |
+| ----------------------- | ------------ | ---------------------------------------------------------- |
+| **README Completeness** | ✅ Excellent | 16KB comprehensive guide                                   |
+| **Setup Instructions**  | ✅ Excellent | Multiple platforms (Claude, Gemini, VSCode, Cursor, Goose) |
+| **Use Case Examples**   | ✅ Excellent | Real-world sysadmin scenarios                              |
+| **API Documentation**   | ✅ Excellent | All tools and parameters documented                        |
+| **Security Guidance**   | ✅ Good      | SSH best practices and considerations                      |
+| **Troubleshooting**     | ✅ Good      | Common issues and solutions                                |
 
 **Documentation Highlights:**
+
 - Detailed use case scenarios (automated issue discovery, intelligent troubleshooting)
 - Platform-specific setup for 5+ MCP clients
 - SSH configuration best practices
@@ -171,25 +180,25 @@ Governance structures typical of new solo developer projects - may evolve with c
 
 ### Current State
 
-| Criterion | Status | Evidence |
-|-----------|--------|----------|
-| **License** | ✅ MIT | Clear open source license |
-| **Contributing Guide** | ❌ None | Not yet established |
-| **Code of Conduct** | ❌ None | Not yet established |
-| **Issue Templates** | ❌ None | Not yet configured |
-| **Security Policy** | ❌ None | No SECURITY.md |
+| Criterion                    | Status  | Evidence                   |
+| ---------------------------- | ------- | -------------------------- |
+| **License**                  | ✅ MIT  | Clear open source license  |
+| **Contributing Guide**       | ❌ None | Not yet established        |
+| **Code of Conduct**          | ❌ None | Not yet established        |
+| **Issue Templates**          | ❌ None | Not yet configured         |
+| **Security Policy**          | ❌ None | No SECURITY.md             |
 | **Maintainer Documentation** | ❌ None | Single maintainer, no docs |
 
 **Assessment:** Standard for brand new projects. Governance typically evolves as external contributors emerge.
 
 ### Contributor Risk
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **Bus Factor** | 1 | High risk - single developer |
-| **Active Contributors** | 1 | Solo project |
-| **Organization** | Individual (@subpop) | Not organizational-backed |
-| **Commit Concentration** | 100% | All commits from one author |
+| Metric                   | Value                | Assessment                   |
+| ------------------------ | -------------------- | ---------------------------- |
+| **Bus Factor**           | 1                    | High risk - single developer |
+| **Active Contributors**  | 1                    | Solo project                 |
+| **Organization**         | Individual (@subpop) | Not organizational-backed    |
+| **Commit Concentration** | 100%                 | All commits from one author  |
 
 **Mitigation:** Project is 2 weeks old. Solo development is expected at this stage.
 
@@ -201,18 +210,19 @@ Essential security practices in place, but comprehensive security infrastructure
 
 ### Current Security Posture
 
-| Criterion | Status | Evidence |
-|-----------|--------|------------|
-| **Security Policy** | ❌ None | No SECURITY.md |
-| **Vulnerability Disclosure** | ❌ None | No documented process |
-| **Dependency Scanning** | ❌ None | No Dependabot visible |
-| **Code Scanning** | ✅ Basic | Clippy in CI |
-| **Security Audit** | ❌ None | Too early for audit |
-| **SBOM Generation** | ❌ None | Not configured |
+| Criterion                    | Status   | Evidence              |
+| ---------------------------- | -------- | --------------------- |
+| **Security Policy**          | ❌ None  | No SECURITY.md        |
+| **Vulnerability Disclosure** | ❌ None  | No documented process |
+| **Dependency Scanning**      | ❌ None  | No Dependabot visible |
+| **Code Scanning**            | ✅ Basic | Clippy in CI          |
+| **Security Audit**           | ❌ None  | Too early for audit   |
+| **SBOM Generation**          | ❌ None  | Not configured        |
 
 ### Security Features
 
 **Built-in Security:**
+
 - SSH-based authentication (leverages SSH security)
 - Separate tools for sudo vs. non-sudo operations
 - Sudo command validation (refuses sudo in non-sudo tool)
@@ -220,6 +230,7 @@ Essential security practices in place, but comprehensive security infrastructure
 - Comprehensive logging to ~/.local/state for auditing
 
 **Security Documentation:**
+
 - SSH key security best practices
 - User permissions guidance
 - Network security recommendations
@@ -234,12 +245,14 @@ Project is 2 weeks old - adoption metrics not yet meaningful.
 ### Early Indicators
 
 **GitHub Metrics:**
+
 - **Stars**: Limited (new project)
 - **Forks**: 0
 - **Watchers**: Limited
 - **Downloads**: 1 download of v0.1.1 Linux x86_64 binary
 
 **MCP Ecosystem Position:**
+
 - Part of growing Model Context Protocol ecosystem
 - SSH/remote execution niche within MCP tools
 - Targets Claude Desktop, VSCode, Cursor, Goose, Gemini
@@ -247,11 +260,13 @@ Project is 2 weeks old - adoption metrics not yet meaningful.
 ### Use Case Positioning
 
 **Target Users:**
+
 - System administrators using AI assistants
 - DevOps engineers with remote infrastructure
 - Site reliability engineers troubleshooting distributed systems
 
 **Differentiation:**
+
 - Focus on POSIX systems (Linux, BSD, macOS)
 - Secure SSH-based approach vs. direct access
 - Explicit sudo control separation
@@ -261,26 +276,26 @@ Project is 2 weeks old - adoption metrics not yet meaningful.
 
 ### Strengths
 
-| Indicator | Status | Evidence |
-|-----------|--------|----------|
-| **Technical Quality** | ✅ Excellent | Professional Rust code, automated builds |
-| **Documentation** | ✅ Excellent | Comprehensive README with examples |
-| **Release Engineering** | ✅ Excellent | Automated multi-platform builds |
-| **Development Velocity** | ✅ Strong | 34 commits in 2 weeks |
-| **Feature Completeness** | ✅ Good | 4 tools covering main use cases |
-| **Code Quality** | ✅ Good | Rust best practices, clippy checks |
+| Indicator                | Status       | Evidence                                 |
+| ------------------------ | ------------ | ---------------------------------------- |
+| **Technical Quality**    | ✅ Excellent | Professional Rust code, automated builds |
+| **Documentation**        | ✅ Excellent | Comprehensive README with examples       |
+| **Release Engineering**  | ✅ Excellent | Automated multi-platform builds          |
+| **Development Velocity** | ✅ Strong    | 34 commits in 2 weeks                    |
+| **Feature Completeness** | ✅ Good      | 4 tools covering main use cases          |
+| **Code Quality**         | ✅ Good      | Rust best practices, clippy checks       |
 
 ### Areas for Growth
 
-| Area | Priority | Recommendation |
-|------|----------|----------------|
-| **Community Building** | Medium | Add CONTRIBUTING.md to encourage contributions |
-| **Security Policy** | Medium | Add SECURITY.md with vulnerability reporting process |
-| **Governance** | Low | Add CODE_OF_CONDUCT.md (becomes important with growth) |
-| **Issue Templates** | Low | Add templates to guide potential contributors |
-| **Dependency Scanning** | Medium | Enable Dependabot for automated dependency updates |
-| **Contributor Diversity** | Low | Natural growth over time |
-| **Testing Infrastructure** | Medium | Add unit/integration tests for tools |
+| Area                       | Priority | Recommendation                                         |
+| -------------------------- | -------- | ------------------------------------------------------ |
+| **Community Building**     | Medium   | Add CONTRIBUTING.md to encourage contributions         |
+| **Security Policy**        | Medium   | Add SECURITY.md with vulnerability reporting process   |
+| **Governance**             | Low      | Add CODE_OF_CONDUCT.md (becomes important with growth) |
+| **Issue Templates**        | Low      | Add templates to guide potential contributors          |
+| **Dependency Scanning**    | Medium   | Enable Dependabot for automated dependency updates     |
+| **Contributor Diversity**  | Low      | Natural growth over time                               |
+| **Testing Infrastructure** | Medium   | Add unit/integration tests for tools                   |
 
 ## Comparison to Project Maturity Standards
 
@@ -290,29 +305,29 @@ Evaluating against early-stage project criteria. Not applicable for CNCF maturit
 
 ### Early-Stage Project Checklist
 
-| Criterion | Status | Notes |
-|-----------|--------|-------|
-| **Clear Goals** | ✅ Excellent | Well-defined purpose and use cases |
-| **Working Code** | ✅ Excellent | Functional release with binaries |
-| **Documentation** | ✅ Excellent | Comprehensive user documentation |
-| **License** | ✅ Present | MIT license |
-| **Public Repository** | ✅ Present | GitHub public repo |
-| **Releases** | ✅ Present | 2 tagged releases |
-| **Build Automation** | ✅ Present | CI/CD configured |
-| **Community Docs** | ⚠️ Partial | No CONTRIBUTING.md yet |
-| **Security Docs** | ❌ None | No SECURITY.md yet |
-| **External Contributors** | ❌ None | Solo project currently |
+| Criterion                 | Status       | Notes                              |
+| ------------------------- | ------------ | ---------------------------------- |
+| **Clear Goals**           | ✅ Excellent | Well-defined purpose and use cases |
+| **Working Code**          | ✅ Excellent | Functional release with binaries   |
+| **Documentation**         | ✅ Excellent | Comprehensive user documentation   |
+| **License**               | ✅ Present   | MIT license                        |
+| **Public Repository**     | ✅ Present   | GitHub public repo                 |
+| **Releases**              | ✅ Present   | 2 tagged releases                  |
+| **Build Automation**      | ✅ Present   | CI/CD configured                   |
+| **Community Docs**        | ⚠️ Partial   | No CONTRIBUTING.md yet             |
+| **Security Docs**         | ❌ None      | No SECURITY.md yet                 |
+| **External Contributors** | ❌ None      | Solo project currently             |
 
 ## Risks & Recommendations
 
 ### Identified Risks
 
-| Risk | Severity | Impact | Likelihood |
-|------|----------|--------|-----------|
-| **Bus Factor** | High | Project stalls if maintainer unavailable | High |
-| **Limited Testing** | Medium | Bugs may emerge with broader usage | Medium |
-| **No Security Policy** | Medium | Unclear vulnerability handling | Low (early stage) |
-| **Single User Adoption** | Low | Limited feedback for improvements | Medium |
+| Risk                     | Severity | Impact                                   | Likelihood        |
+| ------------------------ | -------- | ---------------------------------------- | ----------------- |
+| **Bus Factor**           | High     | Project stalls if maintainer unavailable | High              |
+| **Limited Testing**      | Medium   | Bugs may emerge with broader usage       | Medium            |
+| **No Security Policy**   | Medium   | Unclear vulnerability handling           | Low (early stage) |
+| **Single User Adoption** | Low      | Limited feedback for improvements        | Medium            |
 
 ### Recommendations
 
@@ -377,13 +392,13 @@ Evaluating against early-stage project criteria. Not applicable for CNCF maturit
 
 ## Associated Issues
 
-| Issue | Status | Priority | Link |
-|-------|--------|----------|------|
-| Conduct MCP Linux SSH Health Check | Complete | High | [This Report] |
-| Enable Dependabot | Recommended | Medium | Not filed |
-| Add Testing Infrastructure | Recommended | High | Not filed |
-| Add SECURITY.md | Recommended | Medium | Not filed |
-| Add CONTRIBUTING.md | Recommended | Medium | Not filed |
+| Issue                              | Status      | Priority | Link          |
+| ---------------------------------- | ----------- | -------- | ------------- |
+| Conduct MCP Linux SSH Health Check | Complete    | High     | [This Report] |
+| Enable Dependabot                  | Recommended | Medium   | Not filed     |
+| Add Testing Infrastructure         | Recommended | High     | Not filed     |
+| Add SECURITY.md                    | Recommended | Medium   | Not filed     |
+| Add CONTRIBUTING.md                | Recommended | Medium   | Not filed     |
 
 ---
 

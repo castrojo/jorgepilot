@@ -21,15 +21,15 @@ This report examines COPR repository dependencies across the Universal Blue ecos
 
 ## Key Findings
 
-| Metric | Value | Notes |
-|--------|-------|-------|
-| **Total COPR Repositories** | 14 | Mix of first and third-party |
-| **First-Party COPRs** | 4 | ublue-os maintained and controlled |
-| **Third-Party COPRs** | 10 | External maintainers |
-| **High-Risk Packages** | 1 | Kernel module from third-party (kvmfr) |
-| **Additional External Repos** | 2 | Terra, negativo17 multimedia |
-| **Gaming-Related COPRs** | 4+ | Primarily from kylegospo |
-| **Font COPRs** | 2 | Nerd fonts and specialized fonts |
+| Metric                        | Value | Notes                                  |
+| ----------------------------- | ----- | -------------------------------------- |
+| **Total COPR Repositories**   | 14    | Mix of first and third-party           |
+| **First-Party COPRs**         | 4     | ublue-os maintained and controlled     |
+| **Third-Party COPRs**         | 10    | External maintainers                   |
+| **High-Risk Packages**        | 1     | Kernel module from third-party (kvmfr) |
+| **Additional External Repos** | 2     | Terra, negativo17 multimedia           |
+| **Gaming-Related COPRs**      | 4+    | Primarily from kylegospo               |
+| **Font COPRs**                | 2     | Nerd fonts and specialized fonts       |
 
 ## Analysis
 
@@ -56,6 +56,7 @@ Packages in staging undergo testing before moving to production repositories. Th
 **Risk Level:** 🟢 Low (controlled by project)
 
 Contains project-specific tools, configurations, and utilities including:
+
 - ublue-os-just (just command integration)
 - ublue-update (system update utilities)
 - ublue-os-udev-rules (hardware support rules)
@@ -69,6 +70,7 @@ Contains project-specific tools, configurations, and utilities including:
 **Risk Level:** 🟢 Low (controlled by project)
 
 **Supported Modules:**
+
 - **Framework laptop support** - Power management and hardware enablement
 - **Gaming controllers** - xone (Xbox controllers), xpadneo
 - **Display drivers** - evdi (DisplayLink)
@@ -100,6 +102,7 @@ Contains minimal server utilities and configurations tailored for the ucore head
 **kylegospo/** (Multiple Repositories)
 
 **Repositories:**
+
 - kylegospo/bazzite (gaming packages)
 - kylegospo/bazzite-multilib (32-bit gaming libraries)
 - kylegospo/latencyflex (gaming latency reduction)
@@ -111,6 +114,7 @@ Contains minimal server utilities and configurations tailored for the ucore head
 Multiple COPRs from @kylegospo (Bazzite project lead) provide gaming-essential packages. Close collaboration with ublue-os team reduces risk, but these remain external dependencies.
 
 **Key Packages:**
+
 - Gaming performance optimizations
 - HDR support utilities
 - Steam Deck specific tools
@@ -147,6 +151,7 @@ Provides Nerd Fonts popular among developers for terminal and code editor use. I
 **atim/** (Multiple Repositories)
 
 **Repositories:**
+
 - atim/ubuntu-fonts
 - atim/starship (command prompt tool)
 
@@ -198,6 +203,7 @@ Two additional external repositories require evaluation
 **Risk Level:** 🟡 Medium (disabled but present in configs)
 
 **Evaluation Needed:**
+
 - Currently disabled by default in configurations
 - Review necessity and document required packages
 - Consider removal if unused or migrate needed packages
@@ -223,6 +229,7 @@ One kernel module from third-party source requires security audit
 **Risk Level:** 🔴 High (kernel module, external source)
 
 **Concerns:**
+
 - Kernel module with privileged access
 - Originated from external source
 - Limited upstream review
@@ -234,28 +241,32 @@ One kernel module from third-party source requires security audit
 
 ### Current Approach
 
-| Strategy | Implementation | Effectiveness |
-|----------|----------------|---------------|
-| **First-Party Control** | 4 ublue-os COPRs | ✅ Excellent |
-| **Close Collaborator Trust** | kylegospo repos | ✅ Good |
-| **External Vetting** | Third-party repos | ⚠️ Variable |
-| **Optional Packages** | User choice for some packages | ✅ Good |
+| Strategy                     | Implementation                | Effectiveness |
+| ---------------------------- | ----------------------------- | ------------- |
+| **First-Party Control**      | 4 ublue-os COPRs              | ✅ Excellent  |
+| **Close Collaborator Trust** | kylegospo repos               | ✅ Good       |
+| **External Vetting**         | Third-party repos             | ⚠️ Variable   |
+| **Optional Packages**        | User choice for some packages | ✅ Good       |
 
 ### Dependency Categories
 
 **Tier 1 - Critical (First-Party):**
+
 - ublue-os/packages
 - ublue-os/akmods
 - ublue-os/staging
 
 **Tier 2 - Trusted External (Close Collaboration):**
-- kylegospo/* repositories
+
+- kylegospo/\* repositories
 
 **Tier 3 - Vetted External (Specialized):**
+
 - Font repositories (che, atim)
 - Development tools (phracek)
 
 **Tier 4 - Monitored External (Limited Use):**
+
 - Container tools (rodeo0x, ganto)
 - Utility packages (errornointernet)
 
@@ -263,47 +274,49 @@ One kernel module from third-party source requires security audit
 
 ### Immediate Actions (0-3 months)
 
-| Priority | Action | Rationale | Owner |
-|----------|--------|-----------|-------|
-| 🔴 **Critical** | Security audit looking-glass-kvmfr | Kernel module risk | Security Team |
-| 🔴 **High** | Document negativo17 usage | Licensing clarity | Documentation |
-| 🟡 **Medium** | Review Terra necessity | Currently disabled, evaluate removal | Maintainers |
+| Priority        | Action                             | Rationale                            | Owner         |
+| --------------- | ---------------------------------- | ------------------------------------ | ------------- |
+| 🔴 **Critical** | Security audit looking-glass-kvmfr | Kernel module risk                   | Security Team |
+| 🔴 **High**     | Document negativo17 usage          | Licensing clarity                    | Documentation |
+| 🟡 **Medium**   | Review Terra necessity             | Currently disabled, evaluate removal | Maintainers   |
 
 ### Short-term (3-6 months)
 
-| Priority | Action | Rationale | Timeline |
-|----------|--------|-----------|----------|
-| 🟡 **Medium** | Vendor looking-glass-kvmfr | Move to ublue-os/akmods control | 3 months |
-| 🟡 **Medium** | Evaluate umoci vendoring | Consider ublue-os/packages | 6 months |
-| 🟢 **Low** | Monitor third-party repo health | Implement availability monitoring | 6 months |
+| Priority      | Action                          | Rationale                         | Timeline |
+| ------------- | ------------------------------- | --------------------------------- | -------- |
+| 🟡 **Medium** | Vendor looking-glass-kvmfr      | Move to ublue-os/akmods control   | 3 months |
+| 🟡 **Medium** | Evaluate umoci vendoring        | Consider ublue-os/packages        | 6 months |
+| 🟢 **Low**    | Monitor third-party repo health | Implement availability monitoring | 6 months |
 
 ### Long-term (6-12 months)
 
-| Priority | Action | Rationale | Timeline |
-|----------|--------|-----------|----------|
-| 🟢 **Low** | Upstream podman-bootc features | Reduce external dependencies | 12 months |
-| 🟢 **Low** | Font consolidation | Consider ublue-os/fonts COPR | 12 months |
-| 🟢 **Low** | Contribute to Fedora proper | Submit heavily-used packages upstream | 12+ months |
+| Priority   | Action                         | Rationale                             | Timeline   |
+| ---------- | ------------------------------ | ------------------------------------- | ---------- |
+| 🟢 **Low** | Upstream podman-bootc features | Reduce external dependencies          | 12 months  |
+| 🟢 **Low** | Font consolidation             | Consider ublue-os/fonts COPR          | 12 months  |
+| 🟢 **Low** | Contribute to Fedora proper    | Submit heavily-used packages upstream | 12+ months |
 
 ## Security Considerations
 
 ### Risk Assessment
 
-| Risk Factor | Level | Mitigation |
-|-------------|-------|------------|
-| **Kernel Modules** | 🔴 High | Security audit, vendoring |
-| **Multimedia Codecs** | 🟡 Medium | Document licensing, monitor updates |
-| **External Dependencies** | 🟡 Medium | Health monitoring, backup plans |
-| **Supply Chain** | 🟡 Medium | Vendor critical packages |
+| Risk Factor               | Level     | Mitigation                          |
+| ------------------------- | --------- | ----------------------------------- |
+| **Kernel Modules**        | 🔴 High   | Security audit, vendoring           |
+| **Multimedia Codecs**     | 🟡 Medium | Document licensing, monitor updates |
+| **External Dependencies** | 🟡 Medium | Health monitoring, backup plans     |
+| **Supply Chain**          | 🟡 Medium | Vendor critical packages            |
 
 ### Mitigation Strategies
 
 **Implemented:**
+
 - ✅ First-party COPRs for critical infrastructure
 - ✅ Selective external repository usage
 - ✅ Automated dependency updates via Renovate
 
 **Recommended:**
+
 - ⚠️ Automated health monitoring for third-party repos
 - ⚠️ Security scanning for external packages
 - ⚠️ Documented fallback plans for external dependency failures
@@ -312,16 +325,17 @@ One kernel module from third-party source requires security audit
 
 ### First-Party Repository Status
 
-| Repository | Status | Last Updated | Build Success |
-|------------|--------|--------------|---------------|
-| **ublue-os/staging** | ✅ Active | Current | 95%+ |
-| **ublue-os/packages** | ✅ Active | Current | 98%+ |
-| **ublue-os/akmods** | ✅ Active | Current | 95%+ |
-| **ublue-os/ucore** | ✅ Active | Current | 98%+ |
+| Repository            | Status    | Last Updated | Build Success |
+| --------------------- | --------- | ------------ | ------------- |
+| **ublue-os/staging**  | ✅ Active | Current      | 95%+          |
+| **ublue-os/packages** | ✅ Active | Current      | 98%+          |
+| **ublue-os/akmods**   | ✅ Active | Current      | 95%+          |
+| **ublue-os/ucore**    | ✅ Active | Current      | 98%+          |
 
 ### Third-Party Repository Monitoring
 
 **Monitoring Needs:**
+
 - Automated health checks for availability
 - Build success rate tracking
 - Update frequency monitoring
@@ -341,6 +355,7 @@ One kernel module from third-party source requires security audit
 ### Fedora Integration Opportunities
 
 **Packages Suitable for Fedora Proper:**
+
 - ublue-os-just and ujust recipes (after generalization)
 - Input remapper tools (after packaging standards compliance)
 - Some gaming optimizations (coordinate with Fedora Games SIG)
@@ -350,12 +365,14 @@ One kernel module from third-party source requires security audit
 The ublue-os ecosystem demonstrates reasonable dependency management with strong first-party control (4 COPRs) covering critical infrastructure. Third-party dependencies (10 COPRs) serve specialized needs (gaming, fonts, niche hardware) with generally low risk.
 
 **Strengths:**
+
 - ✅ Strong first-party infrastructure
 - ✅ Clear dependency categorization
 - ✅ Close collaboration with key external maintainers (kylegospo)
 - ✅ Optional external packages reduce mandatory dependencies
 
 **Areas for Improvement:**
+
 - ⚠️ Security audit of kernel modules (kvmfr)
 - ⚠️ Documentation of negativo17 specific packages
 - ⚠️ Automated health monitoring for third-party repos
@@ -386,12 +403,14 @@ The project balances innovation (external packages) with control (first-party in
 ## Methodology
 
 **Analysis Approach:**
+
 - Manual review of Containerfiles across ublue-os repositories
 - Analysis of build scripts and repository configuration files
 - Examination of package dependencies in COPR repositories
 - Assessment of update frequency and maintenance status
 
 **Data Sources:**
+
 - GitHub repository file analysis
 - COPR repository metadata
 - Build log examination

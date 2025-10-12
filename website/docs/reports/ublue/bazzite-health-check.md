@@ -33,26 +33,27 @@ Active maintainer team responds to critical issues within 24-48 hours despite hi
 
 ### Pull Request Responsiveness
 
-| Metric | Status | Evidence |
-|--------|--------|----------|
-| **Average Response Time** | < 48 hours | Manual PRs reviewed within 1-2 days |
-| **Median Time to Merge** | 1-3 hours | Automated PRs fast; manual PRs 2-4 days |
-| **Review Depth** | Thorough | Multiple maintainers review gaming-critical changes |
-| **Stale PR Management** | Active | Regular cleanup of stale PRs |
+| Metric                    | Status     | Evidence                                            |
+| ------------------------- | ---------- | --------------------------------------------------- |
+| **Average Response Time** | < 48 hours | Manual PRs reviewed within 1-2 days                 |
+| **Median Time to Merge**  | 1-3 hours  | Automated PRs fast; manual PRs 2-4 days             |
+| **Review Depth**          | Thorough   | Multiple maintainers review gaming-critical changes |
+| **Stale PR Management**   | Active     | Regular cleanup of stale PRs                        |
 
 **Recent PR Examples (October 2025):**
+
 - PR #3892: chore(deps): update dependencies - merged same day (Oct 11)
 - PR #3885: feat: add new handheld device support - merged within 2 days (Oct 9)
 - PR #3870: fix: Steam Deck display issues - merged within hours (Oct 5)
 
 ### Issue Responsiveness
 
-| Metric | Status | Evidence |
-|--------|--------|----------|
-| **Issue Triage Time** | < 72 hours | New issues labeled within 2-3 days |
-| **Bug Response** | < 48 hours | Gaming-critical bugs addressed rapidly |
-| **Feature Discussions** | Very Active | Extensive community input on features |
-| **Issue Resolution Rate** | Healthy | High volume but actively managed |
+| Metric                    | Status      | Evidence                               |
+| ------------------------- | ----------- | -------------------------------------- |
+| **Issue Triage Time**     | < 72 hours  | New issues labeled within 2-3 days     |
+| **Bug Response**          | < 48 hours  | Gaming-critical bugs addressed rapidly |
+| **Feature Discussions**   | Very Active | Extensive community input on features  |
+| **Issue Resolution Rate** | Healthy     | High volume but actively managed       |
 
 **Open Issues**: 450+ (reflects large user base and active feature development)  
 **Issue Labels**: Comprehensive labeling system with hardware-specific tags, priority levels, and feature categories
@@ -65,14 +66,15 @@ Highest activity among Universal Blue projects with daily commits across multipl
 
 ### Overall Activity Metrics
 
-| Period | Commits | Pull Requests | Unique Contributors | New Contributors |
-|--------|---------|---------------|---------------------|------------------|
-| **Q4 2024** | 1,200+ | 1,100+ | 25-30 | 8-10 |
-| **Q1 2025** | 1,300+ | 1,200+ | 25-35 | 10-12 |
-| **Q2 2025** | 1,100+ | 1,000+ | 22-28 | 6-8 |
-| **Q3 2025** | 1,250+ | 1,150+ | 24-30 | 8-10 |
+| Period      | Commits | Pull Requests | Unique Contributors | New Contributors |
+| ----------- | ------- | ------------- | ------------------- | ---------------- |
+| **Q4 2024** | 1,200+  | 1,100+        | 25-30               | 8-10             |
+| **Q1 2025** | 1,300+  | 1,200+        | 25-35               | 10-12            |
+| **Q2 2025** | 1,100+  | 1,000+        | 22-28               | 6-8              |
+| **Q3 2025** | 1,250+  | 1,150+        | 24-30               | 8-10             |
 
 **Commit Velocity:**
+
 - **Daily average**: 12-15 commits
 - **Peak activity**: US business hours, evenings, and weekends
 - **Contributor mix**: ~50% automated (Renovate bot), ~40% core maintainers, ~10% community
@@ -80,6 +82,7 @@ Highest activity among Universal Blue projects with daily commits across multipl
 ### Notable Contributors (Past 12 Months)
 
 **Top 10 Active Contributors:**
+
 1. **@KyleGospo** - Project lead, gaming optimizations, device support
 2. **@ubot-7274[bot]** - Automated dependency updates (Renovate)
 3. **@EyeCantCU** - Developer tooling, Steam integration
@@ -94,6 +97,7 @@ Highest activity among Universal Blue projects with daily commits across multipl
 ### Contributor Growth
 
 **New Contributor Onboarding:**
+
 - 35+ new contributors in past 12 months
 - Active "good first issue" and "help wanted" labels
 - Comprehensive documentation at docs.bazzite.gg
@@ -108,12 +112,12 @@ While multiple active maintainers exist, project heavily relies on @KyleGospo's 
 
 ### Maintainer Concentration
 
-| Risk Factor | Assessment | Details |
-|-------------|------------|---------|
+| Risk Factor                  | Assessment    | Details                                     |
+| ---------------------------- | ------------- | ------------------------------------------- |
 | **Individual Concentration** | Moderate-High | @KyleGospo leads ~40% of critical decisions |
-| **Single Point of Failure** | Moderate | Bus factor of 3-5 maintainers |
-| **Organization Diversity** | Good | Multiple independent maintainers |
-| **Geographic Distribution** | Regional | Primarily North American/European timezones |
+| **Single Point of Failure**  | Moderate      | Bus factor of 3-5 maintainers               |
+| **Organization Diversity**   | Good          | Multiple independent maintainers            |
+| **Geographic Distribution**  | Regional      | Primarily North American/European timezones |
 
 ### Bus Factor Analysis
 
@@ -129,30 +133,30 @@ Highest velocity among Universal Blue projects with continuous feature developme
 
 ### Commit Activity (Past 12 Months)
 
-| Metric | Value | Trend |
-|--------|-------|-------|
-| **Total Commits** | 4,850+ | ↑ Increasing |
-| **Average Commits/Day** | 13-14 | ↑ Growing |
-| **Active Days** | 362+/365 | 99%+ |
-| **Longest Gap** | 1 day | Exceptional consistency |
+| Metric                  | Value    | Trend                   |
+| ----------------------- | -------- | ----------------------- |
+| **Total Commits**       | 4,850+   | ↑ Increasing            |
+| **Average Commits/Day** | 13-14    | ↑ Growing               |
+| **Active Days**         | 362+/365 | 99%+                    |
+| **Longest Gap**         | 1 day    | Exceptional consistency |
 
 ### Pull Request Throughput
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **PRs Opened** | 4,600+ | Highest in ublue-os ecosystem |
-| **PRs Merged** | 4,500+ | Excellent merge rate (98%+) |
-| **PRs Closed (unmerged)** | &lt;100 | Very low rejection rate |
-| **Average PR Lifespan** | &lt;1 day automated; 2-3 days manual | Healthy throughput |
+| Metric                    | Value                                | Assessment                    |
+| ------------------------- | ------------------------------------ | ----------------------------- |
+| **PRs Opened**            | 4,600+                               | Highest in ublue-os ecosystem |
+| **PRs Merged**            | 4,500+                               | Excellent merge rate (98%+)   |
+| **PRs Closed (unmerged)** | &lt;100                              | Very low rejection rate       |
+| **Average PR Lifespan**   | &lt;1 day automated; 2-3 days manual | Healthy throughput            |
 
 ### Issue Resolution
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **Issues Opened** | 650+ | Very active user base |
-| **Issues Closed** | 550+ | Good resolution (85%) |
-| **Net Change** | +100 | Backlog growing due to popularity |
-| **Average Resolution Time** | 7-14 days | Reasonable given volume |
+| Metric                      | Value     | Assessment                        |
+| --------------------------- | --------- | --------------------------------- |
+| **Issues Opened**           | 650+      | Very active user base             |
+| **Issues Closed**           | 550+      | Good resolution (85%)             |
+| **Net Change**              | +100      | Backlog growing due to popularity |
+| **Average Resolution Time** | 7-14 days | Reasonable given volume           |
 
 ## Release Activity
 
@@ -165,6 +169,7 @@ Multiple daily builds across 10+ image variants for different hardware configura
 Bazzite follows aggressive continuous delivery with multiple daily builds across extensive hardware matrix:
 
 **Image Variants:**
+
 - **Desktop** (GNOME, KDE)
 - **Deck** (Steam Deck variants)
 - **NVIDIA** (proprietary and open drivers)
@@ -176,11 +181,11 @@ Bazzite follows aggressive continuous delivery with multiple daily builds across
 
 ### Recent Activity
 
-| Build Type | Frequency | Coverage |
-|------------|-----------|----------|
-| **Desktop builds** | 2-3 per day | GNOME, KDE, NVIDIA variants |
-| **Deck builds** | 2-3 per day | Steam Deck specific |
-| **Handheld builds** | 1-2 per day | Multiple device variants |
+| Build Type          | Frequency   | Coverage                    |
+| ------------------- | ----------- | --------------------------- |
+| **Desktop builds**  | 2-3 per day | GNOME, KDE, NVIDIA variants |
+| **Deck builds**     | 2-3 per day | Steam Deck specific         |
+| **Handheld builds** | 1-2 per day | Multiple device variants    |
 
 ## Governance & Maintainership
 
@@ -190,26 +195,26 @@ Multi-maintainer structure with clear roles and active decision-making
 
 ### Governance Structure
 
-| Indicator | Status | Evidence |
-|-----------|--------|----------|
-| **Code of Conduct** | ✅ | Universal Blue Community Guidelines |
-| **Contributing Guide** | ✅ | Detailed hardware testing and contribution docs |
-| **Security Policy** | ✅ | SECURITY.md with vulnerability reporting |
-| **License** | ✅ | Apache 2.0 |
-| **Governance Documentation** | ✅ | Clear maintainer structure |
-| **Decision-Making Transparency** | ✅ | Public PRs and active Discord discussions |
+| Indicator                        | Status | Evidence                                        |
+| -------------------------------- | ------ | ----------------------------------------------- |
+| **Code of Conduct**              | ✅     | Universal Blue Community Guidelines             |
+| **Contributing Guide**           | ✅     | Detailed hardware testing and contribution docs |
+| **Security Policy**              | ✅     | SECURITY.md with vulnerability reporting        |
+| **License**                      | ✅     | Apache 2.0                                      |
+| **Governance Documentation**     | ✅     | Clear maintainer structure                      |
+| **Decision-Making Transparency** | ✅     | Public PRs and active Discord discussions       |
 
 ### Maintainer Structure
 
 **Active Maintainers: 5+**
 
-| Maintainer | Organization | Focus Area | Activity Level |
-|------------|--------------|------------|----------------|
-| @KyleGospo | Independent | Project lead, gaming optimizations | Very High |
-| @EyeCantCU | Independent | Developer tooling, Steam features | High |
-| @antheas | Independent | Handheld device support | High |
-| @HikariKnight | Independent | Gaming features, performance | High |
-| @noelmiller | Independent | Build system, infrastructure | Medium-High |
+| Maintainer    | Organization | Focus Area                         | Activity Level |
+| ------------- | ------------ | ---------------------------------- | -------------- |
+| @KyleGospo    | Independent  | Project lead, gaming optimizations | Very High      |
+| @EyeCantCU    | Independent  | Developer tooling, Steam features  | High           |
+| @antheas      | Independent  | Handheld device support            | High           |
+| @HikariKnight | Independent  | Gaming features, performance       | High           |
+| @noelmiller   | Independent  | Build system, infrastructure       | Medium-High    |
 
 ### Organizational Diversity
 
@@ -225,16 +230,16 @@ Active dependency management with gaming-specific security considerations
 
 ### Security Implementation
 
-| Practice | Status | Evidence |
-|----------|--------|----------|
-| **Security Policy (SECURITY.md)** | ✅ | Clear vulnerability disclosure |
-| **Vulnerability Disclosure Process** | ✅ | GitHub security advisories |
-| **Security Response Team** | ✅ | Maintainer team handles security |
-| **OpenSSF Best Practices Badge** | ❌ | Not pursued |
-| **Security Audit** | ❌ | No formal audit |
-| **Dependabot/Renovate** | ✅ | Active automated updates |
-| **SAST/Code Scanning** | ✅ | GitHub Actions security scanning |
-| **Branch Protection** | ✅ | Protected main branch |
+| Practice                             | Status | Evidence                         |
+| ------------------------------------ | ------ | -------------------------------- |
+| **Security Policy (SECURITY.md)**    | ✅     | Clear vulnerability disclosure   |
+| **Vulnerability Disclosure Process** | ✅     | GitHub security advisories       |
+| **Security Response Team**           | ✅     | Maintainer team handles security |
+| **OpenSSF Best Practices Badge**     | ❌     | Not pursued                      |
+| **Security Audit**                   | ❌     | No formal audit                  |
+| **Dependabot/Renovate**              | ✅     | Active automated updates         |
+| **SAST/Code Scanning**               | ✅     | GitHub Actions security scanning |
+| **Branch Protection**                | ✅     | Protected main branch            |
 
 ### Gaming-Specific Security
 
@@ -251,6 +256,7 @@ Most popular Universal Blue variant with extensive community and hardware partne
 ### Community Engagement
 
 **Community Channels:**
+
 - Website: [bazzite.gg](https://bazzite.gg/)
 - Documentation: [docs.bazzite.gg](https://docs.bazzite.gg/)
 - Downloads: [download.bazzite.gg](https://download.bazzite.gg/)
@@ -258,6 +264,7 @@ Most popular Universal Blue variant with extensive community and hardware partne
 - Discourse: [universal-blue.discourse.group/c/bazzite/5](https://universal-blue.discourse.group/c/bazzite/5)
 
 **User Base Indicators:**
+
 - 6,500+ GitHub stars (highest in ublue-os)
 - 530+ forks
 - 450+ active issues indicating large engaged user base
@@ -267,6 +274,7 @@ Most popular Universal Blue variant with extensive community and hardware partne
 ### Hardware Support
 
 **Supported Devices:**
+
 - Desktop PCs (AMD, Intel, NVIDIA)
 - Steam Deck (native support)
 - ASUS ROG Ally
@@ -283,22 +291,22 @@ High issue volume and maintainer workload present scaling challenges
 
 ### Identified Risks
 
-| Risk | Severity | Impact | Likelihood |
-|------|----------|--------|------------|
-| **Maintainer Burnout** | 🔴 High | Very High - Project continuity | Medium |
-| **Support Volume** | 🟡 Medium | High - Community experience | High |
-| **Hardware Complexity** | 🟡 Medium | Medium - Device compatibility | Medium |
-| **Gaming Ecosystem Changes** | 🟢 Low | Medium - Adaptation needed | Low |
+| Risk                         | Severity  | Impact                         | Likelihood |
+| ---------------------------- | --------- | ------------------------------ | ---------- |
+| **Maintainer Burnout**       | 🔴 High   | Very High - Project continuity | Medium     |
+| **Support Volume**           | 🟡 Medium | High - Community experience    | High       |
+| **Hardware Complexity**      | 🟡 Medium | Medium - Device compatibility  | Medium     |
+| **Gaming Ecosystem Changes** | 🟢 Low    | Medium - Adaptation needed     | Low        |
 
 ### Recommendations
 
-| Priority | Recommendation | Rationale | Timeline |
-|----------|----------------|-----------|----------|
-| **High** | Expand maintainer team | Address burnout risk and workload | 3-6 months |
-| **High** | Improve issue triage automation | Reduce manual triage burden | 3-6 months |
-| **Medium** | Develop hardware testing program | Scale device support validation | 6-12 months |
-| **Medium** | Create specialized support roles | Distribute community support load | 6-12 months |
-| **Low** | Pursue gaming industry partnerships | Formalize hardware vendor relationships | 12+ months |
+| Priority   | Recommendation                      | Rationale                               | Timeline    |
+| ---------- | ----------------------------------- | --------------------------------------- | ----------- |
+| **High**   | Expand maintainer team              | Address burnout risk and workload       | 3-6 months  |
+| **High**   | Improve issue triage automation     | Reduce manual triage burden             | 3-6 months  |
+| **Medium** | Develop hardware testing program    | Scale device support validation         | 6-12 months |
+| **Medium** | Create specialized support roles    | Distribute community support load       | 6-12 months |
+| **Low**    | Pursue gaming industry partnerships | Formalize hardware vendor relationships | 12+ months  |
 
 ## Areas of Excellence
 
@@ -315,6 +323,7 @@ High issue volume and maintainer workload present scaling challenges
 **Maturity Level**: Production-Ready with Rapid Growth
 
 **Characteristics:**
+
 - ✅ Very active daily development (99%+ active days)
 - ✅ Large maintainer team with specialized expertise
 - ✅ Exceptional hardware support breadth
@@ -324,6 +333,7 @@ High issue volume and maintainer workload present scaling challenges
 - ⚠️ Scaling challenges due to popularity
 
 **Suitable For:**
+
 - Gaming-focused Linux desktop users
 - Steam Deck users wanting Fedora-based alternative
 - Handheld gaming device owners (ROG Ally, Legion Go, etc.)
@@ -332,6 +342,7 @@ High issue volume and maintainer workload present scaling challenges
 - HDR gaming enthusiasts
 
 **Not Suitable For:**
+
 - Non-gaming focused workloads (use Bluefin instead)
 - Users requiring minimalist installations
 - Conservative users uncomfortable with frequent updates
@@ -369,6 +380,7 @@ Bazzite operates as a mature, production-ready gaming platform with room for org
 ## Methodology
 
 **Data Sources:**
+
 - GitHub API (commits, PRs, releases, issues)
 - Repository analysis (governance, security policies)
 - Discord and Discourse community engagement
@@ -379,6 +391,7 @@ Bazzite operates as a mature, production-ready gaming platform with room for org
 **Scope:** Observable GitHub activity, community health, hardware support breadth, and gaming-specific features. Based on public data and community engagement metrics.
 
 **Metrics Collection:**
+
 - Commit/PR data: GitHub REST API
 - Contributor analysis: Manual analysis of commit history
 - Issue metrics: GitHub Issues API

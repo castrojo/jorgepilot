@@ -23,23 +23,27 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** How quickly maintainers respond to and process contributions.
 
 **Key Metrics:**
+
 - Pull request response time (initial review)
 - Issue triage time
 - Time to merge accepted PRs
 - Response quality and depth
 
 **Healthy Indicators:**
+
 - PR initial response: < 24-48 hours
 - Issue triage: < 48-72 hours
 - Regular, constructive feedback
 - Clear communication on delays
 
 **Assessment Questions:**
+
 - Are PRs reviewed promptly?
 - Do issues receive timely acknowledgment?
 - Is feedback constructive and actionable?
 
 **Data Sources:**
+
 - GitHub PR timestamps
 - Issue creation vs. first response
 - PR approval to merge duration
@@ -51,23 +55,27 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** The project's ability to attract and retain new contributors.
 
 **Key Metrics:**
+
 - Unique contributors per quarter/year
 - New contributor growth rate
 - Contributor retention rate
 - Geographic/organizational diversity
 
 **Healthy Indicators:**
+
 - 30-50+ unique contributors per quarter
 - Positive growth trend year-over-year
 - Contributors from multiple organizations
 - International contributor base
 
 **Assessment Questions:**
+
 - Is the contributor base growing or stable?
 - Are new contributors successfully onboarded?
 - Is there organizational diversity?
 
 **Data Sources:**
+
 - GitHub contributor statistics
 - Commit author analysis
 - Email domain analysis for affiliations
@@ -79,23 +87,27 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** Distribution of code contributions across contributors.
 
 **Key Metrics:**
+
 - Number of active PR authors per month/quarter
 - Contribution concentration (top contributors %)
 - First-time vs. repeat contributors
 - Corporate affiliation diversity
 
 **Healthy Indicators:**
+
 - 10+ active contributors per month
 - Top 5 contributors < 60% of commits
 - Regular first-time contributors
 - Multiple corporate sponsors
 
 **Assessment Questions:**
+
 - Is the workload distributed?
 - Are contributions concentrated in few individuals?
 - Do first-time contributors succeed?
 
 **Data Sources:**
+
 - PR author analysis
 - Commit statistics by author
 - Contributor affiliation data
@@ -107,28 +119,33 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** Risk assessment of project sustainability if key contributors leave.
 
 **Key Metrics:**
+
 - Maintainer concentration percentage
 - Single points of failure
 - Knowledge distribution
 - Succession planning evidence
 
 **Healthy Indicators:**
+
 - Top 3 maintainers < 50% of activity
 - Multiple active reviewers
 - Documented knowledge areas
 - Co-maintainership practices
 
 **Risk Levels:**
+
 - **Low Risk:** Well-distributed, documented succession
 - **Moderate Risk:** 3-5 active maintainers, some concentration
 - **High Risk:** 1-2 key maintainers, no succession plan
 
 **Assessment Questions:**
+
 - What happens if the top maintainer leaves?
 - Is knowledge documented and shared?
 - Are there co-maintainers for critical areas?
 
 **Data Sources:**
+
 - Commit/review concentration analysis
 - Maintainer file and documentation
 - Review approval patterns
@@ -140,23 +157,27 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** Sustained development activity and code contribution rate.
 
 **Key Metrics:**
+
 - Commits per day/week/month
 - Commit frequency trends
 - Code churn rate
 - Development consistency
 
 **Healthy Indicators:**
+
 - Steady commit rate (3-10+ per day for active projects)
 - Consistent activity across months
 - Balanced feature vs. maintenance commits
 - Regular weekday activity
 
 **Assessment Questions:**
+
 - Is development activity sustained?
 - Are there long periods of inactivity?
 - Is the trend growing, stable, or declining?
 
 **Data Sources:**
+
 - GitHub commit history
 - Commit frequency analysis
 - Contributor activity patterns
@@ -168,23 +189,27 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** How effectively the project manages and resolves reported issues.
 
 **Key Metrics:**
+
 - Issues opened vs. closed per period
 - Net issue growth rate
 - Issue age distribution
 - Issue type breakdown (bug/feature/question)
 
 **Healthy Indicators:**
+
 - Net issue growth: 0 to +10% per quarter (manageable)
 - Regular issue closure
 - Few very old unresolved issues
 - Clear issue categorization
 
 **Assessment Questions:**
+
 - Is the issue backlog manageable?
 - Are issues being resolved or accumulating?
 - Is there effective triage?
 
 **Data Sources:**
+
 - GitHub issue statistics
 - Issue open/close timeline analysis
 - Issue label and type analysis
@@ -196,23 +221,27 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** Consistency and predictability of software releases.
 
 **Key Metrics:**
+
 - Time between releases
 - Release schedule adherence
 - Semantic versioning compliance
 - Release note quality
 
 **Healthy Indicators:**
+
 - Predictable release schedule (monthly, quarterly, etc.)
 - Semantic versioning followed
 - Comprehensive release notes
 - Regular security/dependency updates
 
 **Assessment Questions:**
+
 - Are releases predictable?
 - Is there a documented release process?
 - Are releases coordinated and announced?
 
 **Data Sources:**
+
 - GitHub releases/tags
 - Release date analysis
 - Changelog quality review
@@ -224,6 +253,7 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** Documented processes, policies, and decision-making structures.
 
 **Key Metrics:**
+
 - Presence of governance documents
 - Code of Conduct
 - Contributing guidelines
@@ -231,6 +261,7 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 - License clarity
 
 **Healthy Indicators:**
+
 - ✅ Code of Conduct (CoC)
 - ✅ Contributing guide (CONTRIBUTING.md)
 - ✅ Security policy (SECURITY.md)
@@ -238,11 +269,13 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 - ✅ Maintainer/governance documentation
 
 **Assessment Questions:**
+
 - Are governance policies documented?
 - Is decision-making transparent?
 - Are contribution expectations clear?
 
 **Data Sources:**
+
 - Repository documentation files
 - GitHub community health indicators
 - CNCF project maturity requirements
@@ -254,12 +287,14 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 **Definition:** Evidence of welcoming, inclusive community practices.
 
 **Key Metrics:**
+
 - First-time contributor success rate
 - Maintainer tone and feedback quality
 - Communication channel accessibility
 - Diversity of contributors
 
 **Healthy Indicators:**
+
 - Welcoming maintainer responses
 - Detailed, constructive code reviews
 - Multiple communication channels
@@ -267,11 +302,13 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 - Evidence of inclusive language
 
 **Assessment Questions:**
+
 - Do first-time contributors feel welcome?
 - Is feedback constructive and supportive?
 - Are there barriers to participation?
 
 **Data Sources:**
+
 - PR/issue comment analysis
 - First-time contributor outcomes
 - Community feedback and discussions
@@ -283,6 +320,7 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 ### Community Support Channels
 
 **Evaluation Points:**
+
 - GitHub Discussions activity
 - Issue template quality
 - PR template usage
@@ -291,6 +329,7 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 ### Documentation Quality
 
 **Evaluation Points:**
+
 - Setup/installation guides
 - API/usage documentation
 - Architecture documentation
@@ -299,6 +338,7 @@ The [CNCF TAG Contributor Strategy](https://github.com/cncf/tag-contributor-stra
 ### Security Practices
 
 **Evaluation Points:**
+
 - Security policy presence
 - Vulnerability disclosure process
 - Dependency update frequency
@@ -365,6 +405,7 @@ This guide should be updated when:
 **Last Updated:** January 2025
 
 **Revision History:**
+
 - v1.0 (January 2025) - Initial guide based on Cloud Custodian health check
 
 ---
