@@ -9,10 +9,6 @@ tags:
 
 This comprehensive guide provides detailed instructions for contributing to [Bluefin](https://projectbluefin.io), the Fedora Atomic-based developer workstation. Whether you're fixing bugs, adding features, or improving documentation, this guide will help you contribute effectively using the workflows established by the Bluefin maintainer team.
 
-## Executive Summary
-
-[@ublue-os/bluefin](https://github.com/ublue-os/bluefin) is an immutable desktop operating system built on Fedora Atomic and maintained through an automated CI/CD workflow. Contributions range from automated dependency updates (60% of commits) to manual feature development and bug fixes. The project emphasizes container-based development, image testing, and GitHub-centric workflows.
-
 ## Overview
 
 **Repository:** [@ublue-os/bluefin](https://github.com/ublue-os/bluefin)  
@@ -802,7 +798,7 @@ git push origin your-branch --force-with-lease
 
 **Discord:**
 - Real-time chat for quick questions
-- Channel: Universal Blue Discord server
+- Discord: Check [the documentation](https://docs.projectbluefin.io/communications/) for the server link
 - **Remember:** Discord is for chat, not permanent documentation
 
 **Discussion Forum:**
