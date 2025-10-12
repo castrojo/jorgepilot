@@ -9,6 +9,8 @@ import RecentlyUpdated from '@site/src/components/RecentlyUpdated';
 
 This is an experiment to see how useful Copilot can be to a Community Engineer. I use it my own personal interface to asking GitHub things, built for my specific needs. It's served by docusaurus to GitHub pages so I can share my ideas with friends. 
 
+## [File a task](https://github.com/castrojo/jorgepilot/issues)
+
 This will likely be more verbose than the [actual Jorge](https://ypsidanger.com). This may be a mistake.
 
 
