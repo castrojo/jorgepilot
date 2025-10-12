@@ -4,6 +4,7 @@ tags:
   - cncf
   - landscape
   - trends
+date: 2025-10-12
 ---
 
 # CNCF Landscape Trends 2025

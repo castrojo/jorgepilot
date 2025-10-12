@@ -3,6 +3,7 @@ tags:
   - project-health
   - kubeflow
   - ml-pipelines
+date: 2025-10-12
 ---
 
 # Kubeflow Pipelines Project Health Check

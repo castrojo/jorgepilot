@@ -3,6 +3,7 @@ tags:
   - project-health
   - mcp
   - rust
+date: 2025-10-12
 ---
 
 # mcp_dbus Project Health Check

@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-health
   - tag-contributor-strategy
+date: 2025-10-12
 ---
 
 # TAG Contributor Strategy Health Check Guide
