@@ -3,6 +3,7 @@ tags:
   - mcp
   - project-health
   - rust
+date: 2025-10-12
 ---
 
 # MCP Linux SSH Project Health Check

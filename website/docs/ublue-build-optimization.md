@@ -4,6 +4,7 @@ tags:
   - ci-cd
   - optimization
   - github-actions
+date: 2025-10-12
 ---
 
 # ublue-os Build Pipeline Optimization Opportunities

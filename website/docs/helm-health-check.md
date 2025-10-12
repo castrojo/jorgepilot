@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-health
   - helm
+date: 2025-10-12
 ---
 
 # Helm Project Health Check

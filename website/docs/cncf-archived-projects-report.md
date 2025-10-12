@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-status
   - archival
+date: 2025-10-12
 ---
 
 # CNCF Archived Projects Report (18 Months)

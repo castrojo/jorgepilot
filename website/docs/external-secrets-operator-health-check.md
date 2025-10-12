@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-health
   - external-secrets
+date: 2025-10-12
 ---
 
 # External Secrets Operator Project Health Check

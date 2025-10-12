@@ -3,6 +3,7 @@ tags:
   - ublue
   - project-health
   - bluefin
+date: 2025-10-12
 ---
 
 # Bluefin Project Health Check

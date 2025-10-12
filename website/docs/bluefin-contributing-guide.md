@@ -3,6 +3,7 @@ tags:
   - ublue
   - bluefin
   - contributing
+date: 2025-10-12
 ---
 
 # Bluefin Contributor's Guide

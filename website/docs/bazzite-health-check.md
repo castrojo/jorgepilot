@@ -3,6 +3,7 @@ tags:
   - ublue
   - project-health
   - bazzite
+date: 2025-10-12
 ---
 
 # Bazzite Project Health Check

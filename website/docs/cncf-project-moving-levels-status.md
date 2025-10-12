@@ -2,6 +2,7 @@
 tags:
   - cncf
   - project-status
+date: 2025-10-12
 ---
 
 # CNCF Project Moving Levels Status Report

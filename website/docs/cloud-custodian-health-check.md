@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-health
   - cloud-custodian
+date: 2025-10-12
 ---
 
 # Cloud Custodian Project Health Check

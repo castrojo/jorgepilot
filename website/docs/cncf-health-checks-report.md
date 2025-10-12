@@ -2,6 +2,7 @@
 tags:
   - cncf
   - project-health
+date: 2025-10-12
 ---
 
 # CNCF Project Health Checks Report
