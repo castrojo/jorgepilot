@@ -22,30 +22,31 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 
 ## Repository Metrics
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **Stars** | 28,643 | Strong community interest |
-| **Forks** | 7,346 | High derivative usage |
-| **Open Issues** | 464 | Manageable backlog |
-| **Open PRs** | ~10 active | Healthy review velocity |
-| **Latest Release** | v3.19.0 (Sept 2025) | Recent stable release |
-| **Language** | Go | Cloud-native standard |
-| **License** | Apache 2.0 | CNCF-compliant |
-| **Age** | ~10 years (since 2015) | Mature project |
+| Metric             | Value                  | Assessment                |
+| ------------------ | ---------------------- | ------------------------- |
+| **Stars**          | 28,643                 | Strong community interest |
+| **Forks**          | 7,346                  | High derivative usage     |
+| **Open Issues**    | 464                    | Manageable backlog        |
+| **Open PRs**       | ~10 active             | Healthy review velocity   |
+| **Latest Release** | v3.19.0 (Sept 2025)    | Recent stable release     |
+| **Language**       | Go                     | Cloud-native standard     |
+| **License**        | Apache 2.0             | CNCF-compliant            |
+| **Age**            | ~10 years (since 2015) | Mature project            |
 
 ## Governance & Community
 
 ### Maintainer Structure
 
-| Criterion | Status | Evidence |
-|-----------|--------|------------|
+| Criterion                | Status       | Evidence                           |
+| ------------------------ | ------------ | ---------------------------------- |
 | **Maintainer Diversity** | ✅ Excellent | Multiple organizations represented |
-| **Decision-Making** | ✅ Excellent | Transparent GitHub-based process |
-| **Code of Conduct** | ✅ Excellent | CNCF CoC adopted |
-| **Vendor Neutrality** | ✅ Excellent | CNCF governance ensures neutrality |
-| **License Compliance** | ✅ Excellent | Apache 2.0, CNCF-compliant |
+| **Decision-Making**      | ✅ Excellent | Transparent GitHub-based process   |
+| **Code of Conduct**      | ✅ Excellent | CNCF CoC adopted                   |
+| **Vendor Neutrality**    | ✅ Excellent | CNCF governance ensures neutrality |
+| **License Compliance**   | ✅ Excellent | Apache 2.0, CNCF-compliant         |
 
 **Key Maintainers** (based on recent activity):
+
 - Multiple active maintainers from different organizations
 - Clear CODEOWNERS and governance documentation
 - Regular maintainer rotation and succession planning
@@ -53,12 +54,14 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 ### Community Engagement
 
 **Communication Channels:**
+
 - **Kubernetes Slack**: Active #helm-users and #helm-dev channels
 - **GitHub Discussions**: Primary forum for community questions
 - **Developer Calls**: Regular Thursday public meetings
 - **Documentation**: Comprehensive at helm.sh
 
 **Recent Activity Indicators:**
+
 - **Daily Commits**: 3-7 commits per day average
 - **PR Merge Rate**: 85%+ acceptance rate
 - **PR Response Time**: < 48 hours typical
@@ -70,12 +73,14 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 ### Development Activity
 
 **Commit Velocity (October 2025):**
+
 - **Recent Commits**: 30 commits in first week of October
 - **Daily Average**: 3-7 commits (weekdays)
 - **Contributor Mix**: Core maintainers + community contributors
 - **Automated Updates**: Dependabot active for dependency management
 
 **Recent Commit Examples:**
+
 - Oct 7: Test fixes and improvements (@TerryHowe, @robertsirc)
 - Oct 6-7: Dependency updates (Kubernetes libraries, controller-runtime)
 - Oct 3: Windows filepath improvements (@evankanderson)
@@ -84,14 +89,15 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 
 ### Pull Request Health
 
-| Metric | Status | Evidence |
-|--------|--------|------------|
-| **Average PR Size** | 10-100 LOC | Focused, reviewable changes |
-| **PR Merge Rate** | 85%+ | High acceptance rate |
-| **Review Depth** | Thorough | Multiple reviewer feedback |
+| Metric                | Status       | Evidence                      |
+| --------------------- | ------------ | ----------------------------- |
+| **Average PR Size**   | 10-100 LOC   | Focused, reviewable changes   |
+| **PR Merge Rate**     | 85%+         | High acceptance rate          |
+| **Review Depth**      | Thorough     | Multiple reviewer feedback    |
 | **CI/CD Integration** | ✅ Excellent | Comprehensive test automation |
 
 **Active Pull Requests (Oct 2025):**
+
 - #31365: Code refactoring (reflect.TypeFor) - Open
 - #31364: Dependency update (CodeQL action) - Open
 - #31363: Revert problematic change - Under review
@@ -108,6 +114,7 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 - **Security**: Multiple security-related fixes and dependency updates
 
 **Release Patterns:**
+
 - **Minor Releases**: Monthly cadence
 - **Patch Releases**: As needed for critical fixes
 - **Version Support**: v3.x actively maintained, v4.0 in alpha
@@ -117,15 +124,16 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 
 ### Security Practices
 
-| Criterion | Status | Evidence |
-|-----------|--------|------------|
-| **Security Reporting** | ✅ Excellent | Clear vulnerability disclosure process |
-| **Access Controls** | ✅ Excellent | 2FA required, branch protection enabled |
-| **Dependency Scanning** | ✅ Excellent | Automated Dependabot updates |
-| **Code Scanning** | ✅ Excellent | CodeQL and security workflows active |
-| **OSSF Scorecard** | ✅ Good | Regular security posture monitoring |
+| Criterion               | Status       | Evidence                                |
+| ----------------------- | ------------ | --------------------------------------- |
+| **Security Reporting**  | ✅ Excellent | Clear vulnerability disclosure process  |
+| **Access Controls**     | ✅ Excellent | 2FA required, branch protection enabled |
+| **Dependency Scanning** | ✅ Excellent | Automated Dependabot updates            |
+| **Code Scanning**       | ✅ Excellent | CodeQL and security workflows active    |
+| **OSSF Scorecard**      | ✅ Good      | Regular security posture monitoring     |
 
 **Security Features:**
+
 - **Provenance Signing**: Chart provenance and verification support
 - **SBOM**: Software Bill of Materials generation
 - **Vulnerability Scanning**: Automated dependency vulnerability checks
@@ -133,6 +141,7 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 - **CVE Response**: Rapid response to security issues (same-day for critical)
 
 **Recent Security Updates:**
+
 - Oct 7: Dependency updates (Kubernetes libraries, controller-runtime)
 - Oct 1: Security scanning workflow updates (OSSF scorecard)
 - Sept 30: Cryptographic library updates (golang.org/x/crypto)
@@ -150,6 +159,7 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 ### Production Adoption
 
 **Adoption Indicators:**
+
 - **Stars**: 28,643 (top Kubernetes ecosystem project)
 - **Forks**: 7,346 (extensive derivative usage)
 - **Production Usage**: Widely adopted across Fortune 500 and startups
@@ -159,18 +169,21 @@ Helm achieved CNCF Graduated status, indicating production maturity, widespread 
 ### Ecosystem Integration
 
 **Related Helm Projects:**
+
 - [@helm/charts](https://github.com/helm/charts) - Legacy chart repository (15,455 stars, archived)
 - [@helm/chartmuseum](https://github.com/helm/chartmuseum) - Chart repository server (3,767 stars)
 - [@helm/helm-www](https://github.com/helm/helm-www) - Official documentation site (222 stars)
 - [@helm/community](https://github.com/helm/community) - Community governance (464 stars)
 
 **Chart Repositories:**
+
 - **Artifact Hub**: Primary public chart discovery platform
 - **ChartMuseum**: Self-hosted repository solution
 - **OCI Registries**: Native OCI artifact support for chart distribution
 - **Git-based**: GitHub/GitLab repository support
 
 **Tool Integrations:**
+
 - **GitOps**: ArgoCD, Flux native Helm support
 - **CI/CD**: Jenkins, GitHub Actions, GitLab CI integration
 - **Package Managers**: Homebrew, Chocolatey, apt, yum
@@ -218,4 +231,3 @@ This health check was conducted on **October 8, 2025** using:
 **Report Generated**: October 8, 2025
 
 **Next Review**: Recommended annual review or upon significant project changes
-

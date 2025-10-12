@@ -24,13 +24,13 @@ The Raycast Homebrew extension (**extensions/brew**) does NOT use a Homebrew API
 
 **Key Integration Points:**
 
-| Component | Method | Details |
-|-----------|--------|---------|
-| **CLI Execution** | Node.js `child_process.exec` | Spawns `brew` commands with JSON output flags |
-| **Data Format** | JSON (`--json=v2`) | Structured data from `brew info`, `brew outdated` |
-| **Local Data** | Filesystem access | Reads from `{HOMEBREW_PREFIX}/Cellar`, `Caskroom`, lock files |
-| **Caching** | Local JSON files | `~/.cache/raycast-brew/` stores `installed.json`, `formula.json`, `cask.json` |
-| **Remote Data** | HTTP fetch | `https://formulae.brew.sh/api/formula.json` and `/cask.json` |
+| Component         | Method                       | Details                                                                       |
+| ----------------- | ---------------------------- | ----------------------------------------------------------------------------- |
+| **CLI Execution** | Node.js `child_process.exec` | Spawns `brew` commands with JSON output flags                                 |
+| **Data Format**   | JSON (`--json=v2`)           | Structured data from `brew info`, `brew outdated`                             |
+| **Local Data**    | Filesystem access            | Reads from `{HOMEBREW_PREFIX}/Cellar`, `Caskroom`, lock files                 |
+| **Caching**       | Local JSON files             | `~/.cache/raycast-brew/` stores `installed.json`, `formula.json`, `cask.json` |
+| **Remote Data**   | HTTP fetch                   | `https://formulae.brew.sh/api/formula.json` and `/cask.json`                  |
 
 ### Core Implementation Details
 
@@ -39,9 +39,9 @@ The Raycast Homebrew extension (**extensions/brew**) does NOT use a Homebrew API
 ```typescript
 // Executes brew commands with JSON output
 async function execBrew(cmd: string): Promise<ExecResult> {
-  return await execp(`${brewExecutable()} ${cmd}`, { 
-    env: env, 
-    maxBuffer: 10 * 1024 * 1024 
+  return await execp(`${brewExecutable()} ${cmd}`, {
+    env: env,
+    maxBuffer: 10 * 1024 * 1024,
   });
 }
 
@@ -52,7 +52,7 @@ export async function brewFetchInstalled(): Promise<InstalledMap> {
 }
 
 // Searches formulae from Homebrew's public API
-const formulaURL = "https://formulae.brew.sh/api/formula.json";
+const formulaURL = 'https://formulae.brew.sh/api/formula.json';
 export async function brewFetchFormulae(): Promise<Formula[]> {
   return await utils.fetchRemote({ url: formulaURL, cachePath });
 }
@@ -70,7 +70,7 @@ Homebrew provides NO dedicated API beyond its CLI. Third-party integrations must
 **Formulae.brew.sh Public Endpoints:**
 
 - `https://formulae.brew.sh/api/formula.json` - All formulae metadata
-- `https://formulae.brew.sh/api/cask.json` - All casks metadata  
+- `https://formulae.brew.sh/api/cask.json` - All casks metadata
 - `https://formulae.brew.sh/api/formula/{name}.json` - Single formula details
 - `https://formulae.brew.sh/api/cask/{token}.json` - Single cask details
 
@@ -86,7 +86,7 @@ These are **READ-ONLY** - all mutations (install/uninstall/upgrade) require CLI 
 
 ```typescript
 // Uses Linear's official SDK
-import { LinearClient } from "@linear/sdk";
+import { LinearClient } from '@linear/sdk';
 
 const client = new LinearClient({ apiKey: userApiKey });
 const issues = await client.issues({ filter: { assignee: { id } } });
@@ -105,15 +105,16 @@ const issues = await client.issues({ filter: { assignee: { id } } });
 
 ```typescript
 // Example REST API call
-const response = await fetch("https://api.github.com/user/repos", {
+const response = await fetch('https://api.github.com/user/repos', {
   headers: {
     Authorization: `Bearer ${token}`,
-    Accept: "application/vnd.github.v3+json"
-  }
+    Accept: 'application/vnd.github.v3+json',
+  },
 });
 ```
 
 **API Endpoints**:
+
 - REST: `https://api.github.com`
 - GraphQL: `https://api.github.com/graphql`
 
@@ -130,6 +131,7 @@ const response = await fetch("https://api.github.com/user/repos", {
 **API Endpoint**: `https://api.spotify.com/v1`
 
 **Key Endpoints**:
+
 - `/me/player/currently-playing` - Now playing track
 - `/me/player/play` - Resume playback
 - `/search` - Search tracks/artists/albums
@@ -145,12 +147,12 @@ const response = await fetch("https://api.github.com/user/repos", {
 **Authentication**: OAuth 2.0 / Internal Integration Token
 
 ```typescript
-const response = await fetch("https://api.notion.com/v1/databases/{db_id}/query", {
-  method: "POST",
+const response = await fetch('https://api.notion.com/v1/databases/{db_id}/query', {
+  method: 'POST',
   headers: {
-    "Authorization": `Bearer ${token}`,
-    "Notion-Version": "2022-06-28"
-  }
+    Authorization: `Bearer ${token}`,
+    'Notion-Version': '2022-06-28',
+  },
 });
 ```
 
@@ -169,6 +171,7 @@ const response = await fetch("https://api.notion.com/v1/databases/{db_id}/query"
 **API Endpoint**: `https://{site}.atlassian.net/rest/api/3`
 
 **Key Endpoints**:
+
 - `/search` - JQL (Jira Query Language) searches
 - `/issue/{issueIdOrKey}` - Issue details
 - `/issue` (POST) - Create issue
@@ -186,6 +189,7 @@ const response = await fetch("https://api.notion.com/v1/databases/{db_id}/query"
 **API Endpoint**: `https://slack.com/api`
 
 **Key Methods** (all POST):
+
 - `/conversations.list` - List channels
 - `/chat.postMessage` - Send message
 - `/users.list` - List workspace users
@@ -216,7 +220,7 @@ op item get <item> --format=json
 
 ```typescript
 // Docker socket API
-const response = await fetch("unix:///var/run/docker.sock:/containers/json");
+const response = await fetch('unix:///var/run/docker.sock:/containers/json');
 ```
 
 **Integration Pattern**: Combines CLI execution (`docker ps --format=json`) with direct socket communication for real-time data.
@@ -226,6 +230,7 @@ const response = await fetch("unix:///var/run/docker.sock:/containers/json");
 ### Pattern 1: REST APIs (Most Common)
 
 **Characteristics:**
+
 - HTTPS endpoints with JSON payloads
 - OAuth 2.0 or token-based auth
 - Rate limiting (typically 5000-10000 req/hr)
@@ -238,6 +243,7 @@ const response = await fetch("unix:///var/run/docker.sock:/containers/json");
 ### Pattern 2: CLI Wrappers
 
 **Characteristics:**
+
 - Execute local binaries (`brew`, `op`, `docker`)
 - Parse structured output (JSON preferred)
 - Filesystem access for validation
@@ -250,6 +256,7 @@ const response = await fetch("unix:///var/run/docker.sock:/containers/json");
 ### Pattern 3: GraphQL APIs
 
 **Characteristics:**
+
 - Single endpoint for all queries
 - Client-specified response shape
 - Strongly typed schemas
@@ -262,6 +269,7 @@ const response = await fetch("unix:///var/run/docker.sock:/containers/json");
 ### Pattern 4: Local Application Protocols
 
 **Characteristics:**
+
 - AppleScript / JXA (JavaScript for Automation)
 - macOS app URL schemes (`spotify:`, `things:`)
 - Unix domain sockets (`/var/run/docker.sock`)
@@ -291,19 +299,22 @@ When building a tool to interface with services like Raycast does:
 ### Step 3: Data Access Method
 
 **For REST APIs:**
+
 ```typescript
 const data = await fetch(API_URL, {
-  headers: { Authorization: `Bearer ${token}` }
-}).then(r => r.json());
+  headers: { Authorization: `Bearer ${token}` },
+}).then((r) => r.json());
 ```
 
 **For CLI tools:**
+
 ```typescript
 const { stdout } = await execp(`command --json`);
 const data = JSON.parse(stdout);
 ```
 
 **For GraphQL:**
+
 ```typescript
 const query = `{ user { issues { nodes { title } } } }`;
 const data = await graphqlClient.request(query);
@@ -343,8 +354,7 @@ brew outdated --formula --json=v2
 
 ```typescript
 // Fetch all formulae
-const formulae = await fetch("https://formulae.brew.sh/api/formula.json")
-  .then(r => r.json());
+const formulae = await fetch('https://formulae.brew.sh/api/formula.json').then((r) => r.json());
 
 // Check installation locally
 const installed = fs.existsSync(`${HOMEBREW_PREFIX}/Cellar/${name}`);
@@ -367,10 +377,11 @@ const installed = fs.existsSync(`${HOMEBREW_PREFIX}/Cellar/${name}`);
 ## Key Takeaways
 
 :::tip Integration Patterns
+
 - **REST APIs**: 60%+ of extensions use HTTP/JSON APIs (Linear, GitHub, Notion, Slack)
 - **CLI Wrappers**: 25% wrap command-line tools (Homebrew, 1Password, Docker)
 - **Local Protocols**: 15% use macOS-specific mechanisms (AppleScript, URL schemes)
-:::
+  :::
 
 ### For Homebrew Specifically
 
@@ -381,15 +392,15 @@ const installed = fs.existsSync(`${HOMEBREW_PREFIX}/Cellar/${name}`);
 
 ### Reusable API Endpoints
 
-| Service | Endpoint | Auth | Purpose |
-|---------|----------|------|---------|
-| **Homebrew** | `formulae.brew.sh/api/formula.json` | None | Search formulae |
-| **GitHub** | `api.github.com` | Token | Full GitHub operations |
-| **Linear** | `api.linear.app/graphql` | OAuth | Issue management |
-| **Notion** | `api.notion.com/v1` | OAuth | Database queries |
-| **Slack** | `slack.com/api` | OAuth | Messaging |
-| **Spotify** | `api.spotify.com/v1` | OAuth | Playback control |
-| **Jira** | `{site}.atlassian.net/rest/api/3` | OAuth | Issue tracking |
+| Service      | Endpoint                            | Auth  | Purpose                |
+| ------------ | ----------------------------------- | ----- | ---------------------- |
+| **Homebrew** | `formulae.brew.sh/api/formula.json` | None  | Search formulae        |
+| **GitHub**   | `api.github.com`                    | Token | Full GitHub operations |
+| **Linear**   | `api.linear.app/graphql`            | OAuth | Issue management       |
+| **Notion**   | `api.notion.com/v1`                 | OAuth | Database queries       |
+| **Slack**    | `slack.com/api`                     | OAuth | Messaging              |
+| **Spotify**  | `api.spotify.com/v1`                | OAuth | Playback control       |
+| **Jira**     | `{site}.atlassian.net/rest/api/3`   | OAuth | Issue tracking         |
 
 ## References
 
@@ -425,6 +436,7 @@ const installed = fs.existsSync(`${HOMEBREW_PREFIX}/Cellar/${name}`);
 ## Methodology
 
 This analysis examined:
+
 - **Homebrew extension source code** (4 TypeScript files, 15,000+ LOC)
 - **Top 10 Raycast extensions by popularity** (Linear, GitHub, Notion, Slack, Spotify, Jira, 1Password, Docker, Things, Music)
 - **API documentation** for 7 cloud services

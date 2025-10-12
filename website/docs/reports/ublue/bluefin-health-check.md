@@ -33,26 +33,27 @@ Active maintainer engagement with issues triaged within 72 hours and PRs reviewe
 
 ### Pull Request Responsiveness
 
-| Metric | Status | Evidence |
-|--------|--------|----------|
-| **Average Response Time** | < 48 hours | Manual PRs reviewed within 24-48 hours |
-| **Median Time to Merge** | 1-2 hours | Automated PRs merged quickly; manual PRs 1-2 days |
-| **Review Depth** | Thorough | Maintainers provide detailed feedback and testing |
-| **Stale PR Management** | Active | Old PRs closed or merged regularly |
+| Metric                    | Status     | Evidence                                          |
+| ------------------------- | ---------- | ------------------------------------------------- |
+| **Average Response Time** | < 48 hours | Manual PRs reviewed within 24-48 hours            |
+| **Median Time to Merge**  | 1-2 hours  | Automated PRs merged quickly; manual PRs 1-2 days |
+| **Review Depth**          | Thorough   | Maintainers provide detailed feedback and testing |
+| **Stale PR Management**   | Active     | Old PRs closed or merged regularly                |
 
 **Recent PR Examples (October 2025):**
+
 - PR #3356: chore(deps): update silverblue-main digest - merged same day (Oct 11)
 - PR #3329: chore: delete .github/pull.yml - merged within hours (Oct 10)
 - PR #3322: fix: remove cockpit and brew setup functions - merged within hours (Oct 4)
 
 ### Issue Responsiveness
 
-| Metric | Status | Evidence |
-|--------|--------|----------|
-| **Issue Triage Time** | < 72 hours | New issues labeled and responded to within 2-3 days |
-| **Bug Response** | < 48 hours | Critical bugs addressed within 24-48 hours |
-| **Feature Discussions** | Active | Regular community engagement on feature requests |
-| **Issue Resolution Rate** | Healthy | Backlog stable at 84 open issues |
+| Metric                    | Status     | Evidence                                            |
+| ------------------------- | ---------- | --------------------------------------------------- |
+| **Issue Triage Time**     | < 72 hours | New issues labeled and responded to within 2-3 days |
+| **Bug Response**          | < 48 hours | Critical bugs addressed within 24-48 hours          |
+| **Feature Discussions**   | Active     | Regular community engagement on feature requests    |
+| **Issue Resolution Rate** | Healthy    | Backlog stable at 84 open issues                    |
 
 **Open Issues**: 84 (manageable for project size and activity level)  
 **Issue Labels**: Well-organized triage system with bug, enhancement, help wanted, dx, framework, and other categorical labels
@@ -65,14 +66,15 @@ High daily commit volume driven primarily by automated dependency management (60
 
 ### Overall Activity Metrics
 
-| Period | Commits | Pull Requests | Unique Contributors | New Contributors |
-|--------|---------|---------------|---------------------|------------------|
-| **Q4 2024** | 900+ | 850+ | 15-20 | 3-5 |
-| **Q1 2025** | 950+ | 900+ | 15-20 | 2-4 |
-| **Q2 2025** | 800+ | 750+ | 12-18 | 2-3 |
-| **Q3 2025** | 850+ | 800+ | 15-20 | 3-5 |
+| Period      | Commits | Pull Requests | Unique Contributors | New Contributors |
+| ----------- | ------- | ------------- | ------------------- | ---------------- |
+| **Q4 2024** | 900+    | 850+          | 15-20               | 3-5              |
+| **Q1 2025** | 950+    | 900+          | 15-20               | 2-4              |
+| **Q2 2025** | 800+    | 750+          | 12-18               | 2-3              |
+| **Q3 2025** | 850+    | 800+          | 15-20               | 3-5              |
 
 **Commit Velocity:**
+
 - **Daily average**: 8-12 commits (including automated)
 - **Peak activity**: US business hours (EST/PST), weekdays
 - **Contributor mix**: ~60% automated (Renovate bot), ~35% core maintainers, ~5% community
@@ -80,6 +82,7 @@ High daily commit volume driven primarily by automated dependency management (60
 ### Notable Contributors (Past 12 Months)
 
 **Top 10 Active Contributors:**
+
 1. **@ubot-7274[bot]** - Automated dependency updates (Renovate)
 2. **@castrojo** - Project lead, infrastructure, features
 3. **@EyeCantCU** - Developer tooling, DX features
@@ -94,6 +97,7 @@ High daily commit volume driven primarily by automated dependency management (60
 ### Contributor Growth
 
 **New Contributor Onboarding:**
+
 - 12+ new contributors in past 12 months
 - Active "help wanted" label for newcomer-friendly issues
 - Comprehensive documentation at docs.projectbluefin.io
@@ -107,12 +111,12 @@ Project relies heavily on automation (Renovate bot) and 2-3 core maintainers for
 
 ### Maintainer Concentration
 
-| Risk Factor | Assessment | Details |
-|-------------|------------|---------|
-| **Individual Concentration** | Moderate | Top 3 human contributors: ~30% of manual commits |
-| **Single Point of Failure** | Moderate | Bus factor of 3-4 maintainers |
-| **Organization Diversity** | Good | Multiple organizations represented in contributions |
-| **Geographic Distribution** | Regional | Primarily North American timezone |
+| Risk Factor                  | Assessment | Details                                             |
+| ---------------------------- | ---------- | --------------------------------------------------- |
+| **Individual Concentration** | Moderate   | Top 3 human contributors: ~30% of manual commits    |
+| **Single Point of Failure**  | Moderate   | Bus factor of 3-4 maintainers                       |
+| **Organization Diversity**   | Good       | Multiple organizations represented in contributions |
+| **Geographic Distribution**  | Regional   | Primarily North American timezone                   |
 
 ### Bus Factor Analysis
 
@@ -128,30 +132,30 @@ Consistent daily activity with automated updates and regular manual contribution
 
 ### Commit Activity (Past 12 Months)
 
-| Metric | Value | Trend |
-|--------|-------|-------|
-| **Total Commits** | 3,500+ | → Stable |
-| **Average Commits/Day** | 9-10 | → Stable |
-| **Active Days** | 360+/365 | 98%+ |
-| **Longest Gap** | 1-2 days | Very consistent |
+| Metric                  | Value    | Trend           |
+| ----------------------- | -------- | --------------- |
+| **Total Commits**       | 3,500+   | → Stable        |
+| **Average Commits/Day** | 9-10     | → Stable        |
+| **Active Days**         | 360+/365 | 98%+            |
+| **Longest Gap**         | 1-2 days | Very consistent |
 
 ### Pull Request Throughput
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **PRs Opened** | 3,400+ | High automated activity |
-| **PRs Merged** | 3,300+ | Excellent merge rate (97%+) |
-| **PRs Closed (unmerged)** | &lt;100 | Low rejection rate |
-| **Average PR Lifespan** | &lt;1 day | Very healthy for automated; 1-3 days for manual |
+| Metric                    | Value     | Assessment                                      |
+| ------------------------- | --------- | ----------------------------------------------- |
+| **PRs Opened**            | 3,400+    | High automated activity                         |
+| **PRs Merged**            | 3,300+    | Excellent merge rate (97%+)                     |
+| **PRs Closed (unmerged)** | &lt;100   | Low rejection rate                              |
+| **Average PR Lifespan**   | &lt;1 day | Very healthy for automated; 1-3 days for manual |
 
 ### Issue Resolution
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **Issues Opened** | 180+ | Active user base reporting issues |
-| **Issues Closed** | 160+ | Good resolution rate (89%) |
-| **Net Change** | +20 | Backlog slightly growing but manageable |
-| **Average Resolution Time** | 5-10 days | Reasonable for community project |
+| Metric                      | Value     | Assessment                              |
+| --------------------------- | --------- | --------------------------------------- |
+| **Issues Opened**           | 180+      | Active user base reporting issues       |
+| **Issues Closed**           | 160+      | Good resolution rate (89%)              |
+| **Net Change**              | +20       | Backlog slightly growing but manageable |
+| **Average Resolution Time** | 5-10 days | Reasonable for community project        |
 
 ## Release Activity
 
@@ -164,6 +168,7 @@ Daily container image builds with stable, gts (LTS), and latest tracks providing
 Bluefin follows a continuous delivery model with daily OCI image builds rather than traditional versioned releases:
 
 **Image Tags:**
+
 - **stable**: Weekly builds for production users (Fedora 42)
 - **gts**: Long-term support builds (Fedora 41)
 - **latest**: Daily builds for early adopters (Fedora 42)
@@ -174,11 +179,11 @@ Bluefin follows a continuous delivery model with daily OCI image builds rather t
 
 ### Recent Activity
 
-| Version Pattern | Frequency | Stability |
-|-----------------|-----------|-----------|
-| **Daily builds** | 2-4 per day | High - automated CI/CD |
-| **Stable updates** | Weekly | Very stable |
-| **GTS updates** | As needed | Most stable |
+| Version Pattern    | Frequency   | Stability              |
+| ------------------ | ----------- | ---------------------- |
+| **Daily builds**   | 2-4 per day | High - automated CI/CD |
+| **Stable updates** | Weekly      | Very stable            |
+| **GTS updates**    | As needed   | Most stable            |
 
 ## Governance & Maintainership
 
@@ -188,25 +193,25 @@ GitHub-based decision making with clear maintainer structure defined in CODEOWNE
 
 ### Governance Structure
 
-| Indicator | Status | Evidence |
-|-----------|--------|----------|
-| **Code of Conduct** | ✅ | Universal Blue Community Guidelines |
-| **Contributing Guide** | ✅ | Comprehensive contributing documentation |
-| **Security Policy** | ✅ | SECURITY.md with vulnerability reporting |
-| **License** | ✅ | Apache 2.0 |
-| **Governance Documentation** | ✅ | CODEOWNERS defines maintainer structure |
-| **Decision-Making Transparency** | ✅ | Public PRs and issues for all decisions |
+| Indicator                        | Status | Evidence                                 |
+| -------------------------------- | ------ | ---------------------------------------- |
+| **Code of Conduct**              | ✅     | Universal Blue Community Guidelines      |
+| **Contributing Guide**           | ✅     | Comprehensive contributing documentation |
+| **Security Policy**              | ✅     | SECURITY.md with vulnerability reporting |
+| **License**                      | ✅     | Apache 2.0                               |
+| **Governance Documentation**     | ✅     | CODEOWNERS defines maintainer structure  |
+| **Decision-Making Transparency** | ✅     | Public PRs and issues for all decisions  |
 
 ### Maintainer Structure
 
 **Active Maintainers: 4**
 
-| Maintainer | Organization | Focus Area | Activity Level |
-|------------|--------------|------------|----------------|
-| @castrojo | Independent | Project lead, infrastructure | High |
-| @p5 | Independent | Maintenance, features | Medium |
-| @m2Giles | Independent | Build system | Medium |
-| @tulilirockz | Independent | Testing, contributions | Medium |
+| Maintainer   | Organization | Focus Area                   | Activity Level |
+| ------------ | ------------ | ---------------------------- | -------------- |
+| @castrojo    | Independent  | Project lead, infrastructure | High           |
+| @p5          | Independent  | Maintenance, features        | Medium         |
+| @m2Giles     | Independent  | Build system                 | Medium         |
+| @tulilirockz | Independent  | Testing, contributions       | Medium         |
 
 ### Organizational Diversity
 
@@ -222,16 +227,16 @@ Basic security practices in place with room for improvement in formal auditing
 
 ### Security Implementation
 
-| Practice | Status | Evidence |
-|----------|--------|----------|
-| **Security Policy (SECURITY.md)** | ✅ | Clear vulnerability disclosure process |
-| **Vulnerability Disclosure Process** | ✅ | GitHub security advisories enabled |
-| **Security Response Team** | ⚠️ | Maintainers handle security issues |
-| **OpenSSF Best Practices Badge** | ❌ | Not pursued yet |
-| **Security Audit** | ❌ | No formal third-party audit |
-| **Dependabot/Renovate** | ✅ | Renovate bot actively updating dependencies |
-| **SAST/Code Scanning** | ✅ | Codacy integration (Grade A) |
-| **Branch Protection** | ✅ | Protected main branch with required reviews |
+| Practice                             | Status | Evidence                                    |
+| ------------------------------------ | ------ | ------------------------------------------- |
+| **Security Policy (SECURITY.md)**    | ✅     | Clear vulnerability disclosure process      |
+| **Vulnerability Disclosure Process** | ✅     | GitHub security advisories enabled          |
+| **Security Response Team**           | ⚠️     | Maintainers handle security issues          |
+| **OpenSSF Best Practices Badge**     | ❌     | Not pursued yet                             |
+| **Security Audit**                   | ❌     | No formal third-party audit                 |
+| **Dependabot/Renovate**              | ✅     | Renovate bot actively updating dependencies |
+| **SAST/Code Scanning**               | ✅     | Codacy integration (Grade A)                |
+| **Branch Protection**                | ✅     | Protected main branch with required reviews |
 
 ### Security Findings
 
@@ -250,12 +255,14 @@ Active community with documented production users and strong integration ecosyst
 ### Community Engagement
 
 **Community Channels:**
+
 - Documentation: [docs.projectbluefin.io](https://docs.projectbluefin.io/)
 - Forum: [community.projectbluefin.io](https://community.projectbluefin.io/)
 - Discord: Active Universal Blue Discord server
 - GitHub Discussions: Active for questions and support
 
 **User Base Indicators:**
+
 - 2,000+ GitHub stars
 - 200+ forks (indicating derivative projects)
 - Active daily issue/PR activity from external users
@@ -264,6 +271,7 @@ Active community with documented production users and strong integration ecosyst
 ### Ecosystem Integration
 
 **Related Projects:**
+
 - [@ublue-os/main](https://github.com/ublue-os/main) - Base Universal Blue images
 - [@ublue-os/bazzite](https://github.com/ublue-os/bazzite) - Gaming variant
 - [@ublue-os/aurora](https://github.com/ublue-os/aurora) - KDE variant
@@ -277,24 +285,24 @@ While project health is strong, some areas benefit from continued attention
 
 ### Identified Risks
 
-| Risk | Severity | Impact | Likelihood |
-|------|----------|--------|------------|
-| **Maintainer Concentration** | 🟡 Medium | High - Project continuity | Medium |
-| **Automation Dependency** | 🟡 Medium | Medium - Build failures | Low |
-| **Support Burden** | 🟡 Medium | Medium - Maintainer burnout | Medium |
+| Risk                         | Severity  | Impact                      | Likelihood |
+| ---------------------------- | --------- | --------------------------- | ---------- |
+| **Maintainer Concentration** | 🟡 Medium | High - Project continuity   | Medium     |
+| **Automation Dependency**    | 🟡 Medium | Medium - Build failures     | Low        |
+| **Support Burden**           | 🟡 Medium | Medium - Maintainer burnout | Medium     |
 
 ### Recommendations
 
-| Priority | Recommendation | Rationale | Timeline |
-|----------|----------------|-----------|----------|
-| **Medium** | Expand core maintainer team | Reduce concentration risk | 6-12 months |
-| **Low** | Pursue OpenSSF badge | Improve security posture visibility | 12 months |
-| **Low** | Document succession planning | Ensure project continuity | 6-12 months |
+| Priority   | Recommendation               | Rationale                           | Timeline    |
+| ---------- | ---------------------------- | ----------------------------------- | ----------- |
+| **Medium** | Expand core maintainer team  | Reduce concentration risk           | 6-12 months |
+| **Low**    | Pursue OpenSSF badge         | Improve security posture visibility | 12 months   |
+| **Low**    | Document succession planning | Ensure project continuity           | 6-12 months |
 
 ## Areas of Excellence
 
 - **Automation Excellence**: Renovate bot integration provides best-in-class automated dependency management
-- **Multiple Release Tracks**: stable, gts, and latest tracks serve different user needs effectively  
+- **Multiple Release Tracks**: stable, gts, and latest tracks serve different user needs effectively
 - **Documentation Quality**: Comprehensive docs at docs.projectbluefin.io
 - **Build System**: Sophisticated GitHub Actions CI/CD with multiple image variants
 - **Community Support**: Active forum and Discord providing excellent user support
@@ -304,6 +312,7 @@ While project health is strong, some areas benefit from continued attention
 **Maturity Level**: Mature Production
 
 **Characteristics:**
+
 - ✅ Active daily development and maintenance
 - ✅ Stable maintainer team with clear governance
 - ✅ Comprehensive documentation and user support
@@ -312,12 +321,14 @@ While project health is strong, some areas benefit from continued attention
 - ✅ Strong ecosystem integration with Universal Blue family
 
 **Suitable For:**
+
 - Production desktop development workstations
 - Teams wanting cloud-native development environments
 - Users seeking modern, immutable Linux desktops
 - Organizations standardizing on container-based systems
 
 **Not Suitable For:**
+
 - Users requiring Ubuntu/Debian package compatibility
 - Legacy application dependencies
 - Organizations requiring enterprise support contracts
@@ -352,6 +363,7 @@ The project operates as a mature, production-ready development platform with roo
 ## Methodology
 
 **Data Sources:**
+
 - GitHub API (commits, PRs, releases, issues)
 - Repository file analysis (governance docs, security policies)
 - Manual review of recent PRs and issues for responsiveness assessment
@@ -361,6 +373,7 @@ The project operates as a mature, production-ready development platform with roo
 **Scope:** This health check focuses on observable project activity, governance structure, and community health. Analysis based on public GitHub data and repository documentation.
 
 **Metrics Collection:**
+
 - Commit and PR data: GitHub REST API
 - Contributor analysis: Manual analysis of recent commits
 - Release data: GitHub container registry and release tags

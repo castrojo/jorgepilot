@@ -17,6 +17,7 @@ External Secrets Operator (ESO) demonstrates **excellent project health** with s
 [@external-secrets/external-secrets](https://github.com/external-secrets/external-secrets) is a Kubernetes operator that integrates external secret management systems (AWS Secrets Manager, HashiCorp Vault, Google Secrets Manager, Azure Key Vault, and 30+ providers) with Kubernetes. This health check evaluates project activity from **October 8, 2024 to October 8, 2025** against CNCF TAG Contributor Strategy criteria and CNCF project maturity requirements.
 
 **Project Stats (as of October 8, 2025):**
+
 - **GitHub Stars**: 4,800+
 - **Maturity Level**: CNCF Incubating
 - **Current Version**: v0.20.2 (October 2025)
@@ -31,14 +32,15 @@ Sub-24-hour PR response times and active issue triage demonstrate strong maintai
 
 ### Pull Request Responsiveness
 
-| Metric | Status | Evidence |
-|--------|--------|----------|
-| **Average Response Time** | < 24 hours | Recent PRs show same-day reviews |
-| **Median Time to Merge** | 2-7 days | Active PRs merged within week |
-| **Review Depth** | Thorough | Multiple rounds with detailed feedback |
-| **Stale PR Management** | Active | Automated stale bot keeps backlog clean |
+| Metric                    | Status     | Evidence                                |
+| ------------------------- | ---------- | --------------------------------------- |
+| **Average Response Time** | < 24 hours | Recent PRs show same-day reviews        |
+| **Median Time to Merge**  | 2-7 days   | Active PRs merged within week           |
+| **Review Depth**          | Thorough   | Multiple rounds with detailed feedback  |
+| **Stale PR Management**   | Active     | Automated stale bot keeps backlog clean |
 
 **Recent PR Examples (October 2025):**
+
 - PR #5433: Documentation fix merged same day (Oct 7)
 - PR #5427: Dependencies updated with thorough review (Oct 6)
 - PR #5400: Feature PR merged after 3-day review cycle (Oct 3)
@@ -46,12 +48,12 @@ Sub-24-hour PR response times and active issue triage demonstrate strong maintai
 
 ### Issue Responsiveness
 
-| Metric | Status | Evidence |
-|--------|--------|----------|
-| **Issue Triage Time** | < 72 hours | New issues labeled promptly |
-| **Bug Response** | < 48 hours | Critical bugs addressed quickly |
-| **Feature Discussions** | Active | Community engagement in feature requests |
-| **Issue Resolution Rate** | Healthy | Backlog managed effectively |
+| Metric                    | Status     | Evidence                                 |
+| ------------------------- | ---------- | ---------------------------------------- |
+| **Issue Triage Time**     | < 72 hours | New issues labeled promptly              |
+| **Bug Response**          | < 48 hours | Critical bugs addressed quickly          |
+| **Feature Discussions**   | Active     | Community engagement in feature requests |
+| **Issue Resolution Rate** | Healthy    | Backlog managed effectively              |
 
 **Open Issues**: 181 (manageable for project scope)
 **Issue Labels**: Comprehensive triage system with priority/kind/area labels
@@ -64,14 +66,15 @@ Diverse contributor base with 50+ unique contributors per quarter and healthy mi
 
 ### Overall Activity Metrics
 
-| Period | Commits | Pull Requests | Unique Contributors | New Contributors |
-|--------|---------|---------------|---------------------|------------------|
-| **Q4 2024** | 250+ | 80+ | 40+ | 10+ |
-| **Q1 2025** | 280+ | 90+ | 45+ | 12+ |
-| **Q2 2025** | 300+ | 100+ | 50+ | 15+ |
-| **Q3 2025** | 320+ | 110+ | 55+ | 18+ |
+| Period      | Commits | Pull Requests | Unique Contributors | New Contributors |
+| ----------- | ------- | ------------- | ------------------- | ---------------- |
+| **Q4 2024** | 250+    | 80+           | 40+                 | 10+              |
+| **Q1 2025** | 280+    | 90+           | 45+                 | 12+              |
+| **Q2 2025** | 300+    | 100+          | 50+                 | 15+              |
+| **Q3 2025** | 320+    | 110+          | 55+                 | 18+              |
 
 **Commit Velocity:**
+
 - **Daily average**: 8-12 commits
 - **Peak activity**: Weekdays (Mon-Thu)
 - **Contributor mix**: 55% core maintainers, 45% community
@@ -79,6 +82,7 @@ Diverse contributor base with 50+ unique contributors per quarter and healthy mi
 ### Notable Contributors (Past 12 Months)
 
 **Top 10 Active Contributors:**
+
 1. **@moolen** - Core maintainer, infrastructure
 2. **@Skarlso** - Core maintainer, features & docs
 3. **@gusfcarvalho** - Core maintainer, provider work
@@ -93,6 +97,7 @@ Diverse contributor base with 50+ unique contributors per quarter and healthy mi
 ### Contributor Growth
 
 **First-Time Contributors (2025):**
+
 - 27+ new contributors in v0.20.0 release alone
 - Active onboarding through contributor ladder
 - Documentation improvements helping new contributors
@@ -106,14 +111,15 @@ Maintainer concentration is acceptable for mature project, with efforts underway
 
 ### Bus Factor Analysis
 
-| Metric | Value | Assessment |
-|--------|-------|------------|
-| **Top 3 Contributors** | ~40% commits | Moderate concentration |
-| **Active Maintainers** | 5-7 | Healthy for project size |
-| **Organization Diversity** | 4+ orgs | Good vendor neutrality |
-| **Reviewer Pool** | 10+ | Expanding with interim reviewers |
+| Metric                     | Value        | Assessment                       |
+| -------------------------- | ------------ | -------------------------------- |
+| **Top 3 Contributors**     | ~40% commits | Moderate concentration           |
+| **Active Maintainers**     | 5-7          | Healthy for project size         |
+| **Organization Diversity** | 4+ orgs      | Good vendor neutrality           |
+| **Reviewer Pool**          | 10+          | Expanding with interim reviewers |
 
 **Mitigation Efforts:**
+
 - Interim reviewer program launched (2025)
 - Contributor ladder established
 - Documented onboarding process
@@ -128,11 +134,13 @@ Consistent delivery with bi-weekly releases, active feature development, and res
 ### Commit Activity (Past 12 Months)
 
 **2025 Activity (through October):**
+
 - **Total Commits**: 1,800+
 - **Monthly Average**: 150-180 commits
 - **Daily Average**: 8-12 commits (weekdays)
 
 **Recent Commit Examples:**
+
 - Oct 7: Documentation improvements (smellems)
 - Oct 6: Dependency updates (eso-service-account-app)
 - Oct 3: Vault certificate auth enhancements (shaxbee)
@@ -141,21 +149,21 @@ Consistent delivery with bi-weekly releases, active feature development, and res
 
 ### Pull Request Throughput
 
-| Metric | Value | Trend |
-|--------|-------|-------|
-| **PRs Merged (Sep 2025)** | 55+ | ↑ |
-| **PRs Merged (Oct 2025 YTD)** | 45+ | ↗️ |
-| **Average PR Size** | 100-500 LOC | Manageable |
-| **PR Merge Rate** | 85%+ | High acceptance |
+| Metric                        | Value       | Trend           |
+| ----------------------------- | ----------- | --------------- |
+| **PRs Merged (Sep 2025)**     | 55+         | ↑               |
+| **PRs Merged (Oct 2025 YTD)** | 45+         | ↗️              |
+| **Average PR Size**           | 100-500 LOC | Manageable      |
+| **PR Merge Rate**             | 85%+        | High acceptance |
 
 ### Issue Resolution
 
-| Metric | Status | Notes |
-|--------|--------|-------|
-| **Issues Opened (Q3 2025)** | 120+ | Active user base |
-| **Issues Closed (Q3 2025)** | 110+ | Healthy resolution |
-| **Net Growth** | +10/quarter | Manageable backlog |
-| **Average Age (Open)** | 45 days | Good triage |
+| Metric                      | Status      | Notes              |
+| --------------------------- | ----------- | ------------------ |
+| **Issues Opened (Q3 2025)** | 120+        | Active user base   |
+| **Issues Closed (Q3 2025)** | 110+        | Healthy resolution |
+| **Net Growth**              | +10/quarter | Manageable backlog |
+| **Average Age (Open)**      | 45 days     | Good triage        |
 
 ## Release Activity
 
@@ -166,6 +174,7 @@ Bi-weekly to monthly release schedule with comprehensive changelog, semantic ver
 ### Release Pattern
 
 **Recent Releases:**
+
 - **v0.20.2** (Oct 2025) - Latest stable
 - **helm-chart-0.20.2** (Oct 2025)
 - **v0.20.1** (Sep 2025)
@@ -179,6 +188,7 @@ Bi-weekly to monthly release schedule with comprehensive changelog, semantic ver
 ### Release Content
 
 **Typical Release Includes:**
+
 - 30-50 merged PRs per release
 - New provider support and enhancements
 - Security updates & dependency bumps
@@ -187,6 +197,7 @@ Bi-weekly to monthly release schedule with comprehensive changelog, semantic ver
 - SBOM and provenance attestations
 
 **Example from v0.20.2 (Oct 2025):**
+
 - 38 features/fixes
 - New providers: Ngrok, Volcengine
 - GCP latest secret version feature
@@ -196,6 +207,7 @@ Bi-weekly to monthly release schedule with comprehensive changelog, semantic ver
 ### Dependency Management
 
 **Update Frequency:** Multiple times per week
+
 - Automated dependabot PRs for dependencies
 - Go module updates (go 1.25+)
 - SDK updates for all cloud providers
@@ -208,30 +220,33 @@ Bi-weekly to monthly release schedule with comprehensive changelog, semantic ver
 Well-documented governance with clear roles, vendor neutrality, and transparent decision-making processes.
 :::
 
-| Criterion | Status | Evidence |
-|-----------|--------|----------|
-| **Governance Documentation** | ✅ Excellent | MAINTAINERS.md, CONTRIBUTOR_LADDER.md |
-| **Code of Conduct** | ✅ Present | CNCF CoC adopted |
-| **Contributing Guide** | ✅ Comprehensive | Detailed CONTRIBUTING.md |
-| **Security Policy** | ✅ Documented | SECURITY.md with clear reporting |
-| **License Clarity** | ✅ Apache 2.0 | Proper licensing throughout |
-| **Decision Transparency** | ✅ Good | GitHub discussions and issues |
+| Criterion                    | Status           | Evidence                              |
+| ---------------------------- | ---------------- | ------------------------------------- |
+| **Governance Documentation** | ✅ Excellent     | MAINTAINERS.md, CONTRIBUTOR_LADDER.md |
+| **Code of Conduct**          | ✅ Present       | CNCF CoC adopted                      |
+| **Contributing Guide**       | ✅ Comprehensive | Detailed CONTRIBUTING.md              |
+| **Security Policy**          | ✅ Documented    | SECURITY.md with clear reporting      |
+| **License Clarity**          | ✅ Apache 2.0    | Proper licensing throughout           |
+| **Decision Transparency**    | ✅ Good          | GitHub discussions and issues         |
 
 ### Governance Highlights
 
 **Maintainer Team:**
+
 - 5-7 active maintainers from multiple organizations
 - Clear roles defined in contributor ladder
 - Bi-weekly community meetings (alternating times for global coverage)
 - Public meeting notes and recordings
 
 **Vendor Neutrality:**
+
 - Multiple organizations represented (GoDaddy, SAP, Red Hat, External Secrets Inc., etc.)
 - No single vendor controls direction
 - Community-driven roadmap
 - Transparent decision-making in issues
 
 **Recent Governance Improvements (2025):**
+
 - Contributor ladder with multiple tracks (code, docs, community)
 - Interim reviewer program for expanding maintainer pool
 - Burnout prevention strategies documented
@@ -243,21 +258,23 @@ Well-documented governance with clear roles, vendor neutrality, and transparent 
 Welcoming community with comprehensive onboarding, multiple communication channels, and active mentorship.
 :::
 
-| Indicator | Status | Evidence |
-|-----------|--------|----------|
-| **New Contributor Onboarding** | ✅ Excellent | Good first issue labels, detailed contributing guide |
-| **Communication Channels** | ✅ Multiple | Slack, GitHub, bi-weekly meetings |
-| **Documentation Quality** | ✅ Excellent | Comprehensive docs site at external-secrets.io |
-| **Code Review Quality** | ✅ Constructive | Thorough, educational feedback |
-| **Community Support** | ✅ Active | Responsive in Slack and GitHub |
+| Indicator                      | Status          | Evidence                                             |
+| ------------------------------ | --------------- | ---------------------------------------------------- |
+| **New Contributor Onboarding** | ✅ Excellent    | Good first issue labels, detailed contributing guide |
+| **Communication Channels**     | ✅ Multiple     | Slack, GitHub, bi-weekly meetings                    |
+| **Documentation Quality**      | ✅ Excellent    | Comprehensive docs site at external-secrets.io       |
+| **Code Review Quality**        | ✅ Constructive | Thorough, educational feedback                       |
+| **Community Support**          | ✅ Active       | Responsive in Slack and GitHub                       |
 
 **Communication Channels:**
+
 - Kubernetes Slack: #external-secrets
 - GitHub Discussions and Issues
 - Bi-weekly community meetings (8PM / 1PM Berlin time, alternating)
 - Public meeting notes and CNCF calendar integration
 
 **Documentation:**
+
 - Comprehensive provider guides (30+ providers)
 - API reference auto-generated
 - Getting started tutorials
@@ -271,20 +288,21 @@ Welcoming community with comprehensive onboarding, multiple communication channe
 Security-first approach with comprehensive policies, automated scanning, supply chain security, and active vulnerability management.
 :::
 
-| Criterion | Status | Evidence |
-|-----------|--------|------------|
-| **Security Policy** | ✅ Excellent | SECURITY.md with clear process |
-| **Vulnerability Disclosure** | ✅ Active | Email to maintainers list |
-| **OpenSSF Best Practices** | ✅ Passing | CII Best Practices badge |
-| **OpenSSF Scorecard** | ✅ Good | Active security scorecard monitoring |
-| **Dependency Scanning** | ✅ Automated | Dependabot, CodeQL, Trivy |
-| **SBOM Generation** | ✅ Comprehensive | SPDX SBOM attached to releases |
-| **Provenance Attestation** | ✅ Present | SLSA provenance for images |
-| **Security Audits** | ⚠️ Needed | Third-party audit recommended for graduation |
+| Criterion                    | Status           | Evidence                                     |
+| ---------------------------- | ---------------- | -------------------------------------------- |
+| **Security Policy**          | ✅ Excellent     | SECURITY.md with clear process               |
+| **Vulnerability Disclosure** | ✅ Active        | Email to maintainers list                    |
+| **OpenSSF Best Practices**   | ✅ Passing       | CII Best Practices badge                     |
+| **OpenSSF Scorecard**        | ✅ Good          | Active security scorecard monitoring         |
+| **Dependency Scanning**      | ✅ Automated     | Dependabot, CodeQL, Trivy                    |
+| **SBOM Generation**          | ✅ Comprehensive | SPDX SBOM attached to releases               |
+| **Provenance Attestation**   | ✅ Present       | SLSA provenance for images                   |
+| **Security Audits**          | ⚠️ Needed        | Third-party audit recommended for graduation |
 
 ### Security Highlights
 
 **Automated Security:**
+
 - CodeQL analysis on every PR
 - Trivy container scanning
 - Dependabot for vulnerability patches
@@ -292,6 +310,7 @@ Security-first approach with comprehensive policies, automated scanning, supply 
 - Zizmor GitHub Actions vulnerability scanner
 
 **Supply Chain Security:**
+
 - SBOM generation for all releases (SPDX format)
 - SLSA Build Level 3 provenance attestation
 - Cosign image signing
@@ -299,6 +318,7 @@ Security-first approach with comprehensive policies, automated scanning, supply 
 - Multi-architecture image builds (AMD64, ARM64)
 
 **Access Controls:**
+
 - 2FA required for maintainers
 - Branch protection on main
 - Required code review before merge
@@ -313,6 +333,7 @@ Widely adopted with 100+ listed adopters including major enterprises, active eco
 ### Notable Adopters
 
 **Major Organizations Using ESO:**
+
 - SAP
 - Cisco
 - Red Hat OpenShift
@@ -323,6 +344,7 @@ Widely adopted with 100+ listed adopters including major enterprises, active eco
 - 100+ others listed in ADOPTERS.md
 
 **Adoption Indicators:**
+
 - 4,800+ GitHub stars
 - 700+ forks
 - 35,000+ Helm chart downloads per month
@@ -333,6 +355,7 @@ Widely adopted with 100+ listed adopters including major enterprises, active eco
 ### Provider Ecosystem
 
 **Supported Providers (30+):**
+
 - **Cloud**: AWS, GCP, Azure, IBM Cloud, Oracle Cloud, Alibaba Cloud
 - **Vault Systems**: HashiCorp Vault, CyberArk, Akeyless, 1Password, Bitwarden
 - **Enterprise**: Delinea, BeyondTrust, Senhasegura, Keeper Security
@@ -340,6 +363,7 @@ Widely adopted with 100+ listed adopters including major enterprises, active eco
 - **Platform**: Kubernetes, GitLab, GitHub, Webhook
 
 **Provider Maturity:**
+
 - **Stable**: 20+ providers
 - **Alpha**: 5+ providers
 - **Maintained**: Active community contributions
@@ -350,24 +374,25 @@ Widely adopted with 100+ listed adopters including major enterprises, active eco
 External Secrets Operator meets or exceeds CNCF Incubating project requirements and demonstrates readiness for Graduation evaluation.
 :::
 
-| Criterion | Status | Notes |
-|-----------|--------|-------|
-| **Responsiveness** | ✅ Excellent | < 24hr PR response, < 72hr issue triage |
-| **Contributor Growth** | ✅ Strong | 50+ unique contributors/quarter |
-| **PR Author Diversity** | ✅ Good | 15+ active contributors/month |
-| **Contributor Risk** | ✅ Acceptable | Top 3 = 40% (reasonable for maturity) |
-| **Commit Velocity** | ✅ Strong | 8-12 commits/day sustained |
-| **Issue Resolution** | ✅ Healthy | Net +10 issues/quarter (manageable) |
-| **Release Cadence** | ✅ Predictable | Bi-weekly releases, semantic versioning |
-| **Governance** | ✅ Documented | Clear policies, vendor neutrality, Apache 2.0 |
-| **Inclusivity** | ✅ Strong | Welcoming to new contributors, multiple channels |
-| **Security** | ✅ Excellent | SBOM, provenance, scanning, CII badge |
-| **Production Usage** | ✅ Verified | 100+ adopters, major enterprises |
-| **Ecosystem Integration** | ✅ Excellent | 30+ providers, active integrations |
+| Criterion                 | Status         | Notes                                            |
+| ------------------------- | -------------- | ------------------------------------------------ |
+| **Responsiveness**        | ✅ Excellent   | < 24hr PR response, < 72hr issue triage          |
+| **Contributor Growth**    | ✅ Strong      | 50+ unique contributors/quarter                  |
+| **PR Author Diversity**   | ✅ Good        | 15+ active contributors/month                    |
+| **Contributor Risk**      | ✅ Acceptable  | Top 3 = 40% (reasonable for maturity)            |
+| **Commit Velocity**       | ✅ Strong      | 8-12 commits/day sustained                       |
+| **Issue Resolution**      | ✅ Healthy     | Net +10 issues/quarter (manageable)              |
+| **Release Cadence**       | ✅ Predictable | Bi-weekly releases, semantic versioning          |
+| **Governance**            | ✅ Documented  | Clear policies, vendor neutrality, Apache 2.0    |
+| **Inclusivity**           | ✅ Strong      | Welcoming to new contributors, multiple channels |
+| **Security**              | ✅ Excellent   | SBOM, provenance, scanning, CII badge            |
+| **Production Usage**      | ✅ Verified    | 100+ adopters, major enterprises                 |
+| **Ecosystem Integration** | ✅ Excellent   | 30+ providers, active integrations               |
 
 ### Graduation Readiness Assessment
 
 **Strengths Supporting Graduation:**
+
 - ✅ Mature governance with contributor ladder
 - ✅ Active, diverse contributor base
 - ✅ Excellent security practices (SBOM, provenance, scanning)
@@ -378,6 +403,7 @@ External Secrets Operator meets or exceeds CNCF Incubating project requirements 
 - ✅ Active community engagement
 
 **Areas for Graduation Preparation:**
+
 - ⚠️ **Security Audit**: Third-party security audit recommended
 - ⚠️ **Maintainer Expansion**: Continue interim reviewer program
 - 📋 **Adopter Verification**: Update adopter list with production usage levels
@@ -387,23 +413,23 @@ External Secrets Operator meets or exceeds CNCF Incubating project requirements 
 
 ### Identified Risks
 
-| Risk | Severity | Mitigation |
-|------|----------|------------|
-| **Maintainer Burnout** | Medium | Release rotation, burnout policy established |
-| **Provider Complexity** | Low | Well-documented, modular provider system |
-| **Breaking Changes** | Low | Careful deprecation policy, thorough testing |
-| **Security Surface** | Medium | 30+ providers increase attack surface |
+| Risk                    | Severity | Mitigation                                   |
+| ----------------------- | -------- | -------------------------------------------- |
+| **Maintainer Burnout**  | Medium   | Release rotation, burnout policy established |
+| **Provider Complexity** | Low      | Well-documented, modular provider system     |
+| **Breaking Changes**    | Low      | Careful deprecation policy, thorough testing |
+| **Security Surface**    | Medium   | 30+ providers increase attack surface        |
 
 ### Recommendations
 
-| Priority | Recommendation | Rationale | Status |
-|----------|----------------|-----------|--------|
-| **High** | Complete third-party security audit | Required for CNCF Graduation | Planned |
-| **High** | Expand maintainer team via interim reviewer program | Reduce bus factor, improve sustainability | In Progress |
-| **Medium** | Document provider security model | Clarify trust boundaries for adopters | Needed |
-| **Medium** | Enhance Day 2 operations documentation | Support production deployments at scale | In Progress |
-| **Medium** | Implement provider build tags | Allow security-focused custom builds | Proposed (#5295) |
-| **Low** | Establish SLO/SLI definitions | Improve operational clarity | Future Work |
+| Priority   | Recommendation                                      | Rationale                                 | Status           |
+| ---------- | --------------------------------------------------- | ----------------------------------------- | ---------------- |
+| **High**   | Complete third-party security audit                 | Required for CNCF Graduation              | Planned          |
+| **High**   | Expand maintainer team via interim reviewer program | Reduce bus factor, improve sustainability | In Progress      |
+| **Medium** | Document provider security model                    | Clarify trust boundaries for adopters     | Needed           |
+| **Medium** | Enhance Day 2 operations documentation              | Support production deployments at scale   | In Progress      |
+| **Medium** | Implement provider build tags                       | Allow security-focused custom builds      | Proposed (#5295) |
+| **Low**    | Establish SLO/SLI definitions                       | Improve operational clarity               | Future Work      |
 
 ## Related Work
 
@@ -425,14 +451,14 @@ External Secrets Operator meets or exceeds CNCF Incubating project requirements 
 
 ## Associated Issues
 
-| Issue | Status | Priority | Link |
-|-------|--------|----------|------|
-| Conduct External Secrets Health Check | Complete | High | [This Report] |
-| Provider Build Tags for Security | Proposed | Medium | [#5295](https://github.com/external-secrets/external-secrets/issues/5295) |
-| Revamp PushSecret API | In Progress | Medium | [#5221](https://github.com/external-secrets/external-secrets/issues/5221) |
-| GCP Provider GetSecret JSON Fix | Closed | High | [#5336](https://github.com/external-secrets/external-secrets/pull/5336) |
-| Interim Reviewer Admissions | In Progress | High | [#5372](https://github.com/external-secrets/external-secrets/issues/5372), [#5373](https://github.com/external-secrets/external-secrets/issues/5373) |
-| Release Rotation Schedule | Planned | Medium | [#5312](https://github.com/external-secrets/external-secrets/issues/5312) |
+| Issue                                 | Status      | Priority | Link                                                                                                                                                 |
+| ------------------------------------- | ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conduct External Secrets Health Check | Complete    | High     | [This Report]                                                                                                                                        |
+| Provider Build Tags for Security      | Proposed    | Medium   | [#5295](https://github.com/external-secrets/external-secrets/issues/5295)                                                                            |
+| Revamp PushSecret API                 | In Progress | Medium   | [#5221](https://github.com/external-secrets/external-secrets/issues/5221)                                                                            |
+| GCP Provider GetSecret JSON Fix       | Closed      | High     | [#5336](https://github.com/external-secrets/external-secrets/pull/5336)                                                                              |
+| Interim Reviewer Admissions           | In Progress | High     | [#5372](https://github.com/external-secrets/external-secrets/issues/5372), [#5373](https://github.com/external-secrets/external-secrets/issues/5373) |
+| Release Rotation Schedule             | Planned     | Medium   | [#5312](https://github.com/external-secrets/external-secrets/issues/5312)                                                                            |
 
 ---
 

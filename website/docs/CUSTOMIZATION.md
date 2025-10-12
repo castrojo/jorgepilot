@@ -24,20 +24,24 @@ const TAGLINE = 'Metallica in your brain, all the time.'; // Your custom tagline
 When you change these values, the following will automatically update:
 
 ### 1. Site Title
+
 - Page title becomes `{DISPLAY_NAME}pilot` (e.g., "Jeefypilot")
 - Navbar title updates to match
 
 ### 2. Icons & Avatars
+
 - **Favicon**: Uses your GitHub avatar (automatically fetched from `https://avatars.githubusercontent.com/{GITHUB_USERNAME}`)
 - **Logo**: Navbar logo uses your GitHub avatar
 - No need to create or manage icon files manually!
 
 ### 3. GitHub Links
+
 - All GitHub links point to your repository
 - Edit links point to your repo
 - Footer GitHub link updates
 
 ### 4. Site URL & Base Path
+
 - Production URL becomes `https://{GITHUB_USERNAME}.github.io/{REPO_NAME}`
 - Base path automatically set to `/{REPO_NAME}`
 
@@ -52,10 +56,10 @@ const DISPLAY_NAME = 'Jeefy';
 const TAGLINE = 'All the metal, none of the drama.';
 ```
 
-
 ## Why GitHub Avatars?
 
 Using GitHub avatars has several advantages:
+
 - **No file management**: No need to create or update favicon/logo files
 - **Always current**: Avatar automatically updates when you change it on GitHub
 - **Consistent branding**: Your recognizable GitHub identity across the site
@@ -66,10 +70,13 @@ Using GitHub avatars has several advantages:
 If you want more control beyond the basic settings:
 
 ### Change the Tagline
+
 The tagline appears as the site subtitle. Make it your own!
 
 ### Repository Name
+
 If you fork this with a different repo name, update the `REPO_NAME` variable:
+
 ```typescript
 const REPO_NAME = 'your-repo-name';
 ```
@@ -77,11 +84,13 @@ const REPO_NAME = 'your-repo-name';
 This will automatically update the `baseUrl` and all repository links.
 
 ### Theme Colors
+
 Edit `website/src/css/custom.css` to customize colors and styling.
 
 ## Template Use Case
 
 This setup makes jorgepilot perfect as a **template repository**. Anyone can:
+
 1. Fork the repo (optionally rename it)
 2. Edit 4 lines in `docusaurus.config.ts` (username, repo name, display name, tagline)
 3. Get a fully branded documentation site with their GitHub avatar

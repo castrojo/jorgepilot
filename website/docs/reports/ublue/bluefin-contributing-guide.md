@@ -32,6 +32,7 @@ Bluefin uses OCI container images as the distribution mechanism. Every commit to
 ### Build System
 
 Bluefin images are built using:
+
 - **Containerfile**: Defines the base image layers and build arguments
 - **Build scripts**: Located in `build_files/` directory, organized by stage
 - **GitHub Actions**: Automated workflows in `.github/workflows/`
@@ -39,47 +40,53 @@ Bluefin images are built using:
 
 ### Release Channels
 
-| Channel | Purpose | Update Frequency | Fedora Version |
-|---------|---------|------------------|----------------|
-| **latest** | Daily builds | Multiple times per day | 42 (current) |
-| **stable** | Weekly builds | Weekly | 42 |
-| **gts** | Long-term support | As needed | 41 (LTS) |
+| Channel    | Purpose           | Update Frequency       | Fedora Version |
+| ---------- | ----------------- | ---------------------- | -------------- |
+| **latest** | Daily builds      | Multiple times per day | 42 (current)   |
+| **stable** | Weekly builds     | Weekly                 | 42             |
+| **gts**    | Long-term support | As needed              | 41 (LTS)       |
 
 ## Getting Started
 
 ### Prerequisites
 
 **Required Knowledge:**
+
 - Git workflow basics
 - Container concepts (Podman/Docker)
 - Bash scripting fundamentals
 - GitHub Actions basics (for CI/CD changes)
 
 **Required Tools:**
+
 - Git (version 2.x or higher)
 - Text editor (VS Code, vim, etc.)
 - GitHub account with 2FA enabled
 - Podman or Docker (for local builds)
 
 **Optional but Recommended:**
+
 - Bluefin installation (for testing)
 - Access to @ublue-os Discord or discussion forum
 
 ### Fork and Clone
 
 1. **Fork the repository** on GitHub to your account:
+
    ```bash
    # Navigate to https://github.com/ublue-os/bluefin
    # Click "Fork" in the upper right
    ```
 
 2. **Clone your fork**:
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/bluefin.git
    cd bluefin
    ```
 
 3. **Add upstream remote**:
+
    ```bash
    git remote add upstream https://github.com/ublue-os/bluefin.git
    git fetch upstream
@@ -101,12 +108,14 @@ Bluefin images are built using:
 
 **Help Wanted Issues**
 The easiest way to start is with labeled issues:
+
 ```bash
 # View help wanted issues
 open "https://github.com/issues?q=is%3Aopen+is%3Aissue+user%3Aublue-os+archived%3Afalse+label%3A%22help+wanted%22"
 ```
 
 **Common Contribution Areas:**
+
 - 🐛 **Bug fixes**: Issues labeled `bug`
 - 📦 **Package additions**: Issues labeled `enhancement`
 - 📝 **Documentation**: Issues labeled `documentation`
@@ -116,22 +125,24 @@ open "https://github.com/issues?q=is%3Aopen+is%3Aissue+user%3Aublue-os+archived%
 ### Branching Strategy
 
 1. **Always branch from main**:
+
    ```bash
    git checkout main
    git pull upstream main
    ```
 
 2. **Create a descriptive feature branch**:
+
    ```bash
    # For a bug fix
    git checkout -b fix/cockpit-startup-crash
-   
+
    # For a feature
    git checkout -b feat/add-bazaar-integration
-   
+
    # For documentation
    git checkout -b docs/improve-local-build-guide
-   
+
    # For chores/maintenance
    git checkout -b chore/update-copr-repos
    ```
@@ -172,19 +183,18 @@ bluefin/
 **1. Adding a Package**
 
 Edit `packages.json`:
+
 ```bash
 vim packages.json
 ```
 
 Add your package to the appropriate array:
+
 ```json
 {
   "all": {
     "include": {
-      "rpm": [
-        "existing-package",
-        "your-new-package"
-      ]
+      "rpm": ["existing-package", "your-new-package"]
     }
   }
 }
@@ -193,11 +203,13 @@ Add your package to the appropriate array:
 **3. Adding a Just Recipe**
 
 Create or edit a file in `just/`:
+
 ```bash
 vim just/60-custom.just
 ```
 
 Add your recipe:
+
 ```make
 # Install custom development tool
 install-custom-tool:
@@ -210,6 +222,7 @@ install-custom-tool:
 **4. Modifying Build Scripts**
 
 Build scripts are numbered by execution order. Common scripts:
+
 - `04-packages.sh`: Package installation
 - `05-override-install.sh`: RPM overrides
 - `07-base-image-changes.sh`: System modifications
@@ -220,6 +233,7 @@ Always test your changes with a local build (see Testing section).
 **5. Adding Flatpaks**
 
 Edit the appropriate flatpak list file:
+
 ```bash
 # For all Bluefin variants
 edit flatpaks/bluefin-list.txt
@@ -229,6 +243,7 @@ edit flatpaks/bluefin-dx-list.txt
 ```
 
 Add Flatpak IDs (one per line):
+
 ```
 com.example.NewApp
 ```
@@ -238,6 +253,7 @@ com.example.NewApp
 Bluefin uses [Conventional Commits](https://www.conventionalcommits.org/) enforced by CI:
 
 **Format:**
+
 ```
 <type>(<scope>): <subject>
 
@@ -247,6 +263,7 @@ Bluefin uses [Conventional Commits](https://www.conventionalcommits.org/) enforc
 ```
 
 **Types:**
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -279,6 +296,7 @@ and are no longer needed with the updated kernel modules."
 ```
 
 **Commit Message Tips:**
+
 - Keep subject line under 72 characters
 - Use imperative mood ("add" not "added" or "adds")
 - Don't end subject line with a period
@@ -345,6 +363,7 @@ podman run --rm -it \
 **Option 3: GitHub Actions Build** (Use PR builds)
 
 When you open a PR, GitHub Actions automatically builds your changes. Check the Actions tab for:
+
 - Build logs
 - Success/failure status
 - Build artifacts
@@ -384,6 +403,7 @@ ujust install-custom-tool
 ### Linting and Validation
 
 **Shell Script Linting:**
+
 ```bash
 # Install shellcheck if not present
 brew install shellcheck
@@ -393,12 +413,14 @@ shellcheck build_files/base/*.sh
 ```
 
 **Container Linting:**
+
 ```bash
 # Use hadolint for Containerfile
 podman run --rm -i hadolint/hadolint < Containerfile
 ```
 
 **JSON Validation:**
+
 ```bash
 # Validate packages.json
 jq empty packages.json && echo "Valid JSON" || echo "Invalid JSON"
@@ -418,6 +440,7 @@ jq empty packages.json && echo "Valid JSON" || echo "Invalid JSON"
 ### Creating the PR
 
 1. **Push your branch** (if not already done):
+
    ```bash
    git push origin your-branch-name
    ```
@@ -433,9 +456,11 @@ jq empty packages.json && echo "Valid JSON" || echo "Invalid JSON"
 
 ```markdown
 ## Description
+
 Brief description of what this PR does.
 
 ## Type of Change
+
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
@@ -443,17 +468,20 @@ Brief description of what this PR does.
 - [ ] Build/CI improvement
 
 ## Testing Done
+
 - Local build: Yes/No
 - Tested on running system: Yes/No
 - Just recipes tested: Yes/No
 
 ## Related Issues
+
 Fixes #123
 ```
 
 ### PR Review Process
 
 **What Happens Next:**
+
 1. **Automated checks run**: CI builds your changes
 2. **Size label applied**: PR size labeled automatically (XS, S, M, L, XL)
 3. **Maintainer review**: Usually within 24-48 hours
@@ -463,6 +491,7 @@ Fixes #123
 **During Review:**
 
 If changes are requested:
+
 ```bash
 # Make the requested changes
 vim path/to/file
@@ -497,18 +526,21 @@ git push origin --delete your-branch-name
 ### Working with Renovate Bot
 
 **Understanding Renovate:**
+
 - Renovate creates PRs for dependency updates automatically
 - Updates include: base images, GitHub Actions, container digests
 - Auto-merge is enabled for low-risk updates
 - Accounts for 60% of all commits
 
 **Common Renovate PRs:**
+
 ```
 chore(deps): update ghcr.io/ublue-os/silverblue-main:latest docker digest to abc123
 chore(deps): update softprops/action-gh-release digest to def456
 ```
 
 **When Renovate Conflicts with Your PR:**
+
 ```bash
 # Rebase on latest main
 git checkout your-branch
@@ -596,16 +628,19 @@ git merge main
 ### For Cloud Native/DevOps Engineers
 
 **Container Build Optimization:**
+
 - Improve Containerfile layer caching
 - Optimize build scripts for speed
 - Reduce image size
 
 **CI/CD Improvements:**
+
 - Optimize GitHub Actions workflows
 - Add build parallelization
 - Improve artifact handling
 
 **Example Tasks:**
+
 - Refactor `reusable-build.yml` for better caching
 - Add build-time validation tests
 - Implement workflow failure notifications
@@ -613,16 +648,19 @@ git merge main
 ### For Package Maintainers
 
 **Package Management:**
+
 - Submit packages to [@ublue-os/packages](https://github.com/ublue-os/packages)
 - Maintain COPR repositories
 - Update package manifests
 
 **UDEV Rules:**
+
 - Submit hardware enablement rules
 - Test on various hardware
 - Document hardware requirements
 
 **Example Tasks:**
+
 - Add new hardware support to packages.json
 - Update COPR repository definitions
 - Submit udev rules for new devices
@@ -630,16 +668,19 @@ git merge main
 ### For Shell Script Developers
 
 **Build Script Improvements:**
+
 - Enhance error handling
 - Add progress indicators
 - Improve script modularity
 
 **Just Recipe Development:**
+
 - Create new ujust commands
 - Improve existing recipes
 - Add user-friendly aliases
 
 **Example Tasks:**
+
 - Refactor build scripts for clarity
 - Add validation to just recipes
 - Improve error messages
@@ -647,18 +688,21 @@ git merge main
 ### For Documentation Writers
 
 **Documentation Needs:**
+
 - Hardware compatibility guides
 - Custom image building tutorials
 - Troubleshooting documentation
 - Installation guides
 
 **Documentation Standards:**
+
 - Use clear, concise language
 - Avoid terms like "simply" or "easy" ([justsimply.dev](https://justsimply.dev/))
 - Include practical examples
 - Link to related documentation
 
 **Example Tasks:**
+
 - Document hardware-specific issues
 - Create video tutorials
 - Update installation instructions
@@ -667,16 +711,19 @@ git merge main
 ### For Frontend/UX Developers
 
 **User Experience:**
+
 - Improve GNOME shell extensions
 - Customize desktop defaults
 - UI/UX enhancements
 
 **Testing:**
+
 - Test desktop responsiveness
 - Validate accessibility features
 - Report UX issues
 
 **Example Tasks:**
+
 - Test GNOME extensions compatibility
 - Propose UX improvements
 - Create user feedback surveys
@@ -686,21 +733,25 @@ git merge main
 ### Build Failures
 
 **Problem:** Build fails with package conflict
+
 ```
 Error: package foo conflicts with bar
 ```
 
 **Solution:**
+
 1. Check if package is already included elsewhere
 2. Add exclusion to packages.json
 3. Check COPR repository compatibility
 
 **Problem:** Git error during build
+
 ```
 fatal: unable to access 'https://github.com/': Could not resolve host
 ```
 
 **Solution:**
+
 1. Check network connectivity in build environment
 2. Verify GitHub Actions has network access
 3. Check if rate-limited by GitHub
@@ -708,11 +759,13 @@ fatal: unable to access 'https://github.com/': Could not resolve host
 ### Local Testing Issues
 
 **Problem:** Podman build fails with permission error
+
 ```
 Error: writing blob: adding layer with blob: permissions denied
 ```
 
 **Solution:**
+
 ```bash
 # Run with appropriate permissions
 sudo podman build -t test .
@@ -722,11 +775,13 @@ podman system migrate
 ```
 
 **Problem:** Out of disk space during build
+
 ```
 Error: no space left on device
 ```
 
 **Solution:**
+
 ```bash
 # Clean up podman storage
 podman system prune -a
@@ -738,11 +793,13 @@ df -h
 ### PR Issues
 
 **Problem:** CI check failing - Conventional Commit validation
+
 ```
 ❌ Commit message does not follow Conventional Commits format
 ```
 
 **Solution:**
+
 ```bash
 # Amend the commit message
 git commit --amend
@@ -752,11 +809,13 @@ git push origin your-branch --force-with-lease
 ```
 
 **Problem:** Merge conflict with main
+
 ```
 CONFLICT (content): Merge conflict in packages.json
 ```
 
 **Solution:**
+
 ```bash
 # Fetch latest upstream
 git fetch upstream
@@ -780,16 +839,19 @@ git push origin your-branch --force-with-lease
 ### Communication Channels
 
 **GitHub Issues:**
+
 - Primary venue for bug reports and feature requests
 - Use issue templates when available
 - Search existing issues before creating new ones
 
 **Discord:**
+
 - Real-time chat for quick questions
 - Discord: Check [the documentation](https://docs.projectbluefin.io/communications/) for the server link
 - **Remember:** Discord is for chat, not permanent documentation
 
 **Discussion Forum:**
+
 - [community.projectbluefin.io](https://community.projectbluefin.io/)
 - Long-form discussions
 - Support questions
@@ -798,6 +860,7 @@ git push origin your-branch --force-with-lease
 ### Communication Best Practices
 
 **DO:**
+
 - ✅ Ask questions in issues for permanent record
 - ✅ Search before asking
 - ✅ Provide context and details
@@ -806,6 +869,7 @@ git push origin your-branch --force-with-lease
 - ✅ Thank contributors
 
 **DON'T:**
+
 - ❌ Use Discord for bug reports (file issues instead)
 - ❌ Expect immediate responses
 - ❌ Ping maintainers directly unless urgent
@@ -817,6 +881,7 @@ git push origin your-branch --force-with-lease
 All contributors must follow the [Universal Blue Code of Conduct](https://github.com/ublue-os/main?tab=coc-ov-file#readme).
 
 **Key Points:**
+
 - Be respectful and inclusive
 - Welcome newcomers
 - Focus on constructive feedback
@@ -827,18 +892,21 @@ All contributors must follow the [Universal Blue Code of Conduct](https://github
 From the contributing guide philosophy:
 
 **The "Issue Capture" Pattern:**
+
 1. **Use Discord for rapid iteration** - Debug quickly in chat
 2. **Capture to text editor** - Copy important findings as you go
 3. **File an issue** - Create permanent record of solution
 4. **Edit and improve** - Clean up the issue description later
 
 **Why This Matters:**
+
 - Solves the problem once for everyone
 - Creates searchable documentation
 - Prevents asking the same question twice
 - Builds institutional knowledge
 
 **Example Flow:**
+
 ```
 Discord: "Hey, package X is failing to install"
   ↓ (quick back-and-forth debugging)
@@ -856,6 +924,7 @@ GitHub Issue: "Package X fails on Fedora 42 due to Y dependency"
 ### GitHub Actions Workflows
 
 **Workflow Structure:**
+
 - `build-image-*.yml`: Per-channel build triggers
 - `reusable-build.yml`: Shared build logic
 - `clean.yml`: Artifact cleanup
@@ -898,6 +967,7 @@ strategy:
 ### Build Script Development
 
 **Script Organization:**
+
 - `00-09`: Early stage (kernel, repos, packages)
 - `10-16`: Mid stage (configuration, additions)
 - `17-19`: Late stage (cleanup, initramfs)
@@ -936,6 +1006,7 @@ podman run --rm -it \
 ### Understanding Releases
 
 Bluefin uses continuous delivery:
+
 - **Daily builds**: Automatic, no manual release
 - **Version format**: `42.20251012.1` (Fedora.YYYYMMDD.build)
 - **Multiple builds per day**: Various channels updated independently
@@ -943,18 +1014,21 @@ Bluefin uses continuous delivery:
 ### Release Channels
 
 **stable** (Weekly):
+
 ```bash
 # Rebase to stable
 sudo bootc switch ghcr.io/ublue-os/bluefin:stable
 ```
 
 **latest** (Daily):
+
 ```bash
 # Rebase to latest
 sudo bootc switch ghcr.io/ublue-os/bluefin:latest
 ```
 
 **gts** (LTS):
+
 ```bash
 # Rebase to GTS (Long Term Support)
 sudo bootc switch ghcr.io/ublue-os/bluefin:gts
@@ -967,6 +1041,7 @@ Sometimes upstream Fedora has a regression requiring a temporary pin.
 **Add a Pin:**
 
 Edit the appropriate Containerfile section:
+
 ```dockerfile
 # Revert to older version of ostree to fix Flatpak installations
 RUN rpm-ostree override replace \
@@ -974,6 +1049,7 @@ RUN rpm-ostree override replace \
 ```
 
 **Document the Pin:**
+
 ```bash
 # Add comment explaining:
 # - What's pinned
@@ -985,6 +1061,7 @@ RUN rpm-ostree override replace \
 **Remove a Pin:**
 
 Wait 24-48 hours after Fedora releases a fix (for rebuild propagation), then:
+
 ```bash
 # Remove the override
 git diff Containerfile
@@ -997,6 +1074,7 @@ git commit -m "chore: remove ostree pin after upstream fix"
 ### When to Report Upstream
 
 If you find a bug that:
+
 - Exists in vanilla Fedora Silverblue/Kinoite
 - Is not caused by Bluefin modifications
 - Affects the base Fedora Atomic system
@@ -1004,6 +1082,7 @@ If you find a bug that:
 ### How to Report Upstream
 
 1. **Reproduce on vanilla Fedora** (if possible):
+
    ```bash
    # Boot vanilla Fedora Silverblue
    # Test if the issue occurs there
@@ -1023,6 +1102,7 @@ If you find a bug that:
 ### Becoming a Maintainer
 
 Contributing regularly and demonstrating expertise may lead to maintainer status. Qualities valued:
+
 - Consistent quality contributions
 - Good communication
 - Helpful to other contributors
@@ -1030,12 +1110,14 @@ Contributing regularly and demonstrating expertise may lead to maintainer status
 - Reliable and responsive
 
 **Current Maintainer Structure:**
+
 - Lead: @castrojo (infrastructure, project direction)
 - Core: @p5, @m2Giles, @tulilirockz (features, maintenance, testing)
 
 ### Lazy Consensus Model
 
 Bluefin follows [Apache Lazy Consensus](https://community.apache.org/committers/decisionMaking.html):
+
 - Assume consensus unless objections raised
 - Allow time for feedback (account for timezones/holidays)
 - Opinionated decisions encouraged
@@ -1073,6 +1155,7 @@ Bluefin follows [Apache Lazy Consensus](https://community.apache.org/committers/
 ## Contribution Statistics
 
 As of October 2025, Bluefin sees:
+
 - **8-12 commits per day** (including automation)
 - **60% automated** (Renovate bot updates)
 - **35% core maintainers** (manual contributions)
@@ -1093,4 +1176,3 @@ The project welcomes all skill levels and contribution types. Start small, learn
 7. **Document your work**: Help future contributors with clear explanations
 
 Remember: Every maintainer started as a first-time contributor. Welcome to the Bluefin community!
-
