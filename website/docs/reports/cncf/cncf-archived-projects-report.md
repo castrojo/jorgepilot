@@ -277,8 +277,8 @@ This emphasizes the importance of diversified maintainer bases across multiple o
 
 ## Related Work
 
-- [CNCF Health Checks Report](/cncf-health-checks-report) - Active project health reviews
-- [CNCF Project Moving Levels Status](/cncf-project-moving-levels-status) - Graduation tracking
+- [CNCF Health Checks Report](./cncf-health-checks-report.md) - Active project health reviews
+- [CNCF Project Moving Levels Status](./cncf-project-moving-levels-status.md) - Graduation tracking
 - [CNCF Archival Process](https://github.com/cncf/toc/blob/main/process/archiving.md) - Official TOC process
 - [CNCF Project Lifecycle](https://github.com/cncf/toc/blob/main/process/graduation_criteria.md) - Maturity requirements
 

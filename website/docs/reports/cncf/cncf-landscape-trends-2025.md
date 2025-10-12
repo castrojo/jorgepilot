@@ -222,9 +222,9 @@ Based on 2025 trends, expect continued CNCF focus on:
 - [CNCF Landscape](https://landscape.cncf.io/) - Official CNCF landscape visualization
 - [@cncf/landscape](https://github.com/cncf/landscape) - Landscape data repository
 - [@cncf/sandbox](https://github.com/cncf/sandbox) - Sandbox project applications
-- [CNCF Project Moving Levels Status](/cncf-project-moving-levels-status) - Project maturity tracking
-- [CNCF Rust Analysis](/cncf-rust-analysis) - Language trends in CNCF
-- [CNCF Health Checks Report](/cncf-health-checks-report) - Project health reviews
+- [CNCF Project Moving Levels Status](./cncf-project-moving-levels-status.md) - Project maturity tracking
+- [CNCF Rust Analysis](./cncf-rust-analysis.md) - Language trends in CNCF
+- [CNCF Health Checks Report](./cncf-health-checks-report.md) - Project health reviews
 
 ## References
 

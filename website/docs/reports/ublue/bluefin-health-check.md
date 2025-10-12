@@ -349,7 +349,7 @@ The project operates as a mature, production-ready development platform with roo
 - [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) - Bluefin repository
 - [Bluefin Documentation](https://docs.projectbluefin.io/) - Official documentation
 - [Bazzite Health Check](./bazzite-health-check.md) - Gaming variant analysis
-- [COPR Analysis](./copr-analysis.md) - External repository dependencies
+- [COPR Analysis](../other/copr-analysis.md) - External repository dependencies
 - [Build Optimization Analysis](./ublue-build-optimization.md) - CI/CD improvements
 
 ## References

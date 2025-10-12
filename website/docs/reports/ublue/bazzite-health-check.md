@@ -365,7 +365,7 @@ Bazzite operates as a mature, production-ready gaming platform with room for org
 - [@ublue-os/bazzite](https://github.com/ublue-os/bazzite) - Bazzite repository
 - [Bazzite Documentation](https://docs.bazzite.gg/) - Official docs
 - [Bluefin Health Check](./bluefin-health-check.md) - Developer workstation variant
-- [COPR Analysis](./copr-analysis.md) - External repository usage
+- [COPR Analysis](../other/copr-analysis.md) - External repository usage
 - [Build Optimization](./ublue-build-optimization.md) - CI/CD analysis
 
 ## References

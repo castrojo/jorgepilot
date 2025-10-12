@@ -383,10 +383,10 @@ While the 297 open issues represent a notable backlog, active triage and recent 
 
 ## Related Work
 
-- [TAG Contributor Strategy Health Check Guide](/tag-contributor-strategy-guide) - Health check criteria reference
-- [CNCF Project Health Checks Report](/cncf-health-checks-report) - 2024 health check analysis
-- [External Secrets Operator Health Check](/external-secrets-operator-health-check) - Similar CNCF project assessment
-- [Cloud Custodian Health Check](/cloud-custodian-health-check) - CNCF incubating project comparison
+- [TAG Contributor Strategy Health Check Guide](./tag-contributor-strategy-guide.md) - Health check criteria reference
+- [CNCF Project Health Checks Report](../cncf/cncf-health-checks-report.md) - 2024 health check analysis
+- [External Secrets Operator Health Check](./external-secrets-operator-health-check.md) - Similar CNCF project assessment
+- [Cloud Custodian Health Check](./cloud-custodian-health-check.md) - CNCF incubating project comparison
 
 ## References
 

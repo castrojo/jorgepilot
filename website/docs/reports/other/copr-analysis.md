@@ -389,9 +389,9 @@ The project balances innovation (external packages) with control (first-party in
 - [@ublue-os/main](https://github.com/ublue-os/main) - Base Universal Blue images
 - [@ublue-os/akmods](https://github.com/ublue-os/akmods) - Kernel module infrastructure
 - [@ublue-os/packages](https://github.com/ublue-os/packages) - Package specifications
-- [Bluefin Health Check](./bluefin-health-check.md) - Bluefin project analysis
-- [Bazzite Health Check](./bazzite-health-check.md) - Bazzite project analysis
-- [Build Optimization Analysis](./ublue-build-optimization.md) - CI/CD improvements
+- [Bluefin Health Check](../ublue/bluefin-health-check.md) - Bluefin project analysis
+- [Bazzite Health Check](../ublue/bazzite-health-check.md) - Bazzite project analysis
+- [Build Optimization Analysis](../ublue/ublue-build-optimization.md) - CI/CD improvements
 
 ## References
 

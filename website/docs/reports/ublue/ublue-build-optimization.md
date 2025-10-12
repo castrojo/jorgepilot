@@ -524,7 +524,7 @@ Four risk categories to monitor during optimization
 - [@ublue-os/aurora](https://github.com/ublue-os/aurora) - KDE desktop builds
 - [@ublue-os/main](https://github.com/ublue-os/main) - Base image builds
 - [@ublue-os/akmods](https://github.com/ublue-os/akmods) - Kernel module builds (critical dependency)
-- [COPR Analysis](./copr-analysis.md) - External repository dependencies impacting build time
+- [COPR Analysis](../other/copr-analysis.md) - External repository dependencies impacting build time
 - [Bluefin Health Check](./bluefin-health-check.md) - Project health analysis
 - [Bazzite Health Check](./bazzite-health-check.md) - Gaming variant analysis
 
