@@ -221,10 +221,10 @@ Always test your changes with a local build (see Testing section).
 Edit the appropriate flatpak list file:
 ```bash
 # For all Bluefin variants
-vim flatpaks/bluefin-list.txt
+edit flatpaks/bluefin-list.txt
 
 # For DX variant only
-vim flatpaks/bluefin-dx-list.txt
+edit flatpaks/bluefin-dx-list.txt
 ```
 
 Add Flatpak IDs (one per line):
@@ -385,7 +385,7 @@ ujust install-custom-tool
 **Shell Script Linting:**
 ```bash
 # Install shellcheck if not present
-dnf install shellcheck
+brew install shellcheck
 
 # Lint shell scripts
 shellcheck build_files/base/*.sh
@@ -1093,8 +1093,3 @@ The project welcomes all skill levels and contribution types. Start small, learn
 
 Remember: Every maintainer started as a first-time contributor. Welcome to the Bluefin community!
 
----
-
-**Last Updated:** October 2025  
-**Maintainers:** @castrojo, @p5, @m2Giles, @tulilirockz  
-**License:** Apache 2.0
