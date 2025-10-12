@@ -189,19 +189,6 @@ Add your package to the appropriate array:
 }
 ```
 
-**2. Adding a COPR Repository**
-
-Edit `build_files/base/02-install-copr-repos.sh`:
-```bash
-vim build_files/base/02-install-copr-repos.sh
-```
-
-Add your COPR:
-```bash
-curl -Lo /etc/yum.repos.d/_copr:owner:project.repo \
-    https://copr.fedorainfracloud.org/coprs/owner/project/repo/fedora-${FEDORA_MAJOR_VERSION}/owner-project-fedora-${FEDORA_MAJOR_VERSION}.repo
-```
-
 **3. Adding a Just Recipe**
 
 Create or edit a file in `just/`:
