@@ -301,6 +301,36 @@ Each session respects GitHub API rate limits and Copilot token budgets while ens
 
 Update this description after each session to reflect progress.
 
+### Issue Tracking for Health Checks
+
+When a health check issue is filed using the health-check template, it includes session tracking checkboxes and a notes field. For multi-session reports:
+
+**During Each Session:**
+1. Update the session progress checkboxes in the issue by checking off completed sessions
+2. Add session completion notes in the "Session Notes" field:
+   ```
+   - Session 1 completed on YYYY-MM-DD: Foundation established, basic metrics collected
+   - Session 2 completed on YYYY-MM-DD: Contributor activity analyzed, 15+ organizations identified
+   - Session 3 in progress: Conducting security assessment
+   ```
+3. Keep the issue open until all sessions are complete
+
+**Issue Completion Criteria:**
+The issue should remain open until:
+- All analysis sessions are checked off as completed
+- Report is published to the docs/reports/ directory
+- Executive summary is finalized
+- All WIP markers are removed from the report
+- Build passes with the new report
+
+**Closing the Issue:**
+Close the issue only when:
+1. All completion criteria checkboxes in the template are met
+2. The report has been fully reviewed and merged
+3. No further analysis sessions are needed
+
+This ensures the issue tracker accurately reflects the state of each health check report's completion.
+
 ### Quality Assurance for Incremental Reports
 
 **After Each Session:**
