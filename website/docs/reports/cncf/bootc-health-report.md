@@ -3,7 +3,7 @@ tags:
   - bootc
   - project-health
   - cncf
-date: 2025-10-12
+last_updated: 2025-10-12
 ---
 
 # bootc Project Health Check
