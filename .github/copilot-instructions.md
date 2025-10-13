@@ -65,33 +65,6 @@ Strictly follow these criteria when being asked to perform a health check:
 - The report is supposed to reflect only the last year's worth of activity, disregard older data.
 - Always generate an actual report and commit it in the docs directory. Use multiple small commits instead of one large commit.
 
-### Naming Convention and Front Matter
-
-**File Naming:**
-- Health reports must follow the naming pattern: `$projectname-health-report.md` (e.g., `dapr-health-report.md`, `tikv-health-report.md`)
-- Use lowercase with hyphens between words
-
-**File Location:**
-- CNCF Graduated projects: `docs/reports/cncf/graduated/`
-- CNCF Incubating projects: `docs/reports/cncf/incubating/` (create if needed)
-- CNCF Sandbox projects: `docs/reports/cncf/`
-- Other projects: Place in appropriate category folder
-
-**Required Front Matter:**
-All health reports must include the following front matter at the top of the file:
-
-```yaml
----
-tags:
-  - cncf  # or other primary category
-  - project-health
-  - [project-name]
-last_updated: YYYY-MM-DD
----
-```
-
-The `last_updated` field must contain the date when the report content was last edited (not the build date). This should be the date from the git commit that last modified the file's content.
-
 ## Executive Summary
 
 This guide consolidates the CNCF Technical Oversight Committee's comprehensive criteria for evaluating project health across all maturity levels. It synthesizes health review processes, due diligence requirements, and technical assessment frameworks to provide a single reference for conducting thorough project evaluations. Projects at different maturity levels (Sandbox, Incubating, Graduated) have increasingly rigorous requirements aligned with production-readiness expectations.
@@ -120,6 +93,43 @@ A comprehensive health check should evaluate projects across these dimensions:
 7. **Day 0 Planning** - Design, scope, usability (Sandbox focus)
 8. **Day 1 Deployment** - Installation, rollout, configuration (Incubation focus)
 9. **Day 2 Operations** - Observability, scalability, troubleshooting (Graduation focus)
+
+## Naming Convention and Front Matter
+
+**File Naming:**
+- Health reports must follow the naming pattern: `$projectname-health-report.md` (e.g., `dapr-health-report.md`, `tikv-health-report.md`)
+- Use lowercase with hyphens between words
+
+**File Location:**
+- CNCF Graduated projects: `docs/reports/cncf/graduated/`
+- CNCF Incubating projects: `docs/reports/cncf/incubating/` (create if needed)
+- CNCF Sandbox projects: `docs/reports/cncf/`
+- Other projects: Place in appropriate category folder
+
+**Required Front Matter:**
+All health reports must include the following front matter at the top of the file:
+
+```yaml
+---
+tags:
+  - cncf  # or other primary category
+  - project-health
+  - [project-name]
+last_updated: YYYY-MM-DD
+---
+```
+
+The `last_updated` field must contain the date when the report content was last edited (not the build date). This should be the date from the git commit that last modified the file's content.
+
+## Work methodology for large projects
+
+Large projects will take more resources to analyze - when doing a health check on a large project over 2 years old enforce the following criteria:
+
+- Generate the report in multiple steps, using multiple small commits
+- For large requests that use over 10 github API calls save your work into the inprogress report
+- If necessary leave as much information in the inprogress report so that subsequent copilot runs are more efficient
+- Make judicious use of a temporary directory in the repository to save your work for future copilot runs. 
+- Label the report as unfinished in the docusaurus front matter
 
 ## Sandbox Project Health Criteria
 
