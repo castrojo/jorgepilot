@@ -45,7 +45,7 @@ K3s is a production-ready, lightweight Kubernetes distribution maintained by SUS
 
 **Repository:** [@k3s-io/k3s](https://github.com/k3s-io/k3s)  
 **Created:** 2018 (approximately)  
-**Category:** Non-CNCF Project (Independent Kubernetes Distribution)  
+**Category:** CNCF Sandbox Project
 **Primary Maintainer:** Rancher Labs (SUSE)  
 **License:** Apache 2.0  
 **Language:** Go  
