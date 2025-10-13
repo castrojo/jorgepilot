@@ -110,31 +110,65 @@ Primarily maintained by SUSE/Rancher Labs with community engagement model
 
 | Indicator | Status | Evidence |
 |-----------|--------|----------|
-| **Code of Conduct** | ✅ | Reference to CoC in CONTRIBUTING.md |
-| **Contributing Guide** | ✅ | Comprehensive CONTRIBUTING.md (detailed PR process, DCO) |
-| **Security Policy** | ⚠️ | Security email mentioned in README, no SECURITY.md file found |
+| **Code of Conduct** | ✅ | Referenced in CONTRIBUTING.md and GOVERNANCE.md |
+| **Contributing Guide** | ✅ | Comprehensive CONTRIBUTING.md (DCO, PR process, code conventions) |
+| **Security Policy** | ⚠️ | Email (security@k3s.io) documented, no SECURITY.md file |
 | **License** | ✅ | Apache 2.0 |
-| **Governance Documentation** | ⚠️ | Limited - no formal GOVERNANCE.md |
-| **Decision-Making Transparency** | ✅ | Public PRs, issues, community meetings |
+| **Governance Documentation** | ✅ | Comprehensive GOVERNANCE.md added July 2025 |
+| **Decision-Making Transparency** | ✅ | Public PRs, issues, community meetings, ADR process |
+| **MAINTAINERS file** | ✅ | 18 maintainers listed with contact information |
+| **Community Meetings** | ✅ | Monthly public meetings (2 timezone options) |
+| **Proposal Process (ADRs)** | ✅ | Formal Architecture Decision Records process |
+
+**Governance Evolution:**
+- **July 2025**: Major governance overhaul with GOVERNANCE.md (PR #12466)
+- **July 2025**: OpenSSF branch protection checks enabled (PR #12640)
+- **September 2025**: Inclusive naming initiative (master → main, PR #12383)
 
 ### Maintainer Structure
 
-**Primary Maintainer: Rancher Labs (SUSE)**
+**Active Maintainers: 18** (all SUSE employees per MAINTAINERS file)
 
-K3s operates under a corporate-backed open source model where SUSE (via Rancher Labs) provides primary maintenance and development resources.
+| Maintainer | Role/Focus | Activity Level (3 months) |
+|------------|------------|---------------------------|
+| @brandond (Brad Davidson) | Core Engineering | 🔴 Very High (~50% commits) |
+| @dereknola (Derek Nola) | Release Management, CIS | 🟡 High (8+ commits) |
+| @mgfritch (Michael Fritch) | Kubernetes Updates | 🟡 High (6+ commits) |
+| @manuelbuil (Manuel Buil) | Networking | 🟢 Medium (2 commits) |
+| @rbrtbnfgl (Roberto Bonafiglia) | CNI/Networking | 🟢 Medium (2 commits) |
+| @thomasferrandiz (Thomas Ferrandiz) | CoreDNS | 🟢 Medium (2 commits) |
+| @galal-hussein (Hussein Galal) | Core Engineering | ⚪ Observed |
+| Other 11 maintainers | Various | ⚪ Not in recent 3-month sample |
+| @OrlinVasilev (Orlin Vasilev) | Community Management | ⚪ Governance contribution |
+| @robertsirc (Robert Sirchia) | Community Management | ⚪ Community management |
 
-**Community Engagement:**
-- Slack channels: #k3s and #k3s-contributor (rancher-users.slack.com)
-- CNCF Slack: #k3s channel (cloud-native.slack.com)
-- Community meetings: Monthly (AMS/EMEA and EMEA/APAC timezone-friendly)
-- Meeting notes: https://hackmd.io/@k3s/meet-notes/
-- Video recordings: K3s YouTube Channel
+**Governance Roles (from GOVERNANCE.md):**
+- **Maintainer Council**: All 18 maintainers collectively govern the project
+- **Security Response Team**: Appointed by maintainers from maintainer pool
+- **Reviewers**: Not currently documented separately from maintainers
 
 ### Organizational Diversity
 
-**Primary Organization: SUSE/Rancher Labs**
+**Organizations Represented in Maintainership: 1 (SUSE only)**
 
-As a SUSE-maintained project, K3s has limited organizational diversity in core maintainership. However, the project accepts community contributions following standard open source practices (DCO signoff, PR review process).
+All 18 official maintainers are SUSE employees. K3s operates as a corporate-backed open source project, similar to other vendor-led projects like Docker, Podman, or Red Hat Enterprise Linux derivatives.
+
+**Community Contributions:**
+While governance is SUSE-controlled, community contributions are welcomed:
+- ~15% of commits come from community contributors
+- Community PRs reviewed and merged by SUSE maintainers
+- DCO sign-off required (standard CNCF practice)
+- Active community channels (Slack, mailing lists, meetings)
+
+**Becoming a Maintainer (from GOVERNANCE.md):**
+Requirements for maintainer nomination:
+- 6+ months of participation
+- 15+ non-trivial PR reviews
+- 30+ non-trivial PR contributions merged
+- Understanding of codebase and team processes
+- Nomination by existing maintainer, supermajority vote to approve
+
+*Note: While path exists, all current maintainers are SUSE employees*
 
 ## Contributor Activity
 
@@ -204,11 +238,53 @@ Based on recent 100 commits (July 11 - October 10, 2025):
 
 ## Contributor Risk
 
-*To be completed in Session 3*
+:::caution High Organizational Concentration
+Strong single-vendor dependency (SUSE) with limited bus factor - primary maintainer accounts for ~50% of activity
+:::
 
 ### Maintainer Concentration
 
-*Analysis pending*
+| Risk Factor | Assessment | Details |
+|-------------|------------|---------|
+| **Individual Concentration** | 🔴 High | Top contributor (@brandond): ~50% of all commits |
+| **Single Point of Failure** | 🔴 High | Bus factor: 1-2 (Brad Davidson is critical) |
+| **Organization Diversity** | 🔴 Single Vendor | All 18 maintainers are SUSE employees |
+| **Geographic Distribution** | ⚠️ Unknown | Not publicly documented, likely US/Europe-centric |
+
+### Bus Factor Analysis
+
+**Bus Factor: 1-2** (🔴 High Risk)
+
+**Analysis:**
+- **Primary maintainer**: @brandond (Brad Davidson) accounts for ~50% of all recent commits
+- **Secondary maintainers**: @dereknola (Derek Nola) and @mgfritch (Michael Fritch) provide backup but at much lower commit rates
+- **Total maintainers**: 18 per MAINTAINERS file, all SUSE employees
+- **Active maintainers (3 months)**: ~10 appeared in recent commits
+- **Community role**: Limited to small bug fixes and features (15% of commits)
+
+**Risk Assessment:**
+If Brad Davidson were unavailable, K3s development velocity would drop significantly. While SUSE has a deep bench of maintainers (18 total), actual commit activity is highly concentrated. This is typical for corporate-backed projects but represents operational risk for adopters.
+
+**Mitigating Factors:**
+- Corporate backing ensures continuity (SUSE employment)
+- Multiple maintainers trained on codebase
+- Clear governance structure recently added (GOVERNANCE.md - July 2025)
+- Community meeting structure and documentation
+
+### Organizational Analysis
+
+**Primary Organization: SUSE**
+
+All 18 official maintainers (per MAINTAINERS file) are SUSE employees:
+- **Core Engineering**: Brad Davidson, Derek Nola, Michael Fritch, Manuel Buil, Roberto Bonafiglia, Thomas Ferrandiz, Hussein Galal
+- **Community Management**: Orlin Vasilev, Robert Sirchia
+- **Additional Maintainers**: Brian Downs, Brooks Newberry, Caroline Davis, Chris Wayne, Chris Kim, Matt Trachier, MD Rahman, Max Ross, Justin Janes, Shylaja Devadiga
+
+**Vendor Neutrality: Low**
+- K3s operates as a SUSE/Rancher product distributed as open source
+- All decision-making authority rests with SUSE employees
+- Community contributions are accepted but governance is corporate-controlled
+- Not following CNCF multi-vendor governance model
 
 ## Project Velocity
 
@@ -301,35 +377,124 @@ Community PRs merged promptly, often within 24-48 hours of submission
 
 ## Security Practices
 
-*To be completed in Session 3*
+:::info Good Security Posture
+OpenSSF badge, active dependency management, but limited public security documentation
+:::
 
 ### Security Implementation
 
 | Practice | Status | Evidence |
 |----------|--------|----------|
-| **Security Policy (SECURITY.md)** | ⚠️ | Email contact only (security@k3s.io) |
-| **Vulnerability Disclosure Process** | ✅ | security@k3s.io |
-| **Security Response Team** | ✅ | Implied via security email |
-| **OpenSSF Best Practices Badge** | ✅ | Badge visible in README |
-| **Security Audit** | ❓ | To be determined |
-| **Dependabot/Renovate** | ❓ | To be assessed |
-| **SAST/Code Scanning** | ❓ | To be assessed |
-| **Branch Protection** | ❓ | To be assessed |
+| **Security Policy (SECURITY.md)** | ⚠️ | No SECURITY.md file; email contact in README only |
+| **Vulnerability Disclosure Process** | ✅ | security@k3s.io (documented in README and GOVERNANCE.md) |
+| **Security Response Team** | ✅ | Defined in GOVERNANCE.md; maintainers appoint SRT |
+| **OpenSSF Best Practices Badge** | ✅ | Badge visible in README (project #6835) |
+| **OpenSSF Scorecard** | ✅ | Badge visible in README |
+| **Security Audit** | ❓ | Not documented publicly; typical for CNCF projects |
+| **Dependabot/Renovate** | ✅ | Active: dependabot commits + updatecli automation |
+| **SAST/Code Scanning** | ⚠️ | Trivy scanning in GitHub Actions (recent PR #12588) |
+| **Branch Protection** | ✅ | OpenSSF check enabled (PR #12640 - July 2025) |
+
+### Security Governance
+
+**From GOVERNANCE.md (added July 2025):**
+- Security Response Team appointed by maintainers
+- Security reports handled via email: security@k3s.io
+- Private maintainer mailing list for security discussions
+- Closed meetings for security issues (all maintainers invited)
+
+**Security Practices Observed:**
+- Regular dependency updates (containerd, kine, etcd, runc, traefik, coredns)
+- CVE fixes merged promptly (based on commit messages)
+- Component security patches (e.g., containerd v2.1.4 with security backports)
+- Trivy container scanning in CI/CD pipeline
+- Automated dependency update tools (dependabot + updatecli)
+
+**Areas for Improvement:**
+- No formal SECURITY.md file (CNCF/OpenSSF best practice)
+- Security audit status not publicly documented
+- No public security advisories page (using GitHub Security Advisories recommended)
+
+### Security Highlights
+
+- **OpenSSF Best Practices**: Badge indicates passing level
+- **Rapid patching**: Security updates typically merged within days
+- **Upstream tracking**: Kubernetes CVEs addressed via version bumps
+- **Component hardening**: CIS benchmark support, hardened install scripts
+- **Active scanning**: Trivy and code scanning in GitHub Actions
 
 ## Inclusivity Indicators
 
-*To be completed in Session 3*
+:::tip Good Documentation & Community Engagement
+Comprehensive documentation with active community channels and recent governance improvements
+:::
+
+### Community Support
+
+**Communication Channels:**
+- **Rancher Slack**: #k3s (general) and #k3s-contributor channels
+- **CNCF Slack**: #k3s channel (cloud-native.slack.com)
+- **Mailing Lists**: 
+  - cncf-k3s-dev@lists.cncf.io (public developer list)
+  - cncf-k3s-maintainers@lists.cncf.io (private maintainer list)
+  - k3s-security@lists.cncf.io (security reports)
+- **Community Meetings**: Monthly (two timezone options)
+  - AMS/EMEA TZ: 10:00 am PST - every 2nd Tuesday
+  - EMEA/APAC TZ: every 3rd Tuesday
+  - Meeting notes: https://hackmd.io/@k3s/meet-notes/
+  - Video recordings: YouTube K3s Channel
+- **GitHub**: Issues, PRs, Discussions
+
+**Maintainer Tone:** Professional, responsive, collaborative. Community PRs receive thorough reviews and are typically merged within 1-2 days when properly signed (DCO requirement).
 
 ### Documentation & Accessibility
 
 | Indicator | Status | Notes |
 |-----------|--------|-------|
-| **README Quality** | ✅ | Comprehensive, clear explanation of project purpose and differentiators |
-| **Getting Started Guide** | ✅ | Quick-start and manual install instructions in README |
-| **API Documentation** | ✅ | Links to docs.k3s.io for complete documentation |
-| **Contributor Guide** | ✅ | Detailed CONTRIBUTING.md with PR process, code conventions |
-| **Issue Templates** | ❓ | To be assessed |
-| **PR Templates** | ❓ | To be assessed |
+| **README Quality** | ✅ | Excellent: clear value proposition, architecture explanation, comparison to upstream K8s |
+| **Getting Started Guide** | ✅ | Quick-start install script + manual download instructions in README |
+| **API Documentation** | ✅ | Links to comprehensive docs.k3s.io site |
+| **Contributor Guide** | ✅ | Detailed CONTRIBUTING.md with DCO, PR process, code conventions |
+| **GOVERNANCE.md** | ✅ | Comprehensive governance added July 2025 (PR #12466) |
+| **MAINTAINERS file** | ✅ | Clear list of 18 maintainers with contact info |
+| **Issue Templates** | ⚠️ | Not reviewed in this session; likely present |
+| **PR Templates** | ⚠️ | Not reviewed in this session; likely present |
+| **CODE_OF_CONDUCT.md** | ✅ | Referenced in CONTRIBUTING.md and GOVERNANCE.md |
+| **ROADMAP.md** | ✅ | Mentioned in README, forward-looking planning |
+| **ADR Process** | ✅ | Architecture Decision Records process defined in GOVERNANCE.md |
+
+### Recent Governance Improvements
+
+**GOVERNANCE.md Added (July 2025):**
+- Community roles defined (Users → Contributors → Reviewers → Maintainers)
+- Clear maintainer expectations and responsibilities
+- Voting procedures (supermajority and simple majority)
+- Proposal process (ADRs) for major changes
+- Security Response Team definition
+- Code of Conduct enforcement process
+- Maintainer ladder and onboarding process
+
+**Inclusive Naming Initiative:**
+- PR #12383 (Sept 2025): Renamed "master" → "main" branch per CNCF standards
+- Shows responsiveness to community inclusivity standards
+
+### Barrier to Entry
+
+**Low for Usage:**
+- Single-binary installation
+- Excellent documentation
+- Quick-start scripts
+
+**Moderate for Contribution:**
+- DCO sign-off required (standard CNCF/Linux practice)
+- Go development knowledge needed
+- Understanding of Kubernetes internals helpful
+- Community PRs welcomed but must meet quality standards
+
+**High for Governance:**
+- All maintainers are SUSE employees
+- No clear path for external contributors to gain maintainer status without SUSE employment
+- Governance voting limited to SUSE-employed maintainers
 
 ## Adoption & Ecosystem
 
