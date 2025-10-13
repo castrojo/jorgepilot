@@ -3,6 +3,7 @@ slug: /
 ---
 
 import RecentlyUpdated from '@site/src/components/RecentlyUpdated';
+import SectionIndex from '@site/src/components/SectionIndex';
 
 # Jorgepilot
 
@@ -13,6 +14,19 @@ This is an experiment to see how useful Copilot can be to a Community Engineer. 
 ## [File a task](https://github.com/castrojo/jorgepilot/issues)
 
 This will likely be more verbose than the [actual Jorge](https://ypsidanger.com). This may be a mistake.
+
+<SectionIndex sections={[
+  {
+    title: "Customization Guide",
+    path: "/CUSTOMIZATION",
+    description: "Learn how to personalize your pilot site with your own GitHub username, repository name, and custom tagline."
+  },
+  {
+    title: "Reports",
+    path: "/reports/",
+    description: "Collection of project health checks, contribution guides, and analysis reports for CNCF, Universal Blue, and other open source projects."
+  }
+]} />
 
 <RecentlyUpdated />
 
