@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-health
   - spiffe
+last_updated: 2025-10-13
 ---
 
 # SPIFFE Project Health Check
@@ -448,9 +449,9 @@ SPIFFE serves as an exemplar of a mature, production-ready CNCF Graduated projec
 
 ## Related Work
 
-- [CNCF Project Health Checks Report](cncf-health-checks-report.md) - 2024 TOC health check analysis
-- [CNCF Project Moving Levels Status](cncf-project-moving-levels-status.md) - Graduation/incubation tracking
-- [CNCF Landscape 2025 Trends](cncf-landscape-trends-2025.md) - Ecosystem analysis
+- [CNCF Project Health Checks Report](../cncf-health-checks-report.md) - 2024 TOC health check analysis
+- [CNCF Project Moving Levels Status](../cncf-project-moving-levels-status.md) - Graduation/incubation tracking
+- [CNCF Landscape 2025 Trends](../cncf-landscape-trends-2025.md) - Ecosystem analysis
 
 ## References
 

@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-health
   - vitess
+last_updated: 2025-10-13
 ---
 
 # Vitess Project Health Check

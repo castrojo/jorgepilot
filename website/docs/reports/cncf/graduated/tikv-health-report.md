@@ -3,7 +3,7 @@ tags:
   - cncf
   - project-health
   - tikv
-date: 2025-10-13
+last_updated: 2025-10-13
 ---
 
 # TiKV Project Health Check
@@ -499,7 +499,7 @@ TiKV stands as a model CNCF Graduated project, demonstrating best practices in o
 ## Related Work
 
 - [CNCF TOC Health Check Issues](https://github.com/cncf/toc/issues?q=is%3Aissue+label%3Areview%2Fhealth)
-- [CNCF Project Health Checks Report](cncf-health-checks-report.md)
+- [CNCF Project Health Checks Report](../cncf-health-checks-report.md)
 - [CNCF Graduation Criteria](https://github.com/cncf/toc/blob/main/process/graduation_criteria.md)
 - [TAG Contributor Strategy](https://github.com/cncf/tag-contributor-strategy)
 

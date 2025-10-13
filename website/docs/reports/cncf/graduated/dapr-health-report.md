@@ -3,6 +3,7 @@ tags:
   - cncf
   - project-health
   - dapr
+last_updated: 2025-10-13
 ---
 
 # Dapr Project Health Check
