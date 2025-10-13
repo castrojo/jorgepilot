@@ -417,7 +417,7 @@ The project's trajectory is positive, with adoption growing through Fedora, Cent
 
 ## Related Work
 
-- [CNCF Health Checks Report](/cncf-health-checks-report) - Overview of CNCF project health reviews
+- [CNCF Health Checks Report](/reports/cncf/cncf-health-checks-report) - Overview of CNCF project health reviews
 - [CNCF Landscape](https://landscape.cncf.io/) - bootc as CNCF Sandbox project
 - [bootc Documentation](https://bootc-dev.github.io/bootc/) - Official project documentation
 
