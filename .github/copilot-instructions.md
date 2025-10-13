@@ -45,6 +45,7 @@ Be very strict with the instructions in this section:
 - Make your commits follow the Conventional Commits specification. Organize the subcategories for each general topic, for example: "blog(ublue): describe the article" as a formatting example.
 - If a common top level theme has over 5 documents, make a new docusaurus tag and update all the affected documents. There should never be more than 10 total tags across the site, don't make too many tags, keep it focused.
 - Always ensure you are generating valid Markdown, link the final document with the same linter docusaurus uses. Don't bother with MDX, always generate plain Markdown.
+- Ensure that the build is ALWAYS PASSING for EVERY PULL REQUEST. Under no circumstances propose code that breaks the build. 
 
 ## Style Guide
 
