@@ -37,7 +37,7 @@ Very active maintainer team with rapid response times on both PRs and issues, de
 
 | Metric | Status | Evidence |
 |--------|--------|----------|
-| **Average Response Time** | < 24-48 hours | Most PRs get initial feedback within 1-2 days |
+| **Average Response Time** | &lt; 24-48 hours | Most PRs get initial feedback within 1-2 days |
 | **Median Time to Merge** | 2-4 days | Standard PRs merged quickly after review |
 | **Review Depth** | Thorough | Multiple reviewers, detailed technical feedback |
 | **Stale PR Management** | Active | Few stale PRs, maintainers actively manage backlog |
@@ -51,8 +51,8 @@ Very active maintainer team with rapid response times on both PRs and issues, de
 
 | Metric | Status | Evidence |
 |--------|--------|----------|
-| **Issue Triage Time** | < 72 hours | Most issues labeled and responded to within 3 days |
-| **Bug Response** | < 48 hours | Critical bugs receive immediate attention |
+| **Issue Triage Time** | &lt; 72 hours | Most issues labeled and responded to within 3 days |
+| **Bug Response** | &lt; 48 hours | Critical bugs receive immediate attention |
 | **Feature Discussions** | Active | Regular engagement on feature requests |
 | **Issue Resolution Rate** | Healthy | Backlog growing modestly but manageable |
 
@@ -144,7 +144,7 @@ Consistent development pace with regular releases and feature delivery
 |--------|-------|------------|
 | **PRs Opened** | 330+ | Very active development |
 | **PRs Merged** | 310+ | Excellent merge rate (94%+) |
-| **PRs Closed (unmerged)** | <20 | Very low rejection rate |
+| **PRs Closed (unmerged)** | &lt;20 | Very low rejection rate |
 | **Average PR Lifespan** | 2-4 days | Healthy throughput |
 
 ### Issue Resolution
