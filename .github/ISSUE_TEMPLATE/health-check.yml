@@ -9,6 +9,8 @@ body:
         ## Project Health Check Request
         
         Request a comprehensive analysis of a CNCF project's health, including contributor activity, responsiveness, velocity, inclusivity indicators, and alignment with TAG Contributor Strategy criteria.
+        
+        **Note:** Large projects (>1,000 commits/year, 50+ contributors) will be analyzed incrementally across multiple sessions to respect API limits.
 
   - type: input
     id: cncf_project
@@ -19,3 +21,52 @@ body:
         Generate a health check report for @org or @org/project
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Session Completion Tracking
+        
+        **For large projects requiring multi-session analysis, track progress below:**
+
+  - type: checkboxes
+    id: session_progress
+    attributes:
+      label: Analysis Sessions
+      description: Check off each session as it's completed (Copilot will update this)
+      options:
+        - label: "**Session 1:** Foundation & metadata (repo stats, releases, governance files)"
+        - label: "**Session 2:** Activity analysis (commits, PRs, contributor identification)"
+        - label: "**Session 3:** Community & security assessment (diversity, security practices)"
+        - label: "**Session 4:** Finalization (adoption, recommendations, executive summary)"
+
+  - type: textarea
+    id: session_notes
+    attributes:
+      label: Session Notes
+      description: "Notes about completion status, blockers, or next steps (updated by Copilot)"
+      placeholder: |
+        Session progress will be tracked here.
+        
+        Example:
+        - Session 1 completed on YYYY-MM-DD: Foundation established
+        - Session 2 in progress: Analyzing contributor activity
+        - Remaining: Security assessment, finalization
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Completion Criteria
+        
+        **This issue will remain open until:**
+        - [ ] All analysis sessions completed
+        - [ ] Report published to docs/reports/
+        - [ ] Executive summary finalized
+        - [ ] All WIP markers removed from report
+        - [ ] Build passes with new report
+        
+        **Note:** Copilot will update session progress and close this issue when complete.
