@@ -1,0 +1,42 @@
+.sectionIndex {
+  margin: 2rem 0;
+}
+
+.panelLine {
+  border: 0;
+  height: 1px;
+  background: var(--ifm-color-emphasis-300);
+  margin: 2rem 0 1.5rem 0;
+}
+
+.entry {
+  margin-bottom: 2rem;
+}
+
+.entry h5 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.entry h5 a {
+  color: var(--ifm-heading-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.entry h5 a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.entry p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .panelLine {
+  background: var(--ifm-color-emphasis-300);
+}
