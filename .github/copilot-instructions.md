@@ -61,6 +61,7 @@ Be very strict with the instructions in this section:
 Strictly follow these criteria when being asked to perform a health check:
 
 - Only analyze the past 365 days of activity for a health report
+- When asked to analyze a project that already has an existing report, regenerate the report and replace it, but leave a link to the previous version in a changelog at the bottom of the report. This can link to the git commit link in the github webui, there's no need to track older reports. 
 - The report is supposed to reflect only the last year's worth of activity, disregard older data.
 - Always generate an actual report and commit it in the docs directory. Use multiple small commits instead of one large commit.
 
