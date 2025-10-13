@@ -1,41 +1,11 @@
 ---
 tags:
-  - other
+  - cncf
   - project-health
   - k3s
-  - work-in-progress
+  - sandbox
 last_updated: 2025-10-13
-completion_status: "Session 4 of 4 complete"
-next_steps: |
-  - Review and publication (all sessions complete)
 ---
-
-# K3s Project Health Check
-
-:::caution Work in Progress
-This health check is being generated incrementally due to project size. 
-Current completion: Session 1 of 4 complete.
-
-**Completed Sections:**
-- [x] Overview & metadata
-- [x] Release activity
-- [x] Governance structure
-- [x] Contributor activity analysis
-- [x] Project velocity metrics
-- [x] Responsiveness assessment
-- [x] Contributor risk analysis
-- [x] Security practices review
-- [x] Inclusivity indicators
-
-**Remaining Sections:**
-- [ ] Adoption and ecosystem
-- [ ] Areas of excellence
-- [ ] Final risks and recommendations
-- [ ] Executive summary
-- [ ] Health grade assignment
-
-Last updated: 2025-10-13
-:::
 
 ## Executive Summary
 
@@ -45,14 +15,15 @@ K3s is a production-ready, lightweight Kubernetes distribution maintained by SUS
 
 **Repository:** [@k3s-io/k3s](https://github.com/k3s-io/k3s)  
 **Created:** 2018 (approximately)  
-**Category:** CNCF Sandbox Project
+**Category:** CNCF Sandbox Project  
+**Maturity Level:** Sandbox  
 **Primary Maintainer:** Rancher Labs (SUSE)  
 **License:** Apache 2.0  
 **Language:** Go  
 
 **Analysis Period:** October 13, 2024 - October 13, 2025 (Past 365 days)
 
-K3s is a lightweight, fully conformant Kubernetes distribution packaged as a single binary less than 100 MB. It is production-ready, designed for edge, IoT, CI, development, and ARM environments where resource constraints are a concern. K3s is explicitly NOT a fork of Kubernetes—it's a distribution that packages Kubernetes with additional components and maintains minimal patches (under 1000 lines) to support its use case.
+K3s is a CNCF Sandbox project and a lightweight, fully conformant Kubernetes distribution packaged as a single binary less than 100 MB. It is production-ready, designed for edge, IoT, CI, development, and ARM environments where resource constraints are a concern. K3s is explicitly NOT a fork of Kubernetes—it's a distribution that packages Kubernetes with additional components and maintains minimal patches (under 1000 lines) to support its use case. While K3s is a CNCF Sandbox project, it is primarily maintained by SUSE/Rancher Labs.
 
 ## Release Activity
 
@@ -690,7 +661,9 @@ For production deployments, consider SUSE support contracts to mitigate bus fact
 
 ## Related Work
 
-- [TAG Contributor Strategy Health Check Guide](./tag-contributor-strategy-guide.md) - Health check criteria reference
+- [TAG Contributor Strategy Health Check Guide](../other/tag-contributor-strategy-guide.md) - Health check criteria reference
+- [CNCF Health Checks Report](./cncf-health-checks-report.md) - 2024 health check analysis
+- [CNCF Landscape](https://landscape.cncf.io/) - K3s listed as CNCF Sandbox project
 
 ## References
 
