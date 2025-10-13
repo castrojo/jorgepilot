@@ -65,6 +65,81 @@ Strictly follow these criteria when being asked to perform a health check:
 - The report is supposed to reflect only the last year's worth of activity, disregard older data.
 - Always generate an actual report and commit it in the docs directory. Use multiple small commits instead of one large commit.
 
+## CNCF Landscape Requirements (CRITICAL)
+
+**For ALL CNCF project health checks, the CNCF Landscape is the single source of truth.**
+
+When conducting health checks for any CNCF project, you MUST:
+
+### At the Start of Every Health Check Session
+
+1. **Check [@cncf/landscape](https://github.com/cncf/landscape) FIRST** - Always query the landscape repository at the beginning of every health check session to get fresh, authoritative data
+2. **Verify project existence** - Confirm the project exists in the CNCF Landscape before proceeding
+3. **Extract landscape data** - Capture all relevant metadata from landscape.yml including:
+   - Official project name
+   - CNCF maturity level (Sandbox, Incubating, or Graduated)
+   - Project category
+   - Repository URL
+   - Project homepage
+   - Description
+   - Acceptance date
+
+### Landscape Data as Single Source of Truth
+
+- **Prioritize landscape over all other sources** - If there's a conflict between landscape data and other sources (GitHub API, project website, etc.), the landscape data ALWAYS takes precedence
+- **Do NOT infer or assume** - Never guess a project's maturity level or category; always look it up in the landscape
+- **Only three maturity levels exist** - All CNCF projects are categorized as either Sandbox, Incubating, or Graduated. No other categories or maturity levels exist in CNCF.
+- **Correct miscategorizations immediately** - If you discover a report has incorrect categorization, flag it and use landscape data to correct it
+
+### Report Structure Requirements
+
+All CNCF project health reports MUST include a **"CNCF Landscape Information"** section immediately after the Overview section with the following format:
+
+```markdown
+## CNCF Landscape Information
+
+:::info Official CNCF Project Data
+Data source: [@cncf/landscape](https://github.com/cncf/landscape) - landscape.yml
+:::
+
+| Attribute | Value |
+|-----------|-------|
+| **Official Name** | [Project Name] |
+| **CNCF Maturity Level** | [Sandbox/Incubating/Graduated] |
+| **Category** | [Landscape Category] |
+| **Accepted** | [Date accepted into CNCF] |
+| **Repository** | [@org/repo](https://github.com/org/repo) |
+| **Homepage** | [URL] |
+| **Landscape Entry** | [Link to landscape.cncf.io entry] |
+
+**Description:** [Official description from landscape]
+```
+
+### File Location Based on Maturity Level
+
+Use the CNCF maturity level from landscape to determine file location:
+
+- **Graduated projects**: `website/docs/reports/cncf/graduated/[project]-health-report.md`
+- **Incubating projects**: `website/docs/reports/cncf/incubating/[project]-health-report.md`
+- **Sandbox projects**: `website/docs/reports/cncf/[project]-health-report.md`
+
+**NEVER place CNCF projects in the "other" directory.** If you find a CNCF project miscategorized in "other", it must be moved to the correct CNCF location.
+
+### Tags and Front Matter
+
+Include the maturity level in tags:
+
+```yaml
+---
+tags:
+  - cncf
+  - project-health
+  - [graduated/incubating/sandbox]
+  - [project-name]
+last_updated: YYYY-MM-DD
+---
+```
+
 ## Executive Summary
 
 This guide consolidates the CNCF Technical Oversight Committee's comprehensive criteria for evaluating project health across all maturity levels. It synthesizes health review processes, due diligence requirements, and technical assessment frameworks to provide a single reference for conducting thorough project evaluations. Projects at different maturity levels (Sandbox, Incubating, Graduated) have increasingly rigorous requirements aligned with production-readiness expectations.
@@ -874,6 +949,7 @@ Example 1 - Project Health Check Template Structure:
 tags:
   - cncf  # or ublue, personal-project, etc.
   - project-health
+  - [graduated/incubating/sandbox]  # Include maturity level for CNCF projects
   - [project-name]
 last_updated: YYYY-MM-DD
 ---
@@ -897,6 +973,26 @@ last_updated: YYYY-MM-DD
 **License:** [License Type]
 
 **Analysis Period:** [Start Date] - [End Date] (Past 365 days)
+
+## CNCF Landscape Information
+
+(Include this section for ALL CNCF projects - it is REQUIRED)
+
+:::info Official CNCF Project Data
+Data source: [@cncf/landscape](https://github.com/cncf/landscape) - landscape.yml
+:::
+
+| Attribute | Value |
+|-----------|-------|
+| **Official Name** | [Project Name from landscape] |
+| **CNCF Maturity Level** | [Sandbox/Incubating/Graduated] |
+| **Category** | [Landscape Category] |
+| **Accepted** | [Date accepted into CNCF] |
+| **Repository** | [@org/repo](https://github.com/org/repo) |
+| **Homepage** | [URL] |
+| **Landscape Entry** | [Link to landscape.cncf.io entry] |
+
+**Description:** [Official description from landscape.yml]
 
 ## Responsiveness
 
