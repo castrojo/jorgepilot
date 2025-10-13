@@ -123,13 +123,269 @@ The `last_updated` field must contain the date when the report content was last 
 
 ## Work methodology for large projects
 
-Large projects will take more resources to analyze - when doing a health check on a large project over 2 years old enforce the following criteria:
+Large projects require careful resource management due to API rate limits and token budgets. When conducting a health check on a large project (typically projects over 2 years old with significant activity), follow this systematic approach:
 
-- Generate the report in multiple steps, using multiple small commits
-- For large requests that use over 10 github API calls save your work into the inprogress report
-- If necessary leave as much information in the inprogress report so that subsequent copilot runs are more efficient
-- Make judicious use of a temporary directory in the repository to save your work for future copilot runs. 
-- Label the report as unfinished in the docusaurus front matter
+### Identifying Large Projects
+
+A project is considered "large" if it meets any of these criteria:
+- Over 2 years old with continuous activity
+- More than 1,000 commits in the past 365 days
+- More than 50 unique contributors in the past year
+- Multiple subprojects or repositories requiring analysis
+- Requires more than 10-15 GitHub API calls for basic analysis
+
+### Multi-Session Strategy
+
+Large project reports MUST be generated incrementally across multiple Copilot sessions:
+
+**Session Planning:**
+1. **Session 1 - Foundation** (Budget: 30-40 API calls)
+   - Repository metadata and basic statistics
+   - Recent release information
+   - Governance file analysis (SECURITY.md, CONTRIBUTING.md, MAINTAINERS.md)
+   - Create initial report structure with Executive Summary placeholder
+   - Save progress with partial data
+
+2. **Session 2 - Activity Analysis** (Budget: 30-40 API calls)
+   - Commit activity patterns (quarterly breakdown)
+   - Top 10-15 contributors identification
+   - Pull request metrics and examples
+   - Issue responsiveness metrics
+   - Update report sections
+
+3. **Session 3 - Community & Security** (Budget: 20-30 API calls)
+   - Contributor diversity analysis
+   - Maintainer concentration assessment
+   - Security practices verification
+   - OpenSSF badge status
+   - Community documentation review
+   - Update report sections
+
+4. **Session 4 - Finalization** (Budget: 10-20 API calls)
+   - Adoption and ecosystem analysis
+   - Day 2 operations assessment (if applicable)
+   - Risk identification and recommendations
+   - Complete Executive Summary with findings
+   - Generate final health grade
+   - Mark report as complete
+
+### Work-in-Progress Report Management
+
+**Front Matter for Incomplete Reports:**
+```yaml
+---
+tags:
+  - cncf  # or other primary category
+  - project-health
+  - [project-name]
+  - work-in-progress
+last_updated: YYYY-MM-DD
+completion_status: "Session X of 4 complete"
+next_steps: |
+  - Remaining section 1
+  - Remaining section 2
+  - Final review and completion
+---
+```
+
+**Report Structure During Development:**
+
+Include a prominent status banner at the top of incomplete reports:
+
+```markdown
+:::caution Work in Progress
+This health check is being generated incrementally due to project size. 
+Current completion: Session X of 4 complete.
+
+**Completed Sections:**
+- [x] Section 1
+- [x] Section 2
+
+**Remaining Sections:**
+- [ ] Section 3
+- [ ] Section 4
+
+Last updated: [Date]
+:::
+```
+
+### State Preservation and Data Caching
+
+**Temporary Data Storage:**
+- Create `/tmp/health-checks/[project-name]/` directory for intermediate data
+- Store raw API responses as JSON files for reuse: `contributors.json`, `releases.json`, `commits-summary.json`
+- Save analysis progress in `session-notes.md` with:
+  - API calls made (count and purpose)
+  - Key findings discovered
+  - Next steps for subsequent sessions
+  - Any anomalies or special considerations
+
+**Within-Report Data Embedding:**
+When practical, embed raw data as HTML comments for future reference:
+```markdown
+<!-- API Data Cache - Do Not Remove
+Contributor Count: 147
+Top Contributor: @username (234 commits)
+Date Range: 2024-10-13 to 2025-10-13
+-->
+```
+
+### API Call Budgeting
+
+**Budget Tracking:**
+- Count every GitHub API call made during the session
+- When approaching 40-50 API calls in a single session, STOP and save progress
+- Log remaining work in the report's "Next Steps" section
+- Prioritize high-value API calls (e.g., contributor stats over individual PR details)
+
+**API Call Optimization:**
+- Use GraphQL API when possible to batch multiple queries
+- Request broader date ranges rather than multiple narrow queries
+- Cache contributor lists and reuse across sections
+- Use release changelogs instead of commit-by-commit analysis when appropriate
+- Leverage existing CNCF DevStats when available instead of raw GitHub API
+
+### Incremental Commit Strategy
+
+**Commit Frequency:**
+- Commit after completing each major section (4-6 commits per session typical)
+- Use descriptive commit messages: `docs(cncf): add [section] to [project] health check`
+- Never commit incomplete sentences or malformed markdown
+- Each commit should represent a complete, reviewable unit of work
+
+**Commit Message Format:**
+```
+docs(cncf): add contributor activity to kubernetes health check
+
+Session 2 of 4 for Kubernetes health report. Added:
+- Quarterly commit breakdown
+- Top 15 contributors with organizational affiliations
+- PR throughput metrics for past 12 months
+
+Remaining: Community assessment, security analysis, finalization
+```
+
+### Pull Request Communication
+
+When a large project health check requires multiple sessions, the initial PR description MUST include:
+
+```markdown
+## Large Project Health Check - Multi-Session Report
+
+**Project:** [Project Name]
+**Maturity Level:** [Graduated/Incubating/Sandbox]
+**Estimated Sessions:** 4-5
+**Current Progress:** Session X of Y complete
+
+### Session Completion Checklist
+- [x] Session 1: Foundation & metadata (Completed: YYYY-MM-DD)
+- [x] Session 2: Activity analysis (Completed: YYYY-MM-DD)
+- [ ] Session 3: Community & security assessment
+- [ ] Session 4: Finalization & quality review
+
+### Why Multiple Sessions?
+
+This project requires incremental analysis due to:
+- [Reason 1, e.g., "1,500+ commits in past year requiring detailed analysis"]
+- [Reason 2, e.g., "50+ active contributors across 15+ organizations"]
+- [Reason 3, e.g., "Complex subproject structure requiring separate evaluation"]
+
+Each session respects GitHub API rate limits and Copilot token budgets while ensuring thorough, accurate analysis.
+
+### Review Guidance
+
+- Partial reviews welcome after each session
+- Full report review recommended after Session 4 completion
+- Report will be marked complete when `work-in-progress` tag is removed
+```
+
+Update this description after each session to reflect progress.
+
+### Quality Assurance for Incremental Reports
+
+**After Each Session:**
+1. **Build verification:** Run `npm run build` to ensure valid markdown
+2. **Consistency check:** Verify terminology and formatting matches existing sections
+3. **Data validation:** Cross-check numbers for internal consistency
+4. **Link verification:** Ensure all GitHub links are valid
+5. **Progress documentation:** Update completion status in front matter
+
+**Before Final Session:**
+1. **Comprehensive review:** Read entire report start to finish
+2. **Executive summary alignment:** Ensure summary reflects all findings
+3. **Recommendation completeness:** Verify all risks have corresponding recommendations
+4. **Reference completeness:** Check all claims have supporting links or evidence
+5. **Remove WIP markers:** Delete work-in-progress tags and status banners
+
+### Resource Budgeting Guidelines
+
+**Time Per Session:**
+- Session 1-3: 15-25 minutes of analysis time
+- Session 4: 10-15 minutes for finalization
+- Total: 60-90 minutes across all sessions
+
+**API Call Budget (per session):**
+- Conservative: 20-30 calls
+- Standard: 30-40 calls
+- Maximum: 50 calls (only when necessary)
+
+**When to Extend Beyond 4 Sessions:**
+- Projects with 5+ subprojects requiring individual analysis
+- Projects with 100+ active contributors needing detailed diversity analysis
+- Projects requiring extensive adopter verification
+- Projects with complex multi-repository structures
+
+### Handling Interruptions
+
+If a session is interrupted before completion:
+1. Commit all complete sections immediately
+2. Add a session note in the report: "Session interrupted at [section]. Resume with [next task]."
+3. Update front matter with current completion percentage
+4. Preserve `/tmp/` data files for next session
+5. Document specific API calls already consumed
+
+### Example Multi-Session Workflow
+
+**Kubernetes Health Check Example:**
+
+Session 1 (40 API calls):
+- Fetched repository metadata: 1 call
+- Listed releases (past year): 1 call
+- Retrieved governance files: 5 calls
+- Analyzed 10 recent PRs: 10 calls
+- Fetched issue statistics: 3 calls
+- Contributor count query: 1 call
+- Generated sections: Overview, Release Activity, Governance Structure
+- **Committed:** "docs(cncf): initialize kubernetes health check (session 1/4)"
+
+Session 2 (38 API calls):
+- Listed commits by quarter: 4 calls
+- Fetched top 20 contributors: 20 calls
+- Analyzed PR metrics: 8 calls
+- Issue resolution data: 6 calls
+- Generated sections: Contributor Activity, Project Velocity, Responsiveness
+- **Committed:** "docs(cncf): add activity analysis to kubernetes health check (session 2/4)"
+
+Session 3 (32 API calls):
+- Organization affiliation analysis: 15 calls
+- Security file analysis: 5 calls
+- Community documentation review: 8 calls
+- Maintainer diversity check: 4 calls
+- Generated sections: Contributor Risk, Security Practices, Inclusivity
+- **Committed:** "docs(cncf): add community assessment to kubernetes health check (session 3/4)"
+
+Session 4 (15 API calls):
+- Adopter verification: 5 calls
+- Integration compatibility: 5 calls
+- Day 2 operations review: 3 calls
+- Final validation checks: 2 calls
+- Completed: Executive Summary, Risks & Recommendations, Conclusion
+- Removed WIP markers
+- **Committed:** "docs(cncf): finalize kubernetes health check (session 4/4)"
+
+### Template Considerations
+
+This multi-session methodology should remain invisible to users who deploy their own "alicepilot" or "bobpilot" instances. The instructions enable Copilot to handle large projects gracefully without exposing implementation complexity to end users.
 
 ## Sandbox Project Health Criteria
 
