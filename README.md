@@ -16,6 +16,15 @@ This repository includes a Docusaurus documentation site that is automatically d
 
 **Live Site:** https://castrojo.github.io/jorgepilot
 
+### Features
+
+- 🔍 **Site-wide search** - Press `Ctrl+K` (or `Cmd+K` on Mac) to search all documentation
+- 📱 **Responsive design** - Works on mobile, tablet, and desktop
+- 🌙 **Dark mode support** - Automatic theme switching
+- 🚀 **Fast & offline** - Client-side search with no external dependencies
+
+See [SEARCH_DOCUMENTATION.md](SEARCH_DOCUMENTATION.md) for detailed search documentation.
+
 ## Local Development
 
 To run the documentation site locally:
