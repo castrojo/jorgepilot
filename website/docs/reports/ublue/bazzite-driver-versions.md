@@ -86,22 +86,17 @@ Previous stable with NVIDIA info showed: **42.20251011** upgraded from **580.82.
 
 ## Additional Package Highlights
 
-### Release 42.20251011 Notable Changes
-
-**Major Updates:**
-- Firmware: 20250808-1 → 20250917ba1-0
-- HHD (Handheld Daemon): 3.19.18-1 → 3.19.19-1
-- Gamescope: 135.2f30679c-1.bazzite
-- GNOME: 48.3-1
-- KDE Plasma: 6.4.5-1
-
-### Release 42.20251002 Notable Changes
-
-**Major Updates:**
-- Mesa: 25.2.1-4 → 25.2.4-1
-- Gamescope: 134.2f30679c-1.bazzite → 135.2f30679c-1.bazzite
-- KDE Plasma: 6.4.4-1 → 6.4.5-1
-- HHD: 3.19.15-1 → 3.19.18-1
+| Release | Package | Change | Notes |
+|---------|---------|--------|-------|
+| **42.20251011** | Firmware | 20250808-1 → 20250917ba1-0 | Latest firmware |
+| | HHD (Handheld Daemon) | 3.19.18-1 → 3.19.19-1 | Minor update |
+| | Gamescope | 135.2f30679c-1.bazzite | Latest compositor |
+| | GNOME | 48.3-1 | Desktop environment |
+| | KDE Plasma | 6.4.5-1 | Desktop environment |
+| **42.20251002** | Mesa | 25.2.1-4 → 25.2.4-1 | Graphics stack |
+| | Gamescope | 134.2f30679c-1.bazzite → 135.2f30679c-1.bazzite | Compositor update |
+| | KDE Plasma | 6.4.4-1 → 6.4.5-1 | Desktop update |
+| | HHD | 3.19.15-1 → 3.19.18-1 | Handheld daemon |
 
 ## Testing & Rollback Strategy
 
@@ -112,25 +107,26 @@ Previous stable with NVIDIA info showed: **42.20251011** upgraded from **580.82.
 3. **Test your specific use case** (gaming, hardware compatibility, etc.)
 4. **Report findings** in the [@ublue-os/bazzite](https://github.com/ublue-os/bazzite) issue tracker with specific version numbers
 
-### Common Scenarios
+## Latest Gaming Performance Issues
 
-**NVIDIA Driver Issues:**
-```bash
-# Rebase to the most recent NVIDIA driver update
-bazzite-rollback-helper rebase 42.20251011
-```
+Recent bug reports from the Bazzite community with significant impact on gaming performance:
 
-**Mesa/AMD Driver Issues:**
-```bash
-# Test older Mesa version
-bazzite-rollback-helper rebase 42.20250916.1
-```
+| Issue # | Title | Status | Impact | Workaround | Link |
+|---------|-------|--------|--------|------------|------|
+| #3123 | Steam Gaming Mode runs on low refresh rate | Open | Caps games at 48 FPS despite 144Hz monitor | Check refresh rate settings | [Issue #3123](https://github.com/ublue-os/bazzite/issues/3123) |
+| #3120 | Gamepads lagging on gaming mode | Open | Controller input lag makes games unplayable | Switch to Desktop Mode or use specific controllers | [Issue #3120](https://github.com/ublue-os/bazzite/issues/3120) |
+| #3092 | NVIDIA 580 driver causes Steam crashes and flickering | Open | Game mode flickers, Steam won't start in desktop | Rebase to older driver or use Flatpak Steam | [Issue #3092](https://github.com/ublue-os/bazzite/issues/3092) |
+| #2862 | NVIDIA laptop uses integrated GPU by default | Open | Terrible performance until dGPU forced | Set NVIDIA environment variables | [Issue #2862](https://github.com/ublue-os/bazzite/issues/2862) |
+| #2739 | VK_DRIVER_FILES improves NVIDIA performance | Open | Poor performance until Vulkan driver specified | Set VK_DRIVER_FILES env var | [Issue #2739](https://github.com/ublue-os/bazzite/issues/2739) |
+| #2650 | System freezes completely during gaming | Open | Random freezes requiring hard reboot | No reliable workaround | [Issue #2650](https://github.com/ublue-os/bazzite/issues/2650) |
+| #1070 | Performance drops 50% after sleep | Open | FPS halves after wake from sleep | Use hibernate instead of sleep | [Issue #1070](https://github.com/ublue-os/bazzite/issues/1070) |
+| #3078 | Incorrect screen resolution in games (GNOME) | Open | Games detect wrong resolution with fractional scaling | Set scaling to 100% or 200% | [Issue #3078](https://github.com/ublue-os/bazzite/issues/3078) |
+| #3079 | Allow Tearing does not work | Open | Screen tearing remains even when enabled | Gamescope flag workaround may help | [Issue #3079](https://github.com/ublue-os/bazzite/issues/3079) |
+| #3117 | Screenshots fail or cause crashes with background recording | Open | Gaming Mode crashes when screenshot taken | Disable background recording | [Issue #3117](https://github.com/ublue-os/bazzite/issues/3117) |
 
-**Kernel-Related Issues:**
-```bash
-# Rebase to older kernel
-bazzite-rollback-helper rebase 42.20250916.1
-```
+:::info Community Support
+For the latest status on these issues, click the issue links above. Many have active discussions with potential workarounds from the community.
+:::
 
 ## References
 
@@ -139,11 +135,6 @@ bazzite-rollback-helper rebase 42.20250916.1
 - [GitHub Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite) - Container images
 - [Bazzite Documentation](https://docs.bazzite.gg/) - Official docs
 
-## Related Work
-
-- [Bazzite Health Check](./bazzite-health-check.md) - Project health analysis
-- [Universal Blue Build Optimization](./ublue-build-optimization.md) - Build infrastructure
-
 ---
 
 **Report Generated:** 2025-10-14  
@@ -151,3 +142,9 @@ bazzite-rollback-helper rebase 42.20250916.1
 **Scope:** Last 5 stable releases (September-October 2025)
 
 **Note on Data:** This report focuses on stable (non-testing) releases only. Testing releases are published more frequently but are intended for early testing. Only stable releases with `prerelease: false` are included in this analysis.
+
+## Changelog
+
+| Date | Changes | Commit |
+|------|---------|--------|
+| 2025-10-14 | Initial report created with last 5 stable releases | [c077a39](https://github.com/castrojo/jorgepilot/commit/c077a39) |
