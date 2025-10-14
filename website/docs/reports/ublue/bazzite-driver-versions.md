@@ -10,7 +10,7 @@ last_updated: 2025-10-14
 
 ## Executive Summary
 
-This report tracks major driver versions across the last 5 stable Bazzite releases to assist Gaming Next (GN) users in identifying and rebasing to specific driver versions. Each entry includes direct links to GitHub Packages and release pages for easy rebase operations.
+This report tracks major driver versions across the last 5 stable Bazzite releases to assist GamersNexus (GN) users in identifying and rebasing to specific driver versions. Each entry includes direct links to GitHub Packages and release pages for easy rebase operations.
 
 ## Overview
 
