@@ -376,7 +376,7 @@ This grade reflects a functional, well-implemented personal project operating in
 ## Related Work
 
 - [ibroadcast-dl Health Check](./ibroadcast-dl-health-check.md) - Similar personal utility project pattern
-- [Helm Health Check](./helm-health-check.md) - Kubernetes deployment tool comparison
+- [Helm Health Check](../cncf/graduated/helm-health-report.md) - Kubernetes deployment tool comparison
 - [External Secrets Operator Health Check](./external-secrets-operator-health-check.md) - Kubernetes operator comparison
 
 ## References

@@ -701,4 +701,4 @@ The upcoming Helm v4 alpha represents the primary area requiring user communicat
 
 **Note on Data:** This analysis focuses on the helm/helm core repository activity from October 2024-2025. Additional Helm projects (charts, chartmuseum, etc.) are referenced but not analyzed in depth. OpenSSF Security Baseline assessment represents point-in-time evaluation against v2025-10-10 requirements.
 
-**Previous Report:** [Old Helm Health Check](/reports/other/helm-health-check) - Link for changelog reference
+**Previous Report:** This is the first comprehensive health check for Helm with OpenSSF Baseline compliance assessment.
