@@ -10,7 +10,7 @@ last_updated: 2025-10-14
 
 ## Executive Summary
 
-This report tracks major driver versions across the last 5 stable Bazzite releases to assist GamersNexus (GN) users in identifying and rebasing to specific driver versions. Each entry includes direct links to GitHub Packages and release pages for easy rebase operations.
+This report tracks major driver versions across the last 8 stable Bazzite releases to assist GamersNexus (GN) users in identifying and rebasing to specific driver versions. Each entry includes direct links to GitHub Packages and release pages for easy rebase operations.
 
 ## Overview
 
@@ -20,18 +20,23 @@ This report tracks major driver versions across the last 5 stable Bazzite releas
 
 **Data Source:** [@ublue-os/bazzite](https://github.com/ublue-os/bazzite) release changelogs
 
-**Analysis Period:** Past 5 stable releases (September-October 2025)
+**Analysis Period:** Past 8 stable releases (August-October 2025)
 
-## Latest Stable Releases (Last 5)
+## Latest Stable Releases (Last 8)
 
-| Image Tag | Release Date | Kernel Version | NVIDIA Driver | Mesa Version | GitHub Packages | Release Link |
-|-----------|--------------|----------------|---------------|--------------|-----------------|--------------|
-| **42.20251011** | 2025-10-11 | 6.16.4-115.bazzite | 580.95.05-1 | 25.2.4-1 | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20251011) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20251011) |
-| **42.20251002** | 2025-10-02 | 6.16.4-114.bazzite | N/A | 25.2.4-1 | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20251002) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20251002) |
-| **42.20250916.1** | 2025-09-16 | 6.16.4-108.bazzite | N/A | 25.2.1-4 | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250916.1) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250916.1) |
+| Image Tag | Release Date | Kernel Version | NVIDIA Driver | Mesa Version | Rebase Command | GitHub Packages | Release Link |
+|-----------|--------------|----------------|---------------|--------------|----------------|-----------------|--------------|
+| **42.20251011** | 2025-10-11 | 6.16.4-115.bazzite | 580.95.05-1 | 25.2.4-1 | `bazzite-rollback-helper rebase 42.20251011` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20251011) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20251011) |
+| **42.20251002** | 2025-10-02 | 6.16.4-114.bazzite | 580.82.07-1 | 25.2.4-1 | `bazzite-rollback-helper rebase 42.20251002` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20251002) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20251002) |
+| **42.20250916.1** | 2025-09-16 | 6.16.4-108.bazzite | 580.82.07-1 | 25.2.1-4 | `bazzite-rollback-helper rebase 42.20250916.1` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250916.1) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250916.1) |
+| **42.20250911** | 2025-09-11 | 6.16.4-107.bazzite | 580.82.07-1 | 25.2.1-4 | `bazzite-rollback-helper rebase 42.20250911` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250911) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250911) |
+| **42.20250908** | 2025-09-08 | 6.16.4-107.bazzite | 580.82.07-1 | 25.2.1-4 | `bazzite-rollback-helper rebase 42.20250908` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250908) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250908) |
+| **42.20250903** | 2025-09-03 | 6.16.4-104.bazzite | 580.82.07-1 | 25.2.1-4 | `bazzite-rollback-helper rebase 42.20250903` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250903) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250903) |
+| **42.20250901** | 2025-09-01 | 6.16.4-103.bazzite | 580.76.05-1 | 25.2.1-4 | `bazzite-rollback-helper rebase 42.20250901` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250901) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250901) |
+| **42.20250828.1** | 2025-08-28 | 6.15.9-116.bazzite | 580.76.05-1 | 25.2.1-4 | `bazzite-rollback-helper rebase 42.20250828.1` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250828.1) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250828.1) |
 
 :::info NVIDIA Availability
-NVIDIA driver versions are only listed in NVIDIA-specific image variants. Non-NVIDIA images do not include kmod-nvidia packages. The most recent stable release **42.20251011** includes NVIDIA driver **580.95.05-1**, upgraded from **580.82.07-1** in the previous stable release.
+NVIDIA driver versions are only listed in NVIDIA-specific image variants. Non-NVIDIA images do not include kmod-nvidia packages. The most recent stable release **42.20251011** includes NVIDIA driver **580.95.05-1**, upgraded from **580.82.07-1** used in releases from 42.20251002 through 42.20250903.
 :::
 
 ## How to Rebase to a Specific Version
@@ -64,25 +69,43 @@ rpm-ostree status
 |---------|---------------|--------|
 | 42.20251011 | 6.16.4-115.bazzite | ⬆️ +1 from previous |
 | 42.20251002 | 6.16.4-114.bazzite | ⬆️ +6 from previous |
-| 42.20250916.1 | 6.16.4-108.bazzite | Base reference |
+| 42.20250916.1 | 6.16.4-108.bazzite | ⬆️ +1 from previous |
+| 42.20250911 | 6.16.4-107.bazzite | ⬆️ +3 from previous |
+| 42.20250908 | 6.16.4-107.bazzite | Stable (same as previous) |
+| 42.20250903 | 6.16.4-104.bazzite | ⬆️ +1 from previous |
+| 42.20250901 | 6.16.4-103.bazzite | ⬆️ Major upgrade from 6.15.x series |
+| 42.20250828.1 | 6.15.9-116.bazzite | Base reference |
 
 ### Mesa Driver Progression
 
 | Release | Mesa Version | Change |
 |---------|-------------|--------|
-| 42.20251011 | 25.2.4-1 | Stable |
+| 42.20251011 | 25.2.4-1 | Stable (same as previous) |
 | 42.20251002 | 25.2.4-1 | ⬆️ +2 minor from 25.2.1-4 |
-| 42.20250916.1 | 25.2.1-4 | Base reference |
+| 42.20250916.1 | 25.2.1-4 | Stable (same as previous) |
+| 42.20250911 | 25.2.1-4 | Stable (same as previous) |
+| 42.20250908 | 25.2.1-4 | Stable (same as previous) |
+| 42.20250903 | 25.2.1-4 | Stable (same as previous) |
+| 42.20250901 | 25.2.1-4 | Stable (same as previous) |
+| 42.20250828.1 | 25.2.1-4 | Base reference |
 
 ### NVIDIA Driver Progression (NVIDIA Images Only)
 
 | Release | NVIDIA Driver | Change |
 |---------|--------------|--------|
-| 42.20251011 | 580.95.05-1 | ⬆️ New stable version |
-| 42.20251002 | Not in changelog | N/A |
-| 42.20250916.1 | Not in changelog | N/A |
+| 42.20251011 | 580.95.05-1 | ⬆️ Upgraded from 580.82.07-1 |
+| 42.20251002 | 580.82.07-1 | ⬆️ Upgraded from 580.76.05-1 |
+| 42.20250916.1 | 580.82.07-1 | Stable (same as previous) |
+| 42.20250911 | 580.82.07-1 | Stable (same as previous) |
+| 42.20250908 | 580.82.07-1 | Stable (same as previous) |
+| 42.20250903 | 580.82.07-1 | ⬆️ Upgraded from 580.76.05-1 |
+| 42.20250901 | 580.76.05-1 | Stable (same as previous) |
+| 42.20250828.1 | 580.76.05-1 | Base reference |
 
-Previous stable with NVIDIA info showed: **42.20251011** upgraded from **580.82.07-1** to **580.95.05-1**.
+**Key Updates:**
+- **580.95.05-1** (Oct 11): Latest NVIDIA driver version
+- **580.82.07-1** (Sep-Oct): Maintained across 5 releases (42.20251002 through 42.20250903)
+- **580.76.05-1** (Aug-Sep): Previous stable version
 
 ## Additional Package Highlights
 
@@ -139,7 +162,7 @@ For the latest status on these issues, click the issue links above. Many have ac
 
 **Report Generated:** 2025-10-14  
 **Data Source:** [@ublue-os/bazzite](https://github.com/ublue-os/bazzite) GitHub Releases API  
-**Scope:** Last 5 stable releases (September-October 2025)
+**Scope:** Last 8 stable releases (August-October 2025)
 
 **Note on Data:** This report focuses on stable (non-testing) releases only. Testing releases are published more frequently but are intended for early testing. Only stable releases with `prerelease: false` are included in this analysis.
 
@@ -147,4 +170,5 @@ For the latest status on these issues, click the issue links above. Many have ac
 
 | Date | Changes | Commit |
 |------|---------|--------|
+| 2025-10-14 | Added rebase command column, expanded to 8 releases, populated NVIDIA driver versions | (current) |
 | 2025-10-14 | Initial report created with last 5 stable releases | [c077a39](https://github.com/castrojo/jorgepilot/commit/c077a39) |
