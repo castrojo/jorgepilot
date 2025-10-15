@@ -107,21 +107,20 @@ function extractDriverInfo(releaseBody, stream) {
       info.kernel = kernelMatch[2] || kernelMatch[1]; // Use the newer version if there's an arrow
     }
 
+    // For LTS, also check for HWE Kernel and combine them
+    if (stream === 'lts') {
+      const hweMatch = tableRows.match(/\|\s*\*\*HWE Kernel\*\*\s*\|\s*([^\|\s]+)(?:\s*➡️\s*([^\|\s]+))?\s*\|/);
+      if (hweMatch) {
+        const hweKernel = hweMatch[2] || hweMatch[1];
+        const baseKernel = info.kernel;
+        info.kernel = `${baseKernel} (HWE: ${hweKernel})`;
+      }
+    }
+
     // Extract Mesa version
     const mesaMatch = tableRows.match(/\|\s*\*\*Mesa\*\*\s*\|\s*([^\|\s]+)(?:\s*➡️\s*([^\|\s]+))?\s*\|/);
     if (mesaMatch) {
       info.mesa = mesaMatch[2] || mesaMatch[1];
-    }
-
-    // For LTS, kernel might be in HWE Kernel field
-    if (stream === 'lts' && info.kernel === 'N/A') {
-      const hweMatch = tableRows.match(/\|\s*\*\*HWE Kernel\*\*\s*\|\s*([^\|\s]+)(?:\s*➡️\s*([^\|\s]+))?\s*\|/);
-      if (hweMatch) {
-        const hweKernel = hweMatch[2] || hweMatch[1];
-        const baseKernelMatch = tableRows.match(/\|\s*\*\*Kernel\*\*\s*\|\s*([^\|\s]+)(?:\s*➡️\s*([^\|\s]+))?\s*\|/);
-        const baseKernel = baseKernelMatch ? baseKernelMatch[2] || baseKernelMatch[1] : '';
-        info.kernel = `${baseKernel} (HWE: ${hweKernel})`;
-      }
     }
   }
 
@@ -159,8 +158,11 @@ function formatTableRow(release, stream) {
   // Create NVIDIA driver link
   let nvidiaLink = drivers.nvidia;
   if (drivers.nvidia !== 'N/A') {
-    // Try to extract NVIDIA URL from release body
-    const nvidiaUrlMatch = release.body.match(/\[580\.\d+\.\d+-\d+\]\((https:\/\/www\.nvidia\.com[^\)]+)\)/);
+    // Try to extract NVIDIA URL from release body using the exact version
+    const escapedVersion = drivers.nvidia.replace(/\./g, '\\.');
+    const nvidiaUrlMatch = release.body.match(
+      new RegExp(`\\[${escapedVersion}\\]\\((https:\\/\\/www\\.nvidia\\.com[^\\)]+)\\)`)
+    );
     if (nvidiaUrlMatch) {
       nvidiaLink = `[${drivers.nvidia}](${nvidiaUrlMatch[1]})`;
     } else {
@@ -190,10 +192,19 @@ async function updateDocument() {
     // Get latest releases
     const releases = await getLatestReleases();
 
+    // Validate releases were found
+    if (!releases.stable || !releases.gts || !releases.lts) {
+      console.error('❌ Failed to fetch all required releases');
+      console.error('  Stable:', releases.stable?.tag_name || 'NOT FOUND');
+      console.error('  GTS:', releases.gts?.tag_name || 'NOT FOUND');
+      console.error('  LTS:', releases.lts?.tag_name || 'NOT FOUND');
+      process.exit(1);
+    }
+
     console.log('Latest releases:');
-    console.log('- Stable:', releases.stable?.tag_name);
-    console.log('- GTS:', releases.gts?.tag_name);
-    console.log('- LTS:', releases.lts?.tag_name);
+    console.log('- Stable:', releases.stable.tag_name);
+    console.log('- GTS:', releases.gts.tag_name);
+    console.log('- LTS:', releases.lts.tag_name);
 
     // Find the table sections and insert new rows
     let newContent = '';
