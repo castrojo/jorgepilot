@@ -38,9 +38,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 
 ## Bluefin GTS
 
-
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
-| **gts-20251012** | 6.16.7-100 | 580.95.05-1 | [25.0.7-1](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251012) |
 |-----------|----------------|---------------|--------------|--------------|
 | **gts-20251012** | 6.16.7-100 | [580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251012) |
 | **gts-20251005** | 6.16.7-100 | [580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251005) |
@@ -55,9 +53,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 
 ## Bluefin LTS
 
-
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
-| **lts.20251006** | 6.12.0-134 (HWE: 6.16.7-1) | 580.95.05-1 | [25.0.7-4](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251006) |
 |-----------|----------------|---------------|--------------|--------------|
 | **lts.20251006** | 6.12.0-134 (HWE: 6.16.7-1) | [580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251006) |
 | **lts.20251003** | 6.12.0-134 (HWE: 6.16.7-1) | [580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251003) |

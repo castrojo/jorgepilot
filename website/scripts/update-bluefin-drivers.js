@@ -158,10 +158,10 @@ function formatTableRow(release, stream) {
   // Create NVIDIA driver link
   let nvidiaLink = drivers.nvidia;
   if (drivers.nvidia !== 'N/A') {
-    // Try to extract NVIDIA URL from release body using the exact version
+    // Try to extract NVIDIA URL from release body using the exact version (case-insensitive)
     const escapedVersion = drivers.nvidia.replace(/\./g, '\\.');
     const nvidiaUrlMatch = release.body.match(
-      new RegExp(`\\[${escapedVersion}\\]\\((https:\\/\\/www\\.nvidia\\.com[^\\)]+)\\)`)
+      new RegExp(`\\[${escapedVersion}\\]\\((https:\\/\\/www\\.nvidia\\.com[^\\)]+)\\)`, 'i')
     );
     if (nvidiaUrlMatch) {
       nvidiaLink = `[${drivers.nvidia}](${nvidiaUrlMatch[1]})`;
@@ -259,9 +259,16 @@ async function updateDocument() {
         i++;
         newContent += lines[i] + '\n'; // Table header row 2
         i++;
+        // Skip any blank lines after table header
+        while (i < lines.length && lines[i].trim() === '') {
+          i++;
+        }
 
         // Check if the first row is already the latest GTS
-        const firstRowTag = lines[i].match(/\|\s*\*\*([^*]+)\*\*/)?.[1];
+        let firstRowTag = null;
+        if (i < lines.length && lines[i].startsWith('|')) {
+          firstRowTag = lines[i].match(/\|\s*\*\*([^*]+)\*\*/)?.[1];
+        }
         if (firstRowTag !== releases.gts.tag_name) {
           // Insert new row at the top
           const newRow = formatTableRow(releases.gts, 'gts');
@@ -285,9 +292,16 @@ async function updateDocument() {
         i++;
         newContent += lines[i] + '\n'; // Table header row 2
         i++;
+        // Skip any blank lines after table header
+        while (i < lines.length && lines[i].trim() === '') {
+          i++;
+        }
 
         // Check if the first row is already the latest LTS
-        const firstRowTag = lines[i].match(/\|\s*\*\*([^*]+)\*\*/)?.[1];
+        let firstRowTag = null;
+        if (i < lines.length && lines[i].startsWith('|')) {
+          firstRowTag = lines[i].match(/\|\s*\*\*([^*]+)\*\*/)?.[1];
+        }
         if (firstRowTag !== releases.lts.tag_name) {
           // Insert new row at the top
           const newRow = formatTableRow(releases.lts, 'lts');
