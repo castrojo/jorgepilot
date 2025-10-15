@@ -10,17 +10,19 @@ last_updated: 2025-10-15
 
 ## Executive Summary
 
-This report tracks major driver versions across the last 10 stable and 10 GTS (Long Term Support) Bluefin releases to help users identify and switch to specific driver versions. Each entry includes direct links to release pages for reference.
+This report tracks major driver versions across the last 10 stable, 10 GTS (Goal To Serve), and 10 LTS (Long Term Support) Bluefin releases to help users identify and switch to specific driver versions. Each entry includes direct links to release pages for reference.
 
 ## Overview
 
-[@ublue-os/bluefin](https://github.com/ublue-os/bluefin) publishes detailed changelogs with every release that include kernel versions, Mesa driver versions, and NVIDIA driver versions. This report consolidates that information for the most recent stable and GTS releases to help users troubleshoot driver-specific issues or test specific configurations.
+[@ublue-os/bluefin](https://github.com/ublue-os/bluefin) and [@ublue-os/bluefin-lts](https://github.com/ublue-os/bluefin-lts) publish detailed changelogs with every release that include kernel versions, Mesa driver versions, and NVIDIA driver versions. This report consolidates that information for the most recent stable, GTS, and LTS releases to help users troubleshoot driver-specific issues or test specific configurations.
 
 **Purpose:** Help users switch to specific driver combinations for testing or troubleshooting.
 
-**Data Source:** [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) release changelogs
+**Data Sources:** 
+- [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) - Stable and GTS releases
+- [@ublue-os/bluefin-lts](https://github.com/ublue-os/bluefin-lts) - LTS releases
 
-**Analysis Period:** Past 10 stable and 10 GTS releases (August-October 2025)
+**Analysis Period:** Past 10 stable, 10 GTS, and 10 LTS releases (August-October 2025)
 
 ## Latest Stable Releases (Last 10)
 
@@ -37,7 +39,7 @@ This report tracks major driver versions across the last 10 stable and 10 GTS (L
 | **stable-20250819** | 6.14.11-300 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.1.4](https://docs.mesa3d.org/relnotes/25.1.4.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20250819) |
 | **stable-20250817** | 6.14.11-300 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.1.4](https://docs.mesa3d.org/relnotes/25.1.4.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20250817) |
 
-## GTS (Long Term Support) Releases (Last 10)
+## GTS (Goal To Serve) Releases (Last 10)
 
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
@@ -52,8 +54,23 @@ This report tracks major driver versions across the last 10 stable and 10 GTS (L
 | **gts-20250819** | 6.14.11-200 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | 25.0.7 | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20250819) |
 | **gts-20250817** | 6.14.11-200 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | 25.0.7 | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20250817) |
 
+## LTS (Long Term Support) Releases (Last 10)
+
+| Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
+|-----------|----------------|---------------|--------------|--------------|
+| **lts.20251006** | 6.12.0-134 (HWE: 6.16.7-1) | [580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251006) |
+| **lts.20251003** | 6.12.0-134 (HWE: 6.16.7-1) | [580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251003) |
+| **lts.20250930** | 6.12.0-134 (HWE: 6.15.10-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250930) |
+| **lts.20250916** | 6.12.0-128 (HWE: 6.15.10-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250916) |
+| **lts.20250910** | 6.12.0-126 (HWE: 6.15.9-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250910) |
+| **lts.20250909** | 6.12.0-126 (HWE: 6.15.11-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250909) |
+| **lts.20250908** | 6.12.0-126 (HWE: 6.15.11-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250908) |
+| **lts.20250907** | 6.12.0-126 (HWE: 6.15.11-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250907) |
+| **lts.20250905** | 6.12.0-126 (HWE: 6.15.11-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250905) |
+| **lts.20250903** | 6.12.0-124 (HWE: 6.15.11-1) | [580.82.07-2](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.0.7](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20250903) |
+
 :::info NVIDIA Availability
-NVIDIA driver versions are only listed in NVIDIA-specific image variants. Non-NVIDIA images do not include kmod-nvidia packages. The most recent stable release **stable-20251012** includes NVIDIA driver **[580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/)**.
+NVIDIA driver versions are only listed in NVIDIA-specific image variants. Non-NVIDIA images do not include kmod-nvidia packages. The most recent releases include NVIDIA driver **[580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/)** across all channels.
 :::
 
 ## How to Switch to a Specific Version
@@ -79,7 +96,7 @@ sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/$IMAGE_NAME:sta
 sudo systemctl reboot
 ```
 
-### GTS (Long Term Support) Channel
+### GTS (Goal To Serve) Channel
 
 ```bash
 # Get your current image name
@@ -90,6 +107,22 @@ sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/$IMAGE_NAME:gts
 
 # Switch to a specific GTS version
 sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/$IMAGE_NAME:gts-20251012
+
+# Reboot to apply changes
+sudo systemctl reboot
+```
+
+### LTS (Long Term Support) Channel
+
+```bash
+# Get your current image name
+IMAGE_NAME=$(jq -r '."image-name"' < /usr/share/ublue-os/image-info.json)
+
+# Switch to latest LTS
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/$IMAGE_NAME:lts
+
+# Switch to a specific LTS version
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/$IMAGE_NAME:lts.20251006
 
 # Reboot to apply changes
 sudo systemctl reboot
@@ -117,18 +150,29 @@ The `--enforce-container-sigpolicy` flag ensures you're always running a signed 
 
 ## References
 
-- [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) - Main repository
-- [Bluefin Releases](https://github.com/ublue-os/bluefin/releases) - All releases
+- [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) - Stable and GTS releases
+- [@ublue-os/bluefin-lts](https://github.com/ublue-os/bluefin-lts) - LTS releases
+- [Bluefin Releases](https://github.com/ublue-os/bluefin/releases) - Stable/GTS releases
+- [Bluefin LTS Releases](https://github.com/ublue-os/bluefin-lts/releases) - LTS releases
 - [Bluefin Documentation](https://docs.projectbluefin.io/) - Official docs
+- [Bluefin LTS Documentation](https://docs.projectbluefin.io/lts) - LTS-specific docs
 - [@bootc-dev/bootc](https://github.com/containers/bootc) - Bootc reference
 
 ---
 
 **Report Generated:** 2025-10-15  
-**Data Source:** [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) GitHub Releases API  
-**Scope:** Last 10 stable and 10 GTS releases (August-October 2025)
+**Data Sources:** 
+- [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) - Stable and GTS releases
+- [@ublue-os/bluefin-lts](https://github.com/ublue-os/bluefin-lts) - LTS releases
 
-**Note on Data:** This report focuses on stable and GTS (Long Term Support) releases. Stable releases are published weekly, while GTS releases provide long-term support based on Fedora's LTS version. Both include thoroughly tested driver combinations.
+**Scope:** Last 10 stable, 10 GTS, and 10 LTS releases (August-October 2025)
+
+**Note on Data:** This report tracks three distinct release channels:
+- **Stable**: Weekly releases based on Fedora 42 (current)
+- **GTS (Goal To Serve)**: Goal to serve releases based on Fedora 41, providing a balance between stability and currency
+- **LTS (Long Term Support)**: Enterprise-focused releases based on CentOS Stream 10, offering maximum stability with Hardware Enablement (HWE) kernel options
+
+All channels include thoroughly tested driver combinations with cosign-signed container images.
 
 ## Changelog
 
