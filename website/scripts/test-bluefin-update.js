@@ -130,7 +130,7 @@ function formatTableRow(release, stream) {
   if (drivers.nvidia !== 'N/A') {
     const escapedVersion = drivers.nvidia.replace(/\./g, '\\.');
     const nvidiaUrlMatch = release.body.match(
-      new RegExp(`\\[${escapedVersion}\\]\\((https:\\/\\/www\\.nvidia\\.com[^\\)]+)\\)`)
+      new RegExp(`\\[${escapedVersion}\\]\\((https:\\/\\/www\\.nvidia\\.com[^\\)]+)\\)`, 'i')
     );
     if (nvidiaUrlMatch) {
       nvidiaLink = `[${drivers.nvidia}](${nvidiaUrlMatch[1]})`;
