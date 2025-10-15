@@ -3,14 +3,14 @@ tags:
   - ublue
   - bazzite
   - drivers
-last_updated: 2025-10-14
+last_updated: 2025-10-15
 ---
 
 # Bazzite Driver Versions Report
 
 ## Executive Summary
 
-This report tracks major driver versions across the last 8 stable Bazzite releases to assist GamersNexus (GN) users in identifying and rebasing to specific driver versions. Each entry includes direct links to GitHub Packages and release pages for easy rebase operations.
+This report tracks major driver versions across the last 13 stable Bazzite releases to assist GamersNexus (GN) users in identifying and rebasing to specific driver versions. Each entry includes direct links to GitHub Packages and release pages for easy rebase operations.
 
 ## Overview
 
@@ -20,9 +20,9 @@ This report tracks major driver versions across the last 8 stable Bazzite releas
 
 **Data Source:** [@ublue-os/bazzite](https://github.com/ublue-os/bazzite) release changelogs
 
-**Analysis Period:** Past 8 stable releases (August-October 2025)
+**Analysis Period:** Past 13 stable releases (July-October 2025)
 
-## Latest Stable Releases (Last 8)
+## Latest Stable Releases (Last 13)
 
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Rebase Command | GitHub Packages | Release Link |
 |-----------|----------------|---------------|--------------|----------------|-----------------|--------------|
@@ -34,6 +34,11 @@ This report tracks major driver versions across the last 8 stable Bazzite releas
 | **42.20250903** | [6.16.4-104.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.16.4-104.bazzite) | [580.82.07-1](https://www.nvidia.com/en-us/drivers/details/253003/) | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | `brh rebase 42.20250903` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250903) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250903) |
 | **42.20250901** | [6.16.4-103.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.16.4-103.bazzite) | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | `brh rebase 42.20250901` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250901) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250901) |
 | **42.20250828.1** | [6.15.9-116.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.15.9-116.bazzite) | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | `brh rebase 42.20250828.1` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250828.1) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250828.1) |
+| **42.20250825** | [6.15.9-116.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.15.9-116.bazzite) | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | `brh rebase 42.20250825` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250825) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250825) |
+| **42.20250817** | [6.15.9-106.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.15.9-106.bazzite) | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.2.0](https://docs.mesa3d.org/relnotes/25.2.0.html) | `brh rebase 42.20250817` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250817) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250817) |
+| **42.20250809** | [6.15.9-106.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.15.9-106.bazzite) | [575.64.05-1](https://www.nvidia.com/en-us/drivers/details/250991/) | [25.2.0](https://docs.mesa3d.org/relnotes/25.2.0.html) | `brh rebase 42.20250809` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250809) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250809) |
+| **42.20250804** | [6.15.9-103.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.15.9-103.bazzite) | [575.64.05-1](https://www.nvidia.com/en-us/drivers/details/250991/) | [25.1.7](https://docs.mesa3d.org/relnotes/25.1.7.html) | `brh rebase 42.20250804` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250804) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250804) |
+| **42.20250731** | [6.15.6-113.bazzite](https://github.com/bazzite-org/kernel-bazzite/releases/tag/6.15.6-113.bazzite) | [575.64.05-1](https://www.nvidia.com/en-us/drivers/details/250991/) | [25.1.7](https://docs.mesa3d.org/relnotes/25.1.7.html) | `brh rebase 42.20250731` | [Packages](https://github.com/orgs/ublue-os/packages?repo_name=bazzite&tag=42.20250731) | [Release](https://github.com/ublue-os/bazzite/releases/tag/42.20250731) |
 
 :::info NVIDIA Availability
 NVIDIA driver versions are only listed in NVIDIA-specific image variants. Non-NVIDIA images do not include kmod-nvidia packages. The most recent stable release **42.20251011** includes NVIDIA driver **[580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/)**, upgraded from **[580.82.07-1](https://www.nvidia.com/en-us/drivers/details/253003/)** used in releases from 42.20251002 through 42.20250903.
@@ -74,7 +79,12 @@ rpm-ostree status
 | 42.20250908 | 6.16.4-107.bazzite | Stable (same as previous) |
 | 42.20250903 | 6.16.4-104.bazzite | ⬆️ +1 from previous |
 | 42.20250901 | 6.16.4-103.bazzite | ⬆️ Major upgrade from 6.15.x series |
-| 42.20250828.1 | 6.15.9-116.bazzite | Base reference |
+| 42.20250828.1 | 6.15.9-116.bazzite | Stable (same as previous) |
+| 42.20250825 | 6.15.9-116.bazzite | ⬆️ +10 from previous |
+| 42.20250817 | 6.15.9-106.bazzite | Stable (same as previous) |
+| 42.20250809 | 6.15.9-106.bazzite | ⬆️ +3 from previous |
+| 42.20250804 | 6.15.9-103.bazzite | ⬆️ Major upgrade from 6.15.6 series |
+| 42.20250731 | 6.15.6-113.bazzite | Base reference |
 
 ### Mesa Driver Progression
 
@@ -87,7 +97,12 @@ rpm-ostree status
 | 42.20250908 | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | Stable (same as previous) |
 | 42.20250903 | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | Stable (same as previous) |
 | 42.20250901 | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | Stable (same as previous) |
-| 42.20250828.1 | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | Base reference |
+| 42.20250828.1 | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | ⬆️ +3 minor from 25.2.0 |
+| 42.20250825 | [25.2.1](https://docs.mesa3d.org/relnotes/25.2.1.html) | ⬆️ +1 minor from 25.2.0 |
+| 42.20250817 | [25.2.0](https://docs.mesa3d.org/relnotes/25.2.0.html) | Stable (same as previous) |
+| 42.20250809 | [25.2.0](https://docs.mesa3d.org/relnotes/25.2.0.html) | ⬆️ Minor upgrade from 25.1.7 |
+| 42.20250804 | [25.1.7](https://docs.mesa3d.org/relnotes/25.1.7.html) | Stable (same as previous) |
+| 42.20250731 | [25.1.7](https://docs.mesa3d.org/relnotes/25.1.7.html) | Base reference |
 
 ### NVIDIA Driver Progression (NVIDIA Images Only)
 
@@ -100,12 +115,18 @@ rpm-ostree status
 | 42.20250908 | [580.82.07-1](https://www.nvidia.com/en-us/drivers/details/253003/) | Stable (same as previous) |
 | 42.20250903 | [580.82.07-1](https://www.nvidia.com/en-us/drivers/details/253003/) | ⬆️ Upgraded from 580.76.05-1 |
 | 42.20250901 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | Stable (same as previous) |
-| 42.20250828.1 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | Base reference |
+| 42.20250828.1 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | Stable (same as previous) |
+| 42.20250825 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | Stable (same as previous) |
+| 42.20250817 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | ⬆️ Upgraded from 575.64.05-1 |
+| 42.20250809 | [575.64.05-1](https://www.nvidia.com/en-us/drivers/details/250991/) | Stable (same as previous) |
+| 42.20250804 | [575.64.05-1](https://www.nvidia.com/en-us/drivers/details/250991/) | Stable (same as previous) |
+| 42.20250731 | [575.64.05-1](https://www.nvidia.com/en-us/drivers/details/250991/) | Base reference |
 
 **Key Updates:**
 - **[580.95.05-1](https://www.nvidia.com/en-us/drivers/details/254665/)** (Oct 11): Latest NVIDIA driver version
 - **[580.82.07-1](https://www.nvidia.com/en-us/drivers/details/253003/)** (Sep-Oct): Maintained across 5 releases (42.20251002 through 42.20250903)
-- **[580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/)** (Aug-Sep): Previous stable version
+- **[580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/)** (Aug-Sep): Maintained across 5 releases (42.20250817 through 42.20250901)
+- **[575.64.05-1](https://www.nvidia.com/en-us/drivers/details/250991/)** (Jul-Aug): Earlier stable version
 
 ## Additional Package Highlights
 
@@ -160,9 +181,9 @@ For the latest status on these issues, click the issue links above. Many have ac
 
 ---
 
-**Report Generated:** 2025-10-14  
+**Report Generated:** 2025-10-15  
 **Data Source:** [@ublue-os/bazzite](https://github.com/ublue-os/bazzite) GitHub Releases API  
-**Scope:** Last 8 stable releases (August-October 2025)
+**Scope:** Last 13 stable releases (July-October 2025)
 
 **Note on Data:** This report focuses on stable (non-testing) releases only. Testing releases are published more frequently but are intended for early testing. Only stable releases with `prerelease: false` are included in this analysis.
 
@@ -170,7 +191,8 @@ For the latest status on these issues, click the issue links above. Many have ac
 
 | Date | Changes | Commit |
 |------|---------|--------|
-| 2025-10-14 | Added Mesa version links to docs.mesa3d.org release notes | (current) |
+| 2025-10-15 | Expanded to 13 releases (added 5 older releases from July-August 2025) | (current) |
+| 2025-10-14 | Added Mesa version links to docs.mesa3d.org release notes | [6d0c84d](https://github.com/castrojo/jorgepilot/commit/6d0c84d) |
 | 2025-10-14 | Linked kernel versions to @bazzite-org/kernel-bazzite releases, removed redundant release date column, replaced command with `brh` alias | [d1c8f42](https://github.com/castrojo/jorgepilot/commit/d1c8f42) |
 | 2025-10-14 | Linked all NVIDIA driver versions to nvidia.com release notes | [5aeb1f6](https://github.com/castrojo/jorgepilot/commit/5aeb1f6) |
 | 2025-10-14 | Added rebase command column, expanded to 8 releases, populated NVIDIA driver versions | [82cc5ae](https://github.com/castrojo/jorgepilot/commit/82cc5ae) |
