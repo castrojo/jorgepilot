@@ -8,7 +8,9 @@ import SectionIndex from '@site/src/components/SectionIndex';
 
 _My mental scratchpad_
 
-This is an experiment to see how useful Copilot can be to a Community Engineer. I use it my own personal interface to asking GitHub things, built for my specific needs. It's served by docusaurus to GitHub pages so I can share my ideas with friends.
+This is an experiment to see how useful Copilot can be to a Community Engineer. I use it my own personal interface to asking GitHub things, built for my specific needs, in this case specializing in generating reports about various open source projects at the @cncf and @ublue-os. But you can use it with anything!
+
+It's served by docusaurus to GitHub pages so I can share my ideas with friends.
 
 ## [File a task](https://github.com/castrojo/jorgepilot/issues)
 
