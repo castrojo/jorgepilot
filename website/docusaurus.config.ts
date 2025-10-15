@@ -71,24 +71,16 @@ const config: Config = {
 
   plugins: ['./src/plugins/recent-docs-plugin.js'],
 
-  themes: [
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        hashed: true,
-        language: ['en'],
-        highlightSearchTermsOnTargetPage: true,
-        explicitSearchResultPath: true,
-      }),
-    ],
-  ],
-
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
+    },
+    algolia: {
+      appId: 'ID78S355M6',
+      apiKey: 'YOUR_SEARCH_API_KEY', // This is a search-only API key, safe to commit
+      indexName: 'jorgepilot',
     },
     navbar: {
       title: SITE_TITLE,

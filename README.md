@@ -18,12 +18,10 @@ This repository includes a Docusaurus documentation site that is automatically d
 
 ### Features
 
-- 🔍 **Site-wide search** - Press `Ctrl+K` (or `Cmd+K` on Mac) to search all documentation
+- 🔍 **Site-wide search** - Powered by Algolia DocSearch
 - 📱 **Responsive design** - Works on mobile, tablet, and desktop
 - 🌙 **Dark mode support** - Automatic theme switching
-- 🚀 **Fast & offline** - Client-side search with no external dependencies
-
-See [SEARCH_DOCUMENTATION.md](SEARCH_DOCUMENTATION.md) for detailed search documentation.
+- 🚀 **Fast deployment** - Automatically deployed to GitHub Pages
 
 ## Local Development
 
