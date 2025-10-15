@@ -10,7 +10,7 @@ last_updated: 2025-10-15
 
 ## Executive Summary
 
-This report tracks major driver versions across the last 10 stable, 10 GTS (Goal To Serve), and 10 LTS (Long Term Support) Bluefin releases to help users identify and switch to specific driver versions. Each entry includes direct links to release pages for reference.
+This report tracks major driver versions across Bluefin releases to help users identify and switch to specific driver versions. Each entry includes direct links to release pages for reference.
 
 ## Overview
 
@@ -22,9 +22,7 @@ This report tracks major driver versions across the last 10 stable, 10 GTS (Goal
 - [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) - Stable and GTS releases
 - [@ublue-os/bluefin-lts](https://github.com/ublue-os/bluefin-lts) - LTS releases
 
-**Analysis Period:** Past 10 stable, 10 GTS, and 10 LTS releases (August-October 2025)
-
-## Latest Stable Releases (Last 10)
+## Bluefin
 
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
@@ -39,7 +37,7 @@ This report tracks major driver versions across the last 10 stable, 10 GTS (Goal
 | **stable-20250819** | 6.14.11-300 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.1.4](https://docs.mesa3d.org/relnotes/25.1.4.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20250819) |
 | **stable-20250817** | 6.14.11-300 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | [25.1.4](https://docs.mesa3d.org/relnotes/25.1.4.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20250817) |
 
-## GTS (Goal To Serve) Releases (Last 10)
+## Bluefin GTS
 
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
@@ -54,7 +52,7 @@ This report tracks major driver versions across the last 10 stable, 10 GTS (Goal
 | **gts-20250819** | 6.14.11-200 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | 25.0.7 | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20250819) |
 | **gts-20250817** | 6.14.11-200 | [580.76.05-1](https://www.nvidia.com/en-us/drivers/details/252613/) | 25.0.7 | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20250817) |
 
-## LTS (Long Term Support) Releases (Last 10)
+## Bluefin LTS
 
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
@@ -77,7 +75,7 @@ NVIDIA driver versions are only listed in NVIDIA-specific image variants. Non-NV
 
 To switch to any of these versions, use the `bootc switch` command with signature enforcement based on [@bootc-dev/bootc](https://github.com/containers/bootc):
 
-### Stable Channel
+### Bluefin Stream
 
 ```bash
 # Get your current image name
@@ -96,7 +94,7 @@ sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/$IMAGE_NAME:sta
 sudo systemctl reboot
 ```
 
-### GTS (Goal To Serve) Channel
+### Bluefin GTS Stream 
 
 ```bash
 # Get your current image name
@@ -112,7 +110,7 @@ sudo bootc switch --enforce-container-sigpolicy ghcr.io/ublue-os/$IMAGE_NAME:gts
 sudo systemctl reboot
 ```
 
-### LTS (Long Term Support) Channel
+### Bluefin LTS Stream
 
 ```bash
 # Get your current image name
@@ -164,13 +162,6 @@ The `--enforce-container-sigpolicy` flag ensures you're always running a signed 
 **Data Sources:** 
 - [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) - Stable and GTS releases
 - [@ublue-os/bluefin-lts](https://github.com/ublue-os/bluefin-lts) - LTS releases
-
-**Scope:** Last 10 stable, 10 GTS, and 10 LTS releases (August-October 2025)
-
-**Note on Data:** This report tracks three distinct release channels:
-- **Stable**: Weekly releases based on Fedora 42 (current)
-- **GTS (Goal To Serve)**: Goal to serve releases based on Fedora 41, providing a balance between stability and currency
-- **LTS (Long Term Support)**: Enterprise-focused releases based on CentOS Stream 10, offering maximum stability with Hardware Enablement (HWE) kernel options
 
 All channels include thoroughly tested driver combinations with cosign-signed container images.
 
