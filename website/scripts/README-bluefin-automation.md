@@ -10,7 +10,7 @@ The automation keeps the driver versions report up to date by fetching the lates
 
 - **`update-bluefin-drivers.js`** - Main update script that fetches releases and updates the document
 - **`test-bluefin-update.js`** - Test script to validate parsing logic with mock data
-- **`../.github/workflows/update-bluefin-drivers.yml`** - GitHub Action workflow
+- **`../../.github/workflows/update-bluefin-drivers.yml`** - GitHub Action workflow
 
 ## How It Works
 
