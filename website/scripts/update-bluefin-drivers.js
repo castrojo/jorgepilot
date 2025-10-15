@@ -26,13 +26,13 @@ function fetchGitHub(url) {
     const options = {
       headers: {
         'User-Agent': 'jorgepilot-update-script',
-        Accept: 'application/vnd.github.v3+json',
+        Accept: 'application/vnd.github+json',
       },
     };
 
     // Add GitHub token if available (for higher rate limits)
     if (process.env.GITHUB_TOKEN) {
-      options.headers.Authorization = `token ${process.env.GITHUB_TOKEN}`;
+      options.headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
     }
 
     https
