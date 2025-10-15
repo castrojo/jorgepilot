@@ -215,16 +215,27 @@ async function updateDocument() {
 
       // Check if this is the start of a table section
       if (line === '## Bluefin') {
-        // Copy section header and table header
-        newContent += line + '\n\n';
+        // Copy section header
+        newContent += line + '\n';
         i++;
+        // Skip any blank lines after the section header
+        while (i < lines.length && lines[i].trim() === '') {
+          i++;
+        }
+        // Copy table header rows (assume two lines starting with '|')
         newContent += lines[i] + '\n'; // Table header row 1
         i++;
         newContent += lines[i] + '\n'; // Table header row 2
         i++;
-
+        // Skip any blank lines after table header
+        while (i < lines.length && lines[i].trim() === '') {
+          i++;
+        }
         // Check if the first row is already the latest stable
-        const firstRowTag = lines[i].match(/\|\s*\*\*([^*]+)\*\*/)?.[1];
+        let firstRowTag = null;
+        if (i < lines.length && lines[i].startsWith('|')) {
+          firstRowTag = lines[i].match(/\|\s*\*\*([^*]+)\*\*/)?.[1];
+        }
         if (firstRowTag !== releases.stable.tag_name) {
           // Insert new row at the top
           const newRow = formatTableRow(releases.stable, 'stable');
