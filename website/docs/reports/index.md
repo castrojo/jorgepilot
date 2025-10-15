@@ -3,6 +3,8 @@ title: Reports
 description: Collection of project health checks, contribution guides, and analysis reports for CNCF, Universal Blue, and other open source projects.
 ---
 
+<meta name="algolia-site-verification"  content="5B59A2D10A2E25FF" />
+
 import SectionIndex from '@site/src/components/SectionIndex';
 
 # Reports
