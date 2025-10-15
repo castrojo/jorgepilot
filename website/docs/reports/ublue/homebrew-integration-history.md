@@ -11,7 +11,7 @@ last_updated: 2025-10-14
 
 ## Executive Summary
 
-[@ublue-os](https://github.com/ublue-os) pioneered Homebrew integration on immutable Fedora-based desktop Linux distributions, fundamentally transforming the package management experience for [@ublue-os/bluefin](https://github.com/ublue-os/bluefin), [@ublue-os/aurora](https://github.com/ublue-os/aurora), and [@ublue-os/bazzite](https://github.com/ublue-os/bazzite). This integration journey began in May 2024 with #1290 and established Homebrew as the primary package manager for user-space applications, dramatically reducing image size while providing access to thousands of up-to-date packages. The integration overcame significant challenges including SELinux compatibility, permissions handling, automated updates, and command-not-found functionality.
+[@ublue-os](https://github.com/ublue-os) strives for homebrew as it's native "package manager", fundamentally transforming the package management experience for [@ublue-os/bluefin](https://github.com/ublue-os/bluefin), [@ublue-os/aurora](https://github.com/ublue-os/aurora), and [@ublue-os/bazzite](https://github.com/ublue-os/bazzite). This integration journey began in May 2024 and established Homebrew as the primary package manager for user-space applications, dramatically reducing image size while providing access to thousands of up-to-date packages.
 
 ## Overview
 
