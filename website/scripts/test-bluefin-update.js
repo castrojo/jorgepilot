@@ -5,8 +5,6 @@
  * Tests the parsing and formatting logic with mock data
  */
 
-const fs = require('fs');
-const path = require('path');
 
 // Mock release data based on actual GitHub API responses
 const mockReleases = {
