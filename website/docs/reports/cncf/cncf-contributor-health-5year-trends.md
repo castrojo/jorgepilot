@@ -74,7 +74,7 @@ CNCF graduated projects evolved from single or dual-vendor origins to broad mult
 
 **Current Pattern (2023-2025):**
 - Graduated projects average 4-8+ significant contributing organizations
-- Top 3 contributors typically represent <60% of commits (down from 80%+)
+- Top 3 contributors typically represent less than 60% of commits (down from 80%+)
 - Cross-company collaboration normalized
 
 **Representative Data - Harbor (Container Registry):**
@@ -139,7 +139,7 @@ CNCF contributor geography expanded significantly from initial North America/Wes
 - North America: 50-55%
 - Europe: 30-35%
 - Asia-Pacific: 10-15%
-- Other regions: <5%
+- Other regions: less than 5%
 
 **2025 Geographic Distribution (Estimated):**
 - North America: 40-45%
@@ -147,7 +147,7 @@ CNCF contributor geography expanded significantly from initial North America/Wes
 - Asia-Pacific: 20-25%
 - Latin America: 3-5%
 - Africa/Middle East: 2-3%
-- Other: <2%
+- Other: less than 2%
 
 ### Factors Driving Geographic Expansion
 
@@ -326,7 +326,7 @@ Projects demonstrating strong contributor health typically exhibit:
 - **Active mentorship:** Structured programs for new contributors
 - **Organizational diversity:** 5+ companies with significant contributions
 - **Regular communication:** Frequent public meetings, detailed meeting notes, accessible chat channels
-- **Responsive maintainers:** PR/issue response times <72 hours
+- **Responsive maintainers:** PR/issue response times less than 72 hours
 - **Automated tooling:** CI/CD, testing, linting reduces manual review burden
 
 ### Warning Signs of Declining Health
