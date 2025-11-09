@@ -10,13 +10,14 @@ last_updated: 2025-11-09
 
 ## Executive Summary
 
-In 2025, the CNCF Technical Oversight Committee (TOC) processed **30 projects moving between maturity levels**, comprising **13 graduation applications** and **17 incubation applications**. This represents significant growth and maturation across the cloud native ecosystem, with projects spanning AI/ML infrastructure, networking, security, storage, and developer tooling domains.
+In 2025, the CNCF Technical Oversight Committee (TOC) processed **30 projects moving between maturity levels**, comprising **13 graduation applications** and **17 incubation applications**. Additionally, **13 projects were archived**, reflecting active governance and health management of the CNCF project portfolio. This represents significant growth and maturation across the cloud native ecosystem, with projects spanning AI/ML infrastructure, networking, security, storage, and developer tooling domains.
 
 **2025 Statistics:**
 
 - **13 Graduation Applications:** Projects moving from Incubating to Graduated status
 - **17 Incubation Applications:** Projects moving from Sandbox to Incubating status or joining CNCF directly at Incubation level
-- **Total:** 30 projects in transition during 2025
+- **13 Projects Archived:** Projects moved to archived status due to maintainer departure, inactivity, or strategic shifts
+- **Total:** 30 projects in transition during 2025 (plus 13 archived)
 - **Success Rate:** Multiple projects successfully completed their level transitions with TOC approval
 
 **Key Observations:**
@@ -25,6 +26,7 @@ In 2025, the CNCF Technical Oversight Committee (TOC) processed **30 projects mo
 - Diverse incubation pipeline covering critical cloud native infrastructure needs
 - Active TAG engagement across Runtime, Security, Storage, Networking, and App Delivery
 - Growing adoption of emerging technologies like AI/ML acceleration and edge computing
+- Proactive project health management with archival of inactive or unmaintained projects
 
 ## Projects Moving to Graduation (2025)
 
@@ -192,6 +194,44 @@ Microcks provides Kubernetes-native mocking and testing capabilities for APIs an
 - Radius - Application platform
 - Kubewarden - Policy engine
 
+## Projects Moving to Archived Status (2025)
+
+In 2025, **13 projects were archived**, representing projects that lost maintainer support, had zero activity, or failed to maintain community momentum. The majority (9 projects, 69%) were Sandbox-level projects, with 4 Incubating projects also archived.
+
+### Archived Projects Summary
+
+| Project | Domain | TOC Issue | Previous Level | Archived Date |
+|---------|--------|-----------|----------------|---------------|
+| **Keptn** | Application Delivery | [#1584](https://github.com/cncf/toc/issues/1584) | Incubating | 2025-09-08 |
+| **Krustlet** | WebAssembly Runtime | [#1385](https://github.com/cncf/toc/issues/1385) | Incubating | 2025-09-16 |
+| **CNI-Genie** | Networking | [#1680](https://github.com/cncf/toc/issues/1680) | Sandbox | 2025-10-03 |
+| **Xline** | Distributed Coordination | [#1668](https://github.com/cncf/toc/issues/1668) | Sandbox | 2025-09-29 |
+| **Pravega** | Stream Processing | [#1460](https://github.com/cncf/toc/issues/1460) | Sandbox | 2025-10-01 |
+| **Merbridge** | Service Mesh | [#1725](https://github.com/cncf/toc/issues/1725) | Sandbox | 2025-06-06 |
+| **Sealer** | Cluster Delivery | [#1721](https://github.com/cncf/toc/issues/1721) | Sandbox | 2025-06-06 |
+| **Teller** | Secrets Management | [#1723](https://github.com/cncf/toc/issues/1723) | Sandbox | 2025-06-06 |
+| **DevStream** | DevOps Toolchain | [#1724](https://github.com/cncf/toc/issues/1724) | Sandbox | 2025-06-06 |
+| **OpenELB** | Load Balancer | [#1722](https://github.com/cncf/toc/issues/1722) | Sandbox | 2025-06-06 |
+| **Nocalhost** | Development Environment | [#1569](https://github.com/cncf/toc/issues/1569) | Incubating | 2025-06-06 |
+| **SuperEdge** | Edge Computing | [#1570](https://github.com/cncf/toc/issues/1570) | Incubating | 2025-06-06 |
+| **KubeDL** | Deep Learning | [#1571](https://github.com/cncf/toc/issues/1571) | Incubating | 2025-06-06 |
+
+### Archival Trends
+
+**By Maturity Level:**
+- **Sandbox**: 9 projects (69%) - CNI-Genie, Xline, Pravega, Merbridge, Sealer, Teller, DevStream, OpenELB
+- **Incubating**: 4 projects (31%) - Keptn, Krustlet, Nocalhost, SuperEdge, KubeDL
+
+**Common Archival Triggers:**
+- **Maintainer Departure** - Major contributor or corporate sponsor withdrawal (e.g., Keptn - Dynatrace stepped back)
+- **Zero Activity** - Extended periods (6-12 months) with no commits or community engagement (e.g., Xline, Pravega)
+- **Corporate Strategy Shifts** - Batch archival of Chinese ecosystem projects in Q2 2025 (Sealer, OpenELB, DevStream, etc.)
+
+**Archival Velocity:**
+- Q2 2025: 8 projects (major batch archival event)
+- Q3 2025: 3 projects (Keptn, Krustlet, Xline)
+- Q4 2025: 2 projects (CNI-Genie, Pravega)
+
 ## 2025 Analysis and Insights
 
 ### Project Maturity Progression
@@ -337,6 +377,7 @@ Microcks provides Kubernetes-native mocking and testing capabilities for APIs an
 | **Total Projects Moving Levels** | 30 |
 | **Graduation Applications** | 13 |
 | **Incubation Applications** | 17 |
+| **Projects Archived** | 13 |
 | **Approved Graduations** | 13 |
 | **Approved Incubations** | ~10+ |
 | **Average Sandbox Duration** | 12-18 months |
@@ -362,19 +403,26 @@ Microcks provides Kubernetes-native mocking and testing capabilities for APIs an
 - Cilium graduation (approved)
 - Istio graduation (approved)
 - HAMi incubation application
+- Batch archival: 8 projects (Merbridge, Sealer, Teller, DevStream, OpenELB, Nocalhost, SuperEdge, KubeDL)
 
 **Q3 2025:**
 - KServe graduation (approved)
 - Open Cluster Management incubation
 - Dapr graduation (approved)
+- Keptn archived (September)
+- Krustlet archived (September)
+- Xline archived (September)
 
 **Q4 2025:**
 - ORAS incubation application
 - Multiple graduation approvals finalized
 - Cozystack and Kgateway incubation applications
+- CNI-Genie archived (October)
+- Pravega archived (October)
 
 ## Related Work
 
+- [CNCF Archived Projects Report](./cncf-archived-projects-report.md) - Detailed archival analysis
 - [CNCF Project Maturity Levels](https://www.cncf.io/projects/)
 - [CNCF Landscape - All Projects](https://landscape.cncf.io/)
 - [CNCF DevStats - Project Metrics](https://devstats.cncf.io/)
@@ -386,6 +434,7 @@ Microcks provides Kubernetes-native mocking and testing capabilities for APIs an
 - [@cncf/landscape](https://github.com/cncf/landscape) - CNCF Landscape Repository
 - [CNCF TOC Graduation Issues](https://github.com/cncf/toc/issues?q=is%3Aissue+graduated+in%3Atitle+created%3A2025)
 - [CNCF TOC Incubation Issues](https://github.com/cncf/toc/issues?q=is%3Aissue+incubation+in%3Atitle+created%3A2025)
+- [CNCF TOC Archival Issues](https://github.com/cncf/toc/issues?q=is%3Aissue+label%3Alevel%2Farchive+closed%3A2025)
 
 ## Associated Issues
 
