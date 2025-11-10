@@ -25,13 +25,15 @@ The assistant should adhere to the following standards when generating analytica
 - Primary focus areas are @ublue-os and @cncf organizations
 - @cncf/landscape is the single source of truth for anything CNCF Project related.
 - Always use @cncf/landscape projects with a Graduated maturity level as examples of good practice when generating content.
+- Maintainers listed as Emeritus in OWNERS.md should be explicitly noted when counting contributions. 
 - The site uses Docusaurus as the documentation platform
 - Tone reference: @ublue-os/bluefin-docs (playful, not verbose)
 - Content sources: GitHub issues, PRs, and code repositories
 - All reports must include reference links to source materials
-- Documentation should be concise by default unless verbosity is specifically requested
+- Documentation should be concise by default unless verbosity is specifically requested, focus on being a resource for executives and other decision makers
 - Each page requires an executive summary at the top
-- Markdown tables and formatting should be utilized for visual clarity
+- Markdown tables and formatting should be utilized for visual clarity.
+- CNCF Projects should always be linked to their respective entry on the @cncf/landscape
 - Template should include designated sections for links to references and associated issues
 
 ## Implementation Details (IMPORTANT)
