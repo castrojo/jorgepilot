@@ -3,7 +3,7 @@ tags:
   - ublue
   - bluefin
   - drivers
-last_updated: 2025-11-05
+last_updated: 2025-11-12
 ---
 
 # Bluefin Driver Versions Report
@@ -40,7 +40,9 @@ This report tracks major driver versions across Bluefin releases to help users i
 
 ## Bluefin GTS
 
+
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
+| **gts-20251028** | 6.16.8-200 | {pkgrel:nvidia-driver} | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251028) |
 |-----------|----------------|---------------|--------------|--------------|
 | **gts-20251028** | 6.16.8-200 | 580.95.05-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251028) |
 | **gts-20251021** | 6.16.8-100 | 580.95.05-1 | [25.0.7-1](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251021) |
@@ -58,7 +60,9 @@ This report tracks major driver versions across Bluefin releases to help users i
 
 ## Bluefin LTS
 
+
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
+| **lts.20251110** | 6.12.0-150 (HWE: 6.16.10-200.fc42) | 580.105.08-1 | [25.0.7-5](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251110) |
 |-----------|----------------|---------------|--------------|--------------|
 | **lts.20251027** | 6.12.0-142 (HWE: 6.16.8-1) | 580.95.05-1 | [25.0.7-5](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251027) |
 | **lts.20251006** | 6.12.0-134 (HWE: 6.16.7-1) | 580.95.05-1 | [25.0.7-4](https://docs.mesa3d.org/relnotes/25.0.7.html) | [Release](https://github.com/ublue-os/bluefin-lts/releases/tag/lts.20251006) |
@@ -176,6 +180,7 @@ All channels include thoroughly tested driver combinations with cosign-signed co
 | Date | Changes | Commit |
 |------|---------|--------|
 | 2025-10-15 | Initial report created based on Bazzite template | (current) |
+
 
 
 
