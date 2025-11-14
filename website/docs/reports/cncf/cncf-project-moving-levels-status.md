@@ -36,31 +36,32 @@ In 2025, **13 projects applied for or achieved Graduated status**, demonstrating
 
 | Project | Domain | TOC Issue | Status | Applied Date |
 |---------|--------|-----------|--------|--------------|
-| **Cilium** | Networking/Security | [#1424](https://github.com/cncf/toc/issues/1424) | Approved | 2025 |
-| **Dapr** | Application Runtime | [#1401](https://github.com/cncf/toc/issues/1401) | Approved | 2025 |
-| **Dragonfly** | Container Registry | [#1518](https://github.com/cncf/toc/issues/1518) | Approved | 2025 |
-| **Fluentd** | Logging | [#1362](https://github.com/cncf/toc/issues/1362) | Approved | 2025 |
-| **Istio** | Service Mesh | [#1396](https://github.com/cncf/toc/issues/1396) | Approved | 2025 |
-| **K3s** | Kubernetes Distribution | [#1468](https://github.com/cncf/toc/issues/1468) | Approved | 2025 |
-| **KubeEdge** | Edge Computing | [#1493](https://github.com/cncf/toc/issues/1493) | Approved | 2025 |
-| **KServe** | ML Model Serving | [#1367](https://github.com/cncf/toc/issues/1367) | Approved | 2025-09 |
-| **Kyverno** | Policy Engine | [#1459](https://github.com/cncf/toc/issues/1459) | Approved | 2025 |
-| **OpenTelemetry** | Observability | [#1340](https://github.com/cncf/toc/issues/1340) | Approved | 2025 |
-| **Telepresence** | Development Tools | [#1442](https://github.com/cncf/toc/issues/1442) | Approved | 2025 |
-| **TiKV** | Distributed Storage | [#1523](https://github.com/cncf/toc/issues/1523) | Approved | 2025 |
-| **VirtIO** (Virtink) | Virtualization | [#1507](https://github.com/cncf/toc/issues/1507) | Approved | 2025 |
-| **WasmEdge** | WebAssembly Runtime | [#1511](https://github.com/cncf/toc/issues/1511) | In Progress | 2025 |
+| **[Cilium](https://landscape.cncf.io/?selected=cilium)** (Incubating) | Networking/Security | [#1424](https://github.com/cncf/toc/issues/1424) | Approved | 2025 |
+| **[Dapr](https://landscape.cncf.io/?selected=dapr)** (Incubating) | Application Runtime | [#1401](https://github.com/cncf/toc/issues/1401) | Approved | 2025 |
+| **[Dragonfly](https://landscape.cncf.io/?selected=dragonfly)** (Incubating) | Container Registry | [#1518](https://github.com/cncf/toc/issues/1518) | Approved | 2025 |
+| **[Fluentd](https://landscape.cncf.io/?selected=fluentd)** (Incubating) | Logging | [#1362](https://github.com/cncf/toc/issues/1362) | Approved | 2025 |
+| **[Istio](https://landscape.cncf.io/?selected=istio)** (Incubating) | Service Mesh | [#1396](https://github.com/cncf/toc/issues/1396) | Approved | 2025 |
+| **[K3s](https://landscape.cncf.io/?selected=k-3-s)** (Sandbox) | Kubernetes Distribution | [#1468](https://github.com/cncf/toc/issues/1468) | Approved | 2025 |
+| **[KubeEdge](https://landscape.cncf.io/?selected=kube-edge)** (Incubating) | Edge Computing | [#1493](https://github.com/cncf/toc/issues/1493) | Approved | 2025 |
+| **[KServe](https://landscape.cncf.io/?selected=k-serve)** (Incubating) | ML Model Serving | [#1367](https://github.com/cncf/toc/issues/1367) | Approved | 2025-09 |
+| **[Kyverno](https://landscape.cncf.io/?selected=kyverno)** (Incubating) | Policy Engine | [#1459](https://github.com/cncf/toc/issues/1459) | Approved | 2025 |
+| **[OpenTelemetry](https://landscape.cncf.io/?selected=open-telemetry)** (Incubating) | Observability | [#1340](https://github.com/cncf/toc/issues/1340) | Approved | 2025 |
+| **[Telepresence](https://landscape.cncf.io/?selected=telepresence)** (Sandbox) | Development Tools | [#1442](https://github.com/cncf/toc/issues/1442) | Approved | 2025 |
+| **[TiKV](https://landscape.cncf.io/?selected=ti-kv)** (Incubating) | Distributed Storage | [#1523](https://github.com/cncf/toc/issues/1523) | Approved | 2025 |
+| **[VirtIO](https://landscape.cncf.io/?selected=virtink)** (Virtink) (Sandbox) | Virtualization | [#1507](https://github.com/cncf/toc/issues/1507) | Approved | 2025 |
+| **[WasmEdge](https://landscape.cncf.io/?selected=wasm-edge)** (Sandbox) | WebAssembly Runtime | [#1511](https://github.com/cncf/toc/issues/1511) | In Progress | 2025 |
 
 ### Featured Graduation: KServe
 
-**Status:** Graduated (September 2025) | **TOC Issue:** [#1367](https://github.com/cncf/toc/issues/1367)
+**Status:** [Graduated](https://landscape.cncf.io/?selected=k-serve) (September 2025) | **TOC Issue:** [#1367](https://github.com/cncf/toc/issues/1367)
 
-KServe is a standards-based, cloud-native model serving platform for machine learning and AI workloads. The project provides a simplified interface for deploying ML models to production while integrating with Kubernetes-native tools.
+[KServe](https://landscape.cncf.io/?selected=k-serve) is a standards-based, cloud-native model serving platform for machine learning and AI workloads. The project provides a simplified interface for deploying ML models to production while integrating with Kubernetes-native tools.
 
 | Attribute | Details |
 |-----------|---------|
 | **Repository** | [@kserve/kserve](https://github.com/kserve/kserve) |
 | **Domain** | Machine Learning / AI Model Serving |
+| **Landscape Entry** | [KServe on CNCF Landscape](https://landscape.cncf.io/?selected=k-serve) |
 | **Moving Levels PR** | [#1862](https://github.com/cncf/toc/pull/1862) |
 | **Onboarding Issue** | [#1905](https://github.com/cncf/toc/issues/1905) |
 
@@ -73,19 +74,19 @@ KServe is a standards-based, cloud-native model serving platform for machine lea
 ### Notable Graduations by Domain
 
 **Networking & Security:**
-- **Cilium** - eBPF-based networking and security for Kubernetes
-- **Istio** - Industry-leading service mesh with multi-cluster support
+- **[Cilium](https://landscape.cncf.io/?selected=cilium)** (Incubating → Graduated) - eBPF-based networking and security for Kubernetes
+- **[Istio](https://landscape.cncf.io/?selected=istio)** (Incubating → Graduated) - Industry-leading service mesh with multi-cluster support
 
 **AI/ML Infrastructure:**
-- **KServe** - Model serving and inference at scale
+- **[KServe](https://landscape.cncf.io/?selected=k-serve)** (Incubating → Graduated) - Model serving and inference at scale
 
 **Edge & IoT:**
-- **KubeEdge** - Kubernetes-native edge computing framework
-- **K3s** - Lightweight Kubernetes for edge and IoT
+- **[KubeEdge](https://landscape.cncf.io/?selected=kube-edge)** (Incubating → Graduated) - Kubernetes-native edge computing framework
+- **[K3s](https://landscape.cncf.io/?selected=k-3-s)** (Sandbox → Graduated) - Lightweight Kubernetes for edge and IoT
 
 **Observability:**
-- **OpenTelemetry** - Unified observability framework (metrics, logs, traces)
-- **Fluentd** - Unified logging layer
+- **[OpenTelemetry](https://landscape.cncf.io/?selected=open-telemetry)** (Incubating → Graduated) - Unified observability framework (metrics, logs, traces)
+- **[Fluentd](https://landscape.cncf.io/?selected=fluentd)** (Incubating → Graduated) - Unified logging layer
 
 ## Projects Moving to Incubation (2025)
 
@@ -95,23 +96,23 @@ In 2025, **17 projects applied for Incubating status**, representing diverse are
 
 | Project | Domain | TOC Issue | Previous Level | Applied Date |
 |---------|--------|-----------|----------------|--------------|
-| **ORAS** | Artifact Registry | [#1951](https://github.com/cncf/toc/issues/1951) | Sandbox (2021-07-13) | 2025-10-30 |
-| **Cozystack** | Platform Engineering | [#1916](https://github.com/cncf/toc/issues/1916) | Sandbox (2025-03-02) | 2025-10-08 |
-| **Kgateway** | API Gateway | [#1913](https://github.com/cncf/toc/issues/1913) | Sandbox (2025-03-04) | 2025-10-06 |
-| **kcp** | Kubernetes Control Plane | [#1909](https://github.com/cncf/toc/issues/1909) | Sandbox (2023-09-19) | 2025-10-01 |
-| **KServe** | ML Model Serving | [#1905](https://github.com/cncf/toc/issues/1905) | Sandbox → Graduated | 2025-09-28 |
-| **Open Cluster Management** | Multi-cluster | [#1884](https://github.com/cncf/toc/issues/1884) | Sandbox (2021-11-09) | 2025-09-17 |
-| **HAMi** | GPU Virtualization | [#1775](https://github.com/cncf/toc/issues/1775) | Sandbox (2024-08-21) | 2025-07-15 |
-| **Microcks** | API Mocking/Testing | [#1552](https://github.com/cncf/toc/issues/1552) | Sandbox (2023-06-21) | 2025-03-06 |
-| **OpenEBS** | Storage | [#1537](https://github.com/cncf/toc/issues/1537) | Sandbox (2024-10-17) | 2025-02-14 |
-| **OpenFGA** | Authorization | [#1287](https://github.com/cncf/toc/issues/1287) | Sandbox (2024-03-15) | Approved |
-| **Lima** | Development VMs | [#1348](https://github.com/cncf/toc/issues/1348) | Sandbox (2024-10-06) | Approved |
-| **KEDA** | Autoscaling | Previous Incubation | Incubating | 2025 |
-| **Volcano** | Batch Scheduling | Previous Incubation | Incubating | 2025 |
-| **Kubewarden** | Policy Engine | Previous Incubation | Incubating | 2025 |
-| **Metal3** | Bare Metal | Previous Incubation | Incubating | 2025 |
-| **Radius** | Application Platform | Previous Incubation | Incubating | 2025 |
-| **OpenYurt** | Edge Computing | [#1547/#1548](https://github.com/cncf/toc/issues/1548) | Sandbox | Approved |
+| **[ORAS](https://landscape.cncf.io/?selected=oras)** | Artifact Registry | [#1951](https://github.com/cncf/toc/issues/1951) | Sandbox (2021-07-13) | 2025-10-30 |
+| **[Cozystack](https://landscape.cncf.io/?selected=cozystack)** | Platform Engineering | [#1916](https://github.com/cncf/toc/issues/1916) | Sandbox (2025-03-02) | 2025-10-08 |
+| **[Kgateway](https://landscape.cncf.io/?selected=kgateway)** | API Gateway | [#1913](https://github.com/cncf/toc/issues/1913) | Sandbox (2025-03-04) | 2025-10-06 |
+| **[kcp](https://landscape.cncf.io/?selected=kcp)** | Kubernetes Control Plane | [#1909](https://github.com/cncf/toc/issues/1909) | Sandbox (2023-09-19) | 2025-10-01 |
+| **[KServe](https://landscape.cncf.io/?selected=k-serve)** | ML Model Serving | [#1905](https://github.com/cncf/toc/issues/1905) | Sandbox → Graduated | 2025-09-28 |
+| **[Open Cluster Management](https://landscape.cncf.io/?selected=open-cluster-management)** | Multi-cluster | [#1884](https://github.com/cncf/toc/issues/1884) | Sandbox (2021-11-09) | 2025-09-17 |
+| **[HAMi](https://landscape.cncf.io/?selected=hami)** | GPU Virtualization | [#1775](https://github.com/cncf/toc/issues/1775) | Sandbox (2024-08-21) | 2025-07-15 |
+| **[Microcks](https://landscape.cncf.io/?selected=microcks)** | API Mocking/Testing | [#1552](https://github.com/cncf/toc/issues/1552) | Sandbox (2023-06-21) | 2025-03-06 |
+| **[OpenEBS](https://landscape.cncf.io/?selected=open-ebs)** | Storage | [#1537](https://github.com/cncf/toc/issues/1537) | Sandbox (2024-10-17) | 2025-02-14 |
+| **[OpenFGA](https://landscape.cncf.io/?selected=openfga)** | Authorization | [#1287](https://github.com/cncf/toc/issues/1287) | Sandbox (2024-03-15) | Approved |
+| **[Lima](https://landscape.cncf.io/?selected=lima)** | Development VMs | [#1348](https://github.com/cncf/toc/issues/1348) | Sandbox (2024-10-06) | Approved |
+| **[KEDA](https://landscape.cncf.io/?selected=keda)** | Autoscaling | Previous Incubation | Incubating | 2025 |
+| **[Volcano](https://landscape.cncf.io/?selected=volcano)** | Batch Scheduling | Previous Incubation | Incubating | 2025 |
+| **[Kubewarden](https://landscape.cncf.io/?selected=kubewarden)** | Policy Engine | Previous Incubation | Incubating | 2025 |
+| **[Metal3](https://landscape.cncf.io/?selected=metal-3)** | Bare Metal | Previous Incubation | Incubating | 2025 |
+| **[Radius](https://landscape.cncf.io/?selected=radius)** | Application Platform | Previous Incubation | Incubating | 2025 |
+| **[OpenYurt](https://landscape.cncf.io/?selected=openyurt)** | Edge Computing | [#1547/#1548](https://github.com/cncf/toc/issues/1548) | Sandbox | Approved |
 
 ### Featured Incubations
 
@@ -119,11 +120,12 @@ In 2025, **17 projects applied for Incubating status**, representing diverse are
 
 **TOC Issue:** [#1951](https://github.com/cncf/toc/issues/1951) | **Applied:** October 30, 2025
 
-ORAS provides a way to push and pull OCI artifacts to and from OCI-compliant registries, enabling artifact distribution beyond container images.
+[ORAS](https://landscape.cncf.io/?selected=oras) (Sandbox) provides a way to push and pull OCI artifacts to and from OCI-compliant registries, enabling artifact distribution beyond container images.
 
 **Key Details:**
 - **Repository:** [@oras-project](https://github.com/oras-project)
 - **Current Level:** Sandbox (accepted 2021-07-13)
+- **Landscape Entry:** [ORAS on CNCF Landscape](https://landscape.cncf.io/?selected=oras)
 - **Adopters:** Multiple organizations using in production
 - **Sub-projects:** CLI, SDKs (Go, Rust, Python, Java, .NET), GitHub Action
 
@@ -131,11 +133,12 @@ ORAS provides a way to push and pull OCI artifacts to and from OCI-compliant reg
 
 **TOC Issue:** [#1884](https://github.com/cncf/toc/issues/1884) | **Applied:** September 17, 2025
 
-OCM provides multicluster orchestration capabilities for Kubernetes with vendor-neutral APIs and flexible extensibility framework.
+[Open Cluster Management](https://landscape.cncf.io/?selected=open-cluster-management) (Sandbox) provides multicluster orchestration capabilities for Kubernetes with vendor-neutral APIs and flexible extensibility framework.
 
 **Key Details:**
 - **Repository:** [@open-cluster-management-io/ocm](https://github.com/open-cluster-management-io/ocm)
 - **Current Level:** Sandbox (accepted 2021-11-09)
+- **Landscape Entry:** [OCM on CNCF Landscape](https://landscape.cncf.io/?selected=open-cluster-management)
 - **Adopters:** Appscode, eBay, SpectroCloud, Alibaba, Red Hat
 - **Integration:** Works with Argo CD, KubeVela, KubeStellar, Kueue
 
@@ -143,11 +146,12 @@ OCM provides multicluster orchestration capabilities for Kubernetes with vendor-
 
 **TOC Issue:** [#1775](https://github.com/cncf/toc/issues/1775) | **Applied:** July 15, 2025
 
-HAMi enables GPU virtualization and sharing for AI/ML workloads in Kubernetes, providing fine-grained resource allocation.
+[HAMi](https://landscape.cncf.io/?selected=hami) (Sandbox) enables GPU virtualization and sharing for AI/ML workloads in Kubernetes, providing fine-grained resource allocation.
 
 **Key Details:**
 - **Repository:** [@Project-HAMi/HAMi](https://github.com/Project-HAMi/HAMi)
 - **Current Level:** Sandbox (accepted 2024-08-21)
+- **Landscape Entry:** [HAMi on CNCF Landscape](https://landscape.cncf.io/?selected=hami)
 - **Focus:** GPU sharing, vGPU support, multi-vendor GPU support
 - **Integration:** Works with Volcano, Koordinator
 
@@ -155,44 +159,45 @@ HAMi enables GPU virtualization and sharing for AI/ML workloads in Kubernetes, p
 
 **TOC Issue:** [#1552](https://github.com/cncf/toc/issues/1552) | **Applied:** March 6, 2025
 
-Microcks provides Kubernetes-native mocking and testing capabilities for APIs and microservices.
+[Microcks](https://landscape.cncf.io/?selected=microcks) (Sandbox) provides Kubernetes-native mocking and testing capabilities for APIs and microservices.
 
 **Key Details:**
 - **Repository:** [@microcks/microcks](https://github.com/microcks/microcks)
 - **Current Level:** Sandbox (accepted 2023-06-21)
+- **Landscape Entry:** [Microcks on CNCF Landscape](https://landscape.cncf.io/?selected=microcks)
 - **Focus:** API mocking, contract testing, service virtualization
 - **Adopters:** Lombard Odier, CNAM, J.B. Hunt (documented use cases)
 
 ### Incubation Trends by Domain
 
 **AI/ML Infrastructure (3 projects):**
-- HAMi - GPU virtualization
-- KServe - Model serving (now Graduated)
-- OpenFGA - Fine-grained authorization for AI apps
+- [HAMi](https://landscape.cncf.io/?selected=hami) (Sandbox) - GPU virtualization
+- [KServe](https://landscape.cncf.io/?selected=k-serve) (Graduated) - Model serving (now Graduated)
+- [OpenFGA](https://landscape.cncf.io/?selected=openfga) (Sandbox) - Fine-grained authorization for AI apps
 
 **Multi-cluster & Edge (4 projects):**
-- Open Cluster Management - Multi-cluster orchestration
-- kcp - Kubernetes control plane abstraction
-- KubeEdge - Edge computing (moving to Graduation)
-- OpenYurt - Edge computing platform
+- [Open Cluster Management](https://landscape.cncf.io/?selected=open-cluster-management) (Sandbox) - Multi-cluster orchestration
+- [kcp](https://landscape.cncf.io/?selected=kcp) (Sandbox) - Kubernetes control plane abstraction
+- [KubeEdge](https://landscape.cncf.io/?selected=kube-edge) (Incubating) - Edge computing (moving to Graduation)
+- [OpenYurt](https://landscape.cncf.io/?selected=openyurt) (Sandbox) - Edge computing platform
 
 **Developer Tools (3 projects):**
-- Lima - Development VMs for macOS
-- Microcks - API mocking and testing
-- Telepresence - Local development (moving to Graduation)
+- [Lima](https://landscape.cncf.io/?selected=lima) (Sandbox) - Development VMs for macOS
+- [Microcks](https://landscape.cncf.io/?selected=microcks) (Sandbox) - API mocking and testing
+- [Telepresence](https://landscape.cncf.io/?selected=telepresence) (Sandbox) - Local development (moving to Graduation)
 
 **Storage & Data (2 projects):**
-- OpenEBS - Container-attached storage
-- ORAS - OCI artifact distribution
+- [OpenEBS](https://landscape.cncf.io/?selected=open-ebs) (Sandbox) - Container-attached storage
+- [ORAS](https://landscape.cncf.io/?selected=oras) (Sandbox) - OCI artifact distribution
 
 **Networking & Gateway (2 projects):**
-- Kgateway - Kubernetes Gateway API
-- Cilium - Networking (moving to Graduation)
+- [Kgateway](https://landscape.cncf.io/?selected=kgateway) (Sandbox) - Kubernetes Gateway API
+- [Cilium](https://landscape.cncf.io/?selected=cilium) (Incubating) - Networking (moving to Graduation)
 
 **Platform Engineering (3 projects):**
-- Cozystack - Platform as a service
-- Radius - Application platform
-- Kubewarden - Policy engine
+- [Cozystack](https://landscape.cncf.io/?selected=cozystack) (Sandbox) - Platform as a service
+- [Radius](https://landscape.cncf.io/?selected=radius) (Incubating) - Application platform
+- [Kubewarden](https://landscape.cncf.io/?selected=kubewarden) (Incubating) - Policy engine
 
 ## Projects Moving to Archived Status (2025)
 
@@ -202,19 +207,19 @@ In 2025, **13 projects were archived**, representing projects that lost maintain
 
 | Project | Domain | TOC Issue | Previous Level | Archived Date |
 |---------|--------|-----------|----------------|---------------|
-| **Keptn** | Application Delivery | [#1584](https://github.com/cncf/toc/issues/1584) | Incubating | 2025-09-08 |
-| **Krustlet** | WebAssembly Runtime | [#1385](https://github.com/cncf/toc/issues/1385) | Incubating | 2025-09-16 |
-| **CNI-Genie** | Networking | [#1680](https://github.com/cncf/toc/issues/1680) | Sandbox | 2025-10-03 |
-| **Xline** | Distributed Coordination | [#1668](https://github.com/cncf/toc/issues/1668) | Sandbox | 2025-09-29 |
-| **Pravega** | Stream Processing | [#1460](https://github.com/cncf/toc/issues/1460) | Sandbox | 2025-10-01 |
-| **Merbridge** | Service Mesh | [#1725](https://github.com/cncf/toc/issues/1725) | Sandbox | 2025-06-06 |
-| **Sealer** | Cluster Delivery | [#1721](https://github.com/cncf/toc/issues/1721) | Sandbox | 2025-06-06 |
-| **Teller** | Secrets Management | [#1723](https://github.com/cncf/toc/issues/1723) | Sandbox | 2025-06-06 |
-| **DevStream** | DevOps Toolchain | [#1724](https://github.com/cncf/toc/issues/1724) | Sandbox | 2025-06-06 |
-| **OpenELB** | Load Balancer | [#1722](https://github.com/cncf/toc/issues/1722) | Sandbox | 2025-06-06 |
-| **Nocalhost** | Development Environment | [#1569](https://github.com/cncf/toc/issues/1569) | Incubating | 2025-06-06 |
-| **SuperEdge** | Edge Computing | [#1570](https://github.com/cncf/toc/issues/1570) | Incubating | 2025-06-06 |
-| **KubeDL** | Deep Learning | [#1571](https://github.com/cncf/toc/issues/1571) | Incubating | 2025-06-06 |
+| **[Keptn](https://landscape.cncf.io/?selected=keptn)** | Application Delivery | [#1584](https://github.com/cncf/toc/issues/1584) | Incubating | 2025-09-08 |
+| **[Krustlet](https://landscape.cncf.io/?selected=krustlet)** | WebAssembly Runtime | [#1385](https://github.com/cncf/toc/issues/1385) | Incubating | 2025-09-16 |
+| **[CNI-Genie](https://landscape.cncf.io/?selected=cni-genie)** | Networking | [#1680](https://github.com/cncf/toc/issues/1680) | Sandbox | 2025-10-03 |
+| **[Xline](https://landscape.cncf.io/?selected=xline)** | Distributed Coordination | [#1668](https://github.com/cncf/toc/issues/1668) | Sandbox | 2025-09-29 |
+| **[Pravega](https://landscape.cncf.io/?selected=pravega)** | Stream Processing | [#1460](https://github.com/cncf/toc/issues/1460) | Sandbox | 2025-10-01 |
+| **[Merbridge](https://landscape.cncf.io/?selected=merbridge)** | Service Mesh | [#1725](https://github.com/cncf/toc/issues/1725) | Sandbox | 2025-06-06 |
+| **[Sealer](https://landscape.cncf.io/?selected=sealer)** | Cluster Delivery | [#1721](https://github.com/cncf/toc/issues/1721) | Sandbox | 2025-06-06 |
+| **[Teller](https://landscape.cncf.io/?selected=teller)** | Secrets Management | [#1723](https://github.com/cncf/toc/issues/1723) | Sandbox | 2025-06-06 |
+| **[DevStream](https://landscape.cncf.io/?selected=devstream)** | DevOps Toolchain | [#1724](https://github.com/cncf/toc/issues/1724) | Sandbox | 2025-06-06 |
+| **[OpenELB](https://landscape.cncf.io/?selected=openelb)** | Load Balancer | [#1722](https://github.com/cncf/toc/issues/1722) | Sandbox | 2025-06-06 |
+| **[Nocalhost](https://landscape.cncf.io/?selected=nocalhost)** | Development Environment | [#1569](https://github.com/cncf/toc/issues/1569) | Incubating | 2025-06-06 |
+| **[SuperEdge](https://landscape.cncf.io/?selected=superedge)** | Edge Computing | [#1570](https://github.com/cncf/toc/issues/1570) | Incubating | 2025-06-06 |
+| **[KubeDL](https://landscape.cncf.io/?selected=kubedl)** | Deep Learning | [#1571](https://github.com/cncf/toc/issues/1571) | Incubating | 2025-06-06 |
 
 ### Archival Trends
 
@@ -253,60 +258,60 @@ In 2025, **13 projects were archived**, representing projects that lost maintain
 
 | Category | Count | Projects |
 |----------|-------|----------|
-| **Networking & Security** | 3 | Cilium, Istio, Kyverno |
-| **Observability** | 2 | OpenTelemetry, Fluentd |
-| **AI/ML Infrastructure** | 2 | KServe, WasmEdge |
-| **Edge Computing** | 2 | KubeEdge, K3s |
-| **Storage** | 1 | TiKV, Dragonfly |
-| **Runtime & Platform** | 2 | Dapr, VirtIO |
-| **Developer Tools** | 1 | Telepresence |
+| **Networking & Security** | 3 | [Cilium](https://landscape.cncf.io/?selected=cilium), [Istio](https://landscape.cncf.io/?selected=istio), [Kyverno](https://landscape.cncf.io/?selected=kyverno) |
+| **Observability** | 2 | [OpenTelemetry](https://landscape.cncf.io/?selected=open-telemetry), [Fluentd](https://landscape.cncf.io/?selected=fluentd) |
+| **AI/ML Infrastructure** | 2 | [KServe](https://landscape.cncf.io/?selected=k-serve), [WasmEdge](https://landscape.cncf.io/?selected=wasm-edge) |
+| **Edge Computing** | 2 | [KubeEdge](https://landscape.cncf.io/?selected=kube-edge), [K3s](https://landscape.cncf.io/?selected=k-3-s) |
+| **Storage** | 1 | [TiKV](https://landscape.cncf.io/?selected=ti-kv), [Dragonfly](https://landscape.cncf.io/?selected=dragonfly) |
+| **Runtime & Platform** | 2 | [Dapr](https://landscape.cncf.io/?selected=dapr), [VirtIO](https://landscape.cncf.io/?selected=virtink) |
+| **Developer Tools** | 1 | [Telepresence](https://landscape.cncf.io/?selected=telepresence) |
 
 #### 2025 Incubation Applications by Category
 
 | Category | Count | Projects |
 |----------|-------|----------|
-| **Multi-cluster & Edge** | 4 | OCM, kcp, OpenYurt, KubeEdge |
-| **AI/ML Infrastructure** | 3 | HAMi, KServe, OpenFGA |
-| **Developer Tools** | 3 | Lima, Microcks, Telepresence |
-| **Platform Engineering** | 3 | Cozystack, Radius, Kubewarden |
-| **Storage & Artifacts** | 2 | OpenEBS, ORAS |
-| **Networking & Gateway** | 2 | Kgateway, Cilium |
+| **Multi-cluster & Edge** | 4 | [OCM](https://landscape.cncf.io/?selected=open-cluster-management), [kcp](https://landscape.cncf.io/?selected=kcp), [OpenYurt](https://landscape.cncf.io/?selected=openyurt), [KubeEdge](https://landscape.cncf.io/?selected=kube-edge) |
+| **AI/ML Infrastructure** | 3 | [HAMi](https://landscape.cncf.io/?selected=hami), [KServe](https://landscape.cncf.io/?selected=k-serve), [OpenFGA](https://landscape.cncf.io/?selected=openfga) |
+| **Developer Tools** | 3 | [Lima](https://landscape.cncf.io/?selected=lima), [Microcks](https://landscape.cncf.io/?selected=microcks), [Telepresence](https://landscape.cncf.io/?selected=telepresence) |
+| **Platform Engineering** | 3 | [Cozystack](https://landscape.cncf.io/?selected=cozystack), [Radius](https://landscape.cncf.io/?selected=radius), [Kubewarden](https://landscape.cncf.io/?selected=kubewarden) |
+| **Storage & Artifacts** | 2 | [OpenEBS](https://landscape.cncf.io/?selected=open-ebs), [ORAS](https://landscape.cncf.io/?selected=oras) |
+| **Networking & Gateway** | 2 | [Kgateway](https://landscape.cncf.io/?selected=kgateway), [Cilium](https://landscape.cncf.io/?selected=cilium) |
 
 ### Emerging Technology Trends
 
 **AI/ML Acceleration:**
-- HAMi: GPU virtualization enabling efficient resource sharing
-- KServe: Production model serving and inference
-- OpenFGA: Fine-grained authorization for AI applications
+- [HAMi](https://landscape.cncf.io/?selected=hami) (Sandbox): GPU virtualization enabling efficient resource sharing
+- [KServe](https://landscape.cncf.io/?selected=k-serve) (Graduated): Production model serving and inference
+- [OpenFGA](https://landscape.cncf.io/?selected=openfga) (Sandbox): Fine-grained authorization for AI applications
 - Trend: Infrastructure projects supporting AI/ML workloads gaining traction
 
 **Edge Computing Maturity:**
-- KubeEdge and OpenYurt moving toward higher maturity levels
-- K3s graduating as lightweight Kubernetes for edge
+- [KubeEdge](https://landscape.cncf.io/?selected=kube-edge) (Incubating) and [OpenYurt](https://landscape.cncf.io/?selected=openyurt) (Sandbox) moving toward higher maturity levels
+- [K3s](https://landscape.cncf.io/?selected=k-3-s) (Sandbox) graduating as lightweight Kubernetes for edge
 - Trend: Edge computing patterns becoming mainstream in CNCF
 
 **Platform Engineering:**
-- Cozystack, Radius emerging as platform abstraction layers
+- [Cozystack](https://landscape.cncf.io/?selected=cozystack) (Sandbox), [Radius](https://landscape.cncf.io/?selected=radius) (Incubating) emerging as platform abstraction layers
 - Focus on developer experience and platform-as-a-product
 - Trend: Higher-level abstractions built on Kubernetes
 
 **Developer Experience:**
-- Lima, Microcks, Telepresence focusing on inner loop development
+- [Lima](https://landscape.cncf.io/?selected=lima) (Sandbox), [Microcks](https://landscape.cncf.io/?selected=microcks) (Sandbox), [Telepresence](https://landscape.cncf.io/?selected=telepresence) (Sandbox) focusing on inner loop development
 - API-first development with mocking and testing tools
 - Trend: Improving developer productivity in cloud native environments
 
 ### Cross-Project Integration Patterns
 
 **High Integration Projects (Referenced by 3+ other projects):**
-- Kubernetes (referenced by all projects)
-- Prometheus (monitoring integration in 12+ projects)
-- OpenTelemetry (observability in 8+ projects)
-- Istio (service mesh integration in 5+ projects)
+- [Kubernetes](https://landscape.cncf.io/?selected=kubernetes) (Graduated) (referenced by all projects)
+- [Prometheus](https://landscape.cncf.io/?selected=prometheus) (Graduated) (monitoring integration in 12+ projects)
+- [OpenTelemetry](https://landscape.cncf.io/?selected=open-telemetry) (Incubating) (observability in 8+ projects)
+- [Istio](https://landscape.cncf.io/?selected=istio) (Incubating) (service mesh integration in 5+ projects)
 
 **Emerging Integration Hubs:**
-- Kgateway integrating with Istio, Argo Rollouts, OpenTelemetry
-- Open Cluster Management with Argo CD, KubeVela, KubeStellar, Kueue
-- HAMi with Volcano, Koordinator for specialized scheduling
+- [Kgateway](https://landscape.cncf.io/?selected=kgateway) (Sandbox) integrating with Istio, Argo Rollouts, OpenTelemetry
+- [Open Cluster Management](https://landscape.cncf.io/?selected=open-cluster-management) (Sandbox) with Argo CD, KubeVela, KubeStellar, Kueue
+- [HAMi](https://landscape.cncf.io/?selected=hami) (Sandbox) with Volcano, Koordinator for specialized scheduling
 
 ### Geographic and Organizational Diversity
 
