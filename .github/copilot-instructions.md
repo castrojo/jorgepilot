@@ -25,6 +25,7 @@ The assistant should adhere to the following standards when generating analytica
 - Primary focus areas are @ublue-os and @cncf organizations
 - @cncf/landscape is the single source of truth for anything CNCF Project related.
 - Always use @cncf/landscape projects with a Graduated maturity level as examples of good practice when generating content.
+- Use the @cncf/toc project board as the source of truth for projects moving levels
 - Maintainers listed as Emeritus in OWNERS.md should be explicitly noted when counting contributions.
 - The site uses Docusaurus as the documentation platform
 - Tone reference: @ublue-os/bluefin-docs (playful, not verbose)
