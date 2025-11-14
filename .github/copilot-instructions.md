@@ -88,6 +88,7 @@ When conducting health checks for any CNCF project, you MUST:
    - Project homepage
    - Description
    - Acceptance date
+4. When mentioning a project in any health report always mention their maturity level linked next to the project name so that it is clear to a user what the status of a project is. The user should ALWAYS know the maturity level and it should always be referenced in reports.
 
 ### Landscape Data as Single Source of Truth
 
