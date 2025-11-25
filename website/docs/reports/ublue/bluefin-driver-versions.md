@@ -43,7 +43,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 
 
 
-| **gts-20251028** | 6.16.8-200 | {pkgrel:nvidia-driver} | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251028) |
+| **gts-20251028** | 6.16.8-200 | 580.95.05-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251028) |
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
 | **gts-20251028** | 6.16.8-200 | 580.95.05-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251028) |
