@@ -10,7 +10,7 @@ last_updated: 2025-12-10
 
 ## Executive Summary
 
-The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. Currently, there are **2 graduated projects** (Linkerd and TiKV), **3 incubating projects** (wasmCloud, OpenTelemetry, Chaos Mesh), and **8 sandbox projects** written in or significantly utilizing Rust. This report focuses exclusively on official CNCF projects, demonstrating Rust's proven viability for production-grade cloud native infrastructure.
+The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. Currently, there are **8 graduated projects** with significant Rust components (Linkerd, TiKV, containerd, Dragonfly, Istio, Falco, TUF, in-toto), **3 incubating projects** (wasmCloud, OpenTelemetry, Chaos Mesh), and **9 sandbox projects** written in or significantly utilizing Rust. This report focuses exclusively on official CNCF projects, demonstrating Rust's proven viability for production-grade cloud native infrastructure.
 
 ## Overview
 
@@ -24,12 +24,12 @@ All project data sourced from [@cncf/landscape](https://github.com/cncf/landscap
 
 | Metric              | Value      | Notes                        |
 | ------------------- | ---------- | ---------------------------- |
-| Total CNCF Rust Projects | 13    | Official CNCF projects only  |
-| Graduated           | 2          | Linkerd, TiKV                |
+| Total CNCF Rust Projects | 20    | Official CNCF projects only  |
+| Graduated           | 8          | Linkerd, TiKV, containerd, Dragonfly, Istio, Falco, TUF, in-toto |
 | Incubating          | 3          | wasmCloud, OpenTelemetry, Chaos Mesh |
-| Sandbox             | 8          | Active development stage     |
+| Sandbox             | 9          | Including bootc (1.7M lines Rust) |
 | First Accepted      | 2017-01-23 | Linkerd                      |
-| Most Recent         | 2024-10-22 | Youki                        |
+| Most Recent         | 2025-01-21 | bootc                        |
 
 ## Graduated Projects
 
@@ -93,6 +93,142 @@ TiKV is a distributed transactional key-value database, originally created to co
 
 **Known Adopters:**
 TiKV powers TiDB, used by organizations including PingCAP, ByteDance, and numerous enterprises running distributed SQL workloads. TiKV is a core component of the TiDB ecosystem serving production workloads globally.
+
+---
+
+### containerd
+
+**Status:** [Graduated](https://landscape.cncf.io/?selected=containerd) (2019-02-28) | **Accepted:** 2017-03-29
+
+containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability. While the core runtime is written in Go, containerd maintains significant Rust components for WebAssembly support and low-level interfaces.
+
+| Property         | Details                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**  | Industry-standard container runtime                                                             |
+| **Repository**   | [containerd/containerd](https://github.com/containerd/containerd)                               |
+| **Homepage**     | [containerd.io](https://containerd.io/)                                                         |
+| **Languages**    | Go (core), Rust (Wasm/ttrpc)                                                                    |
+| **Stars**        | 18,000+                                                                                         |
+| **Dev Stats**    | [containerd.devstats.cncf.io](https://containerd.devstats.cncf.io/)                             |
+
+**Rust Components (1.2M+ lines):**
+- **[runwasi](https://github.com/containerd/runwasi)** (335k Rust) - Facilitates running Wasm/WASI workloads managed by containerd
+- **[ttrpc-rust](https://github.com/containerd/ttrpc-rust)** (400k Rust) - Rust implementation of ttrpc (gRPC for low-memory environments)
+- **[rust-extensions](https://github.com/containerd/rust-extensions)** (471k Rust) - Rust crates to extend containerd
+
+**Why Rust?** containerd uses Rust for WebAssembly runtime support (runwasi) and low-level RPC protocols (ttrpc) where memory safety and performance are critical for container orchestration.
+
+---
+
+### Dragonfly
+
+**Status:** [Graduated](https://landscape.cncf.io/?selected=dragonfly) (2024-09-03) | **Accepted:** 2018-10-25
+
+Dragonfly is an intelligent P2P-based image and file distribution system. The project uses Rust extensively for its image service (nydus) and client components.
+
+| Property         | Details                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**  | P2P-based image and file distribution system                                                    |
+| **Repository**   | [dragonflyoss/Dragonfly2](https://github.com/dragonflyoss/Dragonfly2)                           |
+| **Homepage**     | [d7y.io](https://d7y.io/)                                                                       |
+| **Languages**    | Go (scheduler), Rust (nydus, client)                                                            |
+| **Stars**        | 2,300+ (main), 1,400+ (nydus)                                                                   |
+| **Dev Stats**    | [dragonfly.devstats.cncf.io](https://dragonfly.devstats.cncf.io/)                               |
+
+**Rust Components (3.9M+ lines):**
+- **[nydus](https://github.com/dragonflyoss/nydus)** (2.4M Rust) - Image service providing fast, secure container image access
+- **[client](https://github.com/dragonflyoss/client)** (1.5M Rust) - Dragonfly client written entirely in Rust
+
+**Why Rust?** Dragonfly chose Rust for nydus to achieve high-performance container image loading with memory safety. The lazy-loading and on-demand image features require low-level system access where Rust excels.
+
+---
+
+### Istio
+
+**Status:** [Graduated](https://landscape.cncf.io/?selected=istio) (2023-07-12) | **Accepted:** 2020-03-03
+
+Istio is an open platform for providing a uniform way to integrate microservices, manage traffic flow, enforce policies, and aggregate telemetry data. The ztunnel component for ambient mesh is written entirely in Rust.
+
+| Property         | Details                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**  | Service mesh for microservices                                                                  |
+| **Repository**   | [istio/istio](https://github.com/istio/istio)                                                   |
+| **Homepage**     | [istio.io](https://istio.io/)                                                                   |
+| **Languages**    | Go (control plane), Rust (ztunnel)                                                              |
+| **Stars**        | 36,000+ (main), 420+ (ztunnel)                                                                  |
+| **Dev Stats**    | [istio.devstats.cncf.io](https://istio.devstats.cncf.io/)                                       |
+
+**Rust Components (1.3M+ lines):**
+- **[ztunnel](https://github.com/istio/ztunnel)** (1.3M Rust) - The zero-trust tunnel component of Istio ambient mesh
+
+**Why Rust?** Istio chose Rust for ztunnel to achieve the performance and security requirements of ambient mesh. The ztunnel proxy handles L4 traffic processing where Rust's memory safety and performance are critical for network security.
+
+---
+
+### Falco
+
+**Status:** [Graduated](https://landscape.cncf.io/?selected=falco) (2024-01-29) | **Accepted:** 2018-10-10
+
+Falco is a cloud-native runtime security project that detects anomalous activity in applications. The project provides Rust SDKs for plugin development.
+
+| Property         | Details                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**  | Cloud-native runtime security                                                                   |
+| **Repository**   | [falcosecurity/falco](https://github.com/falcosecurity/falco)                                   |
+| **Homepage**     | [falco.org](https://falco.org/)                                                                 |
+| **Languages**    | C++ (core), Rust (plugin SDK)                                                                   |
+| **Stars**        | 7,600+                                                                                          |
+| **Dev Stats**    | [falco.devstats.cncf.io](https://falco.devstats.cncf.io/)                                       |
+
+**Rust Components (1.2M+ lines):**
+- **[plugin-sdk-rs](https://github.com/falcosecurity/plugin-sdk-rs)** (1.2M Rust) - Falco plugins SDK for Rust
+- **[client-rs](https://github.com/falcosecurity/client-rs)** - Rust client for Falco
+
+**Why Rust?** Falco provides Rust SDK support to enable plugin development with memory safety guarantees, important for security tooling that processes sensitive runtime data.
+
+---
+
+### The Update Framework (TUF)
+
+**Status:** [Graduated](https://landscape.cncf.io/?selected=the-update-framework-tuf) (2023-02-09) | **Accepted:** 2017-10-24
+
+TUF is a framework for securing software update systems. The project maintains an official Rust implementation.
+
+| Property         | Details                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**  | Framework for securing software update systems                                                  |
+| **Repository**   | [theupdateframework/specification](https://github.com/theupdateframework/specification)         |
+| **Homepage**     | [theupdateframework.io](https://theupdateframework.io/)                                         |
+| **Languages**    | Python (reference), Go, Rust                                                                    |
+| **Stars**        | 181+ (rust-tuf)                                                                                 |
+| **Dev Stats**    | [tuf.devstats.cncf.io](https://tuf.devstats.cncf.io/)                                           |
+
+**Rust Components (642k+ lines):**
+- **[rust-tuf](https://github.com/theupdateframework/rust-tuf)** (642k Rust) - Rust implementation of The Update Framework
+
+**Why Rust?** TUF's Rust implementation provides memory-safe update verification critical for supply chain security. Rust prevents common vulnerabilities that could compromise software update integrity.
+
+---
+
+### in-toto
+
+**Status:** [Graduated](https://landscape.cncf.io/?selected=in-toto) (2023-07-12) | **Accepted:** 2019-08-21
+
+in-toto is a framework to secure the integrity of software supply chains. The project maintains a Rust implementation.
+
+| Property         | Details                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**  | Framework for software supply chain integrity                                                   |
+| **Repository**   | [in-toto/in-toto](https://github.com/in-toto/in-toto)                                           |
+| **Homepage**     | [in-toto.io](https://in-toto.io/)                                                               |
+| **Languages**    | Python (reference), Go, Rust                                                                    |
+| **Stars**        | 34+ (in-toto-rs)                                                                                |
+| **Dev Stats**    | [intoto.devstats.cncf.io](https://intoto.devstats.cncf.io/)                                     |
+
+**Rust Components (299k+ lines):**
+- **[in-toto-rs](https://github.com/in-toto/in-toto-rs)** (299k Rust) - Rust implementation of in-toto
+
+**Why Rust?** in-toto's Rust implementation ensures memory-safe handling of cryptographic attestations and supply chain metadata, critical for verifying software provenance.
 
 ## Incubating Projects
 
@@ -386,10 +522,36 @@ Youki is an OCI-compliant low-level container runtime written entirely in Rust. 
 
 **Why Rust?** Youki demonstrates that Rust can deliver the same functionality as Go-based runtimes while eliminating certain security vulnerabilities inherent to mixed C/Go implementations. The language choice enables a pure Rust implementation without the constraints faced by Go's runtime.
 
+---
+
+### bootc
+
+**Status:** [Sandbox](https://landscape.cncf.io/?selected=bootc) | **Accepted:** 2025-01-21
+
+bootc provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates.
+
+| Property          | Details                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| **Repository**    | [containers/bootc](https://github.com/containers/bootc)       |
+| **Homepage**      | [containers.github.io/bootc](https://containers.github.io/bootc/) |
+| **Dev Stats**     | [bootc.devstats.cncf.io](https://bootc.devstats.cncf.io/)     |
+| **Stars**         | 1,720+                                                        |
+| **Last Activity** | December 2025 (Active)                                        |
+
+**Pure Rust (1.69M lines):** bootc is written almost entirely in Rust, representing one of the largest pure Rust CNCF projects. The codebase leverages Rust for safe, low-level OS operations.
+
+**Why Rust?** bootc chose Rust for its memory safety guarantees essential when managing operating system updates. The project requires direct interaction with bootloaders, filesystems, and OS internals where Rust prevents common vulnerabilities while maintaining system-level performance.
+
+**Key Features:**
+- Transactional OS updates via OCI images
+- Rollback support for failed updates
+- Integration with ostree and composefs
+- Support for Fedora, CentOS Stream, RHEL
+
 ## Analysis
 
 :::info Key Insight
-Rust's adoption in CNCF projects centers on security-critical and performance-sensitive workloads, with two graduated projects (Linkerd, TiKV) proving Rust's viability at the highest maturity level.
+Rust's adoption in CNCF projects centers on security-critical and performance-sensitive workloads, with eight graduated projects now using Rust components proving Rust's viability at the highest maturity level.
 :::
 
 ### CNCF Rust Projects by Maturity
@@ -397,7 +559,13 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 | Project | Maturity | Accepted | Focus Area | Activity (Dec 2025) |
 |---------|----------|----------|------------|---------------------|
 | **Linkerd** | Graduated | 2017-01-23 | Service Mesh | Active |
+| **TUF** | Graduated | 2017-10-24 | Supply Chain Security | Active |
 | **TiKV** | Graduated | 2018-08-28 | Database | Active |
+| **containerd** | Graduated | 2017-03-29 | Container Runtime | Active |
+| **Dragonfly** | Graduated | 2018-10-25 | Image Distribution | Active |
+| **Falco** | Graduated | 2018-10-10 | Runtime Security | Active |
+| **in-toto** | Graduated | 2019-08-21 | Supply Chain Security | Active |
+| **Istio** | Graduated | 2020-03-03 | Service Mesh | Active |
 | **OpenTelemetry** | Incubating | 2019-05-07 | Observability | Active |
 | **Chaos Mesh** | Incubating | 2020-07-15 | Chaos Engineering | Active |
 | **wasmCloud** | Incubating | 2021-07-13 | WebAssembly Platform | Active |
@@ -409,17 +577,20 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 | **Paralus** | Sandbox | 2022-12-14 | Zero Trust Access | Maintenance |
 | **Kuasar** | Sandbox | 2023-09-05 | Container Runtime | Active |
 | **Youki** | Sandbox | 2024-10-22 | Container Runtime | Active |
+| **bootc** | Sandbox | 2025-01-21 | OS Updates | Active |
 
 ### Adoption Trends
 
+- **Service Mesh Leadership**: Both Linkerd (Rust proxy) and Istio (ztunnel) use Rust for data plane components
 - **Database Leadership**: TiKV proves Rust's viability for large-scale distributed databases with 16,000+ stars
-- **Service Mesh Pioneer**: Linkerd, the only graduated service mesh in CNCF using Rust, demonstrates production-grade performance
-- **Container Runtime Innovation**: Youki and Kuasar bring pure Rust to OCI container runtimes, demonstrating 2x performance over runc
+- **Container Runtime Innovation**: containerd (runwasi), Youki, Kuasar, and bootc demonstrate Rust's dominance in container tech
+- **Supply Chain Security**: TUF and in-toto both have official Rust implementations for secure software updates
+- **Image Distribution**: Dragonfly's nydus (2.4M lines Rust) leads container image optimization
 - **Observability**: OpenTelemetry's Rust SDK enables zero-overhead instrumentation
-- **WebAssembly Leadership**: wasmCloud is the first pure Rust WebAssembly platform at incubating level
+- **WebAssembly Leadership**: wasmCloud and containerd/runwasi drive Wasm adoption in cloud native
+- **Runtime Security**: Falco provides Rust SDK for security plugin development
 - **Chaos Engineering**: Chaos Mesh uses Rust for low-level chaos injection (IO, network, kernel)
-- **Security Focus**: 6 of 13 CNCF Rust projects focus on security (Confidential Containers, Keylime, Kubewarden, Paralus, TiKV, Kuasar)
-- **Zero Trust**: Multiple projects leverage Rust for implementing zero trust security architectures
+- **Security Focus**: 10+ projects focus on security use cases
 - **Performance Critical**: Projects choosing Rust cite performance, memory safety, and reliability as key factors
 
 ### Why Rust for Cloud Native?
@@ -434,15 +605,15 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 ### Growth Trajectory
 
 ```
-2017: Linkerd accepted (first CNCF Rust project)
-2018: TiKV accepted
-2019: OpenTelemetry accepted (with Rust SDK)
-2020: Keylime accepted, TiKV graduates
-2020: Keylime, Chaos Mesh accepted; TiKV graduates
+2017: Linkerd, TUF, containerd accepted (first CNCF Rust projects)
+2018: TiKV, Dragonfly, Falco accepted
+2019: OpenTelemetry, in-toto accepted (with Rust implementations)
+2020: Keylime, Chaos Mesh accepted; TiKV graduates; containerd graduates
 2021: Akri, kube-rs, wasmCloud accepted; Linkerd graduates
 2022: Confidential Containers, Kubewarden, Paralus accepted
-2023: Kuasar accepted (multi-sandbox container runtime)
-2024: Youki accepted (first pure Rust OCI runtime in CNCF)
+2023: Kuasar accepted; TUF, in-toto, Istio graduate
+2024: Youki accepted; Falco, Dragonfly graduate
+2025: bootc accepted (1.7M lines pure Rust)
 ```
 
 ## Project Health Summary
@@ -451,10 +622,17 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 |---------|----------------|--------------|-----------------|--------|
 | Linkerd | High | Multi-org | Regular | ✅ Excellent |
 | TiKV | High | Multi-org | Regular | ✅ Excellent |
+| containerd | High | Multi-org | Regular | ✅ Excellent |
+| Dragonfly | High | Multi-org | Regular | ✅ Excellent |
+| Istio | High | Multi-org | Regular | ✅ Excellent |
 | OpenTelemetry | High | Multi-org | Regular | ✅ Excellent |
 | Chaos Mesh | High | Multi-org | Regular | ✅ Excellent |
 | wasmCloud | High | Multi-org | Regular | ✅ Excellent |
 | Youki | High | Multi-org | Regular | ✅ Excellent |
+| bootc | High | Multi-org | Regular | ✅ Excellent |
+| Falco | High | Multi-org | Regular | ✅ Good |
+| TUF | Moderate | Multi-org | Regular | ✅ Good |
+| in-toto | Moderate | Multi-org | Regular | ✅ Good |
 | Kuasar | Moderate | Multi-org | Regular | ✅ Good |
 | kube-rs | High | Multi-org | Regular | ✅ Good |
 | Keylime | High | Multi-org | Regular | ✅ Good |
@@ -483,6 +661,7 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 
 | Date | Change |
 |------|--------|
+| 2025-12-10 | Major update: Added 6 graduated projects with Rust (containerd, Dragonfly, Istio, Falco, TUF, in-toto); Added bootc (Sandbox); Total now 20 projects (8 graduated, 3 incubating, 9 sandbox) |
 | 2025-12-10 | Added Chaos Mesh (Incubating) with 4 Rust repos (toda, chaos-tproxy, nsexec, iproute2-rs); project count now 13 incl. 3 incubating |
 | 2025-12-10 | Added OpenTelemetry (Incubating) and Kuasar (Sandbox) as CNCF Rust projects; updated wasmCloud to Incubating status; comprehensive review of all incubating projects for Rust usage; project count now 12 |
 | 2025-12-10 | Added Youki as newly accepted sandbox project; updated project count to 9; refreshed all activity data |
