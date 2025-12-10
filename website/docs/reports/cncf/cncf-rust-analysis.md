@@ -58,10 +58,17 @@ Linkerd is a service mesh that provides security, observability, and reliability
 
 **Why Rust?** Linkerd's data plane proxy (linkerd2-proxy) is written in Rust to achieve ultra-low overhead, memory safety without garbage collection, and blazing fast performance critical for service mesh operations.
 
-**Recent Activity (December 2025):**
-- Native sidecar container support improvements
-- Active dependency updates and maintenance
-- Regular release cadence maintained
+**Known Adopters (100+):**
+
+| Category | Notable Adopters |
+|----------|------------------|
+| **Enterprise** | Microsoft, Expedia, Nordstrom, HP Inc, AT&T, Adidas, BMW (via MercedesBenz.io) |
+| **Financial Services** | M1 Finance, Mulligan Funding, Paybase, Commonbond, Figure, Zimpler |
+| **Technology** | Docker, Buoyant, Giant Swarm, Timescale, Salt Security, Wiz Security |
+| **Media/Gaming** | PlayStudios Asia, Mythical Games, Web Summit |
+| **Other** | NAV (Norwegian govt), Purdue University Global, Celonis, Personio |
+
+*See [full adopters list](https://github.com/linkerd/linkerd2/blob/main/ADOPTERS.md) for 100+ organizations.*
 
 ---
 
@@ -83,6 +90,9 @@ TiKV is a distributed transactional key-value database, originally created to co
 | **Last Activity**| December 2025 (Active)                                                                          |
 
 **Why Rust?** TiKV chose Rust for its memory safety guarantees without garbage collection, critical for a database where predictable latency and data integrity are paramount. The language's zero-cost abstractions allow high-level code without runtime overhead.
+
+**Known Adopters:**
+TiKV powers TiDB, used by organizations including PingCAP, ByteDance, and numerous enterprises running distributed SQL workloads. TiKV is a core component of the TiDB ecosystem serving production workloads globally.
 
 ## Incubating Projects
 
@@ -108,10 +118,18 @@ wasmCloud is a platform for building distributed applications using WebAssembly 
 
 **Why Rust?** wasmCloud chose Rust for its first-class WebAssembly support, memory safety, and performance. Rust's async ecosystem (tokio) enables efficient handling of distributed workloads, while the language's strict type system ensures reliability in production environments.
 
-**Key Adopters:**
-- Adobe (production)
-- MachineMetrics (production)
-- Multiple CNCF member organizations
+**Known Adopters:**
+
+| Organization | Status | Use Case |
+|--------------|--------|----------|
+| **Cosmonic** | Production | Distributed app platform built on wasmCloud |
+| **BMW AG** | Development | Framework for modular ML inference applications |
+| **MachineMetrics** | Development | Downsampling algorithm for high-frequency IIoT data |
+| **Orange** | Internal | Prototyping distributed rating in multi-tier ecosystems |
+| **SigScale** | Internal | Service logic as customer-provided Actors |
+| **Lattica** | Development | Thought-to-application pipelines for stochastic software |
+
+*See [full adopters list](https://github.com/wasmCloud/wasmCloud/blob/main/ADOPTERS.md).*
 
 ---
 
@@ -171,6 +189,18 @@ Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos 
 
 **Why Rust?** Chaos Mesh uses Rust for low-level system interactions where memory safety and performance are critical. The `toda` filesystem hook requires direct kernel interaction where Rust's safety guarantees prevent common vulnerabilities while maintaining C-level performance.
 
+**Known Adopters (40+):**
+
+| Category | Adopters |
+|----------|----------|
+| **End Users** | ByteDance, Tencent, NetEase Fuxi Lab, Xpeng Motors, KingNet, Qiniu Cloud, Maycur |
+| **Database/Data** | PingCAP (TiDB), DataStax (AstraDB), Percona, GreptimeDB, RabbitMQ |
+| **Security** | Authzed (SpiceDB) |
+| **Cloud Vendors** | Microsoft Azure Chaos Studio, KubeSphere, Civo |
+| **Enterprise** | DigitalChina, Prudential |
+
+*See [full adopters list](https://github.com/chaos-mesh/chaos-mesh/blob/master/ADOPTERS.md) for 40+ organizations.*
+
 ## Sandbox Projects
 
 ### Akri
@@ -208,6 +238,22 @@ Enables cloud native confidential computing by leveraging Trusted Execution Envi
 | **Last Activity** | December 2025 (Active)                                                                                                |
 
 **Rust Components:** Uses Rust for security-critical components interfacing with TEE technologies. Recent maintainer updates show active governance (December 2025).
+
+**Known Adopters:**
+
+| Organization | Status | Use Case |
+|--------------|--------|----------|
+| **Alibaba Cloud** | Beta | Elastic Algorithm Service & Elastic GPU Service for AI/ML privacy |
+| **IBM LinuxONE** | Beta | Confidential Containers with OpenShift and IBM Secure Execution |
+| **Red Hat** | Beta | OpenShift confidential containers (Azure, Intel TDX, AMD SEV-SNP) |
+| **Intel** | Beta | Enterprise-RAG and OPEA for GenAI with Intel TDX |
+| **ByteDance** | Beta | Jeddak Sandbox for data privacy protection |
+| **Edgeless Systems** | Beta | Contrast for confidential container deployments at scale |
+| **Switchboard** | Production | Decentralized Crypto Oracle on AMD SEV-SNP |
+| **JDCloud** | Beta | JoyScale for AI data privacy |
+| **Kubermatic** | Beta | Kubeone clusters with confidential containers |
+
+*See [full adopters list](https://github.com/confidential-containers/confidential-containers/blob/main/ADOPTERS.md).*
 
 ---
 
@@ -248,6 +294,16 @@ Kuasar is a multi-sandbox container runtime that provides cloud-native, all-scen
 **Pure Rust:** Core runtime components including the shim, VMM sandboxer, and Wasm sandboxer are written in Rust. The project uses Rust for safe, efficient container sandbox management.
 
 **Why Rust?** Kuasar chose Rust for memory safety without garbage collection, critical for a low-level container runtime that must be both secure and performant. Rust's type system helps prevent common security vulnerabilities.
+
+**Known Adopters:**
+
+| Adopter | Type | Use Case |
+|---------|------|----------|
+| **Menging Software** | Service Provider | FaaS platform based on WebAssembly |
+| **Huawei Cloud Native** | Service Provider | Kubernetes experience with Kuasar |
+| **iSulad** | OSS Project | Uses Kuasar as low-level container runtime |
+
+*See [full adopters list](https://github.com/kuasar-io/kuasar/blob/main/ADOPTERS.md).*
 
 ---
 
