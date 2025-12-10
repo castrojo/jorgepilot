@@ -10,7 +10,7 @@ last_updated: 2025-12-10
 
 ## Executive Summary
 
-The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. Currently, there are **2 graduated projects** (Linkerd and TiKV), **2 incubating projects** (wasmCloud, OpenTelemetry), and **8 sandbox projects** written in or significantly utilizing Rust. This report focuses exclusively on official CNCF projects, demonstrating Rust's proven viability for production-grade cloud native infrastructure.
+The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. Currently, there are **2 graduated projects** (Linkerd and TiKV), **3 incubating projects** (wasmCloud, OpenTelemetry, Chaos Mesh), and **8 sandbox projects** written in or significantly utilizing Rust. This report focuses exclusively on official CNCF projects, demonstrating Rust's proven viability for production-grade cloud native infrastructure.
 
 ## Overview
 
@@ -24,9 +24,9 @@ All project data sourced from [@cncf/landscape](https://github.com/cncf/landscap
 
 | Metric              | Value      | Notes                        |
 | ------------------- | ---------- | ---------------------------- |
-| Total CNCF Rust Projects | 12    | Official CNCF projects only  |
+| Total CNCF Rust Projects | 13    | Official CNCF projects only  |
 | Graduated           | 2          | Linkerd, TiKV                |
-| Incubating          | 2          | wasmCloud, OpenTelemetry     |
+| Incubating          | 3          | wasmCloud, OpenTelemetry, Chaos Mesh |
 | Sandbox             | 8          | Active development stage     |
 | First Accepted      | 2017-01-23 | Linkerd                      |
 | Most Recent         | 2024-10-22 | Youki                        |
@@ -142,6 +142,34 @@ OpenTelemetry provides APIs, SDKs, and tools for generating, collecting, and exp
 - **opentelemetry-network** - Network telemetry collector with Rust crates
 
 **Why Rust?** OpenTelemetry chose Rust for its SDK to provide zero-overhead instrumentation, memory safety without garbage collection pauses, and excellent async support critical for observability libraries that must minimize performance impact.
+
+---
+
+### Chaos Mesh
+
+**Status:** [Incubating](https://landscape.cncf.io/?selected=chaos-mesh) | **Accepted:** 2020-07-15
+
+Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos experiments on Kubernetes environments. While the main controller is written in Go, the project uses Rust for performance-critical chaos injection components.
+
+| Property          | Details                                                                                         |
+| ----------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**   | Cloud-native Chaos Engineering platform for Kubernetes                                          |
+| **Repository**    | [chaos-mesh/chaos-mesh](https://github.com/chaos-mesh/chaos-mesh)                               |
+| **Homepage**      | [chaos-mesh.org](https://chaos-mesh.org/)                                                       |
+| **Languages**     | Go (controller), Rust (chaos injection tools)                                                   |
+| **Key Features**  | IO chaos, network chaos, stress testing, kernel chaos, DNS chaos                                |
+| **Stars**         | 6,800+                                                                                          |
+| **Dev Stats**     | [chaosmesh.devstats.cncf.io](https://chaosmesh.devstats.cncf.io/)                               |
+| **Slack**         | [#chaos-mesh](https://cloud-native.slack.com/)                                                  |
+| **Last Activity** | December 2025 (Active)                                                                          |
+
+**Rust Components (4 repos):**
+- **toda** - Hook filesystem and utilities to inject IO chaos (155k+ lines of Rust)
+- **chaos-tproxy** - Transparent proxy for network chaos injection
+- **nsexec** - Namespace execution utilities
+- **iproute2-rs** - Rust bindings for iproute2
+
+**Why Rust?** Chaos Mesh uses Rust for low-level system interactions where memory safety and performance are critical. The `toda` filesystem hook requires direct kernel interaction where Rust's safety guarantees prevent common vulnerabilities while maintaining C-level performance.
 
 ## Sandbox Projects
 
@@ -315,6 +343,7 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 | **Linkerd** | Graduated | 2017-01-23 | Service Mesh | Active |
 | **TiKV** | Graduated | 2018-08-28 | Database | Active |
 | **OpenTelemetry** | Incubating | 2019-05-07 | Observability | Active |
+| **Chaos Mesh** | Incubating | 2020-07-15 | Chaos Engineering | Active |
 | **wasmCloud** | Incubating | 2021-07-13 | WebAssembly Platform | Active |
 | **Keylime** | Sandbox | 2020-09-22 | Security/TPM | Active |
 | **Akri** | Sandbox | 2021-09-14 | IoT/Edge | Active |
@@ -332,7 +361,8 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 - **Container Runtime Innovation**: Youki and Kuasar bring pure Rust to OCI container runtimes, demonstrating 2x performance over runc
 - **Observability**: OpenTelemetry's Rust SDK enables zero-overhead instrumentation
 - **WebAssembly Leadership**: wasmCloud is the first pure Rust WebAssembly platform at incubating level
-- **Security Focus**: 6 of 12 CNCF Rust projects focus on security (Confidential Containers, Keylime, Kubewarden, Paralus, TiKV, Kuasar)
+- **Chaos Engineering**: Chaos Mesh uses Rust for low-level chaos injection (IO, network, kernel)
+- **Security Focus**: 6 of 13 CNCF Rust projects focus on security (Confidential Containers, Keylime, Kubewarden, Paralus, TiKV, Kuasar)
 - **Zero Trust**: Multiple projects leverage Rust for implementing zero trust security architectures
 - **Performance Critical**: Projects choosing Rust cite performance, memory safety, and reliability as key factors
 
@@ -352,6 +382,7 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 2018: TiKV accepted
 2019: OpenTelemetry accepted (with Rust SDK)
 2020: Keylime accepted, TiKV graduates
+2020: Keylime, Chaos Mesh accepted; TiKV graduates
 2021: Akri, kube-rs, wasmCloud accepted; Linkerd graduates
 2022: Confidential Containers, Kubewarden, Paralus accepted
 2023: Kuasar accepted (multi-sandbox container runtime)
@@ -365,6 +396,7 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 | Linkerd | High | Multi-org | Regular | ✅ Excellent |
 | TiKV | High | Multi-org | Regular | ✅ Excellent |
 | OpenTelemetry | High | Multi-org | Regular | ✅ Excellent |
+| Chaos Mesh | High | Multi-org | Regular | ✅ Excellent |
 | wasmCloud | High | Multi-org | Regular | ✅ Excellent |
 | Youki | High | Multi-org | Regular | ✅ Excellent |
 | Kuasar | Moderate | Multi-org | Regular | ✅ Good |
@@ -395,6 +427,7 @@ Rust's adoption in CNCF projects centers on security-critical and performance-se
 
 | Date | Change |
 |------|--------|
+| 2025-12-10 | Added Chaos Mesh (Incubating) with 4 Rust repos (toda, chaos-tproxy, nsexec, iproute2-rs); project count now 13 incl. 3 incubating |
 | 2025-12-10 | Added OpenTelemetry (Incubating) and Kuasar (Sandbox) as CNCF Rust projects; updated wasmCloud to Incubating status; comprehensive review of all incubating projects for Rust usage; project count now 12 |
 | 2025-12-10 | Added Youki as newly accepted sandbox project; updated project count to 9; refreshed all activity data |
 | 2025-12-10 | Updated with fresh project activity data; added TiKV as second graduated project; removed non-CNCF projects per scope requirements; added health summary table |
