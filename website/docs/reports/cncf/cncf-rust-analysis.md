@@ -10,17 +10,17 @@ last_updated: 2025-12-10
 
 ## Executive Summary
 
-The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. This report identifies **20 CNCF projects** utilizing Rust, categorized by whether they are **pure Rust implementations** or projects with **Rust components**.
+The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. This report identifies **24 CNCF projects** utilizing Rust, categorized by whether they are **pure Rust implementations** (>89% Rust) or projects with **Rust components**.
 
-**Pure Rust Projects (7):**
+**Pure Rust Projects (11):**
 - **Graduated:** TiKV (24.8M LOC)
 - **Incubating:** wasmCloud (122 crates)
-- **Sandbox:** Youki (OCI runtime), bootc (1.7M LOC), Akri, kube-rs, Kubewarden
+- **Sandbox:** Tremor (4.4M), KCL (3.8M), Hyperlight (1.7M), bootc (1.7M), Youki (1.6M), kube-rs (1.2M), bpfman (949k), Akri (944k), Kuasar (914k), Parsec (892k)
 
 **Projects with Rust Components (13):**
 - **Graduated:** Linkerd, containerd, Dragonfly, Istio, Falco, TUF, in-toto
 - **Incubating:** OpenTelemetry, Chaos Mesh
-- **Sandbox:** Confidential Containers, Keylime, Kuasar, Paralus
+- **Sandbox:** Keylime, Confidential Containers, Kubewarden, Drasi, Inspektor Gadget
 
 ## Overview
 
@@ -34,29 +34,36 @@ All project data sourced from [@cncf/landscape](https://github.com/cncf/landscap
 
 | Metric                     | Value | Notes                                    |
 | -------------------------- | ----- | ---------------------------------------- |
-| **Total CNCF Rust Projects** | 20  | Official CNCF projects only              |
-| **Pure Rust Projects**     | 7     | Core implementation entirely in Rust     |
+| **Total CNCF Rust Projects** | 24  | Official CNCF projects only              |
+| **Pure Rust Projects**     | 11    | >89% Rust in primary codebase            |
 | **Rust Component Projects**| 13    | Significant Rust components or SDKs      |
 | Graduated                  | 8     | 1 pure Rust, 7 with Rust components      |
 | Incubating                 | 3     | 1 pure Rust, 2 with Rust components      |
-| Sandbox                    | 9     | 5 pure Rust, 4 with Rust components      |
+| Sandbox                    | 16    | 10 pure Rust, 6 with Rust components     |
 | First Accepted             | 2017-01-23 | Linkerd                             |
-| Most Recent                | 2025-01-21 | bootc                               |
+| Most Recent                | 2025-04-15 | Hyperlight                          |
 
 ### Rust Lines of Code Summary
 
-| Project | Type | Rust LOC | Primary Language |
-|---------|------|----------|------------------|
-| **TiKV** | Pure Rust | 24,814,809 | Rust |
-| **Dragonfly** (nydus+client) | Components | 3,941,080 | Go + Rust |
-| **bootc** | Pure Rust | 1,694,355 | Rust |
-| **Linkerd** (proxy) | Component | 1,485,071 | Go + Rust |
-| **Istio** (ztunnel) | Component | 1,318,825 | Go + Rust |
-| **containerd** (3 repos) | Components | 1,207,012 | Go + Rust |
-| **Falco** (plugin-sdk) | Component | 1,271,214 | C++ + Rust |
-| **TUF** (rust-tuf) | Implementation | 642,891 | Python/Go/Rust |
-| **Youki** | Pure Rust | ~500,000 | Rust |
-| **in-toto** (in-toto-rs) | Implementation | 299,757 | Python/Go/Rust |
+| Project | Type | Rust LOC | Rust % |
+|---------|------|----------|--------|
+| **TiKV** | Pure Rust | 24,814,809 | 100% |
+| **Tremor** | Pure Rust | 4,387,511 | 97% |
+| **Dragonfly** (nydus+client) | Components | 3,941,080 | - |
+| **KCL** | Pure Rust | 3,757,632 | 98% |
+| **Hyperlight** | Pure Rust | 1,720,988 | 94% |
+| **bootc** | Pure Rust | 1,694,355 | 94% |
+| **Youki** | Pure Rust | 1,608,007 | 97% |
+| **Linkerd** (proxy) | Component | 1,485,071 | - |
+| **Istio** (ztunnel) | Component | 1,318,825 | - |
+| **Keylime** (rust-keylime) | Component | 1,273,869 | - |
+| **Confidential Containers** | Component | 1,263,846 | - |
+| **containerd** (3 repos) | Components | 1,207,012 | - |
+| **kube-rs** | Pure Rust | 1,159,088 | 98% |
+| **bpfman** | Pure Rust | 948,586 | 95% |
+| **Akri** | Pure Rust | 944,186 | 95% |
+| **Kuasar** | Pure Rust | 913,882 | 89% |
+| **Parsec** | Pure Rust | 892,287 | 93% |
 
 ## Graduated Projects
 
@@ -253,23 +260,51 @@ Chaos Mesh is a Chaos Engineering platform. The project uses Rust for chaos inje
 ## Sandbox Projects
 
 :::tip Pure Rust Sandbox Projects
-**5 of 9 sandbox projects** are written entirely in Rust: Youki, bootc, Akri, kube-rs, and Kubewarden.
+**10 sandbox projects** are written primarily in Rust (>89%): Tremor, KCL, Hyperlight, bootc, Youki, kube-rs, bpfman, Akri, Kuasar, and Parsec.
 :::
 
-### [Youki](https://containers.github.io/youki/) ⭐ Pure Rust
+### [Tremor](https://www.tremor.rs/) ⭐ Pure Rust
 
-- Status: [Sandbox](https://landscape.cncf.io/?selected=youki)
-- Accepted: 2024-10-22
+- Status: [Sandbox](https://landscape.cncf.io/?selected=tremor)
+- Accepted: 2020-09-08
 
-Youki is an OCI-compliant low-level container runtime written entirely in Rust.
+Tremor is an event processing system for unstructured data with rich support for structural pattern matching, filtering, and transformation.
 
-- Repository: [youki-dev/youki](https://github.com/youki-dev/youki)
-- Languages: Rust (100%)
-- Rust LOC: ~500,000
+- Repository: [tremor-rs/tremor-runtime](https://github.com/tremor-rs/tremor-runtime)
+- Languages: Rust (97%)
+- Rust LOC: 4,387,511
 
-**Why Rust?** Youki is 2x faster than runc in container creation due to Rust's performance and lack of garbage collection overhead.
+**Why Rust?** Tremor chose Rust for high-throughput event processing with predictable latency. Memory safety without GC is critical for real-time data pipelines.
 
-**Known Adopters:** Azure Kubernetes Service (Wasm workloads), containerd/runwasi, Docker
+---
+
+### [KCL](https://kcl-lang.io/) ⭐ Pure Rust
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=kcl)
+- Accepted: 2023-09-05
+
+KCL is a constraint-based record & functional language for configuration and policy scenarios.
+
+- Repository: [kcl-lang/kcl](https://github.com/kcl-lang/kcl)
+- Languages: Rust (98%)
+- Rust LOC: 3,757,632
+
+**Why Rust?** KCL uses Rust for its compiler and runtime to achieve fast configuration validation with strong type safety guarantees.
+
+---
+
+### [Hyperlight](https://github.com/hyperlight-dev/hyperlight) ⭐ Pure Rust
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=hyperlight)
+- Accepted: 2025-04-15
+
+Hyperlight is a lightweight Virtual Machine Manager (VMM) designed to execute untrusted code in micro-VMs with minimal overhead.
+
+- Repository: [hyperlight-dev/hyperlight](https://github.com/hyperlight-dev/hyperlight)
+- Languages: Rust (94%)
+- Rust LOC: 1,720,988
+
+**Why Rust?** Hyperlight requires memory safety for VM isolation. Rust's zero-cost abstractions enable lightweight virtualization without compromising security.
 
 ---
 
@@ -281,24 +316,27 @@ Youki is an OCI-compliant low-level container runtime written entirely in Rust.
 bootc provides transactional OS updates using OCI container images. Written almost entirely in Rust.
 
 - Repository: [containers/bootc](https://github.com/containers/bootc)
-- Languages: Rust (100%)
+- Languages: Rust (94%)
 - Rust LOC: 1,694,355
 
 **Why Rust?** bootc requires memory safety for OS update operations. Direct interaction with bootloaders, filesystems, and OS internals makes Rust ideal.
 
 ---
 
-### [Akri](https://docs.akri.sh) ⭐ Pure Rust
+### [Youki](https://containers.github.io/youki/) ⭐ Pure Rust
 
-- Status: [Sandbox](https://landscape.cncf.io/?selected=akri)
-- Accepted: 2021-09-14
+- Status: [Sandbox](https://landscape.cncf.io/?selected=youki)
+- Accepted: 2024-10-22
 
-Akri is a Kubernetes Resource Interface for the Edge. Written entirely in Rust.
+Youki is an OCI-compliant low-level container runtime written entirely in Rust.
 
-- Repository: [project-akri/akri](https://github.com/project-akri/akri)
-- Languages: Rust (100%)
+- Repository: [youki-dev/youki](https://github.com/youki-dev/youki)
+- Languages: Rust (97%)
+- Rust LOC: 1,608,007
 
-**Pure Rust:** Core agent and controller for edge device discovery and management.
+**Why Rust?** Youki is 2x faster than runc in container creation due to Rust's performance and lack of garbage collection overhead.
+
+**Known Adopters:** Azure Kubernetes Service (Wasm workloads), containerd/runwasi, Docker
 
 ---
 
@@ -310,39 +348,72 @@ Akri is a Kubernetes Resource Interface for the Edge. Written entirely in Rust.
 kube-rs is the core Rust ecosystem for building Kubernetes applications. Written entirely in Rust.
 
 - Repository: [kube-rs/kube](https://github.com/kube-rs/kube)
-- Languages: Rust (100%)
+- Languages: Rust (98%)
+- Rust LOC: 1,159,088
 
-**Pure Rust:** Complete Kubernetes client library enabling controllers, operators, and tools entirely in Rust.
-
----
-
-### [Kubewarden](https://www.kubewarden.io) ⭐ Pure Rust
-
-- Status: [Sandbox](https://landscape.cncf.io/?selected=kubewarden)
-- Accepted: 2022-06-17
-
-Kubewarden is a WebAssembly-powered Kubernetes policy engine. Core runtime written in Rust.
-
-- Repository: [kubewarden/kubewarden-controller](https://github.com/kubewarden/kubewarden-controller)
-- Languages: Rust (core runtime)
-
-**Rust Usage:** Core runtime written in Rust; supports policy development in Rust for maximum performance.
+**Why Rust?** kube-rs enables building Kubernetes controllers and operators with Rust's async ecosystem, providing memory safety and performance.
 
 ---
 
-### [Confidential Containers](https://confidentialcontainers.org/) (Rust Components)
+### [bpfman](https://bpfman.io/) ⭐ Pure Rust
 
-- Status: [Sandbox](https://landscape.cncf.io/?selected=confidential-containers)
-- Accepted: 2022-03-08
+- Status: [Sandbox](https://landscape.cncf.io/?selected=bpfman)
+- Accepted: 2024-04-03
 
-Enables cloud native confidential computing by leveraging Trusted Execution Environments (TEEs).
+bpfman is an eBPF manager for loading, unloading, and managing eBPF programs on Linux systems.
 
-- Repository: [confidential-containers/confidential-containers](https://github.com/confidential-containers/confidential-containers)
-- Languages: Multiple, Rust (TEE components)
+- Repository: [bpfman/bpfman](https://github.com/bpfman/bpfman)
+- Languages: Rust (95%)
+- Rust LOC: 948,586
 
-**Rust Components:** Security-critical components interfacing with TEE technologies.
+**Why Rust?** bpfman uses Rust for safe interaction with eBPF subsystems, avoiding memory corruption risks in privileged kernel operations.
 
-**Known Adopters:** Alibaba Cloud, IBM LinuxONE, Red Hat, Intel, ByteDance, Edgeless Systems. See [full adopters list](https://github.com/confidential-containers/confidential-containers/blob/main/ADOPTERS.md).
+---
+
+### [Akri](https://docs.akri.sh) ⭐ Pure Rust
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=akri)
+- Accepted: 2021-09-14
+
+Akri is a Kubernetes Resource Interface for the Edge. Written entirely in Rust.
+
+- Repository: [project-akri/akri](https://github.com/project-akri/akri)
+- Languages: Rust (95%)
+- Rust LOC: 944,186
+
+**Why Rust?** Akri uses Rust for edge device discovery agents where memory efficiency and reliability are critical in constrained environments.
+
+---
+
+### [Kuasar](https://kuasar.io/) ⭐ Pure Rust
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=kuasar)
+- Accepted: 2023-09-05
+
+Multi-sandbox container runtime supporting multiple isolation technologies.
+
+- Repository: [kuasar-io/kuasar](https://github.com/kuasar-io/kuasar)
+- Languages: Rust (89%)
+- Rust LOC: 913,882
+
+**Why Rust?** Kuasar uses Rust for runtime shims and sandboxers where performance and safety are critical for container isolation.
+
+**Known Adopters:** Menging Software, Huawei Cloud Native, iSulad
+
+---
+
+### [Parsec](https://parsec.community/) ⭐ Pure Rust
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=parsec)
+- Accepted: 2021-03-09
+
+Parsec (Platform AbstRaction for SECurity) provides a common API to security services across hardware and software platforms.
+
+- Repository: [parallaxsecond/parsec](https://github.com/parallaxsecond/parsec)
+- Languages: Rust (93%)
+- Rust LOC: 892,287
+
+**Why Rust?** Parsec uses Rust for security-critical abstraction layers. Memory safety is essential when interfacing with TPMs, HSMs, and crypto providers.
 
 ---
 
@@ -355,38 +426,71 @@ Remote attestation for Edge, Cloud, and IoT devices. Has Rust agent component.
 
 - Repository: [keylime/keylime](https://github.com/keylime/keylime)
 - Languages: Python, Rust (agent)
+- Rust LOC: 1,273,869 ([rust-keylime](https://github.com/keylime/rust-keylime))
 
-**Rust Component:** keylime-agent for secure system interactions and cryptographic operations.
-
----
-
-### [Kuasar](https://kuasar.io/) (Rust Components)
-
-- Status: [Sandbox](https://landscape.cncf.io/?selected=kuasar)
-- Accepted: 2023-09-05
-
-Multi-sandbox container runtime. Significant Rust components for runtime shims and sandboxers.
-
-- Repository: [kuasar-io/kuasar](https://github.com/kuasar-io/kuasar)
-- Languages: Go, Rust (shim, sandboxers)
-
-**Rust Components:** Shim, VMM sandboxer, and Wasm sandboxer are written in Rust.
-
-**Known Adopters:** Menging Software, Huawei Cloud Native, iSulad
+**Why Rust?** The Rust agent provides memory-safe TPM interactions and cryptographic operations for attestation.
 
 ---
 
-### [Paralus](https://www.paralus.io/) (Rust Components)
+### [Confidential Containers](https://confidentialcontainers.org/) (Rust Components)
 
-- Status: [Sandbox](https://landscape.cncf.io/?selected=paralus)
-- Accepted: 2022-12-14
+- Status: [Sandbox](https://landscape.cncf.io/?selected=confidential-containers)
+- Accepted: 2022-03-08
 
-Zero trust Kubernetes access. Has Rust components for secure operations.
+Enables cloud native confidential computing by leveraging Trusted Execution Environments (TEEs).
 
-- Repository: [paralus/paralus](https://github.com/paralus/paralus)
-- Languages: Go, Rust (components)
+- Repository: [confidential-containers/confidential-containers](https://github.com/confidential-containers/confidential-containers)
+- Languages: Multiple, Rust (TEE components)
+- Rust LOC: 1,263,846 ([guest-components](https://github.com/confidential-containers/guest-components))
 
-**Note:** Reduced activity in 2025; may benefit from additional community engagement.
+**Why Rust?** Security-critical guest components require memory safety when interfacing with TEE technologies.
+
+**Known Adopters:** Alibaba Cloud, IBM LinuxONE, Red Hat, Intel, ByteDance, Edgeless Systems. See [full adopters list](https://github.com/confidential-containers/confidential-containers/blob/main/ADOPTERS.md).
+
+---
+
+### [Kubewarden](https://www.kubewarden.io) (Rust Components)
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=kubewarden)
+- Accepted: 2022-06-17
+
+Kubewarden is a WebAssembly-powered Kubernetes policy engine.
+
+- Repository: [kubewarden/kubewarden-controller](https://github.com/kubewarden/kubewarden-controller)
+- Languages: Go (controller), Rust (policy-server)
+- Rust LOC: 217,807 ([policy-server](https://github.com/kubewarden/policy-server))
+
+**Why Rust?** The policy-server executes Wasm policies with Rust for performance and safety. Policies can be written in Rust.
+
+---
+
+### [Drasi](https://drasi.io/) (Rust Components)
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=drasi)
+- Accepted: 2024-09-10
+
+Drasi is a data change processing platform that continuously monitors data sources for changes.
+
+- Repository: [drasi-project/drasi-platform](https://github.com/drasi-project/drasi-platform)
+- Languages: Multiple (29% Rust)
+- Rust LOC: 720,277
+
+**Why Rust?** Drasi uses Rust for high-performance change detection and event processing components.
+
+---
+
+### [Inspektor Gadget](https://www.inspektor-gadget.io/) (Rust Components)
+
+- Status: [Sandbox](https://landscape.cncf.io/?selected=inspektor-gadget)
+- Accepted: 2022-08-03
+
+Collection of eBPF-based tools for debugging and inspecting Kubernetes resources and applications.
+
+- Repository: [inspektor-gadget/inspektor-gadget](https://github.com/inspektor-gadget/inspektor-gadget)
+- Languages: C, Go, Rust (1%)
+- Rust LOC: 94,583
+
+**Why Rust?** Minor Rust components for eBPF tooling integration.
 
 ## Analysis
 
