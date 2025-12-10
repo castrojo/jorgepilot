@@ -10,7 +10,17 @@ last_updated: 2025-12-10
 
 ## Executive Summary
 
-The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. Currently, there are **8 graduated projects** with significant Rust components (Linkerd, TiKV, containerd, Dragonfly, Istio, Falco, TUF, in-toto), **3 incubating projects** (wasmCloud, OpenTelemetry, Chaos Mesh), and **9 sandbox projects** written in or significantly utilizing Rust. This report focuses exclusively on official CNCF projects, demonstrating Rust's proven viability for production-grade cloud native infrastructure.
+The CNCF ecosystem has embraced Rust for its performance, memory safety, and reliability characteristics. This report identifies **20 CNCF projects** utilizing Rust, categorized by whether they are **pure Rust implementations** or projects with **Rust components**.
+
+**Pure Rust Projects (7):**
+- **Graduated:** TiKV (24.8M LOC)
+- **Incubating:** wasmCloud (122 crates)
+- **Sandbox:** Youki (OCI runtime), bootc (1.7M LOC), Akri, kube-rs, Kubewarden
+
+**Projects with Rust Components (13):**
+- **Graduated:** Linkerd, containerd, Dragonfly, Istio, Falco, TUF, in-toto
+- **Incubating:** OpenTelemetry, Chaos Mesh
+- **Sandbox:** Confidential Containers, Keylime, Kuasar, Paralus
 
 ## Overview
 
@@ -22,57 +32,39 @@ All project data sourced from [@cncf/landscape](https://github.com/cncf/landscap
 
 ## Key Findings
 
-| Metric              | Value      | Notes                        |
-| ------------------- | ---------- | ---------------------------- |
-| Total CNCF Rust Projects | 20    | Official CNCF projects only  |
-| Graduated           | 8          | Linkerd, TiKV, containerd, Dragonfly, Istio, Falco, TUF, in-toto |
-| Incubating          | 3          | wasmCloud, OpenTelemetry, Chaos Mesh |
-| Sandbox             | 9          | Including bootc (1.7M lines Rust) |
-| First Accepted      | 2017-01-23 | Linkerd                      |
-| Most Recent         | 2025-01-21 | bootc                        |
+| Metric                     | Value | Notes                                    |
+| -------------------------- | ----- | ---------------------------------------- |
+| **Total CNCF Rust Projects** | 20  | Official CNCF projects only              |
+| **Pure Rust Projects**     | 7     | Core implementation entirely in Rust     |
+| **Rust Component Projects**| 13    | Significant Rust components or SDKs      |
+| Graduated                  | 8     | 1 pure Rust, 7 with Rust components      |
+| Incubating                 | 3     | 1 pure Rust, 2 with Rust components      |
+| Sandbox                    | 9     | 5 pure Rust, 4 with Rust components      |
+| First Accepted             | 2017-01-23 | Linkerd                             |
+| Most Recent                | 2025-01-21 | bootc                               |
+
+### Rust Lines of Code Summary
+
+| Project | Type | Rust LOC | Primary Language |
+|---------|------|----------|------------------|
+| **TiKV** | Pure Rust | 24,814,809 | Rust |
+| **Dragonfly** (nydus+client) | Components | 3,941,080 | Go + Rust |
+| **bootc** | Pure Rust | 1,694,355 | Rust |
+| **Linkerd** (proxy) | Component | 1,485,071 | Go + Rust |
+| **Istio** (ztunnel) | Component | 1,318,825 | Go + Rust |
+| **containerd** (3 repos) | Components | 1,207,012 | Go + Rust |
+| **Falco** (plugin-sdk) | Component | 1,271,214 | C++ + Rust |
+| **TUF** (rust-tuf) | Implementation | 642,891 | Python/Go/Rust |
+| **Youki** | Pure Rust | ~500,000 | Rust |
+| **in-toto** (in-toto-rs) | Implementation | 299,757 | Python/Go/Rust |
 
 ## Graduated Projects
 
-### Linkerd
+:::tip Pure Rust Graduated Project
+**TiKV** is the only graduated CNCF project written entirely in Rust (24.8M LOC).
+:::
 
-**Status:** [Graduated](https://landscape.cncf.io/?selected=linkerd) (2021-07-28) | **Accepted:** 2017-01-23
-
-Linkerd is a service mesh that provides security, observability, and reliability to Kubernetes applications without code changes. It's built with both Go and Rust components, with the data plane (linkerd2-proxy) written entirely in Rust for maximum performance and safety.
-
-| Property         | Details                                                                                         |
-| ---------------- | ----------------------------------------------------------------------------------------------- |
-| **Description**  | Ultra light, ultra simple, ultra powerful service mesh                                          |
-| **Repository**   | [linkerd/linkerd2](https://github.com/linkerd/linkerd2)                                         |
-| **Homepage**     | [linkerd.io](https://linkerd.io/)                                                               |
-| **Languages**    | Go, Rust                                                                                        |
-| **Key Features** | mTLS, observability, multi-cluster, load balancing, traffic authorization, security, zero trust |
-| **Target Users** | SREs, DevOps Engineers, Architects                                                              |
-| **Dev Stats**    | [linkerd.devstats.cncf.io](https://linkerd.devstats.cncf.io/)                                   |
-| **Last Activity**| December 2025 (Active)                                                                          |
-
-**Security Audits:**
-
-- **2019-06-01**: Security audit by Cure53
-- **2020-06-05**: Rustls TLS library audit by Cure53
-- **2022-06-28**: Security audit by Trail of Bits
-
-**Why Rust?** Linkerd's data plane proxy (linkerd2-proxy) is written in Rust to achieve ultra-low overhead, memory safety without garbage collection, and blazing fast performance critical for service mesh operations.
-
-**Known Adopters (100+):**
-
-| Category | Notable Adopters |
-|----------|------------------|
-| **Enterprise** | Microsoft, Expedia, Nordstrom, HP Inc, AT&T, Adidas, BMW (via MercedesBenz.io) |
-| **Financial Services** | M1 Finance, Mulligan Funding, Paybase, Commonbond, Figure, Zimpler |
-| **Technology** | Docker, Buoyant, Giant Swarm, Timescale, Salt Security, Wiz Security |
-| **Media/Gaming** | PlayStudios Asia, Mythical Games, Web Summit |
-| **Other** | NAV (Norwegian govt), Purdue University Global, Celonis, Personio |
-
-*See [full adopters list](https://github.com/linkerd/linkerd2/blob/main/ADOPTERS.md) for 100+ organizations.*
-
----
-
-### TiKV
+### TiKV ⭐ Pure Rust
 
 **Status:** [Graduated](https://landscape.cncf.io/?selected=tikv) (2020-09-02) | **Accepted:** 2018-08-28
 
@@ -83,7 +75,8 @@ TiKV is a distributed transactional key-value database, originally created to co
 | **Description**  | Distributed transactional key-value database                                                    |
 | **Repository**   | [tikv/tikv](https://github.com/tikv/tikv)                                                       |
 | **Homepage**     | [tikv.org](https://tikv.org/)                                                                   |
-| **Languages**    | Rust (100% core)                                                                                |
+| **Languages**    | **Rust (100% core)**                                                                            |
+| **Rust LOC**     | **24,814,809**                                                                                  |
 | **Key Features** | ACID transactions, horizontal scalability, Raft consensus, RocksDB storage engine               |
 | **Stars**        | 16,355+                                                                                         |
 | **Dev Stats**    | [tikv.devstats.cncf.io](https://tikv.devstats.cncf.io/)                                         |
@@ -96,163 +89,227 @@ TiKV powers TiDB, used by organizations including PingCAP, ByteDance, and numero
 
 ---
 
-### containerd
+### Linkerd (Rust Component)
+
+**Status:** [Graduated](https://landscape.cncf.io/?selected=linkerd) (2021-07-28) | **Accepted:** 2017-01-23
+
+Linkerd is a service mesh providing security, observability, and reliability. The **data plane proxy (linkerd2-proxy)** is written in Rust.
+
+| Property         | Details                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Description**  | Ultra light, ultra simple, ultra powerful service mesh                                          |
+| **Repository**   | [linkerd/linkerd2](https://github.com/linkerd/linkerd2)                                         |
+| **Homepage**     | [linkerd.io](https://linkerd.io/)                                                               |
+| **Languages**    | Go (control plane), **Rust (data plane proxy)**                                                 |
+| **Rust LOC**     | **1,485,071** (linkerd2-proxy)                                                                  |
+| **Stars**        | 10,700+                                                                                         |
+| **Dev Stats**    | [linkerd.devstats.cncf.io](https://linkerd.devstats.cncf.io/)                                   |
+| **Last Activity**| December 2025 (Active)                                                                          |
+
+**Rust Component:** `linkerd2-proxy` - The data plane proxy handling all service-to-service traffic.
+
+**Why Rust?** Linkerd's data plane proxy is written in Rust to achieve ultra-low overhead, memory safety without garbage collection, and blazing fast performance critical for service mesh operations.
+
+**Known Adopters (100+):**
+
+| Category | Notable Adopters |
+|----------|------------------|
+| **Enterprise** | Microsoft, Expedia, Nordstrom, HP Inc, AT&T, Adidas |
+| **Financial Services** | M1 Finance, Mulligan Funding, Paybase, Commonbond |
+| **Technology** | Docker, Buoyant, Giant Swarm, Timescale, Salt Security |
+
+*See [full adopters list](https://github.com/linkerd/linkerd2/blob/main/ADOPTERS.md) for 100+ organizations.*
+
+---
+
+### containerd (Rust Components)
 
 **Status:** [Graduated](https://landscape.cncf.io/?selected=containerd) (2019-02-28) | **Accepted:** 2017-03-29
 
-containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability. While the core runtime is written in Go, containerd maintains significant Rust components for WebAssembly support and low-level interfaces.
+containerd is an industry-standard container runtime. While the core is Go, it maintains significant Rust components for WebAssembly support and low-level interfaces.
 
 | Property         | Details                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**  | Industry-standard container runtime                                                             |
 | **Repository**   | [containerd/containerd](https://github.com/containerd/containerd)                               |
 | **Homepage**     | [containerd.io](https://containerd.io/)                                                         |
-| **Languages**    | Go (core), Rust (Wasm/ttrpc)                                                                    |
+| **Languages**    | Go (core), **Rust (Wasm/ttrpc components)**                                                     |
+| **Rust LOC**     | **1,207,012** (across 3 repos)                                                                  |
 | **Stars**        | 18,000+                                                                                         |
 | **Dev Stats**    | [containerd.devstats.cncf.io](https://containerd.devstats.cncf.io/)                             |
 
-**Rust Components (1.2M+ lines):**
-- **[runwasi](https://github.com/containerd/runwasi)** (335k Rust) - Facilitates running Wasm/WASI workloads managed by containerd
-- **[ttrpc-rust](https://github.com/containerd/ttrpc-rust)** (400k Rust) - Rust implementation of ttrpc (gRPC for low-memory environments)
-- **[rust-extensions](https://github.com/containerd/rust-extensions)** (471k Rust) - Rust crates to extend containerd
+**Rust Components:**
 
-**Why Rust?** containerd uses Rust for WebAssembly runtime support (runwasi) and low-level RPC protocols (ttrpc) where memory safety and performance are critical for container orchestration.
+| Repository | Rust LOC | Description |
+|------------|----------|-------------|
+| [runwasi](https://github.com/containerd/runwasi) | 335,758 | Wasm/WASI workloads for containerd |
+| [ttrpc-rust](https://github.com/containerd/ttrpc-rust) | 400,008 | Rust ttrpc (gRPC for low-memory) |
+| [rust-extensions](https://github.com/containerd/rust-extensions) | 471,246 | Rust crates to extend containerd |
+
+**Why Rust?** containerd uses Rust for WebAssembly runtime support (runwasi) and low-level RPC protocols (ttrpc) where memory safety and performance are critical.
 
 ---
 
-### Dragonfly
+### Dragonfly (Rust Components)
 
 **Status:** [Graduated](https://landscape.cncf.io/?selected=dragonfly) (2024-09-03) | **Accepted:** 2018-10-25
 
-Dragonfly is an intelligent P2P-based image and file distribution system. The project uses Rust extensively for its image service (nydus) and client components.
+Dragonfly is a P2P-based image and file distribution system. The project uses Rust extensively for its image service (nydus) and client.
 
 | Property         | Details                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**  | P2P-based image and file distribution system                                                    |
 | **Repository**   | [dragonflyoss/Dragonfly2](https://github.com/dragonflyoss/Dragonfly2)                           |
 | **Homepage**     | [d7y.io](https://d7y.io/)                                                                       |
-| **Languages**    | Go (scheduler), Rust (nydus, client)                                                            |
+| **Languages**    | Go (scheduler), **Rust (nydus, client)**                                                        |
+| **Rust LOC**     | **3,941,080** (across 2 repos)                                                                  |
 | **Stars**        | 2,300+ (main), 1,400+ (nydus)                                                                   |
 | **Dev Stats**    | [dragonfly.devstats.cncf.io](https://dragonfly.devstats.cncf.io/)                               |
 
-**Rust Components (3.9M+ lines):**
-- **[nydus](https://github.com/dragonflyoss/nydus)** (2.4M Rust) - Image service providing fast, secure container image access
-- **[client](https://github.com/dragonflyoss/client)** (1.5M Rust) - Dragonfly client written entirely in Rust
+**Rust Components:**
 
-**Why Rust?** Dragonfly chose Rust for nydus to achieve high-performance container image loading with memory safety. The lazy-loading and on-demand image features require low-level system access where Rust excels.
+| Repository | Rust LOC | Description |
+|------------|----------|-------------|
+| [nydus](https://github.com/dragonflyoss/nydus) | 2,418,290 | Container image service |
+| [client](https://github.com/dragonflyoss/client) | 1,522,790 | Dragonfly client (pure Rust) |
+
+**Why Rust?** Dragonfly chose Rust for nydus to achieve high-performance container image loading with memory safety. The lazy-loading and on-demand features require low-level system access where Rust excels.
 
 ---
 
-### Istio
+### Istio (Rust Component)
 
 **Status:** [Graduated](https://landscape.cncf.io/?selected=istio) (2023-07-12) | **Accepted:** 2020-03-03
 
-Istio is an open platform for providing a uniform way to integrate microservices, manage traffic flow, enforce policies, and aggregate telemetry data. The ztunnel component for ambient mesh is written entirely in Rust.
+Istio is a service mesh for microservices. The **ztunnel component** for ambient mesh is written entirely in Rust.
 
 | Property         | Details                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**  | Service mesh for microservices                                                                  |
 | **Repository**   | [istio/istio](https://github.com/istio/istio)                                                   |
 | **Homepage**     | [istio.io](https://istio.io/)                                                                   |
-| **Languages**    | Go (control plane), Rust (ztunnel)                                                              |
+| **Languages**    | Go (control plane), **Rust (ztunnel)**                                                          |
+| **Rust LOC**     | **1,318,825** (ztunnel)                                                                         |
 | **Stars**        | 36,000+ (main), 420+ (ztunnel)                                                                  |
 | **Dev Stats**    | [istio.devstats.cncf.io](https://istio.devstats.cncf.io/)                                       |
 
-**Rust Components (1.3M+ lines):**
-- **[ztunnel](https://github.com/istio/ztunnel)** (1.3M Rust) - The zero-trust tunnel component of Istio ambient mesh
+**Rust Component:**
 
-**Why Rust?** Istio chose Rust for ztunnel to achieve the performance and security requirements of ambient mesh. The ztunnel proxy handles L4 traffic processing where Rust's memory safety and performance are critical for network security.
+| Repository | Rust LOC | Description |
+|------------|----------|-------------|
+| [ztunnel](https://github.com/istio/ztunnel) | 1,318,825 | Zero-trust tunnel for ambient mesh |
+
+**Why Rust?** Istio chose Rust for ztunnel to achieve the performance and security requirements of ambient mesh. The ztunnel proxy handles L4 traffic processing where Rust's memory safety and performance are critical.
 
 ---
 
-### Falco
+### Falco (Rust Component)
 
 **Status:** [Graduated](https://landscape.cncf.io/?selected=falco) (2024-01-29) | **Accepted:** 2018-10-10
 
-Falco is a cloud-native runtime security project that detects anomalous activity in applications. The project provides Rust SDKs for plugin development.
+Falco is a cloud-native runtime security project. The project provides **Rust SDKs** for plugin development.
 
 | Property         | Details                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**  | Cloud-native runtime security                                                                   |
 | **Repository**   | [falcosecurity/falco](https://github.com/falcosecurity/falco)                                   |
 | **Homepage**     | [falco.org](https://falco.org/)                                                                 |
-| **Languages**    | C++ (core), Rust (plugin SDK)                                                                   |
+| **Languages**    | C++ (core), **Rust (plugin SDK)**                                                               |
+| **Rust LOC**     | **1,271,214** (plugin-sdk-rs)                                                                   |
 | **Stars**        | 7,600+                                                                                          |
 | **Dev Stats**    | [falco.devstats.cncf.io](https://falco.devstats.cncf.io/)                                       |
 
-**Rust Components (1.2M+ lines):**
-- **[plugin-sdk-rs](https://github.com/falcosecurity/plugin-sdk-rs)** (1.2M Rust) - Falco plugins SDK for Rust
-- **[client-rs](https://github.com/falcosecurity/client-rs)** - Rust client for Falco
+**Rust Component:**
 
-**Why Rust?** Falco provides Rust SDK support to enable plugin development with memory safety guarantees, important for security tooling that processes sensitive runtime data.
+| Repository | Rust LOC | Description |
+|------------|----------|-------------|
+| [plugin-sdk-rs](https://github.com/falcosecurity/plugin-sdk-rs) | 1,271,214 | Falco plugins SDK for Rust |
+
+**Why Rust?** Falco provides Rust SDK support to enable plugin development with memory safety guarantees, important for security tooling.
 
 ---
 
-### The Update Framework (TUF)
+### The Update Framework (TUF) (Rust Implementation)
 
 **Status:** [Graduated](https://landscape.cncf.io/?selected=the-update-framework-tuf) (2023-02-09) | **Accepted:** 2017-10-24
 
-TUF is a framework for securing software update systems. The project maintains an official Rust implementation.
+TUF is a framework for securing software update systems. The project maintains an **official Rust implementation**.
 
 | Property         | Details                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**  | Framework for securing software update systems                                                  |
 | **Repository**   | [theupdateframework/specification](https://github.com/theupdateframework/specification)         |
 | **Homepage**     | [theupdateframework.io](https://theupdateframework.io/)                                         |
-| **Languages**    | Python (reference), Go, Rust                                                                    |
+| **Languages**    | Python (reference), Go, **Rust**                                                                |
+| **Rust LOC**     | **642,891** (rust-tuf)                                                                          |
 | **Stars**        | 181+ (rust-tuf)                                                                                 |
 | **Dev Stats**    | [tuf.devstats.cncf.io](https://tuf.devstats.cncf.io/)                                           |
 
-**Rust Components (642k+ lines):**
-- **[rust-tuf](https://github.com/theupdateframework/rust-tuf)** (642k Rust) - Rust implementation of The Update Framework
+**Rust Implementation:**
 
-**Why Rust?** TUF's Rust implementation provides memory-safe update verification critical for supply chain security. Rust prevents common vulnerabilities that could compromise software update integrity.
+| Repository | Rust LOC | Description |
+|------------|----------|-------------|
+| [rust-tuf](https://github.com/theupdateframework/rust-tuf) | 642,891 | Rust implementation of TUF |
+
+**Why Rust?** TUF's Rust implementation provides memory-safe update verification critical for supply chain security.
 
 ---
 
-### in-toto
+### in-toto (Rust Implementation)
 
 **Status:** [Graduated](https://landscape.cncf.io/?selected=in-toto) (2023-07-12) | **Accepted:** 2019-08-21
 
-in-toto is a framework to secure the integrity of software supply chains. The project maintains a Rust implementation.
+in-toto is a framework to secure the integrity of software supply chains. The project maintains a **Rust implementation**.
 
 | Property         | Details                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**  | Framework for software supply chain integrity                                                   |
 | **Repository**   | [in-toto/in-toto](https://github.com/in-toto/in-toto)                                           |
 | **Homepage**     | [in-toto.io](https://in-toto.io/)                                                               |
-| **Languages**    | Python (reference), Go, Rust                                                                    |
+| **Languages**    | Python (reference), Go, **Rust**                                                                |
+| **Rust LOC**     | **299,757** (in-toto-rs)                                                                        |
 | **Stars**        | 34+ (in-toto-rs)                                                                                |
 | **Dev Stats**    | [intoto.devstats.cncf.io](https://intoto.devstats.cncf.io/)                                     |
 
-**Rust Components (299k+ lines):**
-- **[in-toto-rs](https://github.com/in-toto/in-toto-rs)** (299k Rust) - Rust implementation of in-toto
+**Rust Implementation:**
 
-**Why Rust?** in-toto's Rust implementation ensures memory-safe handling of cryptographic attestations and supply chain metadata, critical for verifying software provenance.
+| Repository | Rust LOC | Description |
+|------------|----------|-------------|
+| [in-toto-rs](https://github.com/in-toto/in-toto-rs) | 299,757 | Rust implementation of in-toto |
+
+**Why Rust?** in-toto's Rust implementation ensures memory-safe handling of cryptographic attestations and supply chain metadata.
 
 ## Incubating Projects
 
-### wasmCloud
+:::tip Pure Rust Incubating Project
+**wasmCloud** is the only incubating CNCF project written entirely in Rust (122 crates).
+:::
+
+### wasmCloud ⭐ Pure Rust
 
 **Status:** [Incubating](https://landscape.cncf.io/?selected=wasmcloud) | **Accepted:** 2021-07-13
 
-wasmCloud is a platform for building distributed applications using WebAssembly components. It enables teams to build, manage, and scale polyglot applications across any cloud, Kubernetes, or edge environment. The core runtime and tooling are written entirely in Rust.
+wasmCloud is a platform for building distributed applications using WebAssembly components. The **entire project** is written in Rust.
 
 | Property          | Details                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**   | Distributed application platform using WebAssembly components                                   |
 | **Repository**    | [wasmCloud/wasmCloud](https://github.com/wasmCloud/wasmCloud)                                   |
 | **Homepage**      | [wasmcloud.com](https://wasmcloud.com)                                                          |
-| **Languages**     | Rust (100% core runtime)                                                                        |
+| **Languages**     | **Rust (100% core)**                                                                            |
+| **Rust Crates**   | **122 Cargo.toml files**                                                                        |
 | **Key Features**  | WebAssembly components, distributed computing, polyglot support, NATS messaging                 |
 | **Stars**         | 3,200+                                                                                          |
 | **Dev Stats**     | [wasmcloud.devstats.cncf.io](https://wasmcloud.devstats.cncf.io/)                               |
-| **Slack**         | [#wasmcloud](https://cloud-native.slack.com/)                                                   |
 | **Last Activity** | December 2025 (Active)                                                                          |
 
-**Pure Rust:** The wasmCloud host runtime, CLI tools (wash), and application deployment manager (wadm) are written entirely in Rust. The project leverages Rust's WebAssembly ecosystem including Wasmtime for component execution.
+**Pure Rust Components:**
+- Host runtime
+- CLI tools (wash)
+- Application deployment manager (wadm)
+- Wasmtime integration
 
-**Why Rust?** wasmCloud chose Rust for its first-class WebAssembly support, memory safety, and performance. Rust's async ecosystem (tokio) enables efficient handling of distributed workloads, while the language's strict type system ensures reliability in production environments.
+**Why Rust?** wasmCloud chose Rust for its first-class WebAssembly support, memory safety, and performance. Rust's async ecosystem (tokio) enables efficient handling of distributed workloads.
 
 **Known Adopters:**
 
@@ -269,58 +326,64 @@ wasmCloud is a platform for building distributed applications using WebAssembly 
 
 ---
 
-### OpenTelemetry
+### OpenTelemetry (Rust Components)
 
 **Status:** [Incubating](https://landscape.cncf.io/?selected=opentelemetry) | **Accepted:** 2019-05-07
 
-OpenTelemetry provides APIs, SDKs, and tools for generating, collecting, and exporting telemetry data (metrics, logs, and traces). While the main collector is written in Go, the project maintains official Rust implementations for its core instrumentation SDKs.
+OpenTelemetry provides APIs, SDKs, and tools for telemetry data. The project maintains **official Rust SDKs**.
 
 | Property          | Details                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**   | Vendor-neutral observability framework for cloud-native software                                |
 | **Repository**    | [open-telemetry/opentelemetry-rust](https://github.com/open-telemetry/opentelemetry-rust)       |
 | **Homepage**      | [opentelemetry.io](https://opentelemetry.io/)                                                   |
-| **Languages**     | Go (collector), Rust (SDK), multiple language SDKs                                              |
-| **Key Features**  | Distributed tracing, metrics, logging, context propagation, OTLP protocol                       |
+| **Languages**     | Go (collector), **Rust (SDK)**                                                                  |
+| **Rust Crates**   | **143 Cargo.toml files**                                                                        |
 | **Stars**         | 2,300+ (Rust SDK)                                                                               |
 | **Dev Stats**     | [opentelemetry.devstats.cncf.io](https://opentelemetry.devstats.cncf.io/)                       |
-| **Slack**         | [#otel-rust](https://cloud-native.slack.com/)                                                   |
 | **Last Activity** | December 2025 (Active)                                                                          |
 
-**Rust Components (143+ Cargo.toml files):**
-- **opentelemetry-rust** - Core Rust SDK for traces, metrics, and logs
-- **opentelemetry-rust-contrib** - Community contributed exporters and integrations
-- **weaver** - Semantic conventions tooling (pure Rust CLI)
-- **otel-arrow** - Apache Arrow protocol implementation with Rust components
-- **opentelemetry-ebpf-profiler** - eBPF-based profiler with Rust components
-- **opentelemetry-network** - Network telemetry collector with Rust crates
+**Rust Components:**
 
-**Why Rust?** OpenTelemetry chose Rust for its SDK to provide zero-overhead instrumentation, memory safety without garbage collection pauses, and excellent async support critical for observability libraries that must minimize performance impact.
+| Repository | Description |
+|------------|-------------|
+| opentelemetry-rust | Core Rust SDK for traces, metrics, and logs |
+| opentelemetry-rust-contrib | Community contributed exporters |
+| weaver | Semantic conventions tooling (pure Rust CLI) |
+| opentelemetry-ebpf-profiler | eBPF profiler with Rust components |
+| opentelemetry-network | Network telemetry collector |
+
+**Why Rust?** OpenTelemetry chose Rust for its SDK to provide zero-overhead instrumentation, memory safety without garbage collection pauses, and excellent async support.
 
 ---
 
-### Chaos Mesh
+### Chaos Mesh (Rust Components)
 
 **Status:** [Incubating](https://landscape.cncf.io/?selected=chaos-mesh) | **Accepted:** 2020-07-15
 
-Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos experiments on Kubernetes environments. While the main controller is written in Go, the project uses Rust for performance-critical chaos injection components.
+Chaos Mesh is a Chaos Engineering platform. The project uses **Rust for chaos injection components**.
 
 | Property          | Details                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | **Description**   | Cloud-native Chaos Engineering platform for Kubernetes                                          |
 | **Repository**    | [chaos-mesh/chaos-mesh](https://github.com/chaos-mesh/chaos-mesh)                               |
 | **Homepage**      | [chaos-mesh.org](https://chaos-mesh.org/)                                                       |
-| **Languages**     | Go (controller), Rust (chaos injection tools)                                                   |
-| **Key Features**  | IO chaos, network chaos, stress testing, kernel chaos, DNS chaos                                |
+| **Languages**     | Go (controller), **Rust (chaos injection)**                                                     |
+| **Rust LOC**      | **~200,000** (across 4 repos)                                                                   |
 | **Stars**         | 6,800+                                                                                          |
 | **Dev Stats**     | [chaosmesh.devstats.cncf.io](https://chaosmesh.devstats.cncf.io/)                               |
-| **Slack**         | [#chaos-mesh](https://cloud-native.slack.com/)                                                  |
 | **Last Activity** | December 2025 (Active)                                                                          |
 
-**Rust Components (4 repos):**
-- **toda** - Hook filesystem and utilities to inject IO chaos (155k+ lines of Rust)
-- **chaos-tproxy** - Transparent proxy for network chaos injection
-- **nsexec** - Namespace execution utilities
+**Rust Components:**
+
+| Repository | Rust LOC | Description |
+|------------|----------|-------------|
+| [toda](https://github.com/chaos-mesh/toda) | 155,985 | IO chaos filesystem hook |
+| chaos-tproxy | ~20,000 | Network chaos proxy |
+| nsexec | ~15,000 | Namespace execution |
+| iproute2-rs | ~10,000 | Rust bindings for iproute2 |
+
+**Why Rust?** Chaos Mesh uses Rust for low-level system interactions where memory safety and performance are critical. The filesystem hook requires direct kernel interaction where Rust prevents vulnerabilities.
 - **iproute2-rs** - Rust bindings for iproute2
 
 **Why Rust?** Chaos Mesh uses Rust for low-level system interactions where memory safety and performance are critical. The `toda` filesystem hook requires direct kernel interaction where Rust's safety guarantees prevent common vulnerabilities while maintaining C-level performance.
@@ -339,26 +402,114 @@ Chaos Mesh is a cloud-native Chaos Engineering platform that orchestrates chaos 
 
 ## Sandbox Projects
 
-### Akri
+:::tip Pure Rust Sandbox Projects
+**5 of 9 sandbox projects** are written entirely in Rust: Youki, bootc, Akri, kube-rs, and Kubewarden.
+:::
 
-**Status:** [Sandbox](https://landscape.cncf.io/?selected=akri) | **Accepted:** 2021-09-14
+### Youki ⭐ Pure Rust
 
-Akri is a Kubernetes Resource Interface for the Edge, enabling Kubernetes to discover and utilize IoT devices as resources. Written entirely in Rust.
+**Status:** [Sandbox](https://landscape.cncf.io/?selected=youki) | **Accepted:** 2024-10-22
 
-| Property          | Details                                                                                                               |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
-| **Repository**    | [project-akri/akri](https://github.com/project-akri/akri)                                                             |
-| **Homepage**      | [docs.akri.sh](https://docs.akri.sh)                                                                                  |
-| **Dev Stats**     | [akri.devstats.cncf.io](https://akri.devstats.cncf.io/)                                                               |
-| **Slack**         | [#akri](https://kubernetes.slack.com/messages/C01D9L7QE8Z)                                                            |
-| **Annual Review** | [2023-06-13](https://github.com/cncf/toc/pull/1080)                                                                   |
-| **Last Activity** | November 2025 (Active)                                                                                                |
+Youki is an OCI-compliant low-level container runtime written **entirely in Rust**.
 
-**Pure Rust:** Core agent and controller components written entirely in Rust for edge device discovery and management.
+| Property          | Details                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| **Description**   | OCI-compliant container runtime                               |
+| **Repository**    | [youki-dev/youki](https://github.com/youki-dev/youki)         |
+| **Homepage**      | [youki.dev](https://containers.github.io/youki/)              |
+| **Languages**     | **Rust (100%)**                                               |
+| **Rust LOC**      | **~500,000**                                                  |
+| **Stars**         | 7,100+                                                        |
+| **Dev Stats**     | [youki.devstats.cncf.io](https://youki.devstats.cncf.io/)     |
+| **Last Activity** | December 2025 (Active)                                        |
+
+**Why Rust?** Youki is 2x faster than runc in container creation due to Rust's performance and lack of garbage collection overhead.
+
+**Key Adopters:** Azure Kubernetes Service (Wasm workloads), containerd/runwasi, Docker
 
 ---
 
-### Confidential Containers
+### bootc ⭐ Pure Rust
+
+**Status:** [Sandbox](https://landscape.cncf.io/?selected=bootc) | **Accepted:** 2025-01-21
+
+bootc provides transactional OS updates using OCI container images. Written **almost entirely in Rust**.
+
+| Property          | Details                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| **Description**   | Boot and upgrade via container images                         |
+| **Repository**    | [containers/bootc](https://github.com/containers/bootc)       |
+| **Homepage**      | [containers.github.io/bootc](https://containers.github.io/bootc/) |
+| **Languages**     | **Rust (100%)**                                               |
+| **Rust LOC**      | **1,694,355**                                                 |
+| **Stars**         | 1,720+                                                        |
+| **Dev Stats**     | [bootc.devstats.cncf.io](https://bootc.devstats.cncf.io/)     |
+| **Last Activity** | December 2025 (Active)                                        |
+
+**Why Rust?** bootc requires memory safety for OS update operations. Direct interaction with bootloaders, filesystems, and OS internals makes Rust ideal.
+
+**Key Features:** Transactional OS updates, rollback support, ostree/composefs integration
+
+---
+
+### Akri ⭐ Pure Rust
+
+**Status:** [Sandbox](https://landscape.cncf.io/?selected=akri) | **Accepted:** 2021-09-14
+
+Akri is a Kubernetes Resource Interface for the Edge. Written **entirely in Rust**.
+
+| Property          | Details                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| **Description**   | Kubernetes edge device discovery and management               |
+| **Repository**    | [project-akri/akri](https://github.com/project-akri/akri)     |
+| **Homepage**      | [docs.akri.sh](https://docs.akri.sh)                          |
+| **Languages**     | **Rust (100%)**                                               |
+| **Dev Stats**     | [akri.devstats.cncf.io](https://akri.devstats.cncf.io/)       |
+| **Last Activity** | November 2025 (Active)                                        |
+
+**Pure Rust:** Core agent and controller for edge device discovery and management.
+
+---
+
+### kube-rs ⭐ Pure Rust
+
+**Status:** [Sandbox](https://landscape.cncf.io/?selected=kube) | **Accepted:** 2021-11-16
+
+kube-rs is the core Rust ecosystem for building Kubernetes applications. Written **entirely in Rust**.
+
+| Property          | Details                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| **Description**   | Rust client library for Kubernetes                            |
+| **Repository**    | [kube-rs/kube](https://github.com/kube-rs/kube)               |
+| **Homepage**      | [kube.rs](https://kube.rs)                                    |
+| **Languages**     | **Rust (100%)**                                               |
+| **Dev Stats**     | [kube.devstats.cncf.io](https://kube.devstats.cncf.io/)       |
+| **Last Activity** | December 2025 (Active)                                        |
+
+**Pure Rust:** Complete Kubernetes client library enabling controllers, operators, and tools entirely in Rust.
+
+---
+
+### Kubewarden ⭐ Pure Rust
+
+**Status:** [Sandbox](https://landscape.cncf.io/?selected=kubewarden) | **Accepted:** 2022-06-17
+
+Kubewarden is a WebAssembly-powered Kubernetes policy engine. Core runtime written in **Rust**.
+
+| Property          | Details                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| **Description**   | WebAssembly policy engine for Kubernetes                      |
+| **Repository**    | [kubewarden/kubewarden-controller](https://github.com/kubewarden/kubewarden-controller) |
+| **Homepage**      | [kubewarden.io](https://www.kubewarden.io)                    |
+| **Languages**     | **Rust (core runtime)**                                       |
+| **Dev Stats**     | [kubewarden.devstats.cncf.io](https://kubewarden.devstats.cncf.io/) |
+| **Last Activity** | December 2025 (Active)                                        |
+
+**Rust Usage:** Core runtime written in Rust; supports policy development in Rust for maximum performance.
+
+---
+
+### Confidential Containers (Rust Components)
 
 **Status:** [Sandbox](https://landscape.cncf.io/?selected=confidential-containers) | **Accepted:** 2022-03-08
 
@@ -393,160 +544,63 @@ Enables cloud native confidential computing by leveraging Trusted Execution Envi
 
 ---
 
-### Keylime
+### Keylime (Rust Components)
 
 **Status:** [Sandbox](https://landscape.cncf.io/?selected=keylime) | **Accepted:** 2020-09-22
 
-Bootstrap and maintain trust on the Edge, Cloud, and IoT devices using remote attestation.
+Remote attestation for Edge, Cloud, and IoT devices. Has **Rust agent component**.
 
 | Property          | Details                                                       |
 | ----------------- | ------------------------------------------------------------- |
+| **Description**   | Remote attestation and trust management                       |
 | **Repository**    | [keylime/keylime](https://github.com/keylime/keylime)         |
 | **Homepage**      | [keylime.dev](https://keylime.dev/)                           |
+| **Languages**     | Python, **Rust (agent)**                                      |
 | **Dev Stats**     | [keylime.devstats.cncf.io](https://keylime.devstats.cncf.io/) |
-| **Slack**         | [#Keylime](https://cloud-native.slack.com/messages/keylime)   |
-| **Annual Review** | [2022-11-10](https://github.com/cncf/toc/pull/959)            |
 | **Last Activity** | December 2025 (Active)                                        |
 
-**Rust Components:** Keylime has Rust components (keylime-agent) for secure, low-level system interactions and cryptographic operations. Recent security fixes include UUID vulnerability patches (December 2025).
+**Rust Component:** keylime-agent for secure system interactions and cryptographic operations.
 
 ---
 
-### Kuasar
+### Kuasar (Rust Components)
 
 **Status:** [Sandbox](https://landscape.cncf.io/?selected=kuasar) | **Accepted:** 2023-09-05
 
-Kuasar is a multi-sandbox container runtime that provides cloud-native, all-scenario multiple sandbox container solutions. Written primarily in Rust for performance and safety.
+Multi-sandbox container runtime. **Significant Rust components** for runtime shims and sandboxers.
 
 | Property          | Details                                                       |
 | ----------------- | ------------------------------------------------------------- |
+| **Description**   | Multi-sandbox container runtime                               |
 | **Repository**    | [kuasar-io/kuasar](https://github.com/kuasar-io/kuasar)       |
 | **Homepage**      | [kuasar.io](https://kuasar.io/)                               |
-| **Dev Stats**     | [kuasar.devstats.cncf.io](https://kuasar.devstats.cncf.io/)   |
-| **Slack**         | [#kuasar](https://cloud-native.slack.com/)                    |
+| **Languages**     | Go, **Rust (shim, sandboxers)**                               |
 | **Stars**         | 2,200+                                                        |
+| **Dev Stats**     | [kuasar.devstats.cncf.io](https://kuasar.devstats.cncf.io/)   |
 | **Last Activity** | December 2025 (Active)                                        |
 
-**Pure Rust:** Core runtime components including the shim, VMM sandboxer, and Wasm sandboxer are written in Rust. The project uses Rust for safe, efficient container sandbox management.
+**Rust Components:** Shim, VMM sandboxer, and Wasm sandboxer are written in Rust.
 
-**Why Rust?** Kuasar chose Rust for memory safety without garbage collection, critical for a low-level container runtime that must be both secure and performant. Rust's type system helps prevent common security vulnerabilities.
-
-**Known Adopters:**
-
-| Adopter | Type | Use Case |
-|---------|------|----------|
-| **Menging Software** | Service Provider | FaaS platform based on WebAssembly |
-| **Huawei Cloud Native** | Service Provider | Kubernetes experience with Kuasar |
-| **iSulad** | OSS Project | Uses Kuasar as low-level container runtime |
-
-*See [full adopters list](https://github.com/kuasar-io/kuasar/blob/main/ADOPTERS.md).*
+**Known Adopters:** Menging Software, Huawei Cloud Native, iSulad
 
 ---
 
-### kube-rs
-
-**Status:** [Sandbox](https://landscape.cncf.io/?selected=kube) | **Accepted:** 2021-11-16
-
-The core Rust ecosystem for building Kubernetes applications, providing idiomatic Rust interfaces for Kubernetes APIs.
-
-| Property       | Details                                                 |
-| -------------- | ------------------------------------------------------- |
-| **Repository** | [kube-rs/kube](https://github.com/kube-rs/kube)         |
-| **Homepage**   | [kube.rs](https://kube.rs)                              |
-| **Dev Stats**  | [kube.devstats.cncf.io](https://kube.devstats.cncf.io/) |
-| **Slack**      | [#kube-rs](https://kubernetes.slack.com/)               |
-| **Last Activity** | December 2025 (Active)                               |
-
-**Pure Rust:** Complete Rust client library for Kubernetes, enabling developers to build controllers, operators, and tools entirely in Rust. Recently updated to rustfmt 2024 edition (December 2025).
-
----
-
-### Kubewarden
-
-**Status:** [Sandbox](https://landscape.cncf.io/?selected=kubewarden) | **Accepted:** 2022-06-17
-
-WebAssembly-powered Kubernetes policy engine supporting policies written in multiple languages including Rust, Go, CEL, Rego, and YAML.
-
-| Property          | Details                                                                                 |
-| ----------------- | --------------------------------------------------------------------------------------- |
-| **Repository**    | [kubewarden/kubewarden-controller](https://github.com/kubewarden/kubewarden-controller) |
-| **Homepage**      | [kubewarden.io](https://www.kubewarden.io)                                              |
-| **Dev Stats**     | [kubewarden.devstats.cncf.io](https://kubewarden.devstats.cncf.io/)                     |
-| **Slack**         | [#kubewarden](https://kubernetes.slack.com/)                                            |
-| **Annual Review** | [2023-10-10](https://github.com/cncf/toc/pull/1162)                                     |
-| **Last Activity** | December 2025 (Active)                                                                  |
-
-**Rust Usage:** Core runtime written in Rust; supports policy development in Rust for maximum performance and safety. Active dependency updates as of December 2025.
-
----
-
-### Paralus
+### Paralus (Rust Components)
 
 **Status:** [Sandbox](https://landscape.cncf.io/?selected=paralus) | **Accepted:** 2022-12-14
 
-Free, open source tool enabling controlled, audited access to Kubernetes infrastructure with zero trust security model.
-
-| Property       | Details                                                       |
-| -------------- | ------------------------------------------------------------- |
-| **Repository** | [paralus/paralus](https://github.com/paralus/paralus)         |
-| **Homepage**   | [paralus.io](https://www.paralus.io/)                         |
-| **Dev Stats**  | [paralus.devstats.cncf.io](https://paralus.devstats.cncf.io/) |
-| **Slack**      | [#paralus](https://paralus.io/slack)                          |
-| **Last Activity** | August 2025 (Maintenance mode)                             |
-
-**Note:** Paralus shows reduced activity in 2025, with primarily automated dependency updates. The project may benefit from additional community engagement.
-
----
-
-### Youki
-
-**Status:** [Sandbox](https://landscape.cncf.io/?selected=youki) | **Accepted:** 2024-10-22
-
-Youki is an OCI-compliant low-level container runtime written entirely in Rust. It serves as an alternative to runc, offering improved performance and memory safety.
+Zero trust Kubernetes access. Has **Rust components** for secure operations.
 
 | Property          | Details                                                       |
 | ----------------- | ------------------------------------------------------------- |
-| **Repository**    | [youki-dev/youki](https://github.com/youki-dev/youki)         |
-| **Homepage**      | [youki.dev](https://containers.github.io/youki/)              |
-| **Dev Stats**     | [youki.devstats.cncf.io](https://youki.devstats.cncf.io/)     |
-| **Slack**         | [#youki](https://cloud-native.slack.com/)                     |
-| **Stars**         | 7,100+                                                        |
-| **Last Activity** | December 2025 (Active)                                        |
+| **Description**   | Zero trust Kubernetes access management                       |
+| **Repository**    | [paralus/paralus](https://github.com/paralus/paralus)         |
+| **Homepage**      | [paralus.io](https://www.paralus.io/)                         |
+| **Languages**     | Go, **Rust (components)**                                     |
+| **Dev Stats**     | [paralus.devstats.cncf.io](https://paralus.devstats.cncf.io/) |
+| **Last Activity** | August 2025 (Maintenance mode)                                |
 
-**Pure Rust:** Complete OCI container runtime implementation in Rust. Youki is approximately 2x faster than runc in container creation benchmarks due to Rust's performance characteristics and lack of garbage collection overhead.
-
-**Key Adopters:**
-- Azure Kubernetes Service (for Wasm workloads)
-- containerd/runwasi
-- Docker
-
-**Why Rust?** Youki demonstrates that Rust can deliver the same functionality as Go-based runtimes while eliminating certain security vulnerabilities inherent to mixed C/Go implementations. The language choice enables a pure Rust implementation without the constraints faced by Go's runtime.
-
----
-
-### bootc
-
-**Status:** [Sandbox](https://landscape.cncf.io/?selected=bootc) | **Accepted:** 2025-01-21
-
-bootc provides transactional, in-place operating system images and updates using OCI/Docker container images. This project applies the Docker container layering model to bootable host systems, using standard OCI/Docker containers as a transport and delivery format for base operating system updates.
-
-| Property          | Details                                                       |
-| ----------------- | ------------------------------------------------------------- |
-| **Repository**    | [containers/bootc](https://github.com/containers/bootc)       |
-| **Homepage**      | [containers.github.io/bootc](https://containers.github.io/bootc/) |
-| **Dev Stats**     | [bootc.devstats.cncf.io](https://bootc.devstats.cncf.io/)     |
-| **Stars**         | 1,720+                                                        |
-| **Last Activity** | December 2025 (Active)                                        |
-
-**Pure Rust (1.69M lines):** bootc is written almost entirely in Rust, representing one of the largest pure Rust CNCF projects. The codebase leverages Rust for safe, low-level OS operations.
-
-**Why Rust?** bootc chose Rust for its memory safety guarantees essential when managing operating system updates. The project requires direct interaction with bootloaders, filesystems, and OS internals where Rust prevents common vulnerabilities while maintaining system-level performance.
-
-**Key Features:**
-- Transactional OS updates via OCI images
-- Rollback support for failed updates
-- Integration with ostree and composefs
-- Support for Fedora, CentOS Stream, RHEL
+**Note:** Reduced activity in 2025; may benefit from additional community engagement.
 
 ## Analysis
 
@@ -554,30 +608,30 @@ bootc provides transactional, in-place operating system images and updates using
 Rust's adoption in CNCF projects centers on security-critical and performance-sensitive workloads, with eight graduated projects now using Rust components proving Rust's viability at the highest maturity level.
 :::
 
-### CNCF Rust Projects by Maturity
+### CNCF Rust Projects Summary
 
-| Project | Maturity | Accepted | Focus Area | Activity (Dec 2025) |
-|---------|----------|----------|------------|---------------------|
-| **Linkerd** | Graduated | 2017-01-23 | Service Mesh | Active |
-| **TUF** | Graduated | 2017-10-24 | Supply Chain Security | Active |
-| **TiKV** | Graduated | 2018-08-28 | Database | Active |
-| **containerd** | Graduated | 2017-03-29 | Container Runtime | Active |
-| **Dragonfly** | Graduated | 2018-10-25 | Image Distribution | Active |
-| **Falco** | Graduated | 2018-10-10 | Runtime Security | Active |
-| **in-toto** | Graduated | 2019-08-21 | Supply Chain Security | Active |
-| **Istio** | Graduated | 2020-03-03 | Service Mesh | Active |
-| **OpenTelemetry** | Incubating | 2019-05-07 | Observability | Active |
-| **Chaos Mesh** | Incubating | 2020-07-15 | Chaos Engineering | Active |
-| **wasmCloud** | Incubating | 2021-07-13 | WebAssembly Platform | Active |
-| **Keylime** | Sandbox | 2020-09-22 | Security/TPM | Active |
-| **Akri** | Sandbox | 2021-09-14 | IoT/Edge | Active |
-| **kube-rs** | Sandbox | 2021-11-16 | Kubernetes SDK | Active |
-| **Confidential Containers** | Sandbox | 2022-03-08 | Security/TEE | Active |
-| **Kubewarden** | Sandbox | 2022-06-17 | Policy Engine | Active |
-| **Paralus** | Sandbox | 2022-12-14 | Zero Trust Access | Maintenance |
-| **Kuasar** | Sandbox | 2023-09-05 | Container Runtime | Active |
-| **Youki** | Sandbox | 2024-10-22 | Container Runtime | Active |
-| **bootc** | Sandbox | 2025-01-21 | OS Updates | Active |
+| Type | Project | Maturity | Rust LOC | Description |
+|------|---------|----------|----------|-------------|
+| ⭐ Pure | **TiKV** | Graduated | 24,814,809 | Distributed database |
+| ⭐ Pure | **wasmCloud** | Incubating | 122 crates | WebAssembly platform |
+| ⭐ Pure | **Youki** | Sandbox | ~500,000 | OCI container runtime |
+| ⭐ Pure | **bootc** | Sandbox | 1,694,355 | OS container updates |
+| ⭐ Pure | **Akri** | Sandbox | - | Edge device discovery |
+| ⭐ Pure | **kube-rs** | Sandbox | - | Kubernetes Rust SDK |
+| ⭐ Pure | **Kubewarden** | Sandbox | - | Policy engine |
+| Component | **Linkerd** | Graduated | 1,485,071 | Service mesh proxy |
+| Component | **containerd** | Graduated | 1,207,012 | Container runtime Wasm |
+| Component | **Dragonfly** | Graduated | 3,941,080 | Image distribution |
+| Component | **Istio** | Graduated | 1,318,825 | Service mesh ztunnel |
+| Component | **Falco** | Graduated | 1,271,214 | Security plugin SDK |
+| Implementation | **TUF** | Graduated | 642,891 | Supply chain security |
+| Implementation | **in-toto** | Graduated | 299,757 | Supply chain integrity |
+| Component | **OpenTelemetry** | Incubating | 143 crates | Observability SDK |
+| Component | **Chaos Mesh** | Incubating | ~200,000 | Chaos injection |
+| Component | **Confidential Containers** | Sandbox | - | TEE security |
+| Component | **Keylime** | Sandbox | - | Remote attestation |
+| Component | **Kuasar** | Sandbox | - | Container sandboxer |
+| Component | **Paralus** | Sandbox | - | Zero trust access |
 
 ### Adoption Trends
 
