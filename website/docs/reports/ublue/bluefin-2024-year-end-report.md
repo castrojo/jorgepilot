@@ -719,28 +719,6 @@ Each tier can be updated independently, providing **flexible release cadences**:
 | **Renovation bot dependency** | 🟢 Low | Heavy reliance on automated PRs - bot failure could slow updates |
 | **Common layer stability** | 🟡 Medium | Rapid changes to common (69+ commits in Dec) may introduce instability |
 
-### Recommendations for 2025
-
-**Documentation:**
-1. Create a "State of the Project" page linking the ecosystem diagram
-2. Add explicit guidance on ublue-os vs projectbluefin namespace decisions
-3. Document the architectural evolution (why common exists, its purpose)
-
-**Architecture:**
-4. Consider deprecation timeline for archived [@projectbluefin/brew](https://github.com/projectbluefin/brew) repo
-5. Establish stability tiers for common layer (stable vs. experimental)
-6. Create common layer release notes/changelog
-
-**Community:**
-7. Recognize top contributors with public acknowledgment
-8. Establish mentorship for first-time contributors
-9. Create "good first issue" labels for new contributors
-
-**Technical:**
-10. Implement automatic rollback on common layer issues
-11. Add integration tests between bluefin and common
-12. Document common layer versioning strategy
-
 ## Conclusion
 
 Project Bluefin has matured significantly in 2024, transitioning from a monolithic build to a **modular, cloud-native architecture** that exemplifies its "best distro is no distro" philosophy. The creation of [@projectbluefin/common](https://github.com/projectbluefin/common) as a shared OCI layer represents a fundamental architectural improvement that will enable:
