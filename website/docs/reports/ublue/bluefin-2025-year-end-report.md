@@ -7,11 +7,11 @@ tags:
 last_updated: 2025-12-21
 ---
 
-# Bluefin 2024 Year-End Report
+# Bluefin 2025 Year-End Report
 
 ## Executive Summary
 
-Project Bluefin has experienced transformative growth in 2024, evolving from an experimental desktop Linux distribution into a mature, cloud-native operating system with significant architectural improvements and community adoption. The project has successfully transitioned to a modular architecture centered around [@projectbluefin/common](https://github.com/projectbluefin/common), launched experimental initiatives like distroless and Wolfi-based variants, and maintained exceptionally high development velocity with daily automated updates and community contributions from dozens of active contributors.
+Project Bluefin has experienced transformative growth in 2025, evolving from an experimental desktop Linux distribution into a mature, cloud-native operating system with significant architectural improvements and community adoption. The project has successfully transitioned to a modular architecture centered around [@projectbluefin/common](https://github.com/projectbluefin/common), launched experimental initiatives like distroless and Wolfi-based variants, and maintained exceptionally high development velocity with daily automated updates and community contributions from dozens of active contributors.
 
 **Key Achievements:**
 - **3,900+ GitHub stars** on [@ublue-os/bluefin](https://github.com/ublue-os/bluefin) (primary repository)
@@ -66,13 +66,13 @@ Created in 2024, [@projectbluefin](https://github.com/projectbluefin) represents
 | [@projectbluefin/brew](https://github.com/projectbluefin/brew) | Homebrew tarball integration | 14 | Archived |
 | [@projectbluefin/wolfi-gnome](https://github.com/projectbluefin/wolfi-gnome) | GNOME packaging for Wolfi | 10 | Active |
 
-## Major Architectural Developments in 2024
+## Major Architectural Developments in 2025
 
 ### 1. Creation of [@projectbluefin/common](https://github.com/projectbluefin/common)
 
 **Launched:** November 2024
 
-The most significant architectural change in 2024 was the extraction of shared configuration into a dedicated OCI layer. This repository consolidates:
+The most significant architectural change in 2025 was the extraction of shared configuration into a dedicated OCI layer. This repository consolidates:
 
 **System Configuration (`/etc/ublue-os/`):**
 - Bling CLI theming settings
@@ -511,7 +511,7 @@ Based on commit references:
 - Added missing Incus integration arguments
 - Corrected MOTD toggle logic
 
-## 2024 Goals Achievement Analysis
+## 2025 Goals Achievement Analysis
 
 While specific goal documents weren't directly accessible in the repository analysis, evidence from development activity suggests focus on:
 
@@ -721,14 +721,14 @@ Each tier can be updated independently, providing **flexible release cadences**:
 
 ## Conclusion
 
-Project Bluefin has matured significantly in 2024, transitioning from a monolithic build to a **modular, cloud-native architecture** that exemplifies its "best distro is no distro" philosophy. The creation of [@projectbluefin/common](https://github.com/projectbluefin/common) as a shared OCI layer represents a fundamental architectural improvement that will enable:
+Project Bluefin has matured significantly in 2025, transitioning from a monolithic build to a **modular, cloud-native architecture** that exemplifies its "best distro is no distro" philosophy. The creation of [@projectbluefin/common](https://github.com/projectbluefin/common) as a shared OCI layer represents a fundamental architectural improvement that will enable:
 
 - **Faster iteration** on shared functionality
 - **Clearer separation** between Universal Blue base and Bluefin opinions
 - **Easier adoption** by downstream projects (Aurora already consuming common)
 - **Reduced duplication** across variants
 
-The project maintains **exceptional development velocity** with daily automated updates, active community contributions, and multiple experimental initiatives exploring the future of Linux desktop distribution. With over 3,900 stars, growing community engagement, and a clear technical vision, Bluefin is well-positioned for continued growth in 2025.
+The project maintains **exceptional development velocity** with daily automated updates, active community contributions, and multiple experimental initiatives exploring the future of Linux desktop distribution. With over 3,900 stars, growing community engagement, and a clear technical vision, Bluefin is well-positioned for continued growth in 2026.
 
 **Health Grade: A** (Excellent)
 
@@ -765,7 +765,7 @@ Bluefin demonstrates strong project health across all dimensions:
 
 ---
 
-**Report Generated:** December 21, 2024  
-**Analysis Period:** Full year 2024, with detailed focus on November-December 2024  
+**Report Generated:** December 21, 2025  
+**Analysis Period:** Full year 2025, with detailed focus on November-December 2024    
 **Data Sources:** GitHub API, repository file analysis, commit history analysis  
 **Methodology:** Comprehensive repository analysis across @ublue-os and @projectbluefin organizations
