@@ -3,7 +3,7 @@ tags:
   - ublue
   - bluefin
   - drivers
-last_updated: 2026-01-14
+last_updated: 2026-01-21
 ---
 
 # Bluefin Driver Versions Report
@@ -25,6 +25,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 ## Bluefin
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
+| **stable-20260120** | 6.17.11-300 | 590.48.01-1 | [25.2.7-1](https://docs.mesa3d.org/relnotes/25.2.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260120) |
 | **stable-20260113** | 6.17.11-300 | 590.48.01-1 | [25.2.7-1](https://docs.mesa3d.org/relnotes/25.2.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260113) |
 | **stable-20260106** | 6.17.8-300 | 590.48.01-1 | [25.2.7-1](https://docs.mesa3d.org/relnotes/25.2.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260106) |
 | **stable-20251230** | 6.17.8-300 | 590.48.01-1 | [25.2.7-1](https://docs.mesa3d.org/relnotes/25.2.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20251230) |
@@ -51,6 +52,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 
 
 
+| **gts-20260120** | 6.17.11-200 | 590.48.01-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20260120) |
 | **gts-20260108** | 6.17.11-200 | 590.48.01-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20260108) |
 | **gts-20260106** | 6.17.8-200 | 590.48.01-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20260106) |
 | **gts-20251230** | 6.17.8-200 | 590.48.01-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20251230) |
@@ -205,6 +207,7 @@ All channels include thoroughly tested driver combinations with cosign-signed co
 | Date | Changes | Commit |
 |------|---------|--------|
 | 2025-10-15 | Initial report created based on Bazzite template | (current) |
+
 
 
 
