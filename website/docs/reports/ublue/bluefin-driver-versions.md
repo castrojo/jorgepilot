@@ -3,7 +3,7 @@ tags:
   - ublue
   - bluefin
   - drivers
-last_updated: 2026-01-28
+last_updated: 2026-02-04
 ---
 
 # Bluefin Driver Versions Report
@@ -25,6 +25,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 ## Bluefin
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
+| **stable-20260203** | 6.17.12-300 | 590.48.01-3 | [25.3.4-1](https://docs.mesa3d.org/relnotes/25.3.4.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260203) |
 | **stable-20260127** | 6.17.12-300 | 590.48.01-3 | [25.2.7-1](https://docs.mesa3d.org/relnotes/25.2.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260127) |
 | **stable-20260120** | 6.17.11-300 | 590.48.01-1 | [25.2.7-1](https://docs.mesa3d.org/relnotes/25.2.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260120) |
 | **stable-20260113** | 6.17.11-300 | 590.48.01-1 | [25.2.7-1](https://docs.mesa3d.org/relnotes/25.2.7.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260113) |
@@ -53,6 +54,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 
 
 
+| **gts-20260203** | 6.17.12-200 | 590.48.01-3 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20260203) |
 | **gts-20260127** | 6.17.12-200 | 590.48.01-3 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20260127) |
 | **gts-20260120** | 6.17.11-200 | 590.48.01-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20260120) |
 | **gts-20260108** | 6.17.11-200 | 590.48.01-1 | [25.1.9-1](https://docs.mesa3d.org/relnotes/25.1.9.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/gts-20260108) |
@@ -209,6 +211,7 @@ All channels include thoroughly tested driver combinations with cosign-signed co
 | Date | Changes | Commit |
 |------|---------|--------|
 | 2025-10-15 | Initial report created based on Bazzite template | (current) |
+
 
 
 
