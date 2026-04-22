@@ -3,7 +3,7 @@ tags:
   - ublue
   - bluefin
   - drivers
-last_updated: 2026-04-15
+last_updated: 2026-04-22
 ---
 
 # Bluefin Driver Versions Report
@@ -25,6 +25,7 @@ This report tracks major driver versions across Bluefin releases to help users i
 ## Bluefin
 | Image Tag | Kernel Version | NVIDIA Driver | Mesa Version | Release Link |
 |-----------|----------------|---------------|--------------|--------------|
+| **stable-20260421** | 6.19.10-200 | 595.58.03-1 | [25.3.6-6](https://docs.mesa3d.org/relnotes/25.3.6.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260421) |
 | **stable-20260414** | 6.19.7-200 | 595.58.03-1 | [25.3.6-6](https://docs.mesa3d.org/relnotes/25.3.6.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260414) |
 | **stable-20260407** | 6.19.7-200 | 595.58.03-1 | [25.3.6-6](https://docs.mesa3d.org/relnotes/25.3.6.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260407) |
 | **stable-20260331** | 6.18.13-200 | 595.58.03-1 | [25.3.6-6](https://docs.mesa3d.org/relnotes/25.3.6.html) | [Release](https://github.com/ublue-os/bluefin/releases/tag/stable-20260331) |
@@ -219,6 +220,7 @@ All channels include thoroughly tested driver combinations with cosign-signed co
 | Date | Changes | Commit |
 |------|---------|--------|
 | 2025-10-15 | Initial report created based on Bazzite template | (current) |
+
 
 
 
